@@ -1,0 +1,74 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          Global_Keyword/Keyword_000_Verification.txt
+Resource          Global_Keyword/Keyword_001_Home.txt
+Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          Global_Keyword/Keyword_070_aftershotpro.txt
+Variables         Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page
+    ${contents}=    Get File    ${ASP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    ${env}    ${wASP}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page    @{var}[3]    @{var}[7]    @{var}[8]
+    \    ...    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'de'    verify link on home page_de    @{var}[3]    @{var}[7]    @{var}[8]
+    \    ...    @{var}[9]    @{var}[10]
+
+Check price_ASP product page
+    ${contents}=    Get File    ${ASP_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check ASP product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+HTTPS_screenshot
+    ${contents}=    Get File    ${HTTPS_ASP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    Split String    ${line}    :
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2    3    open browser    ${line}
+    \    Wait Until Keyword Succeeds    2    3    go to    ${line}
+    \    Maximize Browser Window
+    \    sleep    3
+    \    remove file    c:\\temp\\HTTPS\\${line}.jpg
+    \    capture page screenshot    c:\\temp\\HTTPS\\@{var}[1].jpg
+    \    run keyword and continue on failure    location should contain    https
+    \    close all browsers
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${SpOffer1}    ${SpOffer2}    ${SpOffer3}    ${SpOffer4}
+    click HeroBanner_ASP
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    #Click Sp. Offer 1
+    #run keyword and continue on failure    Verify URL Contain    ${SpOffer1}
+    Click Sp. Offer 2
+    run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer2}
+    #Click Sp. Offer 3
+    #run keyword and continue on failure    Verify URL Contain    ${SpOffer3}
+    #Click Sp. Offer 4
+    #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer4}
+    close all browsers
+
+verify link on home page_de
+    [Arguments]    ${Hero}    ${SpOffer1}    ${SpOffer2}    ${SpOffer3}    ${SpOffer4}
+    click HeroBanner_ASP
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    #Click Sp. Offer 1
+    #run keyword and continue on failure    Verify URL Contain    ${SpOffer1}
+    #Click Sp. Offer 2
+    #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer2}
+    #Click Sp. Offer 3
+    #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer3}
+    #Click Sp. Offer 4
+    #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer4}
+    close all browsers

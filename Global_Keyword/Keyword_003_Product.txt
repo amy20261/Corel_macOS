@@ -1,0 +1,150 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Variables ***
+
+*** Keywords ***
+Open Browser to Products Page
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2    3    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/products/${page}/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
+    Wait Until Keyword Succeeds    2    3    go to    http://${env}.www.${microsite}.public.corel.net/${lan}/products/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+
+Open Browser to Product Page
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2 min    0.3 sec    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
+    Wait Until Keyword Succeeds    2 min    0.3 sec    Go to    http://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+
+Check promo price on product_dropdown list
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Sale Price    ${Full_promo}
+    ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
+
+Check promo price on product_dropdown list_CAD
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_CAD
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Sale Price    ${Full_promo}
+    ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
+
+Check promo price on product_radio
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Sale Price    ${Full_promo}
+    ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
+
+Select Upgrade_dropdown llist
+    select from list by value    //select[@id='version-select']    Upgrade
+
+Select Upgrade_dropdown llist_CAD
+    select from list    //select[@id='version-select']    UPGRADE
+
+select Upgrade_radio button
+    Select Radio Button    version-select    dynPrice_SKU_2
+
+Select Full
+    select from list by value    //select[@id='version-select']    Full Version
+
+Verify SavingsBadge
+    [Arguments]    ${SavingBadge}
+    sleep    1
+    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
+
+Verify Full_Reg price
+    [Arguments]    ${FULL_Reg}
+    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
+
+Verify Full_Sale Price
+    [Arguments]    ${FULL_Promo}
+    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+
+Verify Upgrade_Reg price
+    [Arguments]    ${Upgrade_Reg}
+    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Upgrade_Reg}
+
+Verify Upgrade_Sale price
+    [Arguments]    ${Upgrade_Promo}
+    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Upgrade_Promo}
+
+Open Browser to Product Page_PURCHASE
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2    5    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/?currency=${currency}    browser=firefox
+    Maximize Browser Window
+
+Check promo price on product_dropdown list_PTR
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_PTR
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Sale Price    ${Full_promo}
+    ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
+
+Select Upgrade_dropdown llist_PTR
+    select from list    //select[@id='top-version-select']    UPGRADE
+
+Check promo price on product_Tag
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    verify UPGRADE    ${SavingBadge}    ${Full_Reg}    ${Full_promo}
+    Run keyword if    '${SKU}'!='${UPSKU}'    Verify FULL    ${SavingBadge}    ${Full_Reg}    ${Full_promo}
+
+Verify FULL
+    [Arguments]    ${SavingBadge}    ${Full_Reg}    ${FULL_Promo}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    ...    AND    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Full_Reg}
+    ...    AND    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+    ...    ELSE    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Full_Reg}
+
+Verify UPGRADE
+    [Arguments]    ${SavingBadge}    ${Full_Reg}    ${FULL_Promo}
+    click element    //li[@id='tab-2']
+    sleep    3
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Element should contain    //div[@id='dynPrice_upgradeTab']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    ...    AND    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Full_Reg}
+    ...    AND    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+    ...    ELSE    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Full_Reg}
+
+Open Browser to Products Page_PURCHASE
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2    5    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/products/${page}/?currency=${currency}    browser=firefox
+    Maximize Browser Window
+
+Open Browser to Products Page_HTTPS
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2    3    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/products/${page}/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2    3    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/products/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+
+Open Browser to Products Page_HTTPS_PROD
+    [Arguments]    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2    3    open browser    https://www.${microsite}.com/${lan}/products/${page}/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2    3    go to    https://www.${microsite}.com/${lan}/products/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+
+Open Browser to Product Page_HTTPS
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2 min    0.3 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    0.3 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    4
+
+Check promo price on product_dropdown list_WPO
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_WPO
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Sale Price    ${Full_promo}
+    ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
+
+Select Upgrade_dropdown llist_WPO
+    select from list    //select[@id='version-select']    UPGRADE

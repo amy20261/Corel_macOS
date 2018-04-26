@@ -1,0 +1,33 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          Global_Keyword/Keyword_000_Verification.txt
+Resource          Global_Keyword/Keyword_003_Product.txt
+Resource          Global_Keyword/Keyword_001_Home.txt
+Resource          Global_Keyword/Keyword_080_WinDVDpro.txt
+Variables         Global_Variable/eComm.py
+
+*** Test Cases ***
+Check price_WinDVD product page
+    ${contents}=    Get File    ${DVD_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check WinDVD product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+HTTPS_screenshot
+    ${contents}=    Get File    ${HTTPS_WINDVD}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    Split String    ${line}    :
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2    3    open browser    ${line}
+    \    Wait Until Keyword Succeeds    2    3    go to    ${line}
+    \    Maximize Browser Window
+    \    sleep    3
+    \    remove file    c:\\temp\\HTTPS\\${line}.jpg
+    \    capture page screenshot    c:\\temp\\HTTPS\\@{var}[1].jpg
+    \    run keyword and continue on failure    location should contain    https
+    \    close all browsers

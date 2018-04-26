@@ -1,0 +1,33 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          Keyword_001_Home.txt
+Resource          Keyword_003_Product.txt
+
+*** Keywords ***
+Check CDGS product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
+    Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}
+    close all browsers
+
+Check CAD product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CAD}
+    Check promo price on product_dropdown list_CAD    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCAD}
+    close all browsers
+
+Check CDTS product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
+    Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}
+    close all browsers
+
+Check CDHS product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDHS}
+    Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDHS}
+    close all browsers

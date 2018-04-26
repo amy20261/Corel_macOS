@@ -1,0 +1,35 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+
+*** Test Cases ***
+Condensed
+    ${contents}=    Get File    ${cart_C}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2 min    1 sec    open browser    @{var}[6]&language=@{var}[4]&currency=@{var}[5]    browser=ff
+    \    Wait Until Keyword Succeeds    2 min    1 sec    Go to    @{var}[6]&language=@{var}[4]&currency=@{var}[5]
+    \    Maximize Browser Window
+    \    sleep    1
+    \    Remove file    c:\\temp\\cart_C\\@{var}[1]_@{var}[2]_@{var}[3]_@{var}[4]_@{var}[5].jpg
+    \    capture page screenshot    c:\\temp\\cart_C\\@{var}[1]_@{var}[2]_@{var}[3]_@{var}[4]_@{var}[5].jpg
+    \    close all browsers
+
+longform
+    ${contents}=    Get File    ${cart_L}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2 min    1 sec    open browser    @{var}[6]&language=@{var}[4]&currency=@{var}[5]    browser=ff
+    \    Wait Until Keyword Succeeds    2 min    1 sec    Go to    @{var}[6]&language=@{var}[4]&currency=@{var}[5]
+    \    Maximize Browser Window
+    \    sleep    1
+    \    Remove file    c:\\temp\\cart_L\\@{var}[1]_@{var}[2]_@{var}[3]_@{var}[4]_@{var}[5].jpg
+    \    capture page screenshot    c:\\temp\\cart_L\\@{var}[1]_@{var}[2]_@{var}[3]_@{var}[4]_@{var}[5].jpg
+    \    close all browsers

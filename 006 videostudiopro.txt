@@ -1,0 +1,74 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          Global_Keyword/Keyword_001_Home.txt
+Resource          Global_Keyword/Keyword_000_Verification.txt
+Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          Global_Keyword/Keyword_060_videostudiopro.txt
+Variables         Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page
+    ${contents}=    Get File    ${VSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Special Offer Page
+    ${contents}=    Get File    ${VSP_Sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify link on Sp page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+
+Check price_VSU product page
+    ${contents}=    Get File    ${VSU_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSU product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_VSP product page
+    ${contents}=    Get File    ${VSP_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSP product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
+    ...    ${SpOffer3}    ${SpOffer4}
+    click HeroBanner
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    Click MainFeature
+    run keyword and continue on failure    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    run keyword and continue on failure    Verify URL Contain_blank    ${Highlight 1}
+    Click Highlight 2
+    run keyword and continue on failure    Verify URL Contain_blank    ${Highlight 2}
+    close all browsers
+
+verify link on Sp page
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    #Click Special Offers Hero
+    #run keyword and continue on failure    Verify URL Contain_blank    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 4}
+    close all browsers

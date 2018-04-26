@@ -1,0 +1,8 @@
+*** Settings ***
+Library            Selenium2Library
+
+*** Keywords ***
+Open Browser to Cart
+     [Arguments]     ${SKU}=ESDCDGS2017AM     ${Currencies}=USD     ${LAN}=en     ${Del}=US
+     open browser     https://store.corel.com/1103/purl-${SKU}?currencies=${currencies}&languages=${LAN}&deliveryCountryId=${Del}
+     Maximize Browser Window

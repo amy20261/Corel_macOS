@@ -1,0 +1,73 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+Open Browser to Home Page
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    1 sec    Go to    http://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+
+Click HeroBanner
+    ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="promo-hero-banner"]@style
+    run keyword if    '${promo-hero-banner}'=='display: inline-block;'    click image    //img[@data-promo-image='heroBanner']
+    ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
+
+Click MainFeature
+    click image    //img[@data-promo-image='mainFeature']
+
+Click Highlight 1
+    click element    //div[contains(@class,'highlight highlight-1 col-xs-3')]
+
+Click Highlight 2
+    click element    //div[contains(@class,'highlight highlight-2 col-xs-3')]
+
+Click Sp. Offer 1
+    click element    //div[@class="spoff spoff-1 col-xs-3"]//div[@class="spoff-img col-xs-5"]
+
+Click Sp. Offer 2
+    click element    //div[@class="spoff spoff-2 col-xs-3"]//div[@class="spoff-img col-xs-5"]
+
+Click Sp. Offer 3
+    click element    //div[@class="spoff spoff-3 col-xs-3"]//div[@class="spoff-img col-xs-5"]
+    #click element    //div[@class="spoff spoff-3 col-xs-3 spoff-gallery"]//div[@class="spoff-img col-xs-5"]
+
+Click Sp. Offer 3_wacom
+    click element    //div[@class="spoff spoff-3 col-xs-3 spoff-wacom-header"]//div[@class="spoff-img col-xs-5"]
+
+Click Sp. Offer 3_gallery
+    click element    //div[@class="spoff spoff-3 col-xs-3 spoff-gallery"]//div[@class="spoff-img col-xs-5"]
+
+Click Sp. Offer 4_Gallery
+    click element    //div[@class="spoff spoff-4 col-xs-3 display-en"]//div[@class="spoff-img col-xs-5"]
+
+Click Sp. Offer 4
+    click element    //div[@class="spoff spoff-4 col-xs-3"]//div[@class="spoff-img col-xs-5"]
+
+Open Browser to Home Page_HTTPS
+    [Arguments]    ${env}=dev    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    2
+
+Open Browser to Home Page_HTTPS_PROD
+    [Arguments]    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://www.${microsite}.com/${lan}/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
+    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://www.${microsite}.com/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    7s
+
+Click HeroBanner_corel_IT
+    ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="promo-hero-banner"]@style
+    run keyword if    '${promo-hero-banner}'=='display: block;'    click image    //html/body/div[4]/div[1]/div[2]/a/img
+    ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
+
+Click Sp. Offer 4_ASP
+    click element    //div[@class="spoff spoff-1 col-xs-3"]//div[@class="spoff-img col-xs-5"]
+
+Click HeroBanner_ASP
+    ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="home-promo-banner"]@style
+    run keyword if    '${promo-hero-banner}'=='display: inline-block;'    click image    //img[@data-promo-image='heroBanner']
+    ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]

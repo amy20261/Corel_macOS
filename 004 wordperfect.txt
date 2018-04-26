@@ -1,0 +1,113 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          Global_Keyword/Keyword_000_Verification.txt
+Resource          Global_Keyword/Keyword_001_Home.txt
+Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          Global_Keyword/Keyword_040_wordperfect.txt
+Variables         Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
+    \    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Special Offer Page
+    ${contents}=    Get File    ${WPO_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
+    \    verify link on special offer page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+
+Check price_WPO std product page
+    ${contents}=    Get File    ${Wstd_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check WPO std product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_WPO pro product page
+    ${contents}=    Get File    ${Wpro_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check WPO pro product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_WPO HS product page
+    ${contents}=    Get File    ${WHS_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check WPO HS product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PDF product page
+    ${contents}=    Get File    ${PDF_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PDF product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+HTTPS_screenshot
+    ${contents}=    Get File    ${HTTPS_WPO}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    Split String    ${line}    :
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2    3    open browser    ${line}
+    \    Wait Until Keyword Succeeds    2    3    go to    ${line}
+    \    Maximize Browser Window
+    \    sleep    3
+    \    remove file    c:\\temp\\HTTPS\\${line}.jpg
+    \    capture page screenshot    c:\\temp\\HTTPS\\@{var}[1].jpg
+    \    run keyword and continue on failure    location should contain    https
+    \    close all browsers
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
+    ...    ${SpOffer3}    ${SpOffer4}
+    click HeroBanner
+    Verify URL Contain    ${Hero}
+    Click MainFeature
+    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    Verify URL Contain    ${Highlight 1}
+    Click Highlight 2
+    Verify URL Contain    ${Highlight 2}
+    Click Sp. Offer 1
+    Verify URL Contain    ${SpOffer1}
+    Click Sp. Offer 2
+    Verify URL Contain    ${SpOffer2}
+    Click Sp. Offer 3
+    Verify URL Contain    ${SpOffer3}
+    Click Sp. Offer 4
+    Verify URL Contain    ${SpOffer4}
+    close all browsers
+
+verify link on special offer page
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    #Click Special Offers Hero
+    #Verify URL Contain_blank    ${Special Offers Hero}
+    Click Prod 1
+    Verify URL Contain    ${Prod 1}
+    Click Prod 2
+    Verify URL Contain    ${Prod 2}
+    Click Prod 3
+    Verify URL Contain    ${Prod 3}
+    Click Prod 4
+    Verify URL Contain    ${Prod 4}
+    close all browsers

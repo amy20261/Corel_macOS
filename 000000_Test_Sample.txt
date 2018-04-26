@@ -1,0 +1,150 @@
+*** Settings ***
+Library            Selenium2Library
+Library            Screenshot     c:/temp
+Library            ExcelLibrary
+
+*** Variables ***
+@{env}             dev     stg
+@{lan}             en     de     fr     ja     it     nl     br
+@{currency}        en-US     en-CA     en-GB     en-AU     en-NZ     en-IE     en-RW
+...                de-DE     fr-FR     ja-JP     it-IT     nl-NL     pt-BR
+@{page}            all-products     special-offers     free-trials     volume-licensing     volume-licensing/business     volume-licensing/education     support
+...                product/plugins     business     product/brushes     learn
+
+*** Test Cases ***
+Check Price on Cart
+     Go to cart     ESDCDHSX8AM     EUR     de     DE
+     Page Should Contain     CorelDRAW Home & Student Suite X8
+     input text     //input[@id='cbp_ID0EBABCBEAAABACBAAOA_ID0EBKNA']     1
+     sleep     5
+     element text should be     //span[@id='cbp_ID0EBKNA_ID0EAABAEAAABACBAAOA']     99,95 €     Reg price is not correct!
+     element text should be     //span[@id='cbp_ID0EBKNA_ID0EAAACAEAAABACBAAOA']     96,75 €     Sale \ price is not correct!
+     close all browsers
+
+Check Corel_Home_ Link
+     #Check HomeLink_Corel     dev     en     en-US
+     #Check HomeLink_Corel     dev     en     en-CA
+     #Check HomeLink_Corel     dev     en     en-GB
+     #Check HomeLink_Corel     dev     en     en-AU
+     #Check HomeLink_Corel     dev     en     en-NZ
+     #Check HomeLink_Corel     dev     en     en-IE
+     #Check HomeLink_Corel     dev     en     en-RW
+     #Check HomeLink_Corel     dev     de     de-DE
+     Check HomeLink_Corel     dev     fr     fr-FR
+     Check HomeLink_Corel     dev     ja     ja-JP
+     Check HomeLink_Corel     dev     it     it-IT
+     Check HomeLink_Corel     dev     nl     nl-NL
+     Check HomeLink_Corel     dev     br     pt-BR
+
+Check Corel_SpOffer_ Link
+     Open site     dev     corel     en     en-US
+     Maximize Browser Window
+     Go to page     dev     corel     en     en-US     special-offers
+     sleep     3
+     Click spoffHero 1
+     verify link     products/paintshop-pro/ultimate
+     Click spoffSw1
+     verify link     videostudio/pro
+     Click spoffSw2
+     verify link     product/painter
+     close all browsers
+
+Check ProductPage_painter
+     Open site     dev     painterartist     en     en-US
+     Go to page     dev     painterartist     en     en-US     product/painter
+     Element text should be     //p[@data-promo-text='savingsBadge']     Save $70     Saving is not correct.
+     Element text should be     //div[@class='price']/div[@style='display: inline;']/span[@class='priceDisplayStrikethrough']     $429.00     Full reg price is not correct.
+     Element text should be     //div[@class='price']/div[@style='display: inline;']/span[@class='priceDisplayNormal']     $359.00     Full sale price is not correct.
+     select from list by label     //select[@id='top-version-select']     UPGRADE
+     select from list by label     //select[@id='top-method-select']     DOWNLOAD
+     Element text should be     //div[@class='price']/div[@style='display: inline;']/span[@class='priceDisplayStrikethrough']     $229.00     UPG reg price is not correct.
+     Element text should be     //div[@class='price']/div[@style='display: inline;']/span[@class='priceDisplayNormal']     $189.00     UPG sale price is not correct.
+     select from list by label     //select[@id='top-version-select']     FULL
+     select from list by label     //select[@id='top-method-select']     DOWNLOAD
+     Click element     //p[@data-promo-text='promoMsgDetail']
+     element should contain     //h2[@data-promo-text='promoMsgShort']     Save $70 + get Exclusive Brush Pack FREE (worth $30.99)     LTO is not correct.
+     click button     //div[@id='lto-details']//button[@class='mfp-close']
+     close all browsers
+
+Check FeatureProduct_2_PSU
+     Open site     dev     corel     en     en-US
+     Maximize Browser Window
+     Go to page     dev     corel     en     en-US     special-offers
+     sleep     3
+     element should contain     //h4[@id='offers_product_name_2']     PaintShop Pro X9     #Product name
+     element should contain     //h4[@id='offers_product_name_2']     Ultimate     #product name 2
+     element should contain     //h4[@id='offers_product_name_2']/following-sibling::p[@data-promo-text="promoMsgLong"]     Save 40%     #saving
+     element should contain     //h4[@id='offers_product_name_2']/following-sibling::p[@data-promo-text="promoMsgLong"]     ParticleShop Plugin     #bonus item
+     element should contain     //h4[@id='offers_product_name_2']/following-sibling::p[@data-promo-text="promoMsgLong"]     $39.99     #value add
+     element text should be     //span[@id="dynPrice_Price_3"]//span[@id='old']     $99.99     #FULL_REG_PRICE
+     element text should be     //span[@id="dynPrice_Price_3"]//p[@id='sale']     $59.99     #FULL_SALE_PRICE
+     element text should be     //span[@id="dynPrice_Price_4"]//span[@id='old']     $79.99     #UPG_REG_PRICE
+     element text should be     //span[@id="dynPrice_Price_4"]//p[@id='sale']     $47.99     #UPG_SALE_PRICE
+     close all browsers
+
+*** Keywords ***
+Open site
+     [Arguments]     ${env}=dev     ${microsite}=corel     ${lan}=en     ${currency}=en-US     ${date}=0609
+     open browser     http://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+     sleep     5
+     Maximize Browser Window
+     capture page screenshot     c:\\temp\\${env}_${microsite}\\Home_${currency}.jpg
+
+Go to page
+     [Arguments]     ${env}=dev     ${microsite}=core     ${lan}=en     ${currency}=en-US     ${page}=special-offers     ${date}=0609
+     [Timeout]
+     go to     http://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
+     sleep     5
+     #wait until element is visible     //p[@data-promo-text='promoMsgLong']
+     #wait until element is visible     //img[@data-promo-image='spoffHero1']
+     capture page screenshot     c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
+
+Go to cart
+     [Arguments]     ${SKU}=ESDCDGS2017AM     ${Currencies}=USD     ${LAN}=en     ${Del}=US
+     open browser     https://store.corel.com/1103/purl-${SKU}?currencies=${currencies}&languages=${LAN}&deliveryCountryId=${Del}
+     Maximize Browser Window
+
+verify link
+     [Arguments]     ${name}=painshop-pro/ultimate
+     sleep     3
+     @{titles}=     get window titles
+     select window     title=@{titles}[1]
+     Run Keyword And Continue On Failure     location should contain     ${name}
+     close window
+     select window     title=@{titles}[0]
+
+Click MF
+     click image     //img[@data-promo-image='mainFeature']
+
+Click HL1
+     click element     //div[contains(@class,'highlight highlight-1 col-xs-3')]
+
+Click HL2
+     click element     //div[contains(@class,'highlight highlight-2 col-xs-3')]
+
+Click spoffSw1
+     click image     //img[@data-promo-image='spoffSw1']
+
+Click spoffSw2
+     click image     //img[@data-promo-image='spoffSw2']
+
+Click Hero
+     click image     //img[@data-promo-image='heroBanner']
+
+Click spoffHero1
+     click image     //img[@data-promo-image='spoffHero1']
+
+Check HomeLink_Corel
+     [Arguments]     ${env}=dev     ${lan}=env     ${currency}=en-US
+     Open site     ${env}     corel     ${lan}     ${currency}
+     sleep     3
+     Maximize Browser Window
+     Click Hero
+     verify link     painter
+     Click MF
+     verify link     paintshop-pro/ultimate
+     Click HL1
+     verify link     graphic-design-software
+     Click HL2
+     verify link     videostudio/ultimate
+     close all browsers

@@ -1,0 +1,12 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          Keyword_001_Home.txt
+Resource          Keyword_003_Product.txt
+
+*** Keywords ***
+Check ASP product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Products Page_HTTPS    ${env}    ${wASP}    en    ${currency}    ${ASP}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UASP}
+    close all browsers

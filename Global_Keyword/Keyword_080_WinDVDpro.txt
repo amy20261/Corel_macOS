@@ -1,0 +1,12 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          Keyword_001_Home.txt
+Resource          Keyword_003_Product.txt
+
+*** Keywords ***
+Check WinDVD product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
+    close all browsers
+    open browser to home page_HTTPS    ${env}    ${WinDVD}    en    ${currency}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${WD}
+    close all browsers

@@ -1,0 +1,23 @@
+*** Settings ***
+Library            Selenium2Library
+
+*** Keywords ***
+Verify URL Contain_Blank
+     [Arguments]     ${page}
+     sleep     2
+     Select Window     NEW
+     Run Keyword And Continue On Failure     Location Should Contain     ${page}
+     close window
+     select window     MAIN
+
+Take Screenshot to temp
+     [Arguments]     ${env}=dev     ${microsite}=corel     ${lan}=en     ${currency}=en-US     ${page}=Home
+     Remove file     c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
+     capture page screenshot     c:\\temp\\${env}_${microsite}\\${lan}_${currency}_${page}.jpg
+
+Verify URL Contain
+     [Arguments]     ${page}
+     sleep     2
+     Run Keyword And Continue On Failure     location should contain     ${page}
+     Go back
+     sleep     2

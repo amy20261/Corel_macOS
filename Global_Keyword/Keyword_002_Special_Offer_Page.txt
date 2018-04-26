@@ -1,0 +1,51 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+Open Browser to Special Offer Page
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    1 sec    go to    http://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}
+    Maximize Browser Window
+    sleep    5
+
+Click Special Offers Hero
+    click element    //*[@id="centered-btns1_s0"]
+
+Click Prod 1
+    click element    //*[@id="offers_product_name_1"]
+
+Click Prod 2
+    click element    //*[@id="offers_product_name_2"]
+
+Click Prod 3
+    click element    //*[@id="offers_product_name_3"]
+
+Click Prod 4
+    click element    //*[@id="offers_product_name_4"]
+
+Click Prod 5
+    click element    //*[@id="offers_product_name_5"]
+
+Click Prod 6
+    click element    //*[@id="offers_product_name_6"]
+
+Open Browser to Special Offer Page_HTTPS
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}
+    Maximize Browser Window
+    sleep    5
+
+Open Browser to Special Offer Page_HTTPS_PROD
+    [Arguments]    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://www.${microsite}.com/${lan}/special-offers/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
+    Wait Until Keyword Succeeds    2 min    1 sec    go to    https://www.${microsite}.com/${lan}/special-offers/?currency=${currency}
+    Maximize Browser Window
+    sleep    3
+
+Click Prod 7
+    click element    //*[@id="offers_product_name_7"]
+
+Click Prod 8
+    click element    //*[@id="offers_product_name_8"]

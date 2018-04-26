@@ -1,0 +1,102 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_Product.txt
+
+*** Test Cases ***
+ParticleShop (5-Brush Starter Pack)
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    #Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on ASP page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSP page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    #Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Exclusive Brush Pack
+    ${contents}=    Get File    ${VA_EBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    Exclusive Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Mystic Mountain Brush Pack (Bob Ross)
+    ${contents}=    Get File    ${VA_MBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PTR page    Mystic Mountain Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+NBFX Paint FX
+    ${contents}=    Get File    ${VA_NBFX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSP page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSU page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+*** Keywords ***
+LTO should contain
+    [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
+    #element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
+    click element    //p[@data-promo-text="promoMsgDetail"]
+    wait until element is visible    //div[@id="lto-details"]
+    sleep    5
+    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.jpg
+    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.jpg
+    #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
+    close all browsers
+
+Check VA on CDGS page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDGS}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDGS}    ${currency}    ${worth}
+
+Check VA on ASP page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page    ${env}    ${wASP}    ${Lan}    ${currency}    ${ASP}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${ASP}    ${currency}    ${worth}
+
+Check VA on PSP page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    ${Lan}    ${currency}    ${PSP}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PSP}    ${currency}    ${worth}
+
+Check VA on PSU page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    ${Lan}    ${currency}    ${PSU}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PSU}    ${currency}    ${worth}
+
+Check VA on PTR page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PTR}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PTR}    ${currency}    ${worth}
+
+Check VA on particleshop page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${particleshop}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
+
+Check VA on VSP page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSP}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSP}    ${currency}    ${worth}
+
+Check VA on VSU page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSU}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
