@@ -64,11 +64,11 @@ verify link on home page
     click HeroBanner
     Verify URL Contain    ${Hero}
     Click MainFeature
-    Verify URL Contain    ${MainFeature}
+    Verify URL Contain    ${Main Feature}
     Click Highlight 1
-    Verify URL Contain    ${Highlight1}
+    Verify URL Contain    ${Highlight 1}
     Click Highlight 2
-    Verify URL Contain    ${Highlight2}
+    Verify URL Contain    ${Highlight 2}
     Click Sp. Offer 1
     Verify URL Contain    ${SpOffer1}
     Click Sp. Offer 2
@@ -85,11 +85,11 @@ verify link on home page_US
     click HeroBanner
     Verify URL Contain    ${Hero}
     Click MainFeature
-    Verify URL Contain    ${MainFeature}
+    Verify URL Contain    ${Main Feature}
     Click Highlight 1
-    Verify URL Contain    ${Highlight1}
+    Verify URL Contain    ${Highlight 1}
     Click Highlight 2
-    Verify URL Contain    ${Highlight2}
+    Verify URL Contain    ${Highlight 2}
     Click Sp. Offer 1
     Verify URL Contain    ${SpOffer1}
     Click Sp. Offer 2
@@ -120,11 +120,11 @@ verify link on home page_de
     click HeroBanner
     Verify URL Contain    ${Hero}
     Click MainFeature
-    Verify URL Contain    ${MainFeature}
+    Verify URL Contain    ${Main Feature}
     Click Highlight 1
-    Verify URL Contain    ${Highlight1}
+    Verify URL Contain    ${Highlight 1}
     Click Highlight 2
-    Verify URL Contain    ${Highlight2}
+    Verify URL Contain    ${Highlight 2}
     Click Sp. Offer 1
     Verify URL Contain    ${SpOffer1}
     Click Sp. Offer 2

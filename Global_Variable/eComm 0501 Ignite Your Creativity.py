@@ -74,7 +74,7 @@ VSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_VSP.csv
 
 
 #promo price on product page
-CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS05.csv'
+CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS00.csv'
 CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD00.csv'
 CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS05.csv'
 CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS15.csv'
