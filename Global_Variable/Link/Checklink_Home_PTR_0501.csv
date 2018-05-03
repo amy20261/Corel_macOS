@@ -1,8 +1,6 @@
-﻿painterartist;en;en-US;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;en;en-CA;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;en;en-GB;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;de;de-DE;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;fr;fr-FR;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;it;it-IT;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;nl;nl-NL;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
-painterartist;jp;ja-JP;painter;painter-essentials;particleshop;painter;painter-essentials;particleshop
+﻿painterartist;en;en-US;painter;painter-essentials;particleshop;brushes;painter;masters;wacom;brushes
+painterartist;en;en-CA;painter;painter-essentials;particleshop;brushes;painter;masters;painter/#intro;brushes
+painterartist;en;en-GB;painter;painter-essentials;particleshop;brushes;painter;masters;painter/#intro;brushes
+painterartist;de;de-DE;painter;painter-essentials;particleshop;brushes;painter;masters;painter/#intro;brushes
+painterartist;fr;fr-FR;painter;painter-essentials;particleshop;brushes;painter;masters;painter/#intro;brushes
+painterartist;jp;ja-JP;painter;painter-essentials;particleshop;brushes;painter;masters;painter/#intro;brushes
