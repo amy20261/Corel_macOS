@@ -55,8 +55,8 @@ LTO should contain
     click element    //p[@data-promo-text="promoMsgDetail"]
     wait until element is visible    //div[@id="lto-details"]
     sleep    5
-    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.jpg
-    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.jpg
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
     #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
     close all browsers

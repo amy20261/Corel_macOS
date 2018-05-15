@@ -307,7 +307,7 @@ screenshot_Corel_No spOffer
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home    ${env}    corel    ${lan}    ${currency}
     Open browser to page    ${env}    corel    ${lan}    ${currency}    free-trials
-    #Open browser to page    ${env}    corel    ${lan}    ${currency}    all-products
+    Open browser to page    ${env}    corel    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_coreldraw
@@ -432,63 +432,63 @@ screenshot_DVD
 
 Open browser to home
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${date}=0609
-    remove file    c:\\temp\\${env}_${microsite}\\Home_${currency}.jpg
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\${env}_${microsite}\\Home_${currency}.png
     open browser    https://www.google.com.tw    browser=chrome
     #open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}    browser=ie
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Maximize Browser Window
     sleep    1
-    capture page screenshot    c:\\temp\\${env}_${microsite}\\Home_${currency}.jpg
+    capture page screenshot    c:\\temp\\${env}_${microsite}\\Home_${currency}.png
     close browser
 
 Open browser to page
     [Arguments]    ${env}=dev    ${microsite}=core    ${lan}=en    ${currency}=en-US    ${page}=special-offers    ${date}=0609
     [Timeout]
-    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
+    Run Keyword And Continue On Failure    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.png
     open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}    browser=chrome
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
     sleep    1
-    capture page screenshot    c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
+    capture page screenshot    c:\\temp\\${env}_${microsite}\\${page}_${currency}.png
     close browser
 
 Open browser to home_HTTPS
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${date}=0609
-    remove file    c:\\temp\\${env}_${microsite}\\Home_${currency}.jpg
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\${env}_${microsite}\\Home_${currency}.png
     open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}    browser=chrome
     go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Maximize Browser Window
     sleep    1
-    capture page screenshot    c:\\temp\\${env}_${microsite}\\Home_${currency}.jpg
+    capture page screenshot    c:\\temp\\${env}_${microsite}\\Home_${currency}.png
     close browser
 
 Open browser to page_HTTPS
     [Arguments]    ${env}=dev    ${microsite}=core    ${lan}=en    ${currency}=en-US    ${page}=special-offers    ${date}=0609
     [Timeout]
-    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
+    Run Keyword And Continue On Failure    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.png
     open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}    browser=chrome
     go to    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
     sleep    1
-    capture page screenshot    c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
+    capture page screenshot    c:\\temp\\${env}_${microsite}\\${page}_${currency}.png
     close browser
 
 Open browser to Home_prod
     [Arguments]    ${microsite}=pinnaclesys    ${lan}=en    ${currency}=en-US
-    remove file    c:\\temp\\${microsite}\\Home_${lan}_${currency} .jpg
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\${microsite}\\Home_${lan}_${currency}.png
     Open Browser    https://www.${microsite}.com/${lan}
     go to    https://www.${microsite}.com/${lan}
     Maximize Browser Window
-    capture page screenshot    c:\\temp\\${microsite}\\Home_${lan}_${currency} .jpg
+    capture page screenshot    c:\\temp\\${microsite}\\Home_${lan}_${currency}.png
     close browser
 
 Open browser to Page_prod
     [Arguments]    ${microsite}=pinnaclesys    ${lan}=en    ${currency}=en-US    ${page}=special-offers
-    remove file    c:\\temp\\${microsite}\\Home_${page}_${lan}_${currency} .jpg
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\${microsite}\\Home_${page}_${lan}_${currency}.png
     Open Browser    https://www.${microsite}.com/${lan}/${page}/?currency=${currency}
     go to    https://www.${microsite}.com/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
-    capture page screenshot    c:\\temp\\${microsite}\\Home_${page}_${lan}_${currency} .jpg
+    capture page screenshot    c:\\temp\\${microsite}\\Home_${page}_${lan}_${currency}.png
     close browser
 
 screenshot_Pinnacle

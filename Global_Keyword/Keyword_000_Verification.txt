@@ -1,5 +1,6 @@
 *** Settings ***
 Library           Selenium2Library
+Library           OperatingSystem
 
 *** Keywords ***
 Verify URL Contain_Blank
@@ -12,8 +13,8 @@ Verify URL Contain_Blank
 
 Take Screenshot to temp
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=Home
-    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.jpg
-    capture page screenshot    c:\\temp\\${env}_${microsite}\\${lan}_${currency}_${page}.jpg
+    Run Keyword And Continue On Failure    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.png
+    capture page screenshot    c:\\temp\\${env}_${microsite}\\${lan}_${currency}_${page}.png
 
 Verify URL Contain
     [Arguments]    ${page}
