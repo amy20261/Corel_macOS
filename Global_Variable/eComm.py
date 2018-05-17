@@ -3,7 +3,7 @@
 #https://docs.google.com/a/corel.com/spreadsheets/d/1uke1z4g2D-UDbuoePbx9OGUN4WyebOfkqhSOoyiSFWs/edit?usp=sharing
 
 #env='dev' or 'stg'
-env='stg'
+env='dev'
 
 #micro website
 Corel='corel'
@@ -56,16 +56,16 @@ UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
 
 #link on Home page
-Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_corel_0515.csv'
+Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_corel_0522.csv'
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS_0508.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR_0501.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
-PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP_0515.csv'
-VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
+PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP.csv'
+VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP_0522.csv'
 ASP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
 #link on SpOffer page
-Corel_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_sp_Corel_0515.csv'
+Corel_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_sp_Corel.csv'
 CDGS_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_CDGS.csv'
 PTR_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_PTR.csv'
 WPO_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_WPO.csv'
@@ -86,10 +86,10 @@ Wpro_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOPRO20.csv'
 WHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOHS10.csv'
 PDF_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF20.csv'
 PSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU10.csv'
-PSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP35.csv'
-PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB25.csv'
+PSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP10.csv'
+PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv'
 VSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU10.csv'
-VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP10.csv'
+VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP30.csv'
 ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP20.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 
