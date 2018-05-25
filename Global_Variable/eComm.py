@@ -76,8 +76,8 @@ VSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_VSP.csv
 #promo price on product page
 CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS10.csv'
 CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD10.csv'
-CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS25.csv'
-CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS00.csv'
+CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS15.csv'
+CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS25.csv'
 PTR_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR25.csv'
 PE6_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PE635.csv'
 bruch_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\Particleshop20.csv'
