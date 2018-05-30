@@ -300,22 +300,22 @@ screenshot_Corel
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home    ${env}    corel    ${lan}    ${currency}
     Open browser to page    ${env}    corel    ${lan}    ${currency}    special-offers
-    #Open browser to page    ${env}    corel    ${lan}    ${currency}    free-trials
-    #Open browser to page    ${env}    corel    ${lan}    ${currency}    all-products
+    Open browser to page    ${env}    corel    ${lan}    ${currency}    free-trials
+    Open browser to page    ${env}    corel    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_Corel_No spOffer
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home    ${env}    corel    ${lan}    ${currency}
-    #Open browser to page    ${env}    corel    ${lan}    ${currency}    free-trials
-    #Open browser to page    ${env}    corel    ${lan}    ${currency}    all-products
+    Open browser to page    ${env}    corel    ${lan}    ${currency}    free-trials
+    Open browser to page    ${env}    corel    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_coreldraw
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US    ${CDGS}=product/graphic-design-software
     Open browser to Home_HTTPS    ${env}    coreldraw    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    special-offers
-    #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    free-trials
     #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    licensing
     #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    licensing/business
     #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    licensing/education
@@ -327,7 +327,7 @@ screenshot_coreldraw
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/corel-cad
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/technical-suite
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/home-student
-    #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    all-products
+    Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    all-products
     #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/technical-suite/lattice-3d-studio
     #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/website-creator/#tab1
     #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/designs-app
@@ -341,30 +341,30 @@ screenshot_coreldraw
 screenshot_coreldraw_No spOffer
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US    ${CDGS}=product/graphic-design-software
     Open browser to home_HTTPS    ${env}    coreldraw    ${lan}    ${currency}
-    #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    free-trials
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    ${CDGS}
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/corel-cad
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/technical-suite
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/home-student
-    #Open browser to page_HTTPS    ${env}    corel    ${lan}    ${currency}    all-products
+    Open browser to page_HTTPS    ${env}    corel    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_coreldraw_No H&S
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US    ${CDGS}=product/graphic-design-software
     Open browser to home_HTTPS    ${env}    coreldraw    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    special-offers
-    #Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    free-trials
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    ${CDGS}
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/corel-cad
     Open browser to page_HTTPS    ${env}    coreldraw    ${lan}    ${currency}    product/technical-suite
-    #Open browser to page_HTTPS    ${env}    corel    ${lan}    ${currency}    all-products
+    Open browser to page_HTTPS    ${env}    corel    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_painterartist
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home_HTTPS    ${env}    painterartist    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    special-offers
-    #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    free-trials
     Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    product/painter
     Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    product/painter-essentials
     Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    product/particleshop
@@ -372,7 +372,7 @@ screenshot_painterartist
     #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    product/iphone-photo-app
     #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    product/ipad-photo-app
     #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    product/brushes
-    #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    all-products
+    Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    all-products
     #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    licensing
     #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    licensing/business
     #Open browser to page_HTTPS    ${env}    painterartist    ${lan}    ${currency}    licensing/education
@@ -387,42 +387,42 @@ screenshot_wordperfect
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home_HTTPS    ${env}    wordperfect    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    special-offers
-    #Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    free-trials
     Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    product/office-suite
     Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    product/professional-edition
     Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    product/home-student
     Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    product/pdf-creator
-    #Open browser to page    ${env}    wordperfect    ${lan}    ${currency}    all-products
+    Open browser to page_HTTPS    ${env}    wordperfect    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_PSP
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    special-offers
-    #Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    free-trials
     Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    products/paintshop-pro
     Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    products/paintshop-pro/ultimate
     Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    products/paintshop-pro/standard
     Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    products/photo-video-bundle
-    #Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    products
+    Open browser to page_HTTPS    ${env}    paintshoppro    ${lan}    ${currency}    products
     close all browsers
 
 screenshot_VSP
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    special-offers
-    #Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    free-trials
+    Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    free-trials
     Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    products/videostudio
     Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    products/videostudio/ultimate
     Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    products/videostudio/pro
-    #Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    products
+    Open browser to page_HTTPS    ${env}    videostudiopro    ${lan}    ${currency}    products
     close all browsers
 
 screenshot_ASP
     [Arguments]    ${env}=dev    ${lan}=env    ${currency}=en-US
     Open browser to home_HTTPS    ${env}    aftershotpro    ${lan}    ${currency}
     Open browser to page_HTTPS    ${env}    aftershotpro    ${lan}    ${currency}    products/aftershot/pro
-    #Open browser to page_HTTPS    ${env}    aftershotpro    ${lan}    ${currency}    products
+    Open browser to page_HTTPS    ${env}    aftershotpro    ${lan}    ${currency}    products
     close all browsers
 
 screenshot_DVD
