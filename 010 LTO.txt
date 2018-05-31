@@ -16,7 +16,7 @@ ParticleShop (5-Brush Starter Pack)
     \    #Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    Check VA on ASP page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    Check VA on PSP page    ParticleShop    en    @{var}[1]    @{var}[2]
-    \    #Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 Exclusive Brush Pack

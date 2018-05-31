@@ -3,7 +3,7 @@
 #https://docs.google.com/a/corel.com/spreadsheets/d/1uke1z4g2D-UDbuoePbx9OGUN4WyebOfkqhSOoyiSFWs/edit?usp=sharing
 
 #env='dev' or 'stg'
-env='dev'
+env='stg'
 
 #micro website
 Corel='corel'
@@ -56,7 +56,7 @@ UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
 
 #link on Home page
-Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_corel.csv'
+Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_corel_0601.csv'
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
@@ -65,7 +65,7 @@ VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP
 ASP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
 #link on SpOffer page
-Corel_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_sp_Corel.csv'
+Corel_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_sp_corel.csv'
 CDGS_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_CDGS.csv'
 PTR_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_PTR.csv'
 WPO_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_WPO.csv'

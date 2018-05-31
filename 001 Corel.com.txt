@@ -87,14 +87,14 @@ verify link in special offer page
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 3}
     Click Prod 4
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 4}
-    Click Prod 5
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 5}
-    Click Prod 6
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 6}
-    Click Prod 7
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 7}
-    Click Prod 8
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 8}
+    #Click Prod 5
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 5}
+    #Click Prod 6
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 6}
+    #Click Prod 7
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 7}
+    #Click Prod 8
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 8}
     close all browsers
 
 verify link on home page_de
