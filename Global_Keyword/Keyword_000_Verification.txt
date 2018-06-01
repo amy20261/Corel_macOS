@@ -5,7 +5,7 @@ Library           OperatingSystem
 *** Keywords ***
 Verify URL Contain_Blank
     [Arguments]    ${page}
-    sleep    5
+    sleep    3
     Select Window    NEW
     Run Keyword And Continue On Failure    Location Should Contain    ${page}
     close window
@@ -18,7 +18,7 @@ Take Screenshot to temp
 
 Verify URL Contain
     [Arguments]    ${page}
-    sleep    5
+    sleep    3
     Run Keyword And Continue On Failure    location should contain    ${page}
     Go back
-    sleep    5
+    sleep    3
