@@ -3,7 +3,7 @@
 #https://docs.google.com/a/corel.com/spreadsheets/d/1uke1z4g2D-UDbuoePbx9OGUN4WyebOfkqhSOoyiSFWs/edit?usp=sharing
 
 #env='dev' or 'stg'
-env='stg'
+env='dev'
 
 #micro website
 Corel='corel'
@@ -60,8 +60,8 @@ Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_c
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
-PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP.csv'
-VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
+PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP_0605.csv'
+VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP_0605.csv'
 ASP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
 #link on SpOffer page
@@ -79,18 +79,18 @@ CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD00.csv'
 CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS05.csv'
 CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS10.csv'
 PTR_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR15.csv'
-PE6_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PE640.csv'
+PE6_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PE625.csv'
 bruch_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\Particleshop00.csv'
 Wstd_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOSTD00.csv'
 Wpro_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOPRO00.csv'
 WHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOHS00.csv'
 PDF_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF20.csv'
-PSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU20.csv'
+PSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU40.csv'
 PSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP20.csv'
-PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv'
+PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB25.csv'
 VSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU20.csv'
-VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP20.csv'
-ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP45.csv'
+VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP30.csv'
+ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 
 #VA price file
