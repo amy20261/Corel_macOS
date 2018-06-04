@@ -434,7 +434,7 @@ screenshot_DVD
 Open browser to home
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${date}=0609
     Run Keyword And Continue On Failure    remove file    c:/temp/${env}_${microsite}/Home_${currency}.png
-    open browser    https://www.google.com.tw    browser=chrome
+    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     #open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}    browser=ie
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Maximize Browser Window
@@ -447,7 +447,7 @@ Open browser to page
     [Arguments]    ${env}=dev    ${microsite}=core    ${lan}=en    ${currency}=en-US    ${page}=special-offers    ${date}=0609
     [Timeout]
     Run Keyword And Continue On Failure    Remove file    c:/temp/env}_${microsite}/${page}_${currency}.png
-    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}    browser=chrome
+    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
     sleep    1
@@ -458,7 +458,7 @@ Open browser to page
 Open browser to home_HTTPS
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${date}=0609
     Run Keyword And Continue On Failure    remove file    c:\\temp\\${env}_${microsite}\\Home_${currency}.png
-    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}    browser=chrome
+    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Maximize Browser Window
     sleep    1
@@ -469,7 +469,7 @@ Open browser to page_HTTPS
     [Arguments]    ${env}=dev    ${microsite}=core    ${lan}=en    ${currency}=en-US    ${page}=special-offers    ${date}=0609
     [Timeout]
     Run Keyword And Continue On Failure    Remove file    c:\\temp\\${env}_${microsite}\\${page}_${currency}.png
-    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}    browser=chrome
+    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
     go to    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
     sleep    1
