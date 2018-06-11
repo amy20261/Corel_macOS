@@ -18,7 +18,7 @@ Take Screenshot to temp
 
 Verify URL Contain
     [Arguments]    ${page}
-    sleep    3
+    sleep    4
     Run Keyword And Continue On Failure    location should contain    ${page}
     Go back
-    sleep    3
+    sleep    4
