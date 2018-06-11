@@ -1,8 +1,7 @@
 *** Settings ***
-Library           Selenium2Library
 Library           OperatingSystem
 Variables         Global_Variable/eComm.py
-Library           Screenshot
+Library           Selenium2Library
 
 *** Test Cases ***
 Screenshot_corel_all Lan
@@ -458,7 +457,7 @@ Open browser to page
 Open browser to home_HTTPS
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${date}=0609
     Run Keyword And Continue On Failure    remove file    c:\\temp\\${env}_${microsite}\\Home_${currency}.png
-    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}    firefox
     go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Maximize Browser Window
     sleep    1

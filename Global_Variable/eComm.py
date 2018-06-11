@@ -38,7 +38,7 @@ WinDVD='windvdpro'
 #PID for upgrade product
 UCDGS='ESDCDGS2018AMUG'
 UCAD='ESDCCAD2018MLUG'
-UCDTS='ESDCDTS2017MLUG'
+UCDTS='ESDCDTS2018MLUG'
 UCDHS='ESDCDHS2018MLUG'
 UPTR='ESDPTR2018MLUG'
 UPE='ESDPE6MLUG'
@@ -76,7 +76,7 @@ VSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_VSP.csv
 #promo price on product page
 CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS00.csv'
 CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD00.csv'
-CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS05.csv'
+CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS00.csv'
 CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS10.csv'
 PTR_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR15.csv'
 PE6_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PE625.csv'
