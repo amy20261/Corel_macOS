@@ -7,19 +7,16 @@ Variables         Global_Variable/eComm.py
 Resource          Global_Keyword/Keyword_003_Product.txt
 
 *** Test Cases ***
-ParticleShop (5-Brush Starter Pack)
+002 ParticleShop_CDGS
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    #Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
-    \    Check VA on ASP page    ParticleShop    en    @{var}[1]    @{var}[2]
-    \    Check VA on PSP page    ParticleShop    en    @{var}[1]    @{var}[2]
-    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-Exclusive Brush Pack
+003 Exclusive Brush Pack_particleshop
     ${contents}=    Get File    ${VA_EBrushPack}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -28,7 +25,16 @@ Exclusive Brush Pack
     \    Check VA on particleshop page    Exclusive Brush Pack    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-Mystic Mountain Brush Pack (Bob Ross)
+003 Superhero Brush Pack_particleshop
+    ${contents}=    Get File    ${VA_SHBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    Superhero Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+003 Mystic Mountain Brush Pack (Bob Ross)_PTR
     ${contents}=    Get File    ${VA_MBrushPack}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -37,39 +43,71 @@ Mystic Mountain Brush Pack (Bob Ross)
     \    Check VA on PTR page    Mystic Mountain Brush Pack    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-NBFX Paint FX
+003 Grunge Essentials Brush Pack_PE
+    ${contents}=    Get File    ${VA_GErushPack}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PE page    Grunge Essentials Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+005 ParticleShop_PSP
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSP page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+005 ParticleShop_PSU
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+006 NBFX Paint FX_VSP
     ${contents}=    Get File    ${VA_NBFX}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on VSP page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+006 NBFX Paint FX_VSU
+    ${contents}=    Get File    ${VA_NBFX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
     \    Check VA on VSU page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
+007 ParticleShop_ASP
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on ASP page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
 *** Keywords ***
-LTO should contain
-    [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
-    #element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
-    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
-    click element    //p[@data-promo-text="promoMsgDetail"]
-    wait until element is visible    //div[@id="lto-details"]
-    sleep    5
-    Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
-    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
-    #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
-    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
-    close all browsers
+Check VA on ASP page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Products Page    ${env}    ${wASP}    ${Lan}    ${currency}    ${ASP}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${ASP}    ${currency}    ${worth}
 
 Check VA on CDGS page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDGS}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDGS}    ${currency}    ${worth}
-
-Check VA on ASP page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
-    Open Browser to Products Page    ${env}    ${wASP}    ${Lan}    ${currency}    ${ASP}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${ASP}    ${currency}    ${worth}
 
 Check VA on PSP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
@@ -86,11 +124,6 @@ Check VA on PTR page
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PTR}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PTR}    ${currency}    ${worth}
 
-Check VA on particleshop page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
-    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${particleshop}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
-
 Check VA on VSP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSP}
@@ -100,3 +133,26 @@ Check VA on VSU page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSU}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
+
+Check VA on particleshop page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${particleshop}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
+
+LTO should contain
+    [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
+    #element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
+    click element    //p[@data-promo-text="promoMsgDetail"]
+    wait until element is visible    //div[@id="lto-details"]
+    sleep    5
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
+    close all browsers
+
+Check VA on PE page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PE}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PE}    ${currency}    ${worth}

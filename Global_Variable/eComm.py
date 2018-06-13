@@ -98,6 +98,8 @@ VA_particleshop='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_Particlesh
 VA_EBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_EBrushPack.csv'
 VA_MBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_MBrushPack.csv'
 VA_NBFX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_NBFX.csv'
+VA_GEBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_GEBrushPack.csv'
+VA_SHBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_SHBrushPack.csv'
 
 #HTTPS files
 HTTPS_ASP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'

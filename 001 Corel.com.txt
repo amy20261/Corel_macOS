@@ -37,21 +37,6 @@ Chick Link_Special Offer Page
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     \    ...    @{var}[11]
 
-HTTPS_screenshot
-    ${contents}=    Get File    ${HTTPS_COREL}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    Split String    ${line}    :
-    \    close all browsers
-    \    Wait Until Keyword Succeeds    2    3    open browser    ${line}
-    \    Wait Until Keyword Succeeds    2    3    go to    ${line}
-    \    Maximize Browser Window
-    \    sleep    3
-    \    remove file    c:\\temp\\HTTPS\\${line}.jpg
-    \    capture page screenshot    c:\\temp\\HTTPS\\@{var}[1].jpg
-    \    run keyword and continue on failure    location should contain    https
-    \    close all browsers
-
 *** Keywords ***
 verify link on home page_en
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}

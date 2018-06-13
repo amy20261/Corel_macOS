@@ -61,21 +61,6 @@ Check price_PDF product page
     \    run keyword and continue on failure    Check PDF product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-HTTPS_screenshot
-    ${contents}=    Get File    ${HTTPS_WPO}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    Split String    ${line}    :
-    \    close all browsers
-    \    Wait Until Keyword Succeeds    2    3    open browser    ${line}
-    \    Wait Until Keyword Succeeds    2    3    go to    ${line}
-    \    Maximize Browser Window
-    \    sleep    3
-    \    remove file    c:\\temp\\HTTPS\\${line}.jpg
-    \    capture page screenshot    c:\\temp\\HTTPS\\@{var}[1].jpg
-    \    run keyword and continue on failure    location should contain    https
-    \    close all browsers
-
 *** Keywords ***
 verify link on home page
     [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
