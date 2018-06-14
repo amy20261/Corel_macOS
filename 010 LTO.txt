@@ -44,7 +44,11 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    close all browsers
 
 003 Grunge Essentials Brush Pack_PE
+<<<<<<< HEAD
     ${contents}=    Get File    ${VA_GEBrushPack}
+=======
+    ${contents}=    Get File    ${VA_GEbrushPack}
+>>>>>>> 8bb33ef27965f4893137247055dddf3dff27c39c
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
