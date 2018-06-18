@@ -1,0 +1,35 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+
+*** Test Cases ***
+HTTPS_screenshot_ROXIO_PROD
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\ROXIO\\ROXIO.txt
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    Split String    ${line}    ;
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2    3    open browser    http://www.roxio.com/${line}
+    \    Wait Until Keyword Succeeds    2    3    go to    http://www.roxio.com/${line}
+    \    Maximize Browser Window
+    \    sleep    3
+    \    remove file    c:\\temp\\ROXIO\\${line}.png
+    \    capture page screenshot    c:\\temp\\ROXIO\\${line}.png
+    \    #run keyword and continue on failure    location should contain    https
+    \    close all browsers
+
+HTTPS_screenshot_ROXIO_STG_EN
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\ROXIO\\ROXIO.txt
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    Split String    ${line}    ;
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2    3    open browser    https://stg.www.roxio.public.corel.net/${line}
+    \    Wait Until Keyword Succeeds    2    3    go to    https://stg.www.roxio.public.corel.net/${line}
+    \    Maximize Browser Window
+    \    sleep    3
+    \    remove file    c:\\temp\\ROXIO\\${line}.png
+    \    capture page screenshot    c:\\temp\\ROXIO\\${line}.png
+    \    #run keyword and continue on failure    location should contain    https
+    \    close all browsers
