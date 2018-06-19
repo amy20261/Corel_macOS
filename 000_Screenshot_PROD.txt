@@ -101,10 +101,10 @@ Screenshot_ASP_all Lan
 *** Keywords ***
 screenshot_Corel
     [Arguments]    ${lan}=en    ${currency}=en-US
-    Open browser to home    www.corel.com    ${lan}    ${currency}
-    Open browser to page    www.corel.com    ${lan}    ${currency}    special-offers
-    Open browser to page    www.corel.com    ${lan}    ${currency}    free-trials
-    Open browser to page    www.corel.com    ${lan}    ${currency}    all-products
+    Open browser to home     www.corel.com    ${lan}    ${currency}
+    Open browser to page     www.corel.com    ${lan}    ${currency}    special-offers
+    Open browser to page     www.corel.com    ${lan}    ${currency}    free-trials
+    Open browser to page     www.corel.com    ${lan}    ${currency}    all-products
     close all browsers
 
 screenshot_coreldraw
