@@ -33,3 +33,82 @@ HTTPS_screenshot_ROXIO_STG_EN
     \    capture page screenshot    c:\\temp\\ROXIO\\${line}.png
     \    #run keyword and continue on failure    location should contain    https
     \    close all browsers
+
+Screenshot_ROXIO
+    Screenshot_ROXIO    en    en-US
+    Screenshot_ROXIO    en    en-CA
+    Screenshot_ROXIO    en    en-GB
+    Screenshot_ROXIO    en    en-AU
+    Screenshot_ROXIO    en    en-NZ
+    Screenshot_ROXIO    en    en-ZA
+    Screenshot_ROXIO    en    en-IE
+    Screenshot_ROXIO    en    da-DK
+    Screenshot_ROXIO    en    nb-NO
+    Screenshot_ROXIO    en    pl-PL
+    Screenshot_ROXIO    en    pt-BR
+    Screenshot_ROXIO    en    ru-RU
+    Screenshot_ROXIO    en    zh-TW
+    Screenshot_ROXIO    en    zh-HK
+
+*** Keywords ***
+Open browser to home
+    [Arguments]    ${microsite}=stg.www.roxio.public.corel.net    ${lan}=en    ${currency}=en-US
+    Run Keyword And Continue On Failure    remove file    c:/temp/ROXIO/${microsite}/Home_${currency}.png
+    open browser    https://${microsite}/${lan}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/ROXIO/${microsite}/
+    capture page screenshot    Home_${currency}.png
+    close browser
+
+Open browser to page
+    [Arguments]    ${microsite}=stg.www.roxio.public.corel.net    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    [Timeout]
+    Run Keyword And Continue On Failure    Remove file    c:/temp/prod/microsite}/${page}_${currency}.png
+    open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/prod/${microsite}/
+    capture page screenshot    ${page}_${currency}.png
+    close browser
+
+Screenshot_ROXIO
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to home    stg.www.roxio.public.corel.net    ${lan}    ${currency}
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/cddvdburning
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/photo
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/video
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/backup
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/dvdplayersdecoders
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/mac
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    game-capture/hd-pro
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    company/vlp
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/suite/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/titanium/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/pro/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-burning/standard/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/mydvd/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-video-copy-and-convert/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/recordnow/premier/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/decoder/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/vista/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/standard/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/mac/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-lp-to-mp3/standard/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/standard/purchase-upgrade.html
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/authorscript-video-bd/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/authorscript-video-sd/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/authorscript-video-rt/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/authorscript-storage/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/authorscript-audio/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/authorscript-sdks/authorscript-audio/
+    Openbrowser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/developer-tools/cineplayer-sdks/
