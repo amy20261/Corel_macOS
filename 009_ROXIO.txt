@@ -33,3 +33,65 @@ HTTPS_screenshot_ROXIO_STG_EN
     \    capture page screenshot    c:\\temp\\ROXIO\\${line}.png
     \    #run keyword and continue on failure    location should contain    https
     \    close all browsers
+
+Screenshot_ROXIO_all Lan
+    [Timeout]
+    screenshot_ROXIO    en    en-US
+    screenshot_ROXIO    en    en-CA
+    screenshot_ROXIO    en    en-GB
+    screenshot_ROXIO    en    en-AU
+    screenshot_ROXIO    en    en-NZ
+    screenshot_ROXIO    en    en-ZA
+    screenshot_ROXIO    en    en-IE
+    screenshot_ROXIO    en    da-DK
+    screenshot_ROXIO    en    nb-NO
+    screenshot_ROXIO    en    pl-PL
+    screenshot_ROXIO    en    pt-BR
+    screenshot_ROXIO    en    ru-RU
+    screenshot_ROXIO    en    zh-TW
+    screenshot_ROXIO    en    zh-HK
+    screenshot_ROXIO    de    de-DE
+    screenshot_ROXIO    de    de-LI
+    screenshot_ROXIO    fr    fr-FR
+    screenshot_ROXIO    it    it-IT
+    screenshot_ROXIO    nl    nl-NL
+    screenshot_ROXIO    se    se-SE
+    screenshot_ROXIO    jp    ja-JP
+    screenshot_ROXIO    es    es-MX
+    screenshot_ROXIO    es    es-ES
+
+*** Keywords ***
+Open browser to home
+    [Arguments]    ${microsite}=dev.www.corel.public.corel.net    ${lan}=en    ${currency}=en-US
+    Run Keyword And Continue On Failure    remove file    c:/temp/ROXIO/stg/${microsite}/Home_${currency}.png
+    open browser    https://${microsite}/${lan}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/ROXIO/stg/${microsite}/
+    capture page screenshot    Home_${currency}.png
+    close browser
+
+Open browser to page
+    [Arguments]    ${microsite}=dev.www.corel.public.corel.net    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    [Timeout]
+    Run Keyword And Continue On Failure    Remove file    c:/temp/ROXIO/stg/microsite}/${page}_${currency}.png
+    open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/ROXIO/stg/${microsite}/
+    capture page screenshot    ${page}_${currency}.png
+    close browser
+
+screenshot_ROXIO
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    stg.www.roxio.public.corel.net    ${lan}    ${currency}
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/cddvdburning
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/photo
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/video
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/backup
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/dvdplayersdecoders
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/mac
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro
+    close all browsers
