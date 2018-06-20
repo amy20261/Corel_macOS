@@ -94,4 +94,7 @@ screenshot_ROXIO
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/dvdplayersdecoders
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/mac
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade_center/emc
     close all browsers
