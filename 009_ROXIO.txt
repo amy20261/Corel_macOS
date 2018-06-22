@@ -97,4 +97,21 @@ screenshot_ROXIO
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade_center/emc
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/mac/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-lp-to-mp3/standard/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-burning/standard/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    easy-vhs-to-dvd/standard/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/recordnow/premier/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/vista/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/decoder/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/plugin/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/suite/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/toast/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/titanium/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-video-copy-and-convert/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/creator/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    game-capture/hd-pro/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/pro/
     close all browsers
