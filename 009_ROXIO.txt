@@ -36,29 +36,29 @@ HTTPS_screenshot_ROXIO_STG_EN
 
 Screenshot_ROXIO_all Lan
     [Timeout]
-    screenshot_ROXIO    en    en-US
-    screenshot_ROXIO    en    en-CA
-    screenshot_ROXIO    en    en-GB
-    screenshot_ROXIO    en    en-AU
-    screenshot_ROXIO    en    en-NZ
-    screenshot_ROXIO    en    en-ZA
-    screenshot_ROXIO    en    en-IE
-    screenshot_ROXIO    en    da-DK
-    screenshot_ROXIO    en    nb-NO
-    screenshot_ROXIO    en    pl-PL
-    screenshot_ROXIO    en    pt-BR
-    screenshot_ROXIO    en    ru-RU
-    screenshot_ROXIO    en    zh-TW
-    screenshot_ROXIO    en    zh-HK
-    screenshot_ROXIO    de    de-DE
-    screenshot_ROXIO    de    de-LI
-    screenshot_ROXIO    fr    fr-FR
-    screenshot_ROXIO    it    it-IT
-    screenshot_ROXIO    nl    nl-NL
-    screenshot_ROXIO    se    se-SE
-    screenshot_ROXIO    jp    ja-JP
-    screenshot_ROXIO    es    es-MX
-    screenshot_ROXIO    es    es-ES
+    #screenshot_ROXIO    en    en-US
+    #screenshot_ROXIO    en    en-CA
+    #screenshot_ROXIO    en    en-GB
+    #screenshot_ROXIO    en    en-AU
+    #screenshot_ROXIO    en    en-NZ
+    #screenshot_ROXIO    en    en-ZA
+    #screenshot_ROXIO    en    en-IE
+    #screenshot_ROXIO    en    da-DK
+    #screenshot_ROXIO    en    nb-NO
+    #screenshot_ROXIO    en    pl-PL
+    #screenshot_ROXIO    en    pt-BR
+    #screenshot_ROXIO    en    ru-RU
+    #screenshot_ROXIO    en    zh-TW
+    #screenshot_ROXIO    en    zh-HK
+    #screenshot_ROXIO    de    de-DE
+    #screenshot_ROXIO    de    de-LI
+    #screenshot_ROXIO    fr    fr-FR
+    #screenshot_ROXIO    it    it-IT
+    #screenshot_ROXIO    nl    nl-NL
+    screenshot_ROXIO    sv    se-SE
+    #screenshot_ROXIO    jp    ja-JP
+    #screenshot_ROXIO    es    es-MX
+    #screenshot_ROXIO    es    es-ES
 
 *** Keywords ***
 Open browser to home
