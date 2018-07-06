@@ -1,0 +1,56 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+
+*** Test Cases ***
+Screenshot_PhotoMirage_all Lan
+    [Timeout]
+    screenshot_PhotoMirage_dev    en    en-US
+    screenshot_PhotoMirage_dev    en    en-CA
+    screenshot_PhotoMirage_dev    en    en-GB
+    screenshot_PhotoMirage_dev    en    en-AU
+    screenshot_PhotoMirage_dev    en    en-NZ
+    screenshot_PhotoMirage_dev    en    en-IE
+    screenshot_PhotoMirage_dev    en    nb-NO
+    screenshot_PhotoMirage_dev    en    pl-PL
+    screenshot_PhotoMirage_dev    en    ru-RU
+    screenshot_PhotoMirage_dev    en    de-DE
+    screenshot_PhotoMirage_dev    en    fr-FR
+    screenshot_PhotoMirage_dev    en    it-IT
+    screenshot_PhotoMirage_dev    en    nl-NL
+    screenshot_PhotoMirage_dev    en    se-SE
+    screenshot_PhotoMirage_dev    en    ja-JP
+    screenshot_PhotoMirage_dev    en    es-MX
+    screenshot_PhotoMirage_dev    en    es-ES
+
+*** Keywords ***
+Open browser to home
+    [Arguments]    ${microsite}=stg.www.roxio.public.corel.net    ${lan}=en    ${currency}=en-US
+    Run Keyword And Continue On Failure    remove file    c:/temp/PhotoMirage/${microsite}/Home_${currency}.png
+    open browser    https://${microsite}/${lan}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/PhotoMirage/${microsite}/
+    capture page screenshot    Home_${currency}.png
+    close browser
+
+Open browser to page
+    [Arguments]    ${microsite}=stg.www.roxio.public.corel.net    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    [Timeout]
+    Run Keyword And Continue On Failure    Remove file    c:/temp/PhotoMirage/${microsite}/${page}_${currency}.png
+    open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/PhotoMirage/${microsite}/
+    capture page screenshot    ${page}_${currency}.png
+    close browser
+
+screenshot_PhotoMirage_dev
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    dev.www.photomirage.public.corel.net    ${lan}    ${currency}
+    Open browser to page    dev.www.photomirage.public.corel.net    ${lan}    ${currency}    features
+    Open browser to page    dev.www.photomirage.public.corel.net    ${lan}    ${currency}    gallery
+    Open browser to page    dev.www.photomirage.public.corel.net    ${lan}    ${currency}    learn-support
