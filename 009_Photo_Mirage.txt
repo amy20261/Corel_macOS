@@ -24,6 +24,26 @@ Screenshot_PhotoMirage_all Lan
     screenshot_PhotoMirage_dev    en    es-MX
     screenshot_PhotoMirage_dev    en    es-ES
 
+Screenshot_PhotoMirage_all Lan_STG
+    [Timeout]
+    screenshot_PhotoMirage_stg    en    en-US
+    screenshot_PhotoMirage_stg    en    en-CA
+    screenshot_PhotoMirage_stg    en    en-GB
+    screenshot_PhotoMirage_stg    en    en-AU
+    screenshot_PhotoMirage_stg    en    en-NZ
+    screenshot_PhotoMirage_stg    en    en-IE
+    screenshot_PhotoMirage_stg    en    nb-NO
+    screenshot_PhotoMirage_stg    en    pl-PL
+    screenshot_PhotoMirage_stg    en    ru-RU
+    screenshot_PhotoMirage_stg    en    de-DE
+    screenshot_PhotoMirage_stg    en    fr-FR
+    screenshot_PhotoMirage_stg    en    it-IT
+    screenshot_PhotoMirage_stg    en    nl-NL
+    screenshot_PhotoMirage_stg    en    se-SE
+    screenshot_PhotoMirage_stg    en    ja-JP
+    screenshot_PhotoMirage_stg    en    es-MX
+    screenshot_PhotoMirage_stg    en    es-ES
+
 *** Keywords ***
 Open browser to home
     [Arguments]    ${microsite}=stg.www.roxio.public.corel.net    ${lan}=en    ${currency}=en-US
@@ -54,3 +74,10 @@ screenshot_PhotoMirage_dev
     Open browser to page    dev.www.photomirage.public.corel.net    ${lan}    ${currency}    features
     Open browser to page    dev.www.photomirage.public.corel.net    ${lan}    ${currency}    gallery
     Open browser to page    dev.www.photomirage.public.corel.net    ${lan}    ${currency}    learn-support
+
+screenshot_PhotoMirage_STG
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    stg.www.photomirage.public.corel.net    ${lan}    ${currency}
+    Open browser to page    stg.www.photomirage.public.corel.net    ${lan}    ${currency}    features
+    Open browser to page    stg.www.photomirage.public.corel.net    ${lan}    ${currency}    gallery
+    Open browser to page    stg.www.photomirage.public.corel.net    ${lan}    ${currency}    learn-support
