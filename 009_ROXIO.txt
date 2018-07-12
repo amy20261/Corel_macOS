@@ -34,31 +34,57 @@ HTTPS_screenshot_ROXIO_STG_EN
     \    #run keyword and continue on failure    location should contain    https
     \    close all browsers
 
-Screenshot_ROXIO_all Lan
+Screenshot_ROXIO_all Lan_STG
     [Timeout]
-    screenshot_ROXIO    en    en-US
-    screenshot_ROXIO    en    en-CA
-    screenshot_ROXIO    en    en-GB
-    screenshot_ROXIO    en    en-AU
-    screenshot_ROXIO    en    en-NZ
-    screenshot_ROXIO    en    en-ZA
-    screenshot_ROXIO    en    en-IE
-    screenshot_ROXIO    en    da-DK
-    screenshot_ROXIO    en    nb-NO
-    screenshot_ROXIO    en    pl-PL
-    screenshot_ROXIO    en    pt-BR
-    screenshot_ROXIO    en    ru-RU
-    screenshot_ROXIO    en    zh-TW
-    screenshot_ROXIO    en    zh-HK
-    screenshot_ROXIO    de    de-DE
-    screenshot_ROXIO    de    de-LI
-    screenshot_ROXIO    fr    fr-FR
-    screenshot_ROXIO    it    it-IT
-    screenshot_ROXIO    nl    nl-NL
-    screenshot_ROXIO    se    se-SE
-    screenshot_ROXIO    jp    ja-JP
-    screenshot_ROXIO    es    es-MX
-    screenshot_ROXIO    es    es-ES
+    screenshot_ROXIO_STG    en    en-US
+    screenshot_ROXIO_STG    en    en-CA
+    screenshot_ROXIO_STG    en    en-GB
+    screenshot_ROXIO_STG    en    en-AU
+    screenshot_ROXIO_STG    en    en-NZ
+    screenshot_ROXIO_STG    en    en-ZA
+    screenshot_ROXIO_STG    en    en-IE
+    screenshot_ROXIO_STG    en    da-DK
+    screenshot_ROXIO_STG    en    nb-NO
+    screenshot_ROXIO_STG    en    pl-PL
+    screenshot_ROXIO_STG    en    pt-BR
+    screenshot_ROXIO_STG    en    ru-RU
+    screenshot_ROXIO_STG    en    zh-TW
+    screenshot_ROXIO_STG    en    zh-HK
+    screenshot_ROXIO_STG    de    de-DE
+    screenshot_ROXIO_STG    de    de-LI
+    screenshot_ROXIO_STG    fr    fr-FR
+    screenshot_ROXIO_STG    it    it-IT
+    screenshot_ROXIO_STG    nl    nl-NL
+    screenshot_ROXIO_STG    se    se-SE
+    screenshot_ROXIO_STG    jp    ja-JP
+    screenshot_ROXIO_STG    es    es-MX
+    screenshot_ROXIO_STG    es    es-ES
+
+Screenshot_ROXIO_all Lan_PRO
+    [Timeout]
+    screenshot_ROXIO_PRO    en    en-US
+    screenshot_ROXIO_PRO    en    en-CA
+    screenshot_ROXIO_PRO    en    en-GB
+    screenshot_ROXIO_PRO    en    en-AU
+    screenshot_ROXIO_PRO    en    en-NZ
+    screenshot_ROXIO_PRO    en    en-ZA
+    screenshot_ROXIO_PRO    en    en-IE
+    screenshot_ROXIO_PRO    en    da-DK
+    screenshot_ROXIO_PRO    en    nb-NO
+    screenshot_ROXIO_PRO    en    pl-PL
+    screenshot_ROXIO_PRO    en    pt-BR
+    screenshot_ROXIO_PRO    en    ru-RU
+    screenshot_ROXIO_PRO    en    zh-TW
+    screenshot_ROXIO_PRO    en    zh-HK
+    screenshot_ROXIO_PRO    de    de-DE
+    screenshot_ROXIO_PRO    de    de-LI
+    screenshot_ROXIO_PRO    fr    fr-FR
+    screenshot_ROXIO_PRO    it    it-IT
+    screenshot_ROXIO_PRO    nl    nl-NL
+    screenshot_ROXIO_PRO    se    se-SE
+    screenshot_ROXIO_PRO    jp    ja-JP
+    screenshot_ROXIO_PRO    es    es-MX
+    screenshot_ROXIO_PRO    es    es-ES
 
 *** Keywords ***
 Open browser to home
@@ -84,7 +110,7 @@ Open browser to page
     capture page screenshot    ${page}_${currency}.png
     close browser
 
-screenshot_ROXIO
+screenshot_ROXIO_STG
     [Arguments]    ${lan}=en    ${currency}=en-US
     Open browser to Home    stg.www.roxio.public.corel.net    ${lan}    ${currency}
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/cddvdburning
@@ -114,4 +140,36 @@ screenshot_ROXIO
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    game-capture/hd-pro/
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro/
     Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/pro/
+    close all browsers
+
+screenshot_ROXIO_PRO
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    www.roxio.com    ${lan}    ${currency}
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    store/cddvdburning
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    store/photo
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    store/video
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    store/backup
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    store/dvdplayersdecoders
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    store/mac
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/game-capture/hd-pro
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/toast
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/creator/pro
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    upgrade_center/emc
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/easy-vhs-to-dvd/mac/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/easy-lp-to-mp3/standard/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/easy-burning/standard/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    easy-vhs-to-dvd/standard/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/recordnow/premier/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/cineplayer/vista/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/cineplayer/decoder/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/creator/plugin/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/creator/suite/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    upgrade-center/toast/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/toast/titanium/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/easy-video-copy-and-convert/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    upgrade-center/creator/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/creator/pro/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    game-capture/hd-pro/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/game-capture/hd-pro/
+    Open browser to page    www.roxio.com    ${lan}    ${currency}    products/toast/pro/
     close all browsers
