@@ -60,7 +60,7 @@ Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_c
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
-PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP_0724.csv'
+PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP_0717.csv'
 VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
 ASP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
@@ -74,7 +74,7 @@ VSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_VSP.csv
 
 
 #promo price on product page
-CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS05.csv'
+CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS10.csv'
 CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD00.csv'
 CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS00.csv'
 CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS10.csv'
