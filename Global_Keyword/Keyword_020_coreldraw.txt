@@ -31,3 +31,10 @@ Check CDHS product page
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDHS}
     Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDHS}
     close all browsers
+
+Check CDGS product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
+    Check promo price on product_radio_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}
+    close all browsers

@@ -16,7 +16,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-003 Exclusive Brush Pack_particleshop
+#003 Exclusive Brush Pack_particleshop
     ${contents}=    Get File    ${VA_EBrushPack}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
