@@ -33,7 +33,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    Check VA on particleshop page    Superhero Brush Pack    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-003 Mystic Mountain Brush Pack (Bob Ross)_PTR
+#003 Mystic Mountain Brush Pack (Bob Ross)_PTR
     ${contents}=    Get File    ${VA_MBrushPack}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -100,7 +100,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
 006 TRAVEL_VSP
     ${contents}=    Get File    ${VA_TRAVEL}
     @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
+    :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on VSP page    Travel FX collection    en    @{var}[1]    @{var}[2]
@@ -109,7 +109,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
 006 TRAVEL_VSU
     ${contents}=    Get File    ${VA_TRAVEL}
     @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
+    :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on VSU page    Travel FX collection    en    @{var}[1]    @{var}[2]
