@@ -16,7 +16,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-003 Exclusive Brush Pack_particleshop
+X003 Exclusive Brush Pack_particleshop
     ${contents}=    Get File    ${VA_EBrushPack}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -34,7 +34,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    Check VA on particleshop page    Superhero Brush Pack    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-003 Mystic Mountain Brush Pack (Bob Ross)_PTR
+X003 Mystic Mountain Brush Pack (Bob Ross)_PTR
     ${contents}=    Get File    ${VA_MBrushPack}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -71,7 +71,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-006 NBFX Paint FX_VSP
+X006 NBFX Paint FX_VSP
     ${contents}=    Get File    ${VA_NBFX}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -80,7 +80,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     \    Check VA on VSP page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-006 NBFX Paint FX_VSU
+X006 NBFX Paint FX_VSU
     ${contents}=    Get File    ${VA_NBFX}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -104,7 +104,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on VSP page    Travel FX collection    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSP page    Travel FX Collection    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 006 TRAVEL_VSU
@@ -113,7 +113,7 @@ Resource          Global_Keyword/Keyword_003_Product.txt
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on VSU page    Travel FX collection    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSU page    Travel FX Collection    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 *** Keywords ***
@@ -145,12 +145,12 @@ Check VA on PTR page
 Check VA on VSP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSP}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSP}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_VA name    ${ValueAdd}    ${VSP}    ${currency}    ${worth}
 
 Check VA on VSU page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSU}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_VA name    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
 
 Check VA on particleshop page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
@@ -174,3 +174,16 @@ Check VA on PE page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PE}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PE}    ${currency}    ${worth}
+
+LTO should contain_VA name
+    [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
+    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
+    click element    //p[@data-promo-text="promoMsgDetail"]
+    wait until element is visible    //div[@id="lto-details"]
+    sleep    5
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
+    close all browsers
