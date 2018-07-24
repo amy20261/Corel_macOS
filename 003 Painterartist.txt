@@ -31,7 +31,7 @@ Check Link_Special Offer Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to special offer page_HTTPS    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
-    \    verify link on special offer page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    verify link on special offer page    @{var}[3]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
 
 Check price_PTR product page
     ${contents}=    Get File    ${PTR_file}
