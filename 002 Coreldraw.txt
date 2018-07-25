@@ -67,7 +67,7 @@ Check price_CDHS product page
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_CDGS product page_BOX
-    ${contents}=    Get File    ${CDGS_file}
+    ${contents}=    Get File    ${CDGS_BOX_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
