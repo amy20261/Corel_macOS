@@ -22,7 +22,8 @@ Check WPO HS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOHS}
-    Check promo price on product_tag    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}
+    Check promo price on product_tag    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}    ${OWPOHS}
+    ...    ${XWPOHS}
     close all browsers
 
 Check PDF product page
@@ -37,4 +38,28 @@ Check WPO pro product page_WPO
     close all browsers
     Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
     Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}
+    close all browsers
+
+Check WPO std product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOSTD}
+    Check promo price on product_dropdownlist_WPO_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOSTD}    ${OWPOSTD}
+    ...    ${XWPOSTD}
+    close all browsers
+
+Check WPO pro product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
+    Check promo price on product_dropdownlist_WPO_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}    ${OWPOPRO}
+    ...    ${XWPOPRO}
+    close all browsers
+
+Check WPO HS product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOHS}
+    Check promo price on product_tag_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}    ${OWPOHS}
+    ...    ${XWPOHS}    ${FWPOHS}
     close all browsers

@@ -190,3 +190,41 @@ Check promo price on product_dropdown list_PTR_BOX
 
 select BOX_dropdown list_PTR
     select from list    //select[@form='top-method-select']    BOX
+
+Check promo price on product_dropdown list_WPO_BOX
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
+    ...    ${UPBOXSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown llist_WPO
+    Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
+    Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown llist_WPO
+    ...    AND    Select BOX_dropdown list
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Sale Price    ${Full_promo}
+    ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
+
+Check promo price on product_Tag_BOX
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
+    ...    ${UPBOXSKU}    ${FSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'     verify UPGRADE    ${SavingBadge}    ${Full_Reg}    ${Full_promo}
+    Run keyword if    '${SKU}'=='${FSKU}'    Verify FULL    ${SavingBadge}    ${Full_Reg}    ${Full_promo}
+    Run keyword if    '${SKU}'=='${UPBOXSKU}'     verify UPGRADE_BOX    ${SavingBadge}    ${Full_Reg}    ${Full_promo}
+    Run keyword if    '${SKU}'=='${BOXSKU}'    Verify FULL_BOX    ${SavingBadge}    ${Full_Reg}    ${Full_promo}
+
+Verify FULL_BOX
+    [Arguments]    ${SavingBadge}    ${Full_Reg}    ${FULL_Promo}
+    Select BOX_dropdown list
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    ...    AND    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Full_Reg}
+    ...    AND    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+    ...    ELSE    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Full_Reg}
+
+Verify UPGRADE_BOX
+    [Arguments]    ${SavingBadge}    ${Full_Reg}    ${FULL_Promo}
+    click element    //li[@id='tab-2']
+    Select BOX_dropdown list
+    sleep    3
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Element should contain    //div[@id='dynPrice_upgradeTab']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    ...    AND    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Full_Reg}
+    ...    AND    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+    ...    ELSE    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Full_Reg}
