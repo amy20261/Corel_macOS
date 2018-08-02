@@ -24,3 +24,11 @@ Check particleshop product page
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    en    ${currency}    ${particleshop}
     Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${Uparticleshop}
     close all browsers
+
+Check PTR product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    en    ${currency}    ${PTR}
+    Check promo price on product_dropdown list_PTR_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPTR}    ${OPTR}
+    ...    ${XPTR}
+    close all browsers

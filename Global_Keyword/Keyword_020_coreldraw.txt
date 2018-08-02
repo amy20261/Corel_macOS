@@ -39,3 +39,19 @@ Check CDGS product page_BOX
     Check promo price on product_radio_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}    ${OCDGS}
     ...    ${XCDGS}
     close all browsers
+
+Check CAD product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CAD}
+    Check promo price on product_dropdown list_CAD_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCAD}    ${OCAD}
+    ...    ${XCAD}
+    close all browsers
+
+Check CDTS product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
+    Check promo price on product_radio_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}    ${OCDTS}
+    ...    ${XCDTS}
+    close all browsers
