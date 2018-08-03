@@ -17,3 +17,19 @@ Check VSP product page
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSP}
     Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}
     close all browsers
+
+Check VSU product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSU}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSU}    ${OVSU}
+    ...    ${XVSU}
+    close all browsers
+
+Check VSP product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSP}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}    ${OVSP}
+    ...    ${XVSP}
+    close all browsers

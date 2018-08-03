@@ -72,7 +72,10 @@ XPSU='PSP2019ULEFMBUGAM'
 UPVB='ESDPVS2019MLUG'
 UVSP='ESDVS2018PRMLUG'
 OVSP='VS2018PMLMBAM'
+XVSP='VS2018PMLMBUGAM'
 UVSU='ESDVS2018ULMLUG'
+OVSU='VS2018UMLMBAM'
+XVSU='VS2018UMLMBUGAM'
 UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
 
@@ -125,8 +128,8 @@ PDF_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_20.csv
 PSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX.csv'
 PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX.csv'
 PSB_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_BOX_25.csv'
-
-
+VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv'
+VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv'
 
 #VA price file
 VA_particleshop='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
