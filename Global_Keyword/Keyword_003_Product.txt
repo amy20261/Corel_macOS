@@ -43,7 +43,7 @@ Check promo price on product_radio
     ...    ELSE    Verify Full_Sale Price    ${Full_Reg}
 
 Select Upgrade_dropdown list
-    select from list by value    //select[@id='version-select']    Upgrade
+    select from list by value    //select[@form='version-select']    Upgrade
 
 Select Upgrade_dropdown list_CAD
     select from list    //select[@id='version-select']    UPGRADE

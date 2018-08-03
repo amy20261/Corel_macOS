@@ -203,7 +203,7 @@ Open browser to home
 Open browser to page
     [Arguments]    ${microsite}=dev.www.corel.public.corel.net    ${lan}=en    ${currency}=en-US    ${page}=special-offers
     [Timeout]
-    Run Keyword And Continue On Failure    Remove file    c:/temp/stg/microsite}/${page}_${currency}.png
+    Run Keyword And Continue On Failure    Remove file    c:/temp/stg/${microsite}/${page}_${currency}.png
     open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
