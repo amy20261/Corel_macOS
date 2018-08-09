@@ -22,8 +22,7 @@ Check WPO HS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOHS}
-    Check promo price on product_tag    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}    ${OWPOHS}
-    ...    ${XWPOHS}
+    Check promo price on product_dropdownlist_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}
     close all browsers
 
 Check PDF product page
