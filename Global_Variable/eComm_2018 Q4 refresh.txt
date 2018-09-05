@@ -80,7 +80,7 @@ UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
 
 #link on Home page
-Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_corel_0724.csv'
+Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL.csv'
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
