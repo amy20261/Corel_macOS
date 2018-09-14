@@ -80,7 +80,7 @@ UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
 
 #link on Home page
-Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL.csv'
+Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL_0918.csv'
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
@@ -97,7 +97,7 @@ PSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\\Link\\Checklink_Sp_PSP.cs
 VSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_VSP.csv'
 
 #promo price on product page
-CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS10.csv'
+#CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS15.csv'
 #CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD20.csv'
 #CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS00.csv'
 CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS10.csv'
@@ -112,16 +112,16 @@ PDF_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF20.csv'
 #PSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP00.csv'
 PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB25.csv'
 #VSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU35.csv'
-VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP30.csv'
+#VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP35.csv'
 ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 
 #Promo box price
-CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_10.csv'
+CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv'
 CAD_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD_BOX_00.csv'
 CDTS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS_BOX_00.csv'
-PTR_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BOX_00.csv'
-Wstd_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOSTD_BOX_00.csv'
+PTR_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BOX_15.csv'
+Wstd_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOSTD_BOX_30.csv'
 Wpro_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOPRO_BOX_00.csv'
 #WHS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOHS_BOX.csv'
 #PDF_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_20.csv'
