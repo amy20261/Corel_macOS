@@ -24,7 +24,7 @@ Check Link_Home Page
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Special Offer Page
+X Check Link_Special Offer Page
     ${contents}=    Get File    ${PTR_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -60,7 +60,7 @@ Check price_particleshop product page
 Check price_PTR product page_BOX
     ${contents}=    Get File    ${PTR_file_BOX}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PTR product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]

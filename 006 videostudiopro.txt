@@ -20,7 +20,7 @@ Check Link_Home Page
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Special Offer Page
+X Check Link_Special Offer Page
     ${contents}=    Get File    ${VSP_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
