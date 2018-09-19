@@ -2,6 +2,7 @@
 Library           Selenium2Library
 Library           OperatingSystem
 Library           String
+Resource          Global_Keyword/Keyword_055_photomirage.txt
 
 *** Test Cases ***
 Screenshot_PhotoMirage_all Lan_DEV
@@ -64,6 +65,14 @@ Screenshot_PhotoMirage_all Lan_PRO
     screenshot_PhotoMirage_pro    en    es-MX
     screenshot_PhotoMirage_pro    en    es-ES
 
+Check price_photomirage page
+    ${contents}=    Get File    ${PhotoMirage_file}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check Photomirage page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
 *** Keywords ***
 Open browser to home
     [Arguments]    ${microsite}=stg.www.roxio.public.corel.net    ${lan}=en    ${currency}=en-US
@@ -83,7 +92,7 @@ Open browser to page
     open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
-    sleep    1
+    sleep    3
     Selenium2Library.set screenshot directory    c:/temp/PhotoMirage/${microsite}/
     capture page screenshot    ${page}_${currency}.png
     close browser

@@ -1,0 +1,7 @@
+*** Keywords ***
+Check photomirage page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Products Page_HTTPS    ${env}    ${wPHOTOMIRAGE}    en    ${currency}    ${PHOTOMIRAGE}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPHOTOMIRAGE}
+    close all browsers
