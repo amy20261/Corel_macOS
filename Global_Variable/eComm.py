@@ -3,7 +3,7 @@
 #https://docs.google.com/a/corel.com/spreadsheets/d/1uke1z4g2D-UDbuoePbx9OGUN4WyebOfkqhSOoyiSFWs/edit?usp=sharing
 
 #env='dev' or 'stg'
-env='stg'
+env='dev'
 
 #micro website
 Corel='corel'
@@ -80,7 +80,7 @@ UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
 
 #link on Home page
-Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL_0918.csv'
+Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL.csv'
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
@@ -120,15 +120,15 @@ DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv'
 CAD_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD_BOX_00.csv'
 CDTS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS_BOX_00.csv'
-PTR_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BOX_15.csv'
-Wstd_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOSTD_BOX_30.csv'
+PTR_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BOX_00.csv'
+Wstd_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOSTD_BOX_00.csv'
 Wpro_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOPRO_BOX_00.csv'
 #WHS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOHS_BOX.csv'
 #PDF_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_20.csv'
 PSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv'
 PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv'
 #PSB_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_BOX_25.csv'
-VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv'
+VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_30.csv'
 VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv'
 
 #VA price file
