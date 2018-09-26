@@ -2,7 +2,11 @@
 Library           Selenium2Library
 Library           OperatingSystem
 Library           String
+Resource          Global_Keyword/Keyword_000_Verification.txt
+Resource          Global_Keyword/Keyword_001_Home.txt
+Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
 Resource          Global_Keyword/Keyword_055_photomirage.txt
+Variables         Global_Variable/eComm.py
 
 *** Test Cases ***
 Screenshot_PhotoMirage_all Lan_DEV
@@ -68,7 +72,7 @@ Screenshot_PhotoMirage_all Lan_PRO
 Check price_photomirage page
     ${contents}=    Get File    ${PhotoMirage_file}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check Photomirage page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]

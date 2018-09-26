@@ -13,6 +13,7 @@ wWPO='wordperfect'
 wPSP='paintshoppro'
 wVSP='videostudiopro'
 wASP='aftershotpro'
+wPHOTOMIRAGE='photomirage'
 
 #product
 CDGS='graphic-design-software'
@@ -34,6 +35,7 @@ VSP='videostudio/pro'
 VSU='videostudio/ultimate'
 ASP='aftershot/pro'
 WinDVD='windvdpro'
+features='features'
 
 #PID for upgrade product
 UCDGS='ESDCDGS2018AMUG'
@@ -78,6 +80,7 @@ OVSU='VS2018UMLMBAM'
 XVSU='VS2018UMLMBUGAM'
 UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
+UPHTOMIRAGE='None'
 
 #link on Home page
 Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL.csv'
@@ -130,6 +133,7 @@ PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
 #PSB_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_BOX_25.csv'
 VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_30.csv'
 VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv'
+PhotoMirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage.csv'
 
 #VA price file
 VA_particleshop='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
