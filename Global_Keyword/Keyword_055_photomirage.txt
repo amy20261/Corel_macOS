@@ -8,5 +8,5 @@ Check photomirage page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to photomirage page    ${env}    ${wPHOTOMIRAGE}    en    ${currency}    ${features}
-    Check promo price on product_photomirage    ${SKU}    ${Full_Reg}
+    Check promo price on product_photomirage    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers

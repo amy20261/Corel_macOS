@@ -223,8 +223,12 @@ Open Browser to photomirage page
     sleep    1
 
 Check promo price on product_photomirage
-    [Arguments]    ${SKU}    ${Full_Reg}
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     Verify photomirage Price    ${Full_Reg}
+    #Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    # AND    Verify Full_Reg price    ${Full_Reg}
+    ...    # AND    Verify Full_Promo Price    ${Full_promo}
+    ...    # ELSE    Verify photomirage Price    ${Full_Reg}
 
 Verify Photomirage Price
     [Arguments]    ${FULL_reg}
