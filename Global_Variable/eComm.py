@@ -120,7 +120,7 @@ ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 
 #Promo box price
-CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_15.csv'
+CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_15_2.csv'
 CAD_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD_BOX_00.csv'
 CDTS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS_BOX_00.csv'
 PTR_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BOX_00.csv'
