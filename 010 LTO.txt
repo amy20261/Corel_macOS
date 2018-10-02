@@ -52,7 +52,7 @@ X003 Mystic Mountain Brush Pack (Bob Ross)_PTR
     \    Check VA on PE page    Grunge Essentials Brush Pack    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-X 005 ParticleShop_PSP
+005 ParticleShop_PSP
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -62,7 +62,7 @@ X 005 ParticleShop_PSP
     \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-X 005 ParticleShop_PSU
+\005 ParticleShop_PSU
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
