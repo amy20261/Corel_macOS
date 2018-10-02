@@ -212,3 +212,23 @@ Check VA on CDTS page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDTS}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDTS}    ${currency}    ${worth}
+
+Check VA on WPO std page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${WPOSTD}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WPOSTD}    ${currency}    ${worth}
+
+Check VA on WPO PRO page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${WPOPRO}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WPOPRO}    ${currency}    ${worth}
+
+Check VA on WPO HS page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${WPOHS}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WPOHS}    ${currency}    ${worth}
+
+Check VA on PDF page
+    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${PDF}
+    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PDF}    ${currency}    ${worth}
