@@ -1,0 +1,27 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_Product.txt
+Resource          Global_Keyword/Keyword_003010_LTO.txt
+
+*** Test Cases ***
+NBFX Paint FX_VSP
+    ${contents}=    Get File    ${VA_NBFX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSP page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+NBFX Paint FX_VSU
+    ${contents}=    Get File    ${VA_NBFX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSU page    NewBlue Paint Effects    en    @{var}[1]    @{var}[2]
+    \    close all browsers

@@ -1,0 +1,36 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_Product.txt
+Resource          Global_Keyword/Keyword_003010_LTO.txt
+
+*** Test Cases ***
+Holiday Stationary Pack_WPO STD
+    ${contents}=    Get File    ${VA_HolidayStationaryPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WPO std page    Holiday Stationary Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Holiday Stationary Pack_WPO PRO
+    ${contents}=    Get File    ${VA_HolidayStationaryPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WPO PRO page    Holiday Stationary Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Holiday Stationary Pack_WPO HS
+    ${contents}=    Get File    ${VA_HolidayStationaryPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WPO HS page    Holiday Stationary Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers

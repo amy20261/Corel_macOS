@@ -1,0 +1,18 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_Product.txt
+Resource          Global_Keyword/Keyword_003010_LTO.txt
+
+*** Test Cases ***
+WINZIP_particleshop
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers

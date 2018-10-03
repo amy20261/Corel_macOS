@@ -1,0 +1,36 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_Product.txt
+Resource          Global_Keyword/Keyword_003010_LTO.txt
+
+*** Test Cases ***
+PSP Holiday script_PSP
+    ${contents}=    Get File    ${VA_PSPHoliday}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSP page    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+PSP Holiday script_PSU
+    ${contents}=    Get File    ${VA_PSPHoliday}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSU page    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+PSP Holiday script_PVB
+    ${contents}=    Get File    ${VA_PSPHoliday}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PVB page    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    close all browsers
