@@ -16,3 +16,165 @@ WINZIP_particleshop
     \    close all browsers
     \    Check VA on particleshop page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
+
+WINZIP_PE
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PE page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_PTR
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PTR page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_WPO STD
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WPO STD page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_WPO PRO
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WPO PRO page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_WPO HS
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WPO HS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_PDF
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA PDF page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_CDTS
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on CDTS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_CDGS HS
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on CDGS HS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_CAD
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on CAD page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_CDGS
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on CDGS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_PSP
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSP page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_PSU
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSU    page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_PVB
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PVB page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_Photomirage
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on Photomirage page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_VSP
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSP page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_VSU
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSU page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_ASP
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on ASP page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+WINZIP_WinDVD
+    ${contents}=    Get File    ${VA_WINZIP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on WinDVD page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    close all browsers

@@ -6,8 +6,6 @@ Library           Screenshot    c:/temp
 Resource          Keyword_003_Product.txt
 
 *** Keywords ***
-Should be contain VA
-
 Check VA on PDF page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${PDF}
