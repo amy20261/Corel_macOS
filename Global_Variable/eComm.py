@@ -3,7 +3,7 @@
 #https://docs.google.com/a/corel.com/spreadsheets/d/1uke1z4g2D-UDbuoePbx9OGUN4WyebOfkqhSOoyiSFWs/edit?usp=sharing
 
 #env='dev' or 'stg'
-env='stg'
+env='dev'
 
 #micro website
 Corel='corel'
@@ -13,7 +13,6 @@ wWPO='wordperfect'
 wPSP='paintshoppro'
 wVSP='videostudiopro'
 wASP='aftershotpro'
-wPHOTOMIRAGE='photomirage'
 
 #product
 CDGS='graphic-design-software'
@@ -35,7 +34,6 @@ VSP='videostudio/pro'
 VSU='videostudio/ultimate'
 ASP='aftershot/pro'
 WinDVD='windvdpro'
-features='features'
 
 #PID for upgrade product
 UCDGS='ESDCDGS2018AMUG'
@@ -80,7 +78,6 @@ OVSU='VS2018UMLMBAM'
 XVSU='VS2018UMLMBUGAM'
 UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
-UPHTOMIRAGE='None'
 
 #link on Home page
 Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL.csv'
@@ -100,7 +97,7 @@ PSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\\Link\\Checklink_Sp_PSP.cs
 VSP_SP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Sp_VSP.csv'
 
 #promo price on product page
-#CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS15.csv'
+#CDGS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS00.csv'
 #CAD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD20.csv'
 #CDTS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS00.csv'
 CDHS_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDHS10.csv'
@@ -120,7 +117,7 @@ ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 
 #Promo box price
-CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_15_2.csv'
+CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv'
 CAD_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CAD_BOX_00.csv'
 CDTS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDTS_BOX_00.csv'
 PTR_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BOX_00.csv'
@@ -129,11 +126,10 @@ Wpro_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOPRO_BOX_00
 #WHS_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\WPOHS_BOX.csv'
 #PDF_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_20.csv'
 PSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv'
-PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv'
+PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv'
 #PSB_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_BOX_25.csv'
 VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv'
-VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv'
-PhotoMirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage.csv'
+VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_30.csv'
 
 #VA price file
 VA_particleshop='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
