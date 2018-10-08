@@ -115,6 +115,7 @@ PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB25.csv'
 #VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP35.csv'
 ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
+Photomirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\Photomirage15.csv'
 
 #Promo box price
 CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv'
@@ -139,12 +140,16 @@ VA_NBFX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_NBFX.csv'
 VA_GEBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_GEBrushPack.csv'
 VA_TRAVEL='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_TRAVEL.csv'
 VA_SHBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_SHBrushPack.csv'
+VA_WINZIP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_WINZIP.csv'
+VA_PSPHoliday='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_PSP Holiday.csv'
+VA_HolidayStationaryPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_Holiday Stationary Pack.csv'
 
 #HTTPS files
 HTTPS_ASP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'
 HTTPS_WINDVD='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_WINDVD.csv'
 HTTPS_WPO='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_WPO.csv'
 HTTPS_COREL='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_COREL.csv'
+
 
 
 #Cart
