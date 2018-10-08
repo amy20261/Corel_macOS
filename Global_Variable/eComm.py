@@ -13,6 +13,7 @@ wWPO='wordperfect'
 wPSP='paintshoppro'
 wVSP='videostudiopro'
 wASP='aftershotpro'
+wPHOTOMIRAGE='Photomirage'
 
 #product
 CDGS='graphic-design-software'
@@ -34,6 +35,7 @@ VSP='videostudio/pro'
 VSU='videostudio/ultimate'
 ASP='aftershot/pro'
 WinDVD='windvdpro'
+features='features'
 
 #PID for upgrade product
 UCDGS='ESDCDGS2018AMUG'
