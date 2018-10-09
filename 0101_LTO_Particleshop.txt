@@ -17,6 +17,15 @@ ParticleShop_CDGS
     \    Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
+ParticleShop_PTR
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PTR page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
 ParticleShop_PSP
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
@@ -24,7 +33,6 @@ ParticleShop_PSP
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on PSP page    ParticleShop    en    @{var}[1]    @{var}[2]
-    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 ParticleShop_PSU
@@ -42,7 +50,7 @@ ParticleShop_PVB
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PVB page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 ParticleShop_photomirage
@@ -51,7 +59,7 @@ ParticleShop_photomirage
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on Photomirage page    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 ParticleShop_ASP
