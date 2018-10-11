@@ -224,12 +224,14 @@ Open Browser to photomirage page
 
 Check promo price on product_photomirage
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
-    Verify photomirage Price    ${Full_Reg}
-    #Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
-    ...    # AND    Verify Full_Reg price    ${Full_Reg}
-    ...    # AND    Verify Full_Promo Price    ${Full_promo}
-    ...    # ELSE    Verify photomirage Price    ${Full_Reg}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify Full_Reg price_PM    ${Full_Reg}
+    ...    AND    Verify Full_Promo Price_PM    ${Full_promo}
+    ...    ELSE    Verify Full_Promo Price_PM    ${Full_Reg}
 
-Verify Photomirage Price
+Verify Full_promo Price_PM
     [Arguments]    ${FULL_reg}
     Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_reg}
+
+Verify Full_Reg price_PM
+    [Arguments]    ${FULL_Reg}
+    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
