@@ -234,4 +234,4 @@ Verify Full_promo Price_PM
 
 Verify Full_Reg price_PM
     [Arguments]    ${FULL_Reg}
-    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
+    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
