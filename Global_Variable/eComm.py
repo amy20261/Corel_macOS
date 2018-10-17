@@ -134,6 +134,10 @@ PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
 VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv'
 VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv'
 
+#subscription
+CDGS_Su='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'
+CDTS_Sub='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'
+
 #VA price file
 VA_particleshop='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
 VA_EBrushPack='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\VA\\VA_EBrushPack.csv'
