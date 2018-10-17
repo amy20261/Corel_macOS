@@ -93,16 +93,18 @@ Check price_CDTS product page_BOX
 Check price_CDGS product page_subscription
     ${contents}=    Get File    ${CDGS_Sub}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check CDGS product page_subscription    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    Run keyword if    '@{var}[1]'=='CDGSSUBPUREPREM2'    run keyword and continue on failure    Check CDGS product page_subscription    ${env}    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]
 
 Check price_CDTS product page_subscription
     ${contents}=    Get File    ${CDTS_Sub}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check CDST product page_subscription    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    Run keyword if    '@{var}[1]'=='CDTSSUBSCRIPTION2'    run keyword and continue on failure    Check CDST product page_subscription    ${env}    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]
 
 *** Keywords ***
 verify link on home page

@@ -57,7 +57,7 @@ Check CDTS product page_BOX
     close all browsers
 
 Check CDGS product page_subscription
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${savings}
     close all browsers
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
     Check subscription price    ${SKU}    ${Full_Reg}
