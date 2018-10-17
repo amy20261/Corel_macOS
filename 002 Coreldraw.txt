@@ -103,7 +103,7 @@ Check price_CDTS product page_subscription
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    Run keyword if    '@{var}[1]'=='CDTSSUBSCRIPTION2'    run keyword and continue on failure    Check CDST product page_subscription    ${env}    @{var}[0]
+    \    Run keyword if    '@{var}[1]'=='CDTSSUBSCRIPTION2'    run keyword and continue on failure    Check CDTS product page_subscription    ${env}    @{var}[0]
     \    ...    @{var}[1]    @{var}[4]    @{var}[7]
 
 *** Keywords ***
