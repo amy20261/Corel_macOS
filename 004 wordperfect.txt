@@ -29,7 +29,7 @@ X Check Link_Special Offer Page
     \    open browser to special offer page_HTTPS    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
     \    verify link on special offer page    @{var}[3]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
 
-Check price_WPO std product page
+X Check price_WPO std product page
     ${contents}=    Get File    ${Wstd_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -37,7 +37,7 @@ Check price_WPO std product page
     \    run keyword and continue on failure    Check WPO std product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_WPO pro product page
+X Check price_WPO pro product page
     ${contents}=    Get File    ${Wpro_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -45,7 +45,7 @@ Check price_WPO pro product page
     \    run keyword and continue on failure    Check WPO pro product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_WPO HS product page
+X Check price_WPO HS product page
     ${contents}=    Get File    ${WHS_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -77,7 +77,7 @@ Check price_WPO pro product page_BOX
     \    run keyword and continue on failure    Check WPO pro product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-X Check price_WPO HS product page_BOX
+Check price_WPO HS product page_BOX
     ${contents}=    Get File    ${WHS_file_BOX}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}

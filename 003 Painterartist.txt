@@ -33,7 +33,7 @@ X Check Link_Special Offer Page
     \    open browser to special offer page_HTTPS    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
     \    verify link on special offer page    @{var}[3]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
 
-Check price_PTR product page
+X Check price_PTR product page
     ${contents}=    Get File    ${PTR_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
