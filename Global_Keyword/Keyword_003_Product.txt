@@ -65,7 +65,7 @@ Verify Full_Reg price
 
 Verify Full_Promo Price
     [Arguments]    ${FULL_Promo}
-    Element should contain    //html/body/div[5]/div[1]/div[1]/div/div[1]/div/div[2]/div/div[1]/div[3]/div[2]/span[2]    ${FULL_Promo}
+    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Reg}
 
 Verify Upgrade_Reg price
     [Arguments]    ${Upgrade_Reg}
