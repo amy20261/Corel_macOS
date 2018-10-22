@@ -86,7 +86,7 @@ Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_C
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
-PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP_1016.txt'
+PSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP.csv'
 VSP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
 ASP_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
@@ -118,7 +118,6 @@ PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv'
 ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 Photomirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\Photomirage15.csv'
-#
 
 #Promo box price
 CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_10.csv'
@@ -156,8 +155,6 @@ HTTPS_ASP='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'
 HTTPS_WINDVD='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_WINDVD.csv'
 HTTPS_WPO='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_WPO.csv'
 HTTPS_COREL='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\HTTPS\\HTTPS_COREL.csv'
-
-
 
 #Cart
 cart_C='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Cart\\Condensed.csv'
