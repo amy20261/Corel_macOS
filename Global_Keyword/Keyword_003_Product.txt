@@ -243,3 +243,15 @@ Check subscription price
 
 select subscription
     click element    //*[@id="tab-2"]
+
+select BOX_dropdown list_PDF
+    select from list    //select[@form='full-select']    BOX
+
+Check promo price on product_dropdown list_PDF_BOX
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
+    ...    ${UPBOXSKU}
+    Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list_PDF
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Promo Price    ${Full_promo}
+    ...    ELSE    Verify Full_Promo Price    ${Full_Reg}

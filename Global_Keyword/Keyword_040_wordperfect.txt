@@ -67,6 +67,6 @@ Check PDF product page_BOX
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${PDF}
-    Check promo price on product_dropdownlist_WPO_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPDF}    ${OPDF}
+    Check promo price on product_dropdownlist_PDF_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPDF}    ${OPDF}
     ...    ${XPDF}
     close all browsers
