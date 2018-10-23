@@ -117,7 +117,7 @@ PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv'
 #VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP35.csv'
 ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP30.csv'
 DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
-Photomirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\Photomirage15.csv'
+Photomirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PM2535.csv'
 
 #Promo box price
 CDGS_BOX_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_10.csv'
