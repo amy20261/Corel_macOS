@@ -16,12 +16,14 @@ Check Link_Home Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[2]' in 'en-US'    verify link on home page_US    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    \    run keyword if    '@{var}[2]' in 'en-CA;en-GB;en-AU;en-IE'    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    \    run keyword if    '@{var}[2]' in 'de-DE;fr-FR;ja-JP'    verify link on home page_de    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    verify link on home page_US    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    \    #run keyword if    '@{var}[2]' in 'en-US'    verify link on home page_US    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    # @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    #run keyword if    '@{var}[2]' in 'en-CA;en-GB;en-AU;en-IE'    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    # @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    #run keyword if    '@{var}[2]' in 'de-DE;fr-FR;ja-JP'    verify link on home page_de    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    # @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
 X Check Link_Special Offer Page
@@ -98,14 +100,14 @@ verify link on home page_US
     Verify URL Contain    ${Highlight 1}
     Click Highlight 2
     Verify URL Contain    ${Highlight 2}
-    Click Sp. Offer 1
-    Verify URL Contain    ${SpOffer1}
-    Click Sp. Offer 2
-    Verify URL Contain    ${SpOffer2}
-    Click Sp. Offer 3_wacom
-    Verify URL Contain    ${SpOffer3}
-    Click Sp. Offer 4
-    Verify URL Contain    ${SpOffer4}
+    #Click Sp. Offer 1
+    #Verify URL Contain    ${SpOffer1}
+    #Click Sp. Offer 2
+    #Verify URL Contain    ${SpOffer2}
+    #Click Sp. Offer 3_wacom
+    #Verify URL Contain    ${SpOffer3}
+    #Click Sp. Offer 4
+    #Verify URL Contain    ${SpOffer4}
     close all browsers
 
 verify link on special offer page

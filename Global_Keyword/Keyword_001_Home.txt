@@ -16,6 +16,7 @@ Click HeroBanner
 
 Click MainFeature
     click image    //img[@data-promo-image='mainFeature']
+    sleep    3
 
 Click Highlight 1
     click element    //div[contains(@class,'highlight highlight-1 col-xs-3')]
