@@ -18,7 +18,7 @@ Check Link_Home Page
     \    open browser to home page_HTTPS    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_EN    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    \    run keyword if    '@{var}[1]' in 'de;fr;jp;br;it;nl'    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]
+    \    run keyword if    '@{var}[1]' in 'de;fr;jp;br'    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
