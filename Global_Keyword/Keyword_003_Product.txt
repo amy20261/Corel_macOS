@@ -237,9 +237,10 @@ Verify Full_Reg price_PM
     Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
 
 Check subscription price
-    [Arguments]    ${SKU}    ${Full_Reg}
+    [Arguments]    ${SKU}    ${Full_Reg}    ${saving}
     select subscription
     Verify Full_Promo Price    ${Full_Reg}
+    verify monthly price    ${saving}
 
 select subscription
     click element    //*[@id="tab-2"]
@@ -255,3 +256,7 @@ Check promo price on product_dropdown list_PDF_BOX
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
+
+Verify monthly \ Price
+    [Arguments]    ${monthly}
+    Element should contain    //p[@data-promo-text='promoMsgShort']    ${monthly}
