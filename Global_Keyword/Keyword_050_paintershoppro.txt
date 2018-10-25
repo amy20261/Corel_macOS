@@ -69,3 +69,11 @@ Check PSB product page_BOX
     Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPVB}    ${OPVB}
     ...    ${XPVB}
     close all browsers
+
+Check PI product page_BOX
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PI}
+    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPI}    ${OPI}
+    ...    ${XPI}
+    close all browsers

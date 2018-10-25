@@ -36,6 +36,7 @@ VSU='videostudio/ultimate'
 ASP='aftershot/pro'
 WinDVD='windvdpro'
 features='features'
+PI='photoimpact'
 
 #PID for upgrade product
 UCDGS='ESDCDGS2018AMUG'
@@ -80,6 +81,9 @@ OVSU='VS2018UMLMBAM'
 XVSU='VS2018UMLMBUGAM'
 UASP='ESDASP3MLPCUG'
 WD='ESDWD12PRMLUG'
+UPI='PI_13UGESD'
+OPI='PI2019EFMBAM'
+XPI='PI2019EFMBUGAM'
 
 #link on Home page
 Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL_BN.csv'
@@ -133,6 +137,7 @@ PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_2030.c
 #PSB_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_BOX_w1.csv'
 VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_2030.csv'
 VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_2030.csv'
+PI_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv'
 
 #subscription
 CDGS_Sub='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'
