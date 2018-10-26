@@ -48,7 +48,10 @@ Chick Link_Special Offer Page_BN
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     \    ...    @{var}[11]    @{var}[12]    @{var}[13]    @{var}[14]    @{var}[15]
     \    ...    @{var}[16]    @{var}[17]    @{var}[18]    @{var}[19]
-    \    run keyword if    '@{var}[1]' in 'br;jp'    verify link in special offer page_BN_JP    @{var}[3]    @{var}[4]    @{var}[5]
+    \    run keyword if    '@{var}[1]' in 'br'    verify link in special offer page_BN_BR    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    ...    @{var}[11]
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link in special offer page_BN_JP    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     \    ...    @{var}[11]
 
@@ -164,7 +167,7 @@ verify link in special offer page_BN_JP
     [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}    ${Prod 5}
     ...    ${Prod 6}    ${Prod 7}    ${Prod 8}
     Click Special Offers Hero
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
+    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
     Click Prod 1
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
     Click Prod 2
@@ -221,4 +224,27 @@ verify link in special offer page_BN
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 15}
     Click Prod 16
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 16}
+    close all browsers
+
+verify link in special offer page_BN_BR
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}    ${Prod 5}
+    ...    ${Prod 6}    ${Prod 7}    ${Prod 8}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 4}
+    Click Prod 5
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 5}
+    Click Prod 6
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 6}
+    Click Prod 7
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 7}
+    Click Prod 8
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 8}
     close all browsers
