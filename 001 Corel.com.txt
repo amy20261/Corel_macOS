@@ -44,11 +44,11 @@ Chick Link_Special Offer Page_BN
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to special offer page_HTTPS    ${env}    ${Corel}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br'    verify link in special offer page_BN    @{var}[3]    @{var}[4]    @{var}[5]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr'    verify link in special offer page_BN    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     \    ...    @{var}[11]    @{var}[12]    @{var}[13]    @{var}[14]    @{var}[15]
     \    ...    @{var}[16]    @{var}[17]    @{var}[18]    @{var}[19]
-    \    run keyword if    '@{var}[1]' in 'jp'    verify link in special offer page_BN_JP    @{var}[3]    @{var}[4]    @{var}[5]
+    \    run keyword if    '@{var}[1]' in 'br;jp'    verify link in special offer page_BN_JP    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
 
 *** Keywords ***
