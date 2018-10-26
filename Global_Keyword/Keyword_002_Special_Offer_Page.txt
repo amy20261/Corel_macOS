@@ -49,3 +49,27 @@ Click Prod 7
 
 Click Prod 8
     click element    //*[@id="offers_product_name_8"]
+
+Click Prod 9
+    click element    //*[@id="offers_product_name_9"]
+
+Click Prod 10
+    click element    //*[@id="offers_product_name_10"]
+
+Click Prod 11
+    click element    //*[@id="offers_product_name_11"]
+
+Click Prod 12
+    click element    //*[@id="offers_product_name_12"]
+
+Click Prod 13
+    click element    //*[@id="offers_product_name_13"]
+
+Click Prod 14
+    click element    //*[@id="offers_product_name_14"]
+
+Click Prod 15
+    click element    //*[@id="offers_product_name_15"]
+
+Click Prod 16
+    click element    //*[@id="offers_product_name_16"]
