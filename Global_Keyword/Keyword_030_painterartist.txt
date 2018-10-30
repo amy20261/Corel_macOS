@@ -32,3 +32,13 @@ Check PTR product page_BOX
     Check promo price on product_dropdown list_PTR_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPTR}    ${OPTR}
     ...    ${XPTR}
     close all browsers
+
+Check bunclle page
+    [Arguments]    ${page}    ${product}    ${price_reg}    ${price_promo}    ${SavingBadge}=${null}
+    close all browsers
+    open browser    https://www.painterartist.com/en/product/wacom/?currency=en-US#${page}
+    Element should contain    //*[@id="${page}"]//h3    ${product}
+    Element should contain    //*[@id="${page}"]//span[@class='priceDisplayStrikethrough']     ${price_reg}
+    Element should contain    //*[@id="${page}"]//p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Element should contain    //*[@id="${page}"]//span[@class='priceDisplayNormal']    ${price_promo}
+    close all browsers

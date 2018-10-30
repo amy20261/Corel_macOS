@@ -138,6 +138,7 @@ PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_2030.c
 VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_2030.csv'
 VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_2030.csv'
 PI_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv'
+PTR_file_wacom='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BUNDLE.csv'
 
 #subscription
 CDGS_Sub='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'

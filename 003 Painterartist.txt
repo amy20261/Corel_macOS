@@ -67,6 +67,24 @@ Check price_PTR product page_BOX
     \    run keyword and continue on failure    Check PTR product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
+Check price_Wacom
+    ${contents}=    Get File    ${PTR_file_wacom}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword if    '@{var}[0]'=='DTH1320K'    run keyword and continue on failure    Check bunclle page    cintiq-pro-13    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='DTH1620K0'    run keyword and continue on failure    Check bunclle page    cintiq-pro-16    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='DTK1300'    run keyword and continue on failure    Check bunclle page    cintiq-13hd    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='DTK2200'    run keyword and continue on failure    Check bunclle page    cintiq-22hd    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='PTH660'    run keyword and continue on failure    Check bunclle page    intuos-pro-medium    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='PTH860'    run keyword and continue on failure    Check bunclle page    intuos-pro-large    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+
 *** Keywords ***
 verify link on home page
     [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}

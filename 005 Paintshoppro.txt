@@ -85,8 +85,8 @@ Check price_Photo Impact \ product page_BOX
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PI product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
+    \    Run keyword if    '@{var}[1]'=='PK_PI13ESD'    run keyword and continue on failure    Check PI product page_BOX    ${env}    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
 
 *** Keywords ***
 verify link on home page
