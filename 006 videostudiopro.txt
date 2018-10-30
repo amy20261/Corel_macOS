@@ -29,7 +29,7 @@ X Check Link_Special Offer Page
     \    open browser to special offer page_HTTPS    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
     \    verify link on Sp page    @{var}[3]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
 
-Check price_VSU product page
+X Check price_VSU product page
     ${contents}=    Get File    ${VSU_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -37,7 +37,7 @@ Check price_VSU product page
     \    run keyword and continue on failure    Check VSU product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_VSP product page
+X Check price_VSP product page
     ${contents}=    Get File    ${VSP_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}

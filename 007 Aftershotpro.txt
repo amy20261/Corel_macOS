@@ -36,8 +36,8 @@ verify link on home page
     run keyword and continue on failure    Verify URL Contain    ${Hero}
     #Click Sp. Offer 1
     #run keyword and continue on failure    Verify URL Contain    ${SpOffer1}
-    Click Sp. Offer 2
-    run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer2}
+    #Click Sp. Offer 2
+    #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer2}
     #Click Sp. Offer 3
     #run keyword and continue on failure    Verify URL Contain    ${SpOffer3}
     #Click Sp. Offer 4

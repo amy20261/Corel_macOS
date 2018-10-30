@@ -32,7 +32,7 @@ X Check Link_Special Offer Page
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on special offer page_JP    @{var}[3]    @{var}[6]    @{var}[7]
     \    ...    @{var}[8]    @{var}[9]
 
-Check price_PSU product page
+X Check price_PSU product page
     ${contents}=    Get File    ${PSU_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -40,7 +40,7 @@ Check price_PSU product page
     \    run keyword and continue on failure    Check PSU product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_PSP product page
+X Check price_PSP product page
     ${contents}=    Get File    ${PSP_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}

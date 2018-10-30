@@ -53,7 +53,7 @@ X Check price_WPO HS product page
     \    run keyword and continue on failure    Check WPO HS product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_PDF product page
+X Check price_PDF product page
     ${contents}=    Get File    ${PDF_file}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
