@@ -239,8 +239,8 @@ Verify Full_Reg price_PM
 Check subscription price
     [Arguments]    ${SKU}    ${Full_Reg}    ${saving}
     select subscription
-    Verify Full_Promo Price    ${Full_Reg}
-    verify monthly price    ${saving}
+    run keyword and continue on failure    Verify subscription Price    ${Full_Reg}
+    run keyword and continue on failure    verify monthly price    ${saving}
 
 select subscription
     click element    //*[@id="tab-2"]
@@ -257,6 +257,10 @@ Check promo price on product_dropdown list_PDF_BOX
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
 
-Verify monthly \ Price
+Verify monthly Price
     [Arguments]    ${monthly}
-    Element should contain    //p[@data-promo-text='promoMsgShort']    ${monthly}
+    Element should contain    //div[@id='dynPrice_subscribeTab']//p[@data-promo-text='promoMsgShort']    ${monthly}
+
+Verify subscription Price
+    [Arguments]    ${FULL_Promo}
+    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal no-pad-left price']    ${FULL_Promo}
