@@ -80,7 +80,7 @@ X Check price_PSB product page_BOX
     \    run keyword and continue on failure    Check PSB product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_Photo Impact \ product page_BOX
+Check price_Photo Impact
     ${contents}=    Get File    ${PI_file_BOX}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
