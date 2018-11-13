@@ -1,7 +1,7 @@
 ﻿usd;en-US;29.95
 cad;en-CA;39.95
 gbp;en-GB;25.95
-eur;de-DE;29.95
+eur;de-DE;29,95
 eur;fr-FR;29,95
 eur;it-IT;29,95
 eur;nl-NL;29,95
@@ -14,5 +14,5 @@ zar;en-ZA;440
 aud;en-AU;39.95
 nzd;en-NZ;44.95
 brl;pt-BR;105
-jpy;ja-JP;3,800.00
+jpy;ja-JP;3,800
 usd;en-RW;29.95

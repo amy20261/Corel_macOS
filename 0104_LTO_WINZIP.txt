@@ -6,6 +6,7 @@ Library           Screenshot    c:/temp
 Variables         Global_Variable/eComm.py
 Resource          Global_Keyword/Keyword_003_Product.txt
 Resource          Global_Keyword/Keyword_003010_LTO.txt
+Resource          Global_Keyword/Keyword_001_Home.txt
 
 *** Test Cases ***
 WINZIP_particleshop
@@ -68,7 +69,7 @@ WINZIP_PDF
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA PDF page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on PDF page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_CDTS
@@ -122,7 +123,7 @@ WINZIP_PSU
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU    page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSU page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PVB
@@ -134,7 +135,7 @@ WINZIP_PVB
     \    Check VA on PVB page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-WINZIP_Photomirage
+X WINZIP_Photomirage
     ${contents}=    Get File    ${VA_WINZIP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -176,5 +177,5 @@ WINZIP_WinDVD
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WinDVD page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on WinDVD page    WinZip 22    en    @{var}[1]    @{var}[2]
     \    close all browsers
