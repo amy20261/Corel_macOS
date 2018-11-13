@@ -30,37 +30,37 @@ Check VA on WPO std page
 Check VA on CDTS page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDTS}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDTS}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_CDGS    ${ValueAdd}    ${CDTS}    ${currency}    ${worth}
 
 Check VA on CDGS HS page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDHS}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDHS}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_CDGS    ${ValueAdd}    ${CDHS}    ${currency}    ${worth}
 
 Check VA on CAD page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CAD}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CAD}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_CDGS    ${ValueAdd}    ${CAD}    ${currency}    ${worth}
 
 Check VA on CDGS page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDGS}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDGS}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_CDGS    ${ValueAdd}    ${CDGS}    ${currency}    ${worth}
 
 Check VA on PTR page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PTR}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PTR}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_PTR    ${ValueAdd}    ${PTR}    ${currency}    ${worth}
 
 Check VA on PE page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PE}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PE}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_PTR    ${ValueAdd}    ${PE}    ${currency}    ${worth}
 
 Check VA on particleshop page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${particleshop}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_PTR    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
 
 Check VA on PSP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
@@ -181,6 +181,32 @@ LTO should contain_PSP
     close all browsers
 
 LTO should contain_WPO
+    [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
+    Run Keyword And Continue On Failure    click element    //p[@data-promo-text="promoMsgDetail"]
+    wait until element is visible    //div[@id="lto-details"]
+    sleep    5
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
+    close all browsers
+
+LTO should contain_PTR
+    [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
+    Run Keyword And Continue On Failure    click element    //p[@data-promo-text="promoMsgDetail"]
+    wait until element is visible    //div[@id="lto-details"]
+    sleep    5
+    Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
+    #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
+    close all browsers
+
+LTO should contain_CDGS
     [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
     #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
