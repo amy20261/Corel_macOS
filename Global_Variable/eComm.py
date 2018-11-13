@@ -3,7 +3,7 @@
 #https://docs.google.com/a/corel.com/spreadsheets/d/1uke1z4g2D-UDbuoePbx9OGUN4WyebOfkqhSOoyiSFWs/edit?usp=sharing
 
 #env='dev' or 'stg'
-env='stg'
+env='dev'
 
 #micro website
 Corel='corel'
@@ -86,7 +86,7 @@ OPI='PI2019EFMBAM'
 XPI='PI2019EFMBUGAM'
 
 #link on Home page
-Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL_BN_2.csv'
+Corel_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_COREL_BN_3.csv'
 CDGS_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_CDGS_BN.csv'
 PTR_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR_BN.csv'
 WPO_Home='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO_BN.csv'
