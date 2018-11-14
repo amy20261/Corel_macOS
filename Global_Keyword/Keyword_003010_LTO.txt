@@ -156,7 +156,7 @@ LTO should contain_WINDVD
 
 LTO should contain_PM
     [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
-    Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
     #Run Keyword And Continue On Failure    click element    //p[@data-promo-text="promoMsgDetail"]
     #Run Keyword And Continue On Failure    wait until element is visible    //div[@id="lto-details"]

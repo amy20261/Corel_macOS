@@ -33,7 +33,8 @@ WINZIP_PTR
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PTR page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on PTR page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_WPO STD
@@ -42,7 +43,8 @@ WINZIP_WPO STD
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WPO STD page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on WPO STD page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_WPO PRO
@@ -51,7 +53,8 @@ WINZIP_WPO PRO
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WPO PRO page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on WPO PRO page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_WPO HS
@@ -60,7 +63,8 @@ WINZIP_WPO HS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WPO HS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on WPO HS page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_PDF
@@ -69,7 +73,8 @@ WINZIP_PDF
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PDF page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on PDF page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_CDTS
@@ -78,7 +83,8 @@ WINZIP_CDTS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on CDTS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on CDTS page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_CDGS HS
@@ -96,7 +102,8 @@ WINZIP_CAD
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on CAD page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on CAD page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_CDGS
@@ -168,7 +175,8 @@ WINZIP_ASP
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on ASP page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;jp'    Check VA on ASP page    WinZip 22 Std    en    @{var}[1]
+    \    ...    @{var}[2]
     \    close all browsers
 
 WINZIP_WinDVD
