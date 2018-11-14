@@ -113,7 +113,7 @@ verify link on home page_US
     click HeroBanner
     Verify URL Contain    ${Hero}
     Click MainFeature
-    Verify URL Contain_blank    ${Main Feature}
+    Verify URL Contain    ${Main Feature}
     Click Highlight 1
     Verify URL Contain    ${Highlight 1}
     Click Highlight 2

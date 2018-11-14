@@ -95,7 +95,7 @@ verify link on home page
     click HeroBanner
     run keyword and continue on failure    Verify URL Contain    ${Hero}
     Click MainFeature
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Main Feature}
+    run keyword and continue on failure    Verify URL Contain    ${Main Feature}
     Click Highlight 1
     run keyword and continue on failure    Verify URL Contain    ${Highlight 1}
     Click Highlight 2

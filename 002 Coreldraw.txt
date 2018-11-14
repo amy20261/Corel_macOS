@@ -113,7 +113,7 @@ verify link on home page
     click HeroBanner
     Verify URL Contain    ${Hero}
     Click MainFeature
-    Verify URL Contain_blank    ${Main Feature}
+    Verify URL Contain    ${Main Feature}
     Click Highlight 1
     Verify URL Contain    ${Highlight 1}
     Click Highlight 2
@@ -160,7 +160,7 @@ verify link on home page_EN
     click HeroBanner
     Verify URL Contain    ${Hero}
     Click MainFeature
-    Verify URL Contain_Blank    ${Main Feature}
+    Verify URL Contain    ${Main Feature}
     Click Highlight 1
     Verify URL Contain    ${Highlight 1}
     Click Highlight 2
