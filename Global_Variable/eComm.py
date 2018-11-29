@@ -119,8 +119,8 @@ bruch_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\Particleshop20.c
 PSB_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_w4.csv'
 #VSU_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU35.csv'
 #VSP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP35.csv'
-ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP50.csv'
-DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD60.csv'
+ASP_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\ASP_30.csv'
+DVD_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\winDVD30.csv'
 Photomirage_file='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PM3550.csv'
 
 #Promo box price
@@ -135,8 +135,8 @@ PDF_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_35.csv
 PSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_5030.csv'
 PSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_3050.csv'
 #PSB_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_BOX_w1.csv'
-VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_3050.csv'
-VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_3050.csv'
+VSU_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv'
+VSP_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv'
 PI_file_BOX='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv'
 PTR_file_wacom='C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PTR_BUNDLE.csv'
 
