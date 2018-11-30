@@ -24,8 +24,7 @@ WINZIP_PE
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on PE page    WinZip 22 Std    en    @{var}[1]
-    \    ...    @{var}[2]
+    \    Check VA on PE page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PTR
@@ -34,7 +33,7 @@ WINZIP_PTR
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on PTR page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on PTR page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -44,7 +43,7 @@ WINZIP_WPO STD
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on WPO STD page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on WPO STD page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -54,7 +53,7 @@ WINZIP_WPO PRO
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on WPO PRO page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on WPO PRO page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -64,7 +63,7 @@ WINZIP_WPO HS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on WPO HS page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on WPO HS page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -74,7 +73,7 @@ WINZIP_PDF
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on PDF page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on PDF page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -84,7 +83,7 @@ WINZIP_CDTS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on CDTS page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on CDTS page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -103,7 +102,7 @@ WINZIP_CAD
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on CAD page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on CAD page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 
@@ -176,7 +175,7 @@ WINZIP_ASP
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;de-DE;fr-FR;ja-JP'    Check VA on ASP page    WinZip 22 Std    en    @{var}[1]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr;jp'    Check VA on ASP page    WinZip 22 Std    en    @{var}[1]
     \    ...    @{var}[2]
     \    close all browsers
 

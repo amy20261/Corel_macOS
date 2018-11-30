@@ -60,7 +60,7 @@ Check VA on PE page
 Check VA on particleshop page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${particleshop}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_PSP    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
 
 Check VA on PSP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
@@ -85,12 +85,12 @@ Check VA on PhotoMirage page
 Check VA on VSP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSP}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSP}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_VSP    ${ValueAdd}    ${VSP}    ${currency}    ${worth}
 
 Check VA on VSU page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSU}
-    Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
+    Run Keyword And Continue On Failure    LTO should contain_VSP    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
 
 Check VA on ASP page
     [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
@@ -104,27 +104,27 @@ Check VA on WinDVD page
 
 LTO should contain
     [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
-    Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
     Run Keyword And Continue On Failure    click element    //p[@data-promo-text="promoMsgDetail"]
     wait until element is visible    //div[@id="lto-details"]
     sleep    5
     Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
     capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
-    Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
     close all browsers
 
 LTO should contain_VSP
     [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
-    #element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     #element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
     click element    //p[@data-promo-text="promoMsgDetail"]
     wait until element is visible    //div[@id="lto-details"]
     sleep    5
     Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
     capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
-    #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
+    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
     #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
     close all browsers
 
@@ -170,14 +170,14 @@ LTO should contain_PM
 LTO should contain_PSP
     [Arguments]    ${ValueAdd}    ${product}    ${currency}    ${worth}
     #element should contain    //p[@data-promo-text="promoMsgShort"]    ${ValueAdd}
-    #element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
+    element should contain    //p[@data-promo-text="promoMsgShort"]    ${worth}
     click element    //p[@data-promo-text="promoMsgDetail"]
     wait until element is visible    //div[@id="lto-details"]
     sleep    5
     Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
     capture page screenshot    c:\\temp\\VA\\${ValueAdd}\\${product}_${currency}.png
     #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${ValueAdd}
-    #element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
+    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${worth}
     close all browsers
 
 LTO should contain_WPO
