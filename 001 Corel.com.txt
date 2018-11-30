@@ -60,7 +60,7 @@ verify link on home page_en
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
     Click HeroBanner
-    Verify URL Contain    ${Hero}
+    Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}
     Click Highlight 1
@@ -104,7 +104,7 @@ verify link on home page_de
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
     Click HeroBanner
-    Verify URL Contain    ${Hero}
+    Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}
     Click Highlight 1
@@ -125,7 +125,7 @@ verify link on home page_JP
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
     Click HeroBanner
-    Verify URL Contain    ${Hero}
+    Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}
     Click Highlight 1
