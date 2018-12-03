@@ -64,7 +64,7 @@ Check price_VSP product page_BOX
 Check price_VSP product page_BOX_SRP_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP00.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -72,7 +72,7 @@ Check price_VSP product page_BOX_SRP_DEV
 Check price_VSP product page_BOX_10% Off_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP10.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -80,7 +80,7 @@ Check price_VSP product page_BOX_10% Off_DEV
 Check price_VSP product page_BOX_20% Off_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -88,7 +88,7 @@ Check price_VSP product page_BOX_20% Off_DEV
 Check price_VSP product page_BOX_30% Off_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -96,7 +96,7 @@ Check price_VSP product page_BOX_30% Off_DEV
 Check price_VSP product page_BOX_35% Off_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP35.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -104,7 +104,7 @@ Check price_VSP product page_BOX_35% Off_DEV
 Check price_VSP product page_BOX_SRP_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP00.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -112,7 +112,7 @@ Check price_VSP product page_BOX_SRP_STG
 Check price_VSP product page_BOX_10% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP10.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -120,7 +120,7 @@ Check price_VSP product page_BOX_10% Off_STG
 Check price_VSP product page_BOX_20% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -128,7 +128,7 @@ Check price_VSP product page_BOX_20% Off_STG
 Check price_VSP product page_BOX_30% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -136,7 +136,7 @@ Check price_VSP product page_BOX_30% Off_STG
 Check price_VSP product page_BOX_35% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSP35.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -144,7 +144,7 @@ Check price_VSP product page_BOX_35% Off_STG
 Check price_VSU product page_BOX_SRP_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU00.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -152,7 +152,7 @@ Check price_VSU product page_BOX_SRP_DEV
 Check price_VSU product page_BOX_10% OFF_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU10.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -160,7 +160,7 @@ Check price_VSU product page_BOX_10% OFF_DEV
 Check price_VSU product page_BOX_20% OFF_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -168,7 +168,7 @@ Check price_VSU product page_BOX_20% OFF_DEV
 Check price_VSU product page_BOX_30% OFF_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -176,9 +176,49 @@ Check price_VSU product page_BOX_30% OFF_DEV
 Check price_VSU product page_BOX_35% OFF_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX35.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check VSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_VSU product page_BOX_SRP_STG
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_VSU product page_BOX_10% OFF_STG
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU10.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_VSU product page_BOX_20% OFF_STG
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_20.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_VSU product page_BOX_30% OFF_STG
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX_30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_VSU product page_BOX_35% OFF_STG
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\VSU_BOX35.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check VSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check Link_Home Page_DEV_Family_VSU_PVB_DVD
