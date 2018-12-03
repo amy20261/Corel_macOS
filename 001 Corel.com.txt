@@ -60,7 +60,7 @@ verify link on home page_en
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
     Click HeroBanner
-    Verify URL Contain    ${Hero}
+    Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}
     Click Highlight 1
@@ -81,7 +81,7 @@ verify link in special offer page
     [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}    ${Prod 5}
     ...    ${Prod 6}    ${Prod 7}    ${Prod 8}
     Click Special Offers Hero
-    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
     Click Prod 1
     run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
     Click Prod 2
@@ -104,7 +104,7 @@ verify link on home page_de
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
     Click HeroBanner
-    Verify URL Contain    ${Hero}
+    Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}
     Click Highlight 1
@@ -125,7 +125,7 @@ verify link on home page_JP
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
     Click HeroBanner
-    Verify URL Contain    ${Hero}
+    Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}
     Click Highlight 1
