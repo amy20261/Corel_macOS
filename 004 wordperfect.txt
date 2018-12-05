@@ -525,7 +525,7 @@ verify link on home page
     Verify URL Contain    ${Main Feature}
     Click Highlight 1
     Verify URL Contain    ${Highlight 1}
-    Highlight 2
+    click highlight 2
     Verify URL Contain    ${Highlight 2}
     Click Sp. Offer 1
     Verify URL Contain    ${SpOffer1}
