@@ -510,7 +510,7 @@ Check Link_Home Page_STG_STD_PRO_HS_PDF
     :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
+    \    open browser to home page_HTTPS    stg    ${wWPO}    @{var}[1]    @{var}[2]
     \    verify link on home page    office-suite    professional-edition    pdf-creator    home-student    @{var}[7]
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
