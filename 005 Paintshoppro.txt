@@ -414,6 +414,17 @@ Check Link_Home Page_STG_Family_PSU_PVB_particleshop
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
+Check Link_Home Page_DEV_PSP_PSU_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
 *** Keywords ***
 verify link on home page
     [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
