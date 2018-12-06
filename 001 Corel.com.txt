@@ -55,6 +55,30 @@ Chick Link_Special Offer Page_BN
     \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     \    ...    @{var}[11]
 
+Check Link_Home Page_DEV_CDGS_PSP_PTR_VSP
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to Home page_HTTPS    dev    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr'    verify link on home page_en    coreldraw    paintshop-pro/standard    painter
+    \    ...    videostudio/pro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/pro    painter    paintshop-pro/standard
+    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+
+Check Link_Home Page_STG_CDGS_PSP_PTR_VSP
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to Home page_HTTPS    stg    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en;de;fr'    verify link on home page_en    coreldraw    paintshop-pro/standard    painter
+    \    ...    videostudio/pro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/pro    painter    paintshop-pro/standard
+    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+
 *** Keywords ***
 verify link on home page_en
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
@@ -67,14 +91,14 @@ verify link on home page_en
     Verify URL Contain_Blank    ${Highlight1}
     Click Highlight 2
     Verify URL Contain_Blank    ${Highlight2}
-    Click Sp. Offer 1
-    Verify URL Contain_Blank    ${SpOffer1}
-    Click Sp. Offer 2
-    Verify URL Contain_Blank    ${SpOffer2}
-    Click Sp. Offer 3
-    Verify URL Contain_Blank    ${SpOffer3}
-    Click Sp. Offer 4
-    Verify URL Contain_Blank    ${SpOffer4}
+    #Click Sp. Offer 1
+    #Verify URL Contain_Blank    ${SpOffer1}
+    #Click Sp. Offer 2
+    #Verify URL Contain_Blank    ${SpOffer2}
+    #Click Sp. Offer 3
+    # Verify URL Contain_Blank    ${SpOffer3}
+    # Click Sp. Offer 4
+    # Verify URL Contain_Blank    ${SpOffer4}
     close all browsers
 
 verify link in special offer page
