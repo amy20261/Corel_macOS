@@ -265,6 +265,28 @@ Check Link_Home Page_STG_VSP_VSU_PVB_DVD
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
+Check Link_Home Page_DEV_VSU_VSP_PVB_DVD
+    ${contents}=    Get File    ${VSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle    windvdpro    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_STG_VSU_VSP_PVB_DVD
+    ${contents}=    Get File    ${VSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle    windvdpro    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
 *** Keywords ***
 verify link on home page
     [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
