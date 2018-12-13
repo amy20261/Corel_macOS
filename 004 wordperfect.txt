@@ -416,7 +416,7 @@ Check price_WPO HS product page_BOX_50% OFF_STG
 Check price_PDF product page_BOX_20% Off_dev
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -424,7 +424,7 @@ Check price_PDF product page_BOX_20% Off_dev
 Check price_PDF product page_BOX_25% Off_dev
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_25.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -432,7 +432,7 @@ Check price_PDF product page_BOX_25% Off_dev
 Check price_PDF product page_BOX_30% Off_dev
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -440,7 +440,7 @@ Check price_PDF product page_BOX_30% Off_dev
 Check price_PDF product page_BOX_35% Off_dev
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_35.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -448,7 +448,7 @@ Check price_PDF product page_BOX_35% Off_dev
 Check price_PDF product page_BOX_50% Off_dev
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX50.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -456,7 +456,7 @@ Check price_PDF product page_BOX_50% Off_dev
 Check price_PDF product page_BOX_20% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -464,7 +464,7 @@ Check price_PDF product page_BOX_20% Off_STG
 Check price_PDF product page_BOX_25% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_25.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -472,7 +472,7 @@ Check price_PDF product page_BOX_25% Off_STG
 Check price_PDF product page_BOX_30% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -480,7 +480,7 @@ Check price_PDF product page_BOX_30% Off_STG
 Check price_PDF product page_BOX_35% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX_35.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -488,7 +488,7 @@ Check price_PDF product page_BOX_35% Off_STG
 Check price_PDF product page_BOX_50% Off_STG
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PDF_BOX50.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -496,7 +496,7 @@ Check price_PDF product page_BOX_50% Off_STG
 Check Link_Home Page_DEV_STD_PRO_HS_PDF
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
@@ -507,11 +507,33 @@ Check Link_Home Page_DEV_STD_PRO_HS_PDF
 Check Link_Home Page_STG_STD_PRO_HS_PDF
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wWPO}    @{var}[1]    @{var}[2]
     \    verify link on home page    office-suite    professional-edition    pdf-creator    home-student    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_DEV_PRO_STD_HS_PDF
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
+    \    verify link on home page    professional-edition    office-suite    pdf-creator    home-student    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_STG_PRO_STD_HS_PDF
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
+    \    verify link on home page    professional-edition    office-suite    pdf-creator    home-student    @{var}[7]
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
