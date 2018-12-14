@@ -440,7 +440,7 @@ Check Link_Home Page_DEV_CDGS_CDHS_CDTS_CAD
 Check Link_Home Page_STG_CDGS_CDHS_CDTS_CAD
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
@@ -451,9 +451,17 @@ Check Link_Home Page_STG_CDGS_CDHS_CDTS_CAD
 Check price_CDGS product page_BOX_15-10% OFF_DEV
     ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_1510.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check CDGS product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_CDGS product page_BOX_15-10% OFF_STG
+    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\CDGS_BOX_1510.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check CDGS product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 *** Keywords ***
