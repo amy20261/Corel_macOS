@@ -8,20 +8,38 @@ Resource          Global_Keyword/Keyword_003_Product.txt
 Resource          Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
-TRAVEL_VSP
+TRAVEL_VSP_dev
     ${contents}=    Get File    ${VA_TRAVEL}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on VSP page    Travel FX Collection    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSP page    dev    Travel FX Collection    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-TRAVEL_VSU
+TRAVEL_VSU_dev
     ${contents}=    Get File    ${VA_TRAVEL}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on VSU page    Travel FX Collection    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSU page    dev    Travel FX Collection    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+TRAVEL_VSP_stg
+    ${contents}=    Get File    ${VA_TRAVEL}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSP page    stg    Travel FX Collection    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+TRAVEL_VSU_stg
+    ${contents}=    Get File    ${VA_TRAVEL}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSU page    dev    Travel FX Collection    en    @{var}[1]    @{var}[2]
     \    close all browsers
