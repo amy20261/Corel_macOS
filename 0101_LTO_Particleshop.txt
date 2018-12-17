@@ -8,66 +8,130 @@ Resource          Global_Keyword/Keyword_003_Product.txt
 Resource          Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
-ParticleShop_CDGS
+ParticleShop_CDGS_dev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on CDGS page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on CDGS page    dev    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop_PTR
+ParticleShop_PTR_dev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[2]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    ParticleShop    en    @{var}[1]
-    \    ...    @{var}[2]
+    \    run keyword if    '@{var}[2]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    dev    ParticleShop    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop_PSP
+ParticleShop_PSP_dev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSP page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSP page    dev    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop_PSU
+ParticleShop_PSU_dev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSU page    dev    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop_PVB
+ParticleShop_PVBDev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PVB page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on PVB page    dev    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop_photomirage
+ParticleShop_photomirage_dev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on Photomirage page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on Photomirage page    dev    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-ParticleShop_ASP
+ParticleShop_ASP_dev
     ${contents}=    Get File    ${VA_particleshop}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on ASP page    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    Check VA on ASP page    dev    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_CDGS_stg
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on CDGS page    stg    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_PTR_stg
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    run keyword if    '@{var}[2]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    stg    ParticleShop    en
+    \    ...    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_PSP_STG
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSP page    stg    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_PSU_STG
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSU page    stg    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_PVB_STG
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PVB page    stg    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_photomirage_stg
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on Photomirage page    stg    ParticleShop    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+ParticleShop_ASP_STG
+    ${contents}=    Get File    ${VA_particleshop}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on ASP page    stg    ParticleShop    en    @{var}[1]    @{var}[2]
     \    close all browsers

@@ -8,97 +8,97 @@ Resource          Keyword_001_Home.txt
 
 *** Keywords ***
 Check VA on PDF page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${PDF}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PDF}    ${currency}    ${worth}
 
 Check VA on WPO HS page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${WPOHS}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WPOHS}    ${currency}    ${worth}
 
 Check VA on WPO PRO page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${WPOPRO}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WPOPRO}    ${currency}    ${worth}
 
 Check VA on WPO std page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    ${Lan}    ${currency}    ${WPOSTD}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WPOSTD}    ${currency}    ${worth}
 
 Check VA on CDTS page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDTS}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDTS}    ${currency}    ${worth}
 
 Check VA on CDGS HS page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDHS}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDHS}    ${currency}    ${worth}
 
 Check VA on CAD page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CAD}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CAD}    ${currency}    ${worth}
 
 Check VA on CDGS page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    ${Lan}    ${currency}    ${CDGS}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${CDGS}    ${currency}    ${worth}
 
 Check VA on PTR page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PTR}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PTR}    ${currency}    ${worth}
 
 Check VA on PE page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${PE}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PE}    ${currency}    ${worth}
 
 Check VA on particleshop page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    ${Lan}    ${currency}    ${particleshop}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${particleshop}    ${currency}    ${worth}
 
 Check VA on PSP page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    ${Lan}    ${currency}    ${PSP}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PSP}    ${currency}    ${worth}
 
 Check VA on PSU page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    ${Lan}    ${currency}    ${PSU}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PSU}    ${currency}    ${worth}
 
 Check VA on PVB page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    ${Lan}    ${currency}    ${PVB}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PVB}    ${currency}    ${worth}
 
 Check VA on PhotoMirage page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to photomirage page    ${env}    ${wPHOTOMIRAGE}    en    ${currency}    ${features}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${PVB}    ${currency}    ${worth}
 
 Check VA on VSP page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSP}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSP}    ${currency}    ${worth}
 
 Check VA on VSU page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    ${Lan}    ${currency}    ${VSU}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${VSU}    ${currency}    ${worth}
 
 Check VA on ASP page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser to Products Page    ${env}    ${wASP}    ${Lan}    ${currency}    ${ASP}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${ASP}    ${currency}    ${worth}
 
 Check VA on WinDVD page
-    [Arguments]    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
+    [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
     Open Browser To Home Page HTTPS    ${env}    ${WinDVD}    en    ${currency}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WinDVD}    ${currency}    ${worth}
 
