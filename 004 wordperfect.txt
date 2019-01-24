@@ -515,7 +515,7 @@ Check Link_Home Page_STG_STD_PRO_HS_PDF
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Home Page_DEV_PRO_STD_HS_PDF
+Check Link_Home Page_DEV_PRO_STD_PDF_HS
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -526,7 +526,7 @@ Check Link_Home Page_DEV_PRO_STD_HS_PDF
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Home Page_STG_PRO_STD_HS_PDF
+Check Link_Home Page_STG_PRO_STD_PDF_HS
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
