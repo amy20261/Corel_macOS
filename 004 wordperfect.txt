@@ -493,7 +493,7 @@ Check price_PDF product page_BOX_50% Off_STG
     \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check Link_Home Page_DEV_STD_PRO_HS_PDF
+Check Link_Home Page_DEV_STD_PROPDF_HS
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -504,7 +504,7 @@ Check Link_Home Page_DEV_STD_PRO_HS_PDF
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Home Page_STG_STD_PRO_HS_PDF
+Check Link_Home Page_STG_STD_PRO_PDF_HS
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
