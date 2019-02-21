@@ -89,7 +89,7 @@ Check price_Photo Impact
     \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_Q1_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -97,7 +97,7 @@ Check price_PVB product page_Q1_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_25% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB25.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB25.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -105,7 +105,7 @@ Check price_PVB product page_25% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_30% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -113,7 +113,7 @@ Check price_PVB product page_30% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_35% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -121,7 +121,7 @@ Check price_PVB product page_35% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_40% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB40.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB40.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -129,7 +129,7 @@ Check price_PVB product page_40% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_Q1_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -137,7 +137,7 @@ Check price_PVB product page_Q1_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_25% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB25.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB25.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -145,7 +145,7 @@ Check price_PVB product page_25% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_30% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -153,7 +153,7 @@ Check price_PVB product page_30% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_35% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -161,7 +161,7 @@ Check price_PVB product page_35% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_40% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PVB40.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB40.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -169,7 +169,7 @@ Check price_PVB product page_40% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_SRP_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -177,7 +177,7 @@ Check price_PSP product page_BOX_SRP_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_10% OFF_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -185,7 +185,7 @@ Check price_PSP product page_BOX_10% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_20% OFF_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_20.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -193,7 +193,7 @@ Check price_PSP product page_BOX_20% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_30% OFF_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -201,7 +201,7 @@ Check price_PSP product page_BOX_30% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_35% OFF_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP35.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP35.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -209,7 +209,7 @@ Check price_PSP product page_BOX_35% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_40% OFF_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP40.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP40.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -217,7 +217,7 @@ Check price_PSP product page_BOX_40% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_50% OFF_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP50.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP50.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -225,7 +225,7 @@ Check price_PSP product page_BOX_50% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_SRP_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -233,7 +233,7 @@ Check price_PSP product page_BOX_SRP_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_10% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -241,7 +241,7 @@ Check price_PSP product page_BOX_10% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_20% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP_BOX_20.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -249,7 +249,7 @@ Check price_PSP product page_BOX_20% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_30% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -257,7 +257,7 @@ Check price_PSP product page_BOX_30% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_35% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP35.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP35.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -265,7 +265,7 @@ Check price_PSP product page_BOX_35% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_40% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP40.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP40.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -273,7 +273,7 @@ Check price_PSP product page_BOX_40% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_50% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSP50.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP50.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -281,7 +281,7 @@ Check price_PSP product page_BOX_50% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_SRP_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -289,7 +289,7 @@ Check price_PSU product page_BOX_SRP_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_10% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_10.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_10.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -297,7 +297,7 @@ Check price_PSU product page_BOX_10% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_20% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -305,7 +305,7 @@ Check price_PSU product page_BOX_20% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_25% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_25.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_25.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -313,7 +313,7 @@ Check price_PSU product page_BOX_25% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_30% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -321,7 +321,7 @@ Check price_PSU product page_BOX_30% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_35% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU35.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU35.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -329,7 +329,7 @@ Check price_PSU product page_BOX_35% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_40% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU40.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU40.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -337,7 +337,7 @@ Check price_PSU product page_BOX_40% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_50% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU50.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU50.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -345,7 +345,7 @@ Check price_PSU product page_BOX_50% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_SRP_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -353,7 +353,7 @@ Check price_PSU product page_BOX_SRP_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_10% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_10.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_10.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -361,7 +361,7 @@ Check price_PSU product page_BOX_10% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_20% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -369,7 +369,7 @@ Check price_PSU product page_BOX_20% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_25% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_25.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_25.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -377,7 +377,7 @@ Check price_PSU product page_BOX_25% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_30% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU30.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -385,7 +385,7 @@ Check price_PSU product page_BOX_30% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_35% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU35.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU35.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -393,7 +393,7 @@ Check price_PSU product page_BOX_35% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_40% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU40.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU40.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -401,7 +401,7 @@ Check price_PSU product page_BOX_40% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_50% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU50.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU50.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -409,7 +409,7 @@ Check price_PSU product page_BOX_50% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_Photo Impact_55% Off_dev
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -417,7 +417,7 @@ Check price_Photo Impact_55% Off_dev
     \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
 
 Check price_Photo Impact_55% Off_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -469,7 +469,7 @@ Check Link_Home Page_STG_PSP_PSU_PVB_particleshop
     [Teardown]
 
 Check price_PSU product page_BOX_30/20% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_3020.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_3020.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -477,7 +477,7 @@ Check price_PSU product page_BOX_30/20% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_30/20% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_3020.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_3020.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -507,7 +507,7 @@ Check Link_Home Page_STG_PSU_PSP_PVB_particleshop
     [Teardown]
 
 Check price_PSU product page_BOX_40/25% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
     @{lines}=    Split to lines    ${contents}
     :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -515,7 +515,7 @@ Check price_PSU product page_BOX_40/25% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_40/25% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;

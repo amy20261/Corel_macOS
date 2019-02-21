@@ -5,7 +5,7 @@ Library           String
 
 *** Test Cases ***
 HTTPS_screenshot_ROXIO_PROD
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\ROXIO\\ROXIO.txt
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\ROXIO\\ROXIO.txt
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    Split String    ${line}    ;
@@ -20,7 +20,7 @@ HTTPS_screenshot_ROXIO_PROD
     \    close all browsers
 
 HTTPS_screenshot_ROXIO_STG_EN
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\ROXIO\\ROXIO_S.txt
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\ROXIO\\ROXIO_S.txt
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    Split String    ${line}    ;
