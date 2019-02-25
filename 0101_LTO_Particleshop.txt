@@ -23,7 +23,7 @@ ParticleShop_PTR_dev
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[2]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    dev    ParticleShop    en
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    dev    ParticleShop    en
     \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
@@ -87,7 +87,7 @@ ParticleShop_PTR_stg
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[2]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    stg    ParticleShop    en
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    stg    ParticleShop    en
     \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 

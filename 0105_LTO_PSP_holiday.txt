@@ -14,7 +14,7 @@ PSP Holiday script_PSP
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSP page    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSP page    dev    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 PSP Holiday script_PSU
@@ -23,7 +23,7 @@ PSP Holiday script_PSU
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSU page    dev    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 PSP Holiday script_PVB
@@ -32,5 +32,5 @@ PSP Holiday script_PVB
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PVB page    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
+    \    Check VA on PVB page    dev    PSP Holiday Scripts    en    @{var}[1]    @{var}[2]
     \    close all browsers
