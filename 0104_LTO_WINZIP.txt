@@ -15,7 +15,7 @@ WINZIP_particleshop
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on particleshop page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on particleshop page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PE
@@ -24,7 +24,7 @@ WINZIP_PE
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PE page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on PE page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PTR
@@ -33,8 +33,8 @@ WINZIP_PTR
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on PTR page    WinZip 22 Std    en    @{var}[1]
-    \    ...    @{var}[2]
+    \    run keyword if    dev    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Check VA on PTR page    WinZip 22 Std    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_WPO STD
@@ -93,7 +93,7 @@ WINZIP_CDGS HS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on CDGS HS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on CDGS HS page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_CAD
@@ -112,7 +112,7 @@ WINZIP_CDGS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on CDGS page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on CDGS page    WinZip 22 Std    dev    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PSP
@@ -121,7 +121,7 @@ WINZIP_PSP
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSP page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSP page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PSU
@@ -130,7 +130,7 @@ WINZIP_PSU
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on PSU page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_PVB
@@ -139,16 +139,7 @@ WINZIP_PVB
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PVB page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
-    \    close all browsers
-
-X WINZIP_Photomirage
-    ${contents}=    Get File    ${VA_WINZIP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Check VA on Photomirage page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on PVB page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_VSP
@@ -157,7 +148,7 @@ WINZIP_VSP
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on VSP page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSP page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_VSU
@@ -166,7 +157,7 @@ WINZIP_VSU
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on VSU page    WinZip 22 Std    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSU page    dev    WinZip 22 Std    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
 WINZIP_ASP
@@ -185,5 +176,5 @@ WINZIP_WinDVD
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WinDVD page    WinZip 22    en    @{var}[1]    @{var}[2]
+    \    Check VA on WinDVD page    dev    WinZip 22    en    @{var}[1]    @{var}[2]
     \    close all browsers
