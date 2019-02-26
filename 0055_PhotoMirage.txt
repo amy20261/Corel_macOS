@@ -142,7 +142,7 @@ Check price_photomirage page_15% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_photomirage page_20% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage20.csv
+    ${contents}=    Get File    c:\\Corel\\Global_Variable\\Data\\PhotoMirage20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
