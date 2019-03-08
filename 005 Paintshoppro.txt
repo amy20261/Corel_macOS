@@ -487,7 +487,7 @@ Check Link_Home Page_STG_PSU_PSP_PVB_particleshop
     [Teardown]
 
 Check price_PSP product page_BOX_50/35% OFF_dev
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_3050.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_5035.csv
     @{lines}=    Split to lines    ${contents}
     :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -495,7 +495,7 @@ Check price_PSP product page_BOX_50/35% OFF_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSP product page_BOX_50/35% OFF_stg
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\PSP_BOX_3050.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_5035.csv
     @{lines}=    Split to lines    ${contents}
     :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
