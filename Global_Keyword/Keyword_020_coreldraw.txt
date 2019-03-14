@@ -69,3 +69,18 @@ Check CDTS product page_subscription
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
     Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
     close all browsers
+
+Check CDGS product page_BOX_MAC
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page_HTTPS_MAC    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
+    Check promo price on product_radio_BOX_MAC    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}    ${OCDGS}
+    ...    ${XCDGS}
+    close all browsers
+
+Check CDGS product page_subscription_MAC
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${savings}
+    close all browsers
+    Open Browser to Product Page_HTTPS_MAC    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
+    Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
+    close all browsers

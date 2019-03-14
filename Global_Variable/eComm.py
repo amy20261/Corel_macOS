@@ -16,7 +16,7 @@ wASP='aftershotpro'
 wPHOTOMIRAGE='Photomirage'
 
 #product
-CDGS='graphic-design-software'
+CDGS='coreldraw'
 CAD='corel-cad'
 CDTS='technical-suite'
 CDHS='home-student'

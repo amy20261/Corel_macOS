@@ -264,3 +264,18 @@ Verify monthly Price
 Verify subscription Price
     [Arguments]    ${FULL_Promo}
     Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal no-pad-left price']    ${FULL_Promo}
+
+Open Browser to Product Page_HTTPS_MAC
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
+    Wait Until Keyword Succeeds    2 min    0.3 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/mac/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    0.3 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/product/${page}/mac/?currency=${currency}
+    Maximize Browser Window
+    sleep    4
+
+Check promo price on product_radio_BOX_MAC
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
+    ...    ${UPBOXSKU}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Promo Price    ${Full_promo}
+    ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
