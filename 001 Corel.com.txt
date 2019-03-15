@@ -286,11 +286,11 @@ Check Link_Home Page_DEV_CDGS_PSP_PTR/PSU_WPO/VSU/WINDVD_CDGS2019
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to Home page_HTTPS    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    '@{var}[1]' in 'de;fr'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
+    \    run keyword if    '@{var}[1]' in 'de;fr'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
     \    ...    office-suite    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    \    run keyword and continue on failure    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
     \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    \    run keyword and continue on failure    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
+    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
     \    ...    office-suite    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
 
 *** Keywords ***
