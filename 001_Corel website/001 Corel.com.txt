@@ -2,10 +2,10 @@
 Resource          Global_Keyword/Keyword_001_Home.txt
 Library           Selenium2Library
 Library           OperatingSystem
-Resource          Global_Keyword/Keyword_000_Verification.txt
-Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
-Resource          Global_Keyword/Keyword_010_corel.com.txt
-Variables         Global_Variable/eComm.py
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_010_corel.com.txt
+Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
 Check Link_Home Page
@@ -278,7 +278,7 @@ Check Link_Home Page_DEV_CDGS_PSP_PTR/PSU_VSU_CDGS2019
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
     \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
 
-Check Link_Home Page_DEV_CDGS_PSP_PTR/PSU_WPO/VSU/WINDVD_CDGS2019
+Check Link_Home Page_DEV_CDGS2019_PSP_PTR/PSU_WPO/VSU/WINDVD
     ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -292,7 +292,7 @@ Check Link_Home Page_DEV_CDGS_PSP_PTR/PSU_WPO/VSU/WINDVD_CDGS2019
     \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
     \    ...    office-suite    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
 
-Check Link_Home Page_stg_CDGS_PSP_PTR/PSU_WPO/VSU/WINDVD_CDGS2019
+Check Link_Home Page_STG_CDGS2019_PSP_PTR/PSU_WPO/VSU/WINDVD
     ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}

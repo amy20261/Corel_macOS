@@ -1,0 +1,90 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../lobal_Keyword/Keyword_050_paintershoppro.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check price_PVB product page_Q1_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_25% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB25.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_30% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_35% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_40% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_Q1_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_25% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB25.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_30% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_40% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
