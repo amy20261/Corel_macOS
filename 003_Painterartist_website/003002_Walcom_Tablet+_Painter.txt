@@ -1,0 +1,28 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_030_painterartist.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check price_Wacom
+    ${contents}=    Get File    ${PTR_file_wacom}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword if    '@{var}[0]'=='DTH1320K'    run keyword and continue on failure    Check bunclle page    cintiq-pro-13    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='DTH1620K0'    run keyword and continue on failure    Check bunclle page    cintiq-pro-16    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='DTK1300'    run keyword and continue on failure    Check bunclle page    cintiq-13hd    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='DTK2200'    run keyword and continue on failure    Check bunclle page    cintiq-22hd    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='PTH660'    run keyword and continue on failure    Check bunclle page    intuos-pro-medium    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
+    \    run keyword if    '@{var}[0]'=='PTH860'    run keyword and continue on failure    Check bunclle page    intuos-pro-large    @{var}[2]
+    \    ...    @{var}[4]    @{var}[5]    @{var}[7]
