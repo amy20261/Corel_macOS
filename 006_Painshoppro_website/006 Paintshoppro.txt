@@ -1,0 +1,545 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          Global_Keyword/Keyword_000_Verification.txt
+Resource          Global_Keyword/Keyword_001_Home.txt
+Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          Global_Keyword/Keyword_050_paintershoppro.txt
+Variables         Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    ${env}    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check price_PSB product page
+    ${contents}=    Get File    ${PSB_file}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX
+    ${contents}=    Get File    ${PSU_file_BOX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX
+    ${contents}=    Get File    ${PSP_file_BOX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_Photo Impact
+    ${contents}=    Get File    ${PI_file_BOX}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='PK_PI13ESD'    run keyword and continue on failure    Check PI product page_BOX    ${env}    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_SRP_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_10% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_20% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_20.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_30% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_35% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP35.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_40% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_50% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP50.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_SRP_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_10% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_10.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_20% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_20.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_30% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP35.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_40% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_50% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP50.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_SRP_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_10% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_10.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_20% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_25% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_25.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_30% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_35% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU35.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_40% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_50% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU50.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_SRP_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_10% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_10.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_20% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_25% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_25.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_30% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU35.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_40% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_50% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU50.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_30/20% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_3020.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_30/20% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_3020.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_40/25% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_40/25% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_Q1_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_25% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB25.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_30% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_35% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_40% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_Q1_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_25% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB25.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_30% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB30.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PVB product page_40% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB40.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSB product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_Photo Impact_55% Off_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='PK_PI13ESD'    run keyword and continue on failure    Check PI product page_BOX    dev    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
+
+Check price_Photo Impact_55% Off_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PI_BOX_55.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='PK_PI13ESD'    run keyword and continue on failure    Check PI product page_BOX    stg    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
+
+Check Link_Home Page_DEV_Family_PSU_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro    paintshop-pro/ultimate    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_STG_Family_PSU_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro    paintshop-pro/ultimate    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_DEV_PSP_PSU_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_STG_PSP_PSU_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_DEV_PSU_PSP_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check Link_Home Page_STG_PSU_PSP_PVB_particleshop
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle    particleshop    @{var}[7]
+    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    [Teardown]
+
+Check price_PSP product page_BOX_50/35% OFF_dev
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_5035.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSP product page_BOX_50/35% OFF_stg
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSP_BOX_5035.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
+    ...    ${SpOffer3}    ${SpOffer4}
+    click HeroBanner
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    Click MainFeature
+    run keyword and continue on failure    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    run keyword and continue on failure    Verify URL Contain    ${Highlight 1}
+    Click Highlight 2
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 2}
+    close all browsers
+
+verify link on special offer page
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    #Click Special Offers Hero
+    #run keyword and continue on failure    Verify URL Contain_blank    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain    ${Prod 4}
+    close all browsers
+
+verify link on special offer page_JP
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    #Click Special Offers Hero
+    #run keyword and continue on failure    Verify URL Contain_blank    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain    ${Prod 4}
+    close all browsers

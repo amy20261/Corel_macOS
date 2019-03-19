@@ -1,0 +1,42 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check price_CDGS product page_subscription_dev_MAC
+    ${contents}=    Get File    ${CDGS_Sub}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='CDGSSUBPUREPREM2'    run keyword and continue on failure    Check CDGS product page_subscription_MAC    dev    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]
+
+Check price_CDGS product page_subscription_stg_MAC
+    ${contents}=    Get File    ${CDGS_Sub}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='CDGSSUBPUREPREM2'    run keyword and continue on failure    Check CDGS product page_subscription_MAC    stg    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]
+
+Check price_CDGS product page_BOX_SRP_DEV_MAC
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='ESDCDGS2018AM'    run keyword and continue on failure    Check CDGS product page_BOX_MAC    dev    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
+
+Check price_CDGS product page_BOX_SRP_STG_MAC
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    Run keyword if    '@{var}[1]'=='ESDCDGS2018AM'    run keyword and continue on failure    Check CDGS product page_BOX_MAC    stg    @{var}[0]
+    \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]

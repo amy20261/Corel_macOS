@@ -1,0 +1,128 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Library           Screenshot    c:/temp
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_Product.txt
+Resource          Global_Keyword/Keyword_003010_LTO.txt
+
+*** Test Cases ***
+Exclusive Brush Pack_particleshop_DEV
+    ${contents}=    Get File    ${VA_EBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    dev    Exclusive Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Mystic Mountain Brush Pack (Bob Ross)_PTR_DEV
+    ${contents}=    Get File    ${VA_MBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PTR page    dev    Mystic Mountain Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Superhero Brush Pack_particleshop_dev
+    ${contents}=    Get File    ${VA_SHBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    dev    Superhero Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Superhero Brush Pack_particleshop_STG
+    ${contents}=    Get File    ${VA_SHBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    stg    Superhero Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Grunge Essentials Brush Pack_PE_dev
+    ${contents}=    Get File    ${VA_GEBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PE page    dev    Grunge Essentials Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Grunge Essentials Brush Pack_PE_STG
+    ${contents}=    Get File    ${VA_GEBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PE page    stg    Grunge Essentials Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Nature Brush Pack_PTR_dev
+    ${contents}=    Get File    ${VA_NatureBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    dev    Nature Brush Pack    en
+    \    ...    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Nature Essential Brush Pack_PE_dev
+    ${contents}=    Get File    ${VA_NEBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PE page    dev    Nature Essentials    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Nature Brush Pack_particleshop_dev
+    ${contents}=    Get File    ${VA_NatureBrushPack}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on particleshop page    dev    Nature Brush Pack    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Film and Filter effect scripts bundle_PSP
+    ${contents}=    Get File    ${VA_ScriptsBundle}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSP page    dev    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+Flim and Fliter effect scripts bundle_PSU
+    ${contents}=    Get File    ${VA_ScriptsBundle}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on PSU page    dev    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+MultiCam Capture_VSP_dev
+    ${contents}=    Get File    ${VA_MultiCam}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSP page    dev    MultiCam Capture    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+MultiCam Capture_VSU_dev
+    ${contents}=    Get File    ${VA_MultiCam}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSU page    dev    MultiCam Capture    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+*** Keywords ***
