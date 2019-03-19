@@ -2,11 +2,11 @@
 Library           Selenium2Library
 Library           OperatingSystem
 Library           String
-Resource          Global_Keyword/Keyword_000_Verification.txt
-Resource          Global_Keyword/Keyword_001_Home.txt
-Resource          Global_Keyword/Keyword_002_Special_Offer_Page.txt
-Resource          Global_Keyword/Keyword_055_photomirage.txt
-Variables         Global_Variable/eComm.py
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_055_photomirage.txt
+Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
 Screenshot_PhotoMirage_all Lan_DEV
@@ -75,86 +75,6 @@ Check price_photomirage page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check Photomirage page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_SRP_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage00.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    dev    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_10% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage10.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    dev    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_15% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage15.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    dev    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_20% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage20.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    dev    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_55% OFF_DEV
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage55.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    dev    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_SRP_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage00.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    stg    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_10% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage10.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    STG    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_15% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage15.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    stg    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_20% OFF_STG
-    ${contents}=    Get File    c:\\Corel\\Global_Variable\\Data\\PhotoMirage20.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    STG    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_photomirage page_55% OFF_STG
-    ${contents}=    Get File    C:\\Users\\Amy.Hsieh\\Corel\\Global_Variable\\Data\\PhotoMirage55.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check Photomirage page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 *** Keywords ***

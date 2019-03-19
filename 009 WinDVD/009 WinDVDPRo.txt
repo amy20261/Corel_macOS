@@ -2,11 +2,11 @@
 Library           Selenium2Library
 Library           OperatingSystem
 Library           String
-Resource          Global_Keyword/Keyword_000_Verification.txt
-Resource          Global_Keyword/Keyword_003_Product.txt
-Resource          Global_Keyword/Keyword_001_Home.txt
-Resource          Global_Keyword/Keyword_080_WinDVDpro.txt
-Variables         Global_Variable/eComm.py
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_003_Product.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_080_WinDVDpro.txt
+Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
 Check price_WinDVD product page
@@ -20,7 +20,7 @@ Check price_WinDVD product page
 Check price_WinDVD product page_30% OFF_DEV
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -28,7 +28,7 @@ Check price_WinDVD product page_30% OFF_DEV
 Check price_WinDVD product page_40% OFF_DEV
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD40.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -36,7 +36,7 @@ Check price_WinDVD product page_40% OFF_DEV
 Check price_WinDVD product page_45% OFF_DEV
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD45.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -44,7 +44,7 @@ Check price_WinDVD product page_45% OFF_DEV
 Check price_WinDVD product page_60% OFF_DEV
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD60.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -52,7 +52,7 @@ Check price_WinDVD product page_60% OFF_DEV
 Check price_WinDVD product page_30% OFF_STG
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD30.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -60,7 +60,7 @@ Check price_WinDVD product page_30% OFF_STG
 Check price_WinDVD product page_40% OFF_STG
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD40.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -68,7 +68,7 @@ Check price_WinDVD product page_40% OFF_STG
 Check price_WinDVD product page_45% OFF_STG
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD45.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
@@ -76,7 +76,7 @@ Check price_WinDVD product page_45% OFF_STG
 Check price_WinDVD product page_60% OFF_STG
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\winDVD60.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check WinDVD product page    STG    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
