@@ -3,9 +3,9 @@ Library           Selenium2Library
 Library           OperatingSystem
 Library           String
 Library           Screenshot    c:/temp
-Variables         Global_Variable/eComm.py
-Resource          Global_Keyword/Keyword_003_Product.txt
-Resource          Global_Keyword/Keyword_003010_LTO.txt
+Variables         ../Global_Variable/eComm.py
+Resource          ../ Global_Keyword/Keyword_003_Product.txt
+Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
 TRAVEL_VSP_dev

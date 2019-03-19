@@ -3,9 +3,9 @@ Library           Selenium2Library
 Library           OperatingSystem
 Library           String
 Library           Screenshot    c:/temp
-Variables         Global_Variable/eComm.py
-Resource          Global_Keyword/Keyword_003_Product.txt
-Resource          Global_Keyword/Keyword_003010_LTO.txt
+Variables         ../Global_Variable/eComm.py
+Resource          ../Global_Keyword/Keyword_003_Product.txt
+Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
 Exclusive Brush Pack_particleshop_DEV
@@ -65,7 +65,7 @@ Grunge Essentials Brush Pack_PE_STG
 Nature Brush Pack_PTR_dev
     ${contents}=    Get File    ${VA_NatureBrushPack}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    dev    Nature Brush Pack    en
     \    ...    @{var}[1]    @{var}[2]
@@ -74,7 +74,7 @@ Nature Brush Pack_PTR_dev
 Nature Essential Brush Pack_PE_dev
     ${contents}=    Get File    ${VA_NEBrushPack}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on PE page    dev    Nature Essentials    en    @{var}[1]    @{var}[2]
@@ -83,7 +83,7 @@ Nature Essential Brush Pack_PE_dev
 Nature Brush Pack_particleshop_dev
     ${contents}=    Get File    ${VA_NatureBrushPack}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on particleshop page    dev    Nature Brush Pack    en    @{var}[1]    @{var}[2]
@@ -92,7 +92,7 @@ Nature Brush Pack_particleshop_dev
 Film and Filter effect scripts bundle_PSP
     ${contents}=    Get File    ${VA_ScriptsBundle}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on PSP page    dev    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
@@ -101,7 +101,7 @@ Film and Filter effect scripts bundle_PSP
 Flim and Fliter effect scripts bundle_PSU
     ${contents}=    Get File    ${VA_ScriptsBundle}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on PSU page    dev    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
@@ -110,7 +110,7 @@ Flim and Fliter effect scripts bundle_PSU
 MultiCam Capture_VSP_dev
     ${contents}=    Get File    ${VA_MultiCam}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on VSP page    dev    MultiCam Capture    en    @{var}[1]    @{var}[2]
@@ -119,7 +119,7 @@ MultiCam Capture_VSP_dev
 MultiCam Capture_VSU_dev
     ${contents}=    Get File    ${VA_MultiCam}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Check VA on VSU page    dev    MultiCam Capture    en    @{var}[1]    @{var}[2]
