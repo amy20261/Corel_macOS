@@ -9,14 +9,21 @@ Screenshot_corel
     screenshot_Corel    en    en-CA
     screenshot_Corel    en    en-GB
     screenshot_Corel    en    en-AU
-    screenshot_Corel    en    en-IE
-    screenshot_Corel    en    en-RW
+    screenshot_Corel    en    en-NZ
     screenshot_Corel    de    de-DE
     screenshot_Corel    fr    fr-FR
-    screenshot_Corel    ja    ja-JP
     screenshot_Corel    it    it-IT
     screenshot_Corel    nl    nl-NL
     screenshot_Corel    br    pt-BR
+    screenshot_Corel    ja    ja-JP
+    screenshot_Corel    tw    zh-TW
+    screenshot_Corel    cn    zh-HK
+    screenshot_Corel    en    en-IE
+    screenshot_Corel    en    en-RW
+    screenshot_Corel    la    es-ES
+    screenshot_Corel    pl    pl-PL
+    screenshot_Corel    ru    ru-RU
+    screenshot_Corel    cz    cs-CZ
 
 Screenshot_coreldraw
     [Timeout]
@@ -24,12 +31,21 @@ Screenshot_coreldraw
     screenshot_coreldraw    en    en-CA
     screenshot_coreldraw    en    en-GB
     screenshot_coreldraw    en    en-AU
+    screenshot_coreldraw    en    en-NZ
+    screenshot_coreldraw    de    de-DE
+    screenshot_coreldraw    fr    fr-FR
+    screenshot_coreldraw    it    it-IT
+    screenshot_coreldraw    nl    nl-NL
+    screenshot_coreldraw    br    pt-BR
+    screenshot_coreldraw_No H&S    jp    ja-JP
+    screenshot_coreldraw    tw    zh-TW
+    screenshot_coreldraw    cn    zh-HK
     screenshot_coreldraw    en    en-IE
     screenshot_coreldraw    en    en-RW
-    screenshot_coreldraw    de    de-DE    product/grafikprogramm
-    screenshot_coreldraw    fr    fr-FR    product/logiciel-de-dessin
-    screenshot_coreldraw_No H&S    jp    ja-JP
-    screenshot_coreldraw    br    pt-BR    product/software-de-design-grafico
+    screenshot_coreldraw    la    es-ES
+    screenshot_coreldraw    pl    pl-PL
+    screenshot_coreldraw    ru    ru-RU
+    screenshot_coreldraw    cz    cs-CZ
 
 Screenshot_painterartist
     [Timeout]
@@ -37,11 +53,12 @@ Screenshot_painterartist
     screenshot_painterartist    en    en-CA
     screenshot_painterartist    en    en-GB
     screenshot_painterartist    en    en-AU
-    screenshot_painterartist    en    en-IE
+    screenshot_painterartist    en    en-NZ
     screenshot_painterartist    de    de-DE
     screenshot_painterartist    fr    fr-FR
     screenshot_painterartist    jp    ja-JP
-    screenshot_painterartist    en    es-MX
+    screenshot_painterartist    tw    zh-TW
+    screenshot_painterartist    en    en-IE
 
 Screenshot_wordperfect_all Lan
     [Timeout]
@@ -58,12 +75,15 @@ Screenshot_PSP_all Lan
     screenshot_PSP    en    en-CA
     screenshot_PSP    en    en-GB
     screenshot_PSP    en    en-AU
-    screenshot_PSP    en    en-IE
+    screenshot_PSP    en    en-NZ
     screenshot_PSP    de    de-DE
     screenshot_PSP    fr    fr-FR
     screenshot_PSP    it    it-IT
     screenshot_PSP    nl    nl-NL
     screenshot_PSP    jp    ja-JP
+    screenshot_PSP    tw    zh-TW
+    screenshot_PSP    en    en-IE
+    screenshot_PSP    ru    ru-RU
 
 Screenshot_VSP_all Lan
     [Timeout]
@@ -71,9 +91,15 @@ Screenshot_VSP_all Lan
     screenshot_VSP    en    en-CA
     screenshot_VSP    en    en-GB
     screenshot_VSP    en    en-AU
-    screenshot_VSP    en    en-IE
+    screenshot_VSP    en    en-NZ
     screenshot_VSP    de    de-DE
     screenshot_VSP    fr    fr-FR
+    screenshot_VSP    it    it-IT
+    screenshot_VSP    nl    nl-NL
+    screenshot_VSP    jp    ja-JP
+    screenshot_VSP    tw    zh-TW
+    screenshot_VSP    en    en-IE
+    screenshot_VSP    ru    ru-RU
 
 Screenshot_WinDVD_all Lan
     [Timeout]
@@ -81,12 +107,13 @@ Screenshot_WinDVD_all Lan
     screenshot_DVD    en    en-CA
     screenshot_DVD    en    en-GB
     screenshot_DVD    en    en-AU
-    screenshot_DVD    en    en-IE
+    screenshot_DVD    en    en-NZ
     screenshot_DVD    de    de-DE
     screenshot_DVD    fr    fr-FR
     screenshot_DVD    it    it-IT
     screenshot_DVD    nl    nl-NL
     screenshot_DVD    jp    ja-JP
+    screenshot_DVD    en    en-IE
 
 Screenshot_ASP_all Lan
     [Timeout]
@@ -94,9 +121,14 @@ Screenshot_ASP_all Lan
     screenshot_ASP    en    en-CA
     screenshot_ASP    en    en-GB
     screenshot_ASP    en    en-AU
-    screenshot_ASP    en    en-IE
+    screenshot_ASP    en    en-NZ
     screenshot_ASP    de    de-DE
+    screenshot_ASP    fr    fr-FR
+    screenshot_ASP    it    it-IT
+    screenshot_ASP    nl    nl-NL
     screenshot_ASP    jp    ja-JP
+    screenshot_ASP    en    en-IE
+    screenshot_ASP    ru    ru-RU
 
 *** Keywords ***
 screenshot_Corel
@@ -113,7 +145,7 @@ screenshot_coreldraw
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    special-offers
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    free-trials
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    all-products
-    Open browser to page    www.coreldraw.com    ${lan}    ${currency}    ${CDGS}
+    Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/coreldraw
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/corel-cad
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/technical-suite
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/home-student
@@ -125,7 +157,7 @@ screenshot_coreldraw_No H&S
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    special-offers
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    free-trials
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    all-products
-    Open browser to page    www.coreldraw.com    ${lan}    ${currency}    ${CDGS}
+    Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/coreldraw
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/corel-cad
     Open browser to page    www.coreldraw.com    ${lan}    ${currency}    product/technical-suite
     close all browsers
