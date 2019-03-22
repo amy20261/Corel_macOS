@@ -5,7 +5,7 @@ Library           String
 Resource          ../Global_Keyword/Keyword_000_Verification.txt
 Resource          ../Global_Keyword/Keyword_001_Home.txt
 Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
-Resource          ../lobal_Keyword/Keyword_050_paintershoppro.txt
+Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
@@ -165,6 +165,22 @@ Check price_PSU product page_BOX_40/25% OFF_STG
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_4025.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_50/35% OFF_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_5035.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
+
+Check price_PSU product page_BOX_50/35% OFF_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_5035.csv
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]

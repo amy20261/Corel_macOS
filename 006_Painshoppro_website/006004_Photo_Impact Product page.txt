@@ -5,7 +5,7 @@ Library           String
 Resource          ../Global_Keyword/Keyword_000_Verification.txt
 Resource          ../Global_Keyword/Keyword_001_Home.txt
 Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
-Resource          ../lobal_Keyword/Keyword_050_paintershoppro.txt
+Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***

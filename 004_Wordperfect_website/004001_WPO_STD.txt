@@ -3,7 +3,7 @@ Library           Selenium2Library
 Library           OperatingSystem
 Library           String
 Resource          ../Global_Keyword/Keyword_000_Verification.txt
-Resource          ../ Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
 Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
 Resource          ../Global_Keyword/Keyword_040_wordperfect.txt
 Variables         ../Global_Variable/eComm.py
