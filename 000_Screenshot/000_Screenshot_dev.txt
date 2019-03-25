@@ -1,6 +1,6 @@
 *** Settings ***
 Library           OperatingSystem
-Variables         Global_Variable/eComm.py
+Variables         ../Global_Variable/eComm.py
 Library           Selenium2Library
 
 *** Test Cases ***
@@ -15,7 +15,7 @@ Screenshot_corel
     screenshot_Corel    it    it-IT
     screenshot_Corel    nl    nl-NL
     screenshot_Corel    br    pt-BR
-    screenshot_Corel    ja    ja-JP
+    screenshot_Corel    jp    ja-JP
     screenshot_Corel    tw    zh-TW
     screenshot_Corel    cn    zh-HK
     screenshot_Corel    en    en-IE
