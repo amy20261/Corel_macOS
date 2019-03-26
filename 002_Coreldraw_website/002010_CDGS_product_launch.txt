@@ -1,0 +1,31 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
+Variables         ../Global_Variable/eComm.py
+
+*** test case ***
+Check SKU on CDGS_DEV_ALL LAN
+    Check SKU on CDGS_DEV    en    en-US
+    Check SKU on CDGS_DEV    en    en-CA
+    Check SKU on CDGS_DEV    en    en-GB
+    Check SKU on CDGS_DEV    en    en-AU
+    Check SKU on CDGS_DEV    en    en-NZ
+    Check SKU on CDGS_DEV    de    de-DE
+    Check SKU on CDGS_DEV    fr    fr-FR
+    Check SKU on CDGS_DEV    it    it-IT
+    Check SKU on CDGS_DEV    nl    nl-NL
+    Check SKU on CDGS_DEV    br    pt-BR
+    Check SKU on CDGS_DEV    jp    ja-JP
+    Check SKU on CDGS_DEV    tw    zh-TW
+    Check SKU on CDGS_DEV    cn    zh-HK
+    Check SKU on CDGS_DEV    en    en-IE
+    Check SKU on CDGS_DEV    en    en-RW
+    Check SKU on CDGS_DEV    la    es-ES
+    Check SKU on CDGS_DEV    pl    pl-PL
+    Check SKU on CDGS_DEV    ru    ru-RU
+    Check SKU on CDGS_DEV    cz    cs-CZ

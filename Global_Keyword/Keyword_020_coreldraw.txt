@@ -84,3 +84,14 @@ Check CDGS product page_subscription_MAC
     Open Browser to Product Page_HTTPS_MAC    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
     Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
     close all browsers
+
+Check SKU on CDGS_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
+    run keyword and continue on failure    Check sku array
+    run keyword and continue on failure    Check SKU    ESDCDGS2019AM
+    run keyword and continue on failure    Check UP SKU    ESDCDGS2019AMUG
+    run keyword and continue on failure    Check BOX SKU    CDGS2019EFDPECOM
+    run keyword and continue on failure    Check UP \ BOX SKU    CDGS2019EFDPECOMUG
+    close all browsers

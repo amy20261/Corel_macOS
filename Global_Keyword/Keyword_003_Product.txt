@@ -279,3 +279,22 @@ Check promo price on product_radio_BOX_MAC
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
+
+Check SKU array
+    run keyword and ignore error    Page should contain    var skuArray    loglevel=NONE
+
+Check SKU
+    [Arguments]    ${SKU}
+    run keyword and ignore error    Page should contain    ${SKU}    loglevel=NONE
+
+Check UP SKU
+    [Arguments]    ${UPSKU}
+    run keyword and ignore error    Page should contain    ${UPSKU}    loglevel=NONE
+
+Check BOX SKU
+    [Arguments]    ${BOXSKU}
+    run keyword and ignore error    Page should contain    ${BOXSKU}    loglevel=NONE
+
+CheckUP \ BOX SKU
+    [Arguments]    ${UPBOXSKU}
+    run keyword and ignore error    Page should contain    ${UPBOXSKU}    loglevel=NONE
