@@ -295,6 +295,6 @@ Check BOX SKU
     [Arguments]    ${BOXSKU}
     run keyword and ignore error    Page should contain    ${BOXSKU}    loglevel=NONE
 
-CheckUP \ BOX SKU
+Check UP BOX SKU
     [Arguments]    ${UPBOXSKU}
     run keyword and ignore error    Page should contain    ${UPBOXSKU}    loglevel=NONE
