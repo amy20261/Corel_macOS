@@ -90,12 +90,12 @@ Check SKU on CDGS_SKU_BOX_SUB_DEV
     close all browsers
     Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
     run keyword and continue on failure    Check sku array
-    run keyword and continue on failure    Check SKU    ESDCDGS2019AM
-    run keyword and continue on failure    Check UP SKU    ESDCDGS2019AMUG
-    run keyword and continue on failure    Check BOX SKU    CDGS2019EFDPECOM
-    run keyword and continue on failure    Check UP BOX SKU    CDGS2019EFDPECOMUG
-    run keyword and continue on failure    Check SUB1 SKU    CDGSSUBPUREPREM1
-    run keyword and continue on failure    Check SUB1 SKU    CDGSSUBPUREPREM2
+    run keyword and continue on failure    Check SKU    ${KCDGS}
+    run keyword and continue on failure    Check UP SKU    ${UCDGS}
+    run keyword and continue on failure    Check BOX SKU    ${OCDGS}
+    run keyword and continue on failure    Check UP BOX SKU    ${XCDGS}
+    run keyword and continue on failure    Check SUB1 SKU    ${S1CDGS}
+    run keyword and continue on failure    Check SUB1 SKU    ${S2CDGS}
     close all browsers
 
 Check SKU on CDGS_SKU_BOX_DEV
@@ -103,10 +103,10 @@ Check SKU on CDGS_SKU_BOX_DEV
     close all browsers
     Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
     run keyword and continue on failure    Check sku array
-    run keyword and continue on failure    Check SKU    ESDCDGS2019AM
-    run keyword and continue on failure    Check UP SKU    ESDCDGS2019AMUG
-    run keyword and continue on failure    Check BOX SKU    CDGS2019EFDPECOM
-    run keyword and continue on failure    Check UP BOX SKU    CDGS2019EFDPECOMUG
+    run keyword and continue on failure    Check SKU    ${KCDGS}
+    run keyword and continue on failure    Check UP SKU    ${UCDGS}
+    run keyword and continue on failure    Check BOX SKU    ${OCDGS}
+    run keyword and continue on failure    Check UP BOX SKU    ${XCDGS}
     close all browsers
 
 Check SKU on CDGS_SKU_DEV
@@ -114,6 +114,6 @@ Check SKU on CDGS_SKU_DEV
     close all browsers
     Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
     run keyword and continue on failure    Check sku array
-    run keyword and continue on failure    Check SKU    ESDCDGS2019AM
-    run keyword and continue on failure    Check UP SKU    ESDCDGS2019AMUG
+    run keyword and continue on failure    Check SKU    ${KCDGS}
+    run keyword and continue on failure    Check UP SKU    ${UCDGS}
     close all browsers
