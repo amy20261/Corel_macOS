@@ -22,10 +22,10 @@ Check SKU on CDGS_DEV_ALL LAN
     Check SKU on CDGS_SKU_DEV    br    pt-BR
     Check SKU on CDGS_SKU_DEV    jp    ja-JP
     Check SKU on CDGS_SKU_DEV    tw    zh-TW
-    Check SKU on CDGS_SKU_DEV    cn    zh-HK
+    #Check SKU on CDGS_SKU_DEV    cn    zh-HK
     Check SKU on CDGS_SKU_DEV    en    en-IE
     Check SKU on CDGS_SKU_DEV    en    en-RW
     Check SKU on CDGS_SKU_DEV    la    es-ES
     Check SKU on CDGS_SKU_DEV    pl    pl-PL
-    Check SKU on CDGS_SKU_DEV    ru    ru-RU
+    #Check SKU on CDGS_SKU_DEV    ru    ru-RU
     Check SKU on CDGS_SKU_DEV    cz    cs-CZ

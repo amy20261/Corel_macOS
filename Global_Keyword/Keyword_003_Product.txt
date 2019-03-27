@@ -281,7 +281,7 @@ Check promo price on product_radio_BOX_MAC
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
 
 Check SKU array
-    run keyword and ignore error    Page should contain    var skuArray    loglevel=NONE
+    Page should contain    var skuArray    loglevel=NONE
 
 Check SKU
     [Arguments]    ${SKU}
