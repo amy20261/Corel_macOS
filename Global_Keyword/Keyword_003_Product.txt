@@ -300,9 +300,9 @@ Check UP BOX SKU
     Page should contain    ${UPBOXSKU}    loglevel=NONE
 
 Check SUB1 SKU
-    [Arguments]    ${SKU}
-    Page should contain    ${SKU}    loglevel=NONE
+    [Arguments]    ${SUB1SKU}
+    Page should contain    ${SUB1SKU}    loglevel=NONE
 
 Check SUB2 SKU
-    [Arguments]    ${SKU}
-    Page should contain    ${SKU}    loglevel=NONE
+    [Arguments]    ${SUB2SKU}
+    Page should contain    ${SUB2SKU}    loglevel=NONE
