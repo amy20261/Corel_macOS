@@ -85,35 +85,15 @@ Check CDGS product page_subscription_MAC
     Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
     close all browsers
 
-Check SKU on CDGS_SKU_BOX_SUB_DEV
+Check SKU on CDGS_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
     Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
-    run keyword and continue on failure    Check sku array
-    run keyword and continue on failure    Check SKU    ${KCDGS}
-    run keyword and continue on failure    Check UP SKU    ${UCDGS}
-    run keyword and continue on failure    Check BOX SKU    ${OCDGS}
-    run keyword and continue on failure    Check UP BOX SKU    ${XCDGS}
-    run keyword and continue on failure    Check SUB1 SKU    ${S1CDGS}
-    run keyword and continue on failure    Check SUB1 SKU    ${S2CDGS}
-    close all browsers
-
-Check SKU on CDGS_SKU_BOX_DEV
-    [Arguments]    ${lan}    ${currency}
-    close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
-    run keyword and continue on failure    Check sku array
-    run keyword and continue on failure    Check SKU    ${KCDGS}
-    run keyword and continue on failure    Check UP SKU    ${UCDGS}
-    run keyword and continue on failure    Check BOX SKU    ${OCDGS}
-    run keyword and continue on failure    Check UP BOX SKU    ${XCDGS}
-    close all browsers
-
-Check SKU on CDGS_SKU_DEV
-    [Arguments]    ${lan}    ${currency}
-    close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
-    run keyword and continue on failure    Check sku array
-    run keyword and continue on failure    Check SKU    ${KCDGS}
-    run keyword and continue on failure    Check UP SKU    ${UCDGS}
+    Check sku array
+    Check SKU    ${KCDGS}
+    Check UP SKU    ${UCDGS}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OCDGS}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XCDGS}
+    run keyword if    '${currency}' in 'en-US;en-CA'    Check BOX SKU    ${S1CDGS}
+    run keyword if    '${currency}' in 'en-US;en-CA'    Check BOX SKU    ${S2CDGS}
     close all browsers

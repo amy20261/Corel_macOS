@@ -2,26 +2,38 @@
 Library           Selenium2Library
 Library           OperatingSystem
 Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
-Variables         ../Global_Variable/SKU/SKU_CDGS.py
+Variables         ../Global_Variable/SKU/SKU.py
 
 *** test case ***
 Check SKU on CDGS_DEV_ALL LAN
-    Check SKU on CDGS_SKU_BOX_SUB_DEV    en    en-US
-    Check SKU on CDGS_SKU_BOX_SUB_DEV    en    en-CA
-    Check SKU on CDGS_SKU_BOX_DEV    en    en-GB
-    Check SKU on CDGS_SKU_BOX_DEV    en    en-AU
-    Check SKU on CDGS_SKU_BOX_DEV    en    en-NZ
-    Check SKU on CDGS_SKU_DEV    de    de-DE
-    Check SKU on CDGS_SKU_DEV    fr    fr-FR
-    Check SKU on CDGS_SKU_DEV    it    it-IT
-    Check SKU on CDGS_SKU_DEV    nl    nl-NL
-    Check SKU on CDGS_SKU_DEV    br    pt-BR
-    Check SKU on CDGS_SKU_DEV    jp    ja-JP
-    Check SKU on CDGS_SKU_DEV    tw    zh-TW
+    Check SKU on CDGS_DEV    en    en-US
+    Check SKU on CDGS_DEV    en    en-CA
+    Check SKU on CDGS_DEV    en    en-GB
+    Check SKU on CDGS_DEV    en    en-AU
+    Check SKU on CDGS_DEV    en    en-NZ
+    Check SKU on CDGS_DEV    de    de-DE
+    Check SKU on CDGS_DEV    fr    fr-FR
+    Check SKU on CDGS_DEV    it    it-IT
+    Check SKU on CDGS_DEV    nl    nl-NL
+    Check SKU on CDGS_DEV    br    pt-BR
+    Check SKU on CDGS_DEV    jp    ja-JP
+    Check SKU on CDGS_DEV    tw    zh-TW
     #Check SKU on CDGS_SKU_DEV    cn    zh-HK
-    Check SKU on CDGS_SKU_DEV    en    en-IE
-    Check SKU on CDGS_SKU_DEV    en    en-RW
-    Check SKU on CDGS_SKU_DEV    la    es-ES
-    Check SKU on CDGS_SKU_DEV    pl    pl-PL
+    Check SKU on CDGS_DEV    en    en-IE
+    Check SKU on CDGS_DEV    en    en-RW
+    Check SKU on CDGS_DEV    la    es-ES
+    Check SKU on CDGS_DEV    pl    pl-PL
     #Check SKU on CDGS_SKU_DEV    ru    ru-RU
-    Check SKU on CDGS_SKU_DEV    cz    cs-CZ
+    Check SKU on CDGS_DEV    cz    cs-CZ
+    Check SKU on CDGS_DEV    en    da-DK
+    Check SKU on CDGS_DEV    en    de-Li
+    Check SKU on CDGS_DEV    en    nb-NO
+    Check SKU on CDGS_DEV    en    se-SE
+    Check SKU on CDGS_DEV    la    ko-KR
+    Check SKU on CDGS_DEV    la    es-PE
+    Check SKU on CDGS_DEV    la    es-MX
+    Check SKU on CDGS_DEV    la    es-CO
+    Check SKU on CDGS_DEV    la    es-CL
+    Check SKU on CDGS_DEV    la    es-AR
+    Check SKU on CDGS_DEV    la    en-ZA
+    Check SKU on CDGS_DEV    la    en-SG

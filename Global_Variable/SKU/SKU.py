@@ -1,11 +1,31 @@
 #micro website
 wCDGS='coreldraw'
+wPTR='painterartist'
+wWPO='wordperfect'
+wPSP='paintshoppro'
+wVSP='videostudiopro'
+wASP='aftershotpro'
+wPHOTOMIRAGE='Photomirage'
 
 #product
 CDGS='coreldraw'
 CAD='corel-cad'
 CDTS='technical-suite'
 CDHS='home-student'
+PTR='painter'
+PE='painter-essentials'
+particleshop='particleshop'
+WPOSTD='office-suite'
+WPOPRO='professional-edition'
+WPOHS='home-student'
+PDF='pdf-creator'
+PSP='paintshop-pro/standard'
+PSU='paintshop-pro/ultimate'
+PVB='photo-video-bundle'
+VSP='videostudio/pro'
+VSU='videostudio/ultimate'
+ASP='aftershot/pro'
+WinDVD='windvdpro'
 
 #PID for upgrade product
 KCDGS='ESDCDGS2019AM'
