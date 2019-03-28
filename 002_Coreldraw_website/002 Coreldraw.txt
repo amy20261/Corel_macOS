@@ -98,7 +98,7 @@ Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS
     \    ...    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Home Page_DEV_CDGS_CDTS_CAD_CDHS_CDGS2019
+Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -106,10 +106,10 @@ Check Link_Home Page_DEV_CDGS_CDTS_CAD_CDHS_CDGS2019
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    verify link on home page_CDGS2019    coreldraw    technical-suite    corel-cad    home-student    licensing
-    \    ...    product/coreldraw/#gallery    @{var}[9]    @{var}[10]
+    \    ...    product/coreldraw/#gallery
     [Teardown]
 
-Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_CDGS2019
+Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -117,7 +117,7 @@ Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_CDGS2019
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    verify link on home page_CDGS2019    coreldraw    technical-suite    corel-cad    home-student    licensing
-    \    ...    product/coreldraw/#gallery    @{var}[9]    @{var}[10]
+    \    ...    product/coreldraw/#gallery
     [Teardown]
 
 *** Keywords ***
@@ -191,7 +191,6 @@ verify link on home page_EN
 
 verify link on home page_CDGS2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    ...    ${SpOffer3}    ${SpOffer4}
     click HeroBanner_CDGS2019_coreldraw
     Verify URL Contain    ${Hero}
     Click Featured Prod 1
