@@ -36,7 +36,7 @@ Check Link_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    aftershot/pro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    verify link on home page_ASP    aftershot/pro    paintsh op-pro/ultimate    photo-video-bundle    particleshop
 
 Check Link_Home Page_STG
     ${contents}=    Get File    ${ASP_Home}
@@ -46,6 +46,42 @@ Check Link_Home Page_STG
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page    aftershot/pro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+
+Check Link_Home Page_DEV_ASP_PSU_PVB_particleshop
+    ${contents}=    Get File    ${ASP_Home}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
+    \    verify link on home page_ASP    aftershot/pro    paintshop-pro/ultimate    photo-video-bundle    particleshop
+
+Check Link_Home Page_STG_ASP_PSU_PVB_particleshop
+    ${contents}=    Get File    ${ASP_Home}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wASP}    @{var}[1]    @{var}[2]
+    \    verify link on home page_ASP    aftershot/pro    paintshop-pro/ultimate    photo-video-bundle    particleshop
+
+Check Link_Home Page_DEV_ASP_PSP_PVB_particleshop
+    ${contents}=    Get File    ${ASP_Home}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
+    \    verify link on home page_ASP    aftershot/pro    paintshop-pro/standard    photo-video-bundle    particleshop
+
+Check Link_Home Page_STG_ASP_PSP_PVB_particleshop
+    ${contents}=    Get File    ${ASP_Home}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wASP}    @{var}[1]    @{var}[2]
+    \    verify link on home page_ASP    aftershot/pro    paintshop-pro/standard    photo-video-bundle    particleshop
 
 *** Keywords ***
 verify link on home page
@@ -74,4 +110,16 @@ verify link on home page_de
     #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer3}
     #Click Sp. Offer 4
     #run keyword and continue on failure    Verify URL Contain_blank    ${SpOffer4}
+    close all browsers
+
+verify link on home page_ASP
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}
+    click HeroBanner_ASP
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    Click MainFeature
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Main Feature}
+    Click Highlight 1
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 1}
+    Click Highlight 2
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 2}
     close all browsers
