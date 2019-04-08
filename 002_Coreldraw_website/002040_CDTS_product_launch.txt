@@ -1,0 +1,72 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
+Variables         ../Global_Variable/SKU/SKU.py
+
+*** test case ***
+Check SKU on CDTS_DEV_ALL LAN
+    Check SKU on CDTS_DEV    en    en-US
+    Check SKU on CDTS_DEV    en    en-CA
+    Check SKU on CDTS_DEV    en    en-GB
+    Check SKU on CDTS_DEV    en    en-AU
+    Check SKU on CDTS_DEV    en    en-NZ
+    Check SKU on CDTS_DEV    de    de-DE
+    Check SKU on CDTS_DEV    fr    fr-FR
+    Check SKU on CDTS_DEV    it    it-IT
+    Check SKU on CDTS_DEV    nl    nl-NL
+    Check SKU on CDTS_DEV    br    pt-BR
+    Check SKU on CDTS_DEV    jp    ja-JP
+    Check SKU on CDTS_DEV    tw    zh-TW
+    #Check SKU on CDTS_SKU_DEV    cn    zh-HK
+    Check SKU on CDTS_DEV    en    en-IE
+    Check SKU on CDTS_DEV    en    en-RW
+    Check SKU on CDTS_DEV    la    es-ES
+    Check SKU on CDTS_DEV    pl    pl-PL
+    #Check SKU on CDTS_SKU_DEV    ru    ru-RU
+    Check SKU on CDTS_DEV    cz    cs-CZ
+    Check SKU on CDTS_DEV    en    da-DK
+    Check SKU on CDTS_DEV    en    de-Li
+    Check SKU on CDTS_DEV    en    nb-NO
+    Check SKU on CDTS_DEV    en    se-SE
+    Check SKU on CDTS_DEV    la    ko-KR
+    Check SKU on CDTS_DEV    la    es-PE
+    Check SKU on CDTS_DEV    la    es-MX
+    Check SKU on CDTS_DEV    la    es-CO
+    Check SKU on CDTS_DEV    la    es-CL
+    Check SKU on CDTS_DEV    la    es-AR
+    Check SKU on CDTS_DEV    la    en-ZA
+    Check SKU on CDTS_DEV    la    en-SG
+
+Check SKU on CDTS_STG_ALL LAN
+    Check SKU on CDTS_STG    en    en-US
+    Check SKU on CDTS_STG    en    en-CA
+    Check SKU on CDTS_STG    en    en-GB
+    Check SKU on CDTS_STG    en    en-AU
+    Check SKU on CDTS_STG    en    en-NZ
+    Check SKU on CDTS_STG    de    de-DE
+    Check SKU on CDTS_STG    fr    fr-FR
+    Check SKU on CDTS_STG    it    it-IT
+    Check SKU on CDTS_STG    nl    nl-NL
+    Check SKU on CDTS_STG    br    pt-BR
+    Check SKU on CDTS_STG    jp    ja-JP
+    Check SKU on CDTS_STG    tw    zh-TW
+    #Check SKU on CDTS_STG    cn    zh-HK
+    Check SKU on CDTS_STG    en    en-IE
+    Check SKU on CDTS_STG    en    en-RW
+    Check SKU on CDTS_STG    la    es-ES
+    Check SKU on CDTS_STG    pl    pl-PL
+    #Check SKU on CDTS_STG    ru    ru-RU
+    Check SKU on CDTS_STG    cz    cs-CZ
+    Check SKU on CDTS_STG    en    da-DK
+    Check SKU on CDTS_STG    en    de-Li
+    Check SKU on CDTS_STG    en    nb-NO
+    Check SKU on CDTS_STG    en    se-SE
+    Check SKU on CDTS_STG    la    ko-KR
+    Check SKU on CDTS_STG    la    es-PE
+    Check SKU on CDTS_STG    la    es-MX
+    Check SKU on CDTS_STG    la    es-CO
+    Check SKU on CDTS_STG    la    es-CL
+    Check SKU on CDTS_STG    la    es-AR
+    Check SKU on CDTS_STG    la    en-ZA
+    Check SKU on CDTS_STG    la    en-SG

@@ -97,3 +97,80 @@ Check SKU on CDGS_DEV
     run keyword if    '${currency}' in 'en-US;en-CA'    Check BOX SKU    ${S1CDGS}
     run keyword if    '${currency}' in 'en-US;en-CA'    Check BOX SKU    ${S2CDGS}
     close all browsers
+
+Check SKU on CDGS_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
+    Check sku array
+    Check SKU    ${KCDGS}
+    Check UP SKU    ${UCDGS}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OCDGS}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XCDGS}
+    run keyword if    '${currency}' in 'en-US;en-CA'    Check BOX SKU    ${S1CDGS}
+    run keyword if    '${currency}' in 'en-US;en-CA'    Check BOX SKU    ${S2CDGS}
+    close all browsers
+
+Check SKU on CAD_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CAD}
+    Check sku array
+    Check SKU    ${KCAD}
+    Check UP SKU    ${UCAD}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OCAD}
+    #run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XCAD}
+    close all browsers
+
+Check SKU on CAD_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CAD}
+    Check sku array
+    Check SKU    ${KCAD}
+    Check UP SKU    ${UCAD}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OCAD}
+    #run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XCAD}
+    close all browsers
+
+Check SKU on CDHS_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDHS}
+    Check sku array
+    Check SKU    ${KCDHS}
+    close all browsers
+
+Check SKU on CDHS_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CDHS}
+    Check sku array
+    Check SKU    ${KCDHS}
+    close all browsers
+
+Check SKU on CDTS_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDTS}
+    Check sku array
+    Check SKU    ${KCDTS}
+    Check UP SKU    ${UCDTS}
+    Check BOX SKU    ${OCDTS}
+    Check BOX SKU    ${XCDTS}
+    Check BOX SKU    ${S1CDTS}
+    Check BOX SKU    ${S2CDTS}
+    close all browsers
+
+Check SKU on CDTS_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CDTS}
+    Check sku array
+    Check SKU    ${KCDTS}
+    Check UP SKU    ${UCDTS}
+    Check BOX SKU    ${OCDTS}
+    Check BOX SKU    ${XCDTS}
+    Check BOX SKU    ${S1CDTS}
+    Check BOX SKU    ${S2CDTS}
+    close all browsers

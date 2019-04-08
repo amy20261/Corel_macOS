@@ -281,28 +281,28 @@ Check promo price on product_radio_BOX_MAC
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
 
 Check SKU array
-    Page should contain    var skuArray    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    var skuArray    loglevel=NONE
 
 Check SKU
     [Arguments]    ${SKU}
-    Page should contain    ${SKU}    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    ${SKU}    loglevel=NONE
 
 Check UP SKU
     [Arguments]    ${UPSKU}
-    Page should contain    ${UPSKU}    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    ${UPSKU}    loglevel=NONE
 
 Check BOX SKU
     [Arguments]    ${BOXSKU}
-    Page should contain    ${BOXSKU}    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    ${BOXSKU}    loglevel=NONE
 
 Check UP BOX SKU
     [Arguments]    ${UPBOXSKU}
-    Page should contain    ${UPBOXSKU}    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    ${UPBOXSKU}    loglevel=NONE
 
 Check SUB1 SKU
     [Arguments]    ${SUB1SKU}
-    Page should contain    ${SUB1SKU}    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    ${SUB1SKU}    loglevel=NONE
 
 Check SUB2 SKU
     [Arguments]    ${SUB2SKU}
-    Page should contain    ${SUB2SKU}    loglevel=NONE
+    Run Keyword And Continue On Failure    Page should contain    ${SUB2SKU}    loglevel=NONE
