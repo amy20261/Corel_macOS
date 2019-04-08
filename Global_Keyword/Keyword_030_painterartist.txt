@@ -38,7 +38,29 @@ Check bunclle page
     close all browsers
     open browser    https://www.painterartist.com/en/product/wacom/?currency=en-US#${page}
     Element should contain    //*[@id="${page}"]//h3    ${product}
-    Element should contain    //*[@id="${page}"]//span[@class='priceDisplayStrikethrough']     ${price_reg}
+    Element should contain    //*[@id="${page}"]//span[@class='priceDisplayStrikethrough']    ${price_reg}
     Element should contain    //*[@id="${page}"]//p[@data-promo-text='savingsBadge']    ${SavingBadge}
     Element should contain    //*[@id="${page}"]//span[@class='priceDisplayNormal']    ${price_promo}
+    close all browsers
+
+Check SKU on PTR_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wPTR}    ${lan}    ${currency}    ${PTR}
+    Check sku array
+    Check SKU    ${KPTR}
+    Check UP SKU    ${UPTR}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPTR}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPTR}
+    close all browsers
+
+Check SKU on PTR_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    STG    ${wPTR}    ${lan}    ${currency}    ${PTR}
+    Check sku array
+    Check SKU    ${KPTR}
+    Check UP SKU    ${UPTR}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPTR}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPTR}
     close all browsers
