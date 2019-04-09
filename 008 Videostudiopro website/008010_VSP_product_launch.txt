@@ -1,0 +1,72 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Variables         ../Global_Variable/SKU/SKU.py
+Resource          ../Global_Keyword/Keyword_060_videostudiopro.txt
+
+*** test case ***
+Check SKU on VSP_DEV_ALL LAN
+    Check SKU on VSP_DEV    en    en-US
+    Check SKU on VSP_DEV    en    en-CA
+    Check SKU on VSP_DEV    en    en-GB
+    Check SKU on VSP_DEV    en    en-AU
+    Check SKU on VSP_DEV    en    en-NZ
+    Check SKU on VSP_DEV    de    de-DE
+    Check SKU on VSP_DEV    fr    fr-FR
+    Check SKU on VSP_DEV    it    it-IT
+    Check SKU on VSP_DEV    nl    nl-NL
+    #Check SKU on VSP_SKU_DEV    br    pt-BR
+    Check SKU on VSP_DEV    jp    ja-JP
+    Check SKU on VSP_DEV    tw    zh-TW
+    #Check SKU on VSP_SKU_DEV    cn    zh-HK
+    Check SKU on VSP_DEV    en    en-IE
+    Check SKU on VSP_DEV    en    en-RW
+    #Check SKU on VSP_SKU_DEV    la    es-ES
+    #Check SKU on VSP_SKU_DEV    pl    pl-PL
+    #Check SKU on VSP_SKU_DEV    ru    ru-RU
+    #Check SKU on VSP_SKU_DEV    cz    cs-CZ
+    Check SKU on VSP_DEV    en    da-DK
+    Check SKU on VSP_DEV    en    de-Li
+    Check SKU on VSP_DEV    en    nb-NO
+    Check SKU on VSP_DEV    en    se-SE
+    Check SKU on VSP_DEV    en    ko-KR
+    Check SKU on VSP_DEV    en    es-PE
+    Check SKU on VSP_DEV    en    es-MX
+    Check SKU on VSP_DEV    en    es-CO
+    Check SKU on VSP_DEV    en    es-CL
+    Check SKU on VSP_DEV    en    es-AR
+    Check SKU on VSP_DEV    en    en-ZA
+    Check SKU on VSP_DEV    en    en-SG
+
+Check SKU on VSP_STG_ALL LAN
+    Check SKU on VSP_STG    en    en-US
+    Check SKU on VSP_STG    en    en-CA
+    Check SKU on VSP_STG    en    en-GB
+    Check SKU on VSP_STG    en    en-AU
+    Check SKU on VSP_STG    en    en-NZ
+    Check SKU on VSP_STG    de    de-DE
+    Check SKU on VSP_STG    fr    fr-FR
+    Check SKU on VSP_STG    it    it-IT
+    Check SKU on VSP_STG    nl    nl-NL
+    #Check SKU on VSP_STG    br    pt-BR
+    Check SKU on VSP_STG    jp    ja-JP
+    Check SKU on VSP_STG    tw    zh-TW
+    #Check SKU on VSP_STG    cn    zh-HK
+    Check SKU on VSP_STG    en    en-IE
+    Check SKU on VSP_STG    en    en-RW
+    #Check SKU on VSP_STG    la    es-ES
+    #Check SKU on VSP_STG    pl    pl-PL
+    #Check SKU on VSP_STG    ru    ru-RU
+    #Check SKU on VSP_STG    cz    cs-CZ
+    Check SKU on VSP_STG    en    da-DK
+    Check SKU on VSP_STG    en    de-Li
+    Check SKU on VSP_STG    en    nb-NO
+    Check SKU on VSP_STG    en    se-SE
+    Check SKU on VSP_STG    en    ko-KR
+    Check SKU on VSP_STG    en    es-PE
+    Check SKU on VSP_STG    en    es-MX
+    Check SKU on VSP_STG    en    es-CO
+    Check SKU on VSP_STG    en    es-CL
+    Check SKU on VSP_STG    en    es-AR
+    Check SKU on VSP_STG    en    en-ZA
+    Check SKU on VSP_STG    en    en-SG

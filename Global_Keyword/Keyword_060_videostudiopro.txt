@@ -33,3 +33,47 @@ Check VSP product page_BOX
     Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}    ${OVSP}
     ...    ${XVSP}
     close all browsers
+
+Check SKU on VSP_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    dev    ${wVSP}    ${lan}    ${currency}    ${VSP}
+    Check sku array
+    Check SKU    ${KVSP}
+    Check UP SKU    ${UVSP}
+    Check BOX SKU    ${OVSP}
+    Check BOX SKU    ${XVSP}
+    close all browsers
+
+Check SKU on VSP_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    stg    ${wVSP}    ${lan}    ${currency}    ${VSP}
+    Check sku array
+    Check SKU    ${KVSP}
+    Check UP SKU    ${UVSP}
+    Check BOX SKU    ${OVSP}
+    Check BOX SKU    ${XVSP}
+    close all browsers
+
+Check SKU on VSU_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    dev    ${wVSP}    ${lan}    ${currency}    ${VSU}
+    Check sku array
+    Check SKU    ${KVSU}
+    Check UP SKU    ${UVSU}
+    Check BOX SKU    ${OVSU}
+    Check BOX SKU    ${XVSU}
+    close all browsers
+
+Check SKU on VSU_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    stg    ${wVSP}    ${lan}    ${currency}    ${VSU}
+    Check sku array
+    Check SKU    ${KVSU}
+    Check UP SKU    ${UVSU}
+    Check BOX SKU    ${OVSU}
+    Check BOX SKU    ${XVSU}
+    close all browsers
