@@ -1,0 +1,72 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Variables         ../Global_Variable/SKU/SKU.py
+Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
+
+*** test case ***
+Check SKU on PSU_DEV_ALL LAN
+    Check SKU on PSU_DEV    en    en-US
+    Check SKU on PSU_DEV    en    en-CA
+    Check SKU on PSU_DEV    en    en-GB
+    Check SKU on PSU_DEV    en    en-AU
+    Check SKU on PSU_DEV    en    en-NZ
+    Check SKU on PSU_DEV    de    de-DE
+    Check SKU on PSU_DEV    fr    fr-FR
+    Check SKU on PSU_DEV    it    it-IT
+    Check SKU on PSU_DEV    nl    nl-NL
+    #Check SKU on PSU_SKU_DEV    br    pt-BR
+    Check SKU on PSU_DEV    jp    ja-JP
+    Check SKU on PSU_DEV    tw    zh-TW
+    #Check SKU on PSU_SKU_DEV    cn    zh-HK
+    Check SKU on PSU_DEV    en    en-IE
+    Check SKU on PSU_DEV    en    en-RW
+    #Check SKU on PSU_SKU_DEV    la    es-ES
+    #Check SKU on PSU_SKU_DEV    pl    pl-PL
+    #Check SKU on PSU_SKU_DEV    ru    ru-RU
+    #Check SKU on PSU_SKU_DEV    cz    cs-CZ
+    Check SKU on PSU_DEV    en    da-DK
+    Check SKU on PSU_DEV    en    de-Li
+    Check SKU on PSU_DEV    en    nb-NO
+    Check SKU on PSU_DEV    en    se-SE
+    Check SKU on PSU_DEV    en    ko-KR
+    Check SKU on PSU_DEV    en    es-PE
+    Check SKU on PSU_DEV    en    es-MX
+    Check SKU on PSU_DEV    en    es-CO
+    Check SKU on PSU_DEV    en    es-CL
+    Check SKU on PSU_DEV    en    es-AR
+    Check SKU on PSU_DEV    en    en-ZA
+    Check SKU on PSU_DEV    en    en-SG
+
+Check SKU on PSU_STG_ALL LAN
+    Check SKU on PSU_STG    en    en-US
+    Check SKU on PSU_STG    en    en-CA
+    Check SKU on PSU_STG    en    en-GB
+    Check SKU on PSU_STG    en    en-AU
+    Check SKU on PSU_STG    en    en-NZ
+    Check SKU on PSU_STG    de    de-DE
+    Check SKU on PSU_STG    fr    fr-FR
+    Check SKU on PSU_STG    it    it-IT
+    Check SKU on PSU_STG    nl    nl-NL
+    #Check SKU on PSU_STG    br    pt-BR
+    Check SKU on PSU_STG    jp    ja-JP
+    Check SKU on PSU_STG    tw    zh-TW
+    #Check SKU on PSU_STG    cn    zh-HK
+    Check SKU on PSU_STG    en    en-IE
+    Check SKU on PSU_STG    en    en-RW
+    #Check SKU on PSU_STG    la    es-ES
+    #Check SKU on PSU_STG    pl    pl-PL
+    #Check SKU on PSU_STG    ru    ru-RU
+    #Check SKU on PSU_STG    cz    cs-CZ
+    Check SKU on PSU_STG    en    da-DK
+    Check SKU on PSU_STG    en    de-Li
+    Check SKU on PSU_STG    en    nb-NO
+    Check SKU on PSU_STG    en    se-SE
+    Check SKU on PSU_STG    en    ko-KR
+    Check SKU on PSU_STG    en    es-PE
+    Check SKU on PSU_STG    en    es-MX
+    Check SKU on PSU_STG    en    es-CO
+    Check SKU on PSU_STG    en    es-CL
+    Check SKU on PSU_STG    en    es-AR
+    Check SKU on PSU_STG    en    en-ZA
+    Check SKU on PSU_STG    en    en-SG

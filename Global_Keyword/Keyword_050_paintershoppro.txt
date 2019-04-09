@@ -77,3 +77,47 @@ Check PI product page_BOX
     Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPI}    ${OPI}
     ...    ${XPI}
     close all browsers
+
+Check SKU on PSP_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}    ${PSP}
+    Check sku array
+    Check SKU    ${KPSP}
+    Check UP SKU    ${UPSP}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSP}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSP}
+    close all browsers
+
+Check SKU on PSP_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}    ${PSP}
+    Check sku array
+    Check SKU    ${KPSP}
+    Check UP SKU    ${UPSP}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSP}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSP}
+    close all browsers
+
+Check SKU on PSU_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}    ${PSU}
+    Check sku array
+    Check SKU    ${KPSU}
+    Check UP SKU    ${UPSU}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSU}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSU}
+    close all browsers
+
+Check SKU on PSU_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}    ${PSU}
+    Check sku array
+    Check SKU    ${KPSU}
+    Check UP SKU    ${UPSU}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSU}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSU}
+    close all browsers
