@@ -70,3 +70,65 @@ Check PDF product page_BOX
     Check promo price on product_dropdownlist_PDF_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPDF}    ${OPDF}
     ...    ${XPDF}
     close all browsers
+
+Check SKU on WPO STD_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}    ${WPOSTD}
+    Check sku array
+    Check SKU    ${KWPO}
+    Check UP SKU    ${UWPO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OWPO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XWPO}
+    close all browsers
+
+Check SKU on WPO STD_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}    ${WPOSTD}
+    Check sku array
+    Check SKU    ${KWPO}
+    Check UP SKU    ${UWPO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OWPO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XWPO}
+    close all browsers
+
+Check SKU on WPO PRO_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}    ${WPOPRO}
+    Check sku array
+    Check SKU    ${KPRO}
+    Check UP SKU    ${UPRO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPRO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPRO}
+    close all browsers
+
+Check SKU on WPO PRO_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}    ${WPOPRO}
+    Check sku array
+    Check SKU    ${KPRO}
+    Check UP SKU    ${UPRO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPRO}
+    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPRO}
+    close all browsers
+
+Check SKU on WPO HS_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}    ${WPOHS}
+    Check sku array
+    Check SKU    ${KHNS}
+    Check UP SKU    ${UHNS}
+    close all browsers
+
+Check SKU on WPO HS_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Product Page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}    ${WPOHS}
+    Check sku array
+    Check SKU    ${KHNS}
+    Check UP SKU    ${UHNS}
+    close all browsers

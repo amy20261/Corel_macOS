@@ -1,0 +1,72 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Variables         ../Global_Variable/SKU/SKU.py
+Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
+
+*** test case ***
+Check SKU on PVB_DEV_ALL LAN
+    Check SKU on PVB_DEV    en    en-US
+    Check SKU on PVB_DEV    en    en-CA
+    Check SKU on PVB_DEV    en    en-GB
+    Check SKU on PVB_DEV    en    en-AU
+    Check SKU on PVB_DEV    en    en-NZ
+    Check SKU on PVB_DEV    de    de-DE
+    Check SKU on PVB_DEV    fr    fr-FR
+    Check SKU on PVB_DEV    it    it-IT
+    Check SKU on PVB_DEV    nl    nl-NL
+    #Check SKU on PVB_SKU_DEV    br    pt-BR
+    Check SKU on PVB_DEV    jp    ja-JP
+    Check SKU on PVB_DEV    tw    zh-TW
+    #Check SKU on PVB_SKU_DEV    cn    zh-HK
+    Check SKU on PVB_DEV    en    en-IE
+    Check SKU on PVB_DEV    en    en-RW
+    #Check SKU on PVB_SKU_DEV    la    es-ES
+    #Check SKU on PVB_SKU_DEV    pl    pl-PL
+    #Check SKU on PVB_SKU_DEV    ru    ru-RU
+    #Check SKU on PVB_SKU_DEV    cz    cs-CZ
+    Check SKU on PVB_DEV    en    da-DK
+    Check SKU on PVB_DEV    en    de-Li
+    Check SKU on PVB_DEV    en    nb-NO
+    Check SKU on PVB_DEV    en    se-SE
+    Check SKU on PVB_DEV    en    ko-KR
+    Check SKU on PVB_DEV    en    es-PE
+    Check SKU on PVB_DEV    en    es-MX
+    Check SKU on PVB_DEV    en    es-CO
+    Check SKU on PVB_DEV    en    es-CL
+    Check SKU on PVB_DEV    en    es-AR
+    Check SKU on PVB_DEV    en    en-ZA
+    Check SKU on PVB_DEV    en    en-SG
+
+Check SKU on PVB_STG_ALL LAN
+    Check SKU on PVB_STG    en    en-US
+    Check SKU on PVB_STG    en    en-CA
+    Check SKU on PVB_STG    en    en-GB
+    Check SKU on PVB_STG    en    en-AU
+    Check SKU on PVB_STG    en    en-NZ
+    Check SKU on PVB_STG    de    de-DE
+    Check SKU on PVB_STG    fr    fr-FR
+    Check SKU on PVB_STG    it    it-IT
+    Check SKU on PVB_STG    nl    nl-NL
+    #Check SKU on PVB_STG    br    pt-BR
+    Check SKU on PVB_STG    jp    ja-JP
+    Check SKU on PVB_STG    tw    zh-TW
+    #Check SKU on PVB_STG    cn    zh-HK
+    Check SKU on PVB_STG    en    en-IE
+    Check SKU on PVB_STG    en    en-RW
+    #Check SKU on PVB_STG    la    es-ES
+    #Check SKU on PVB_STG    pl    pl-PL
+    #Check SKU on PVB_STG    ru    ru-RU
+    #Check SKU on PVB_STG    cz    cs-CZ
+    Check SKU on PVB_STG    en    da-DK
+    Check SKU on PVB_STG    en    de-Li
+    Check SKU on PVB_STG    en    nb-NO
+    Check SKU on PVB_STG    en    se-SE
+    Check SKU on PVB_STG    en    ko-KR
+    Check SKU on PVB_STG    en    es-PE
+    Check SKU on PVB_STG    en    es-MX
+    Check SKU on PVB_STG    en    es-CO
+    Check SKU on PVB_STG    en    es-CL
+    Check SKU on PVB_STG    en    es-AR
+    Check SKU on PVB_STG    en    en-ZA
+    Check SKU on PVB_STG    en    en-SG

@@ -121,3 +121,19 @@ Check SKU on PSU_STG
     run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSU}
     run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSU}
     close all browsers
+
+Check SKU on PVB_DEV
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}    ${PVB}
+    Check sku array
+    Check SKU    ${KPVB}
+    close all browsers
+
+Check SKU on PVB_STG
+    [Arguments]    ${lan}    ${currency}
+    close all browsers
+    Open Browser to Products Page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}    ${PVB}
+    Check sku array
+    Check SKU    ${KPVB}
+    close all browsers
