@@ -4,6 +4,8 @@
 
 #env='dev' or 'stg'
 env='dev'
+lan='en'
+currency='en-US'
 
 #micro website
 Corel='corel'

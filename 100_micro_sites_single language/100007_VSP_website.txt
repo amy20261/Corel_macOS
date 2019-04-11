@@ -1,0 +1,32 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Variables         ../Global_Variable/eComm.py
+Resource          ../Global_Keyword/Keyword_060_videostudiopro.txt
+
+*** Test Cases ***
+Check Link_Home Page_DEV_VSU_VSP_PVB_DVD
+    close all browsers
+    open browser to home page_HTTPS    dev    ${wVSP}    ${lan}    ${currency}
+    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle    windvdpro
+    [Teardown]
+
+Check Link_Home Page_STG_VSU_VSP_PVB_DVD
+    close all browsers
+    open browser to home page_HTTPS    stg    ${wVSP}    ${lan}    ${currency}
+    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle    windvdpro
+    [Teardown]
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}
+    click HeroBanner
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    Click MainFeature
+    run keyword and continue on failure    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    run keyword and continue on failure    Verify URL Contain_blank    ${Highlight 1}
+    Click Highlight 2
+    run keyword and continue on failure    Verify URL Contain_blank    ${Highlight 2}
+    close all browsers

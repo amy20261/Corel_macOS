@@ -1,6 +1,6 @@
 *** Settings ***
 Library           OperatingSystem
-Variables         Global_Variable/eComm.py
+Variables         ../Global_Variable/eComm.py
 Library           Selenium2Library
 
 *** Test Cases ***
@@ -130,6 +130,16 @@ Screenshot_ASP_all Lan
     screenshot_ASP    en    en-IE
     screenshot_ASP    ru    ru-RU
 
+screenshot_all websites
+    screenshot_Corel    ${lan}    ${currency}
+    screenshot_coreldraw    ${lan}    ${currency}
+    screenshot_painterartist    ${lan}    ${currency}
+    screenshot_wordperfect    ${lan}    ${currency}
+    screenshot_PSP    ${lan}    ${currency}
+    screenshot_VSP    ${lan}    ${currency}
+    screenshot_DVD    ${lan}    ${currency}
+    screenshot_ASP    ${lan}    ${currency}
+
 *** Keywords ***
 screenshot_Corel
     [Arguments]    ${lan}=en    ${currency}=en-US
@@ -140,7 +150,7 @@ screenshot_Corel
     close all browsers
 
 screenshot_coreldraw
-    [Arguments]    ${lan}=en    ${currency}=en-US    ${CDGS}=product/graphic-design-software
+    [Arguments]    ${lan}=en    ${currency}=en-US
     Open browser to Home    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    special-offers
     Open browser to page    stg.www.coreldraw.public.corel.net    ${lan}    ${currency}    free-trials

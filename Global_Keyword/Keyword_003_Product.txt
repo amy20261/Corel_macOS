@@ -57,23 +57,23 @@ Select Full
 Verify SavingsBadge
     [Arguments]    ${SavingBadge}
     sleep    1
-    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Run Keyword And Continue On Failure    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
 
 Verify Full_Reg price
     [Arguments]    ${FULL_Reg}
-    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
+    Run Keyword And Continue On Failure    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
 
 Verify Full_Promo Price
     [Arguments]    ${FULL_Promo}
-    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
 
 Verify Upgrade_Reg price
     [Arguments]    ${Upgrade_Reg}
-    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Upgrade_Reg}
+    Run Keyword And Continue On Failure    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Upgrade_Reg}
 
 Verify Upgrade_Sale price
     [Arguments]    ${Upgrade_Promo}
-    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Upgrade_Promo}
+    Run Keyword And Continue On Failure    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Upgrade_Promo}
 
 Open Browser to Product Page_PURCHASE
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter
@@ -98,7 +98,7 @@ Check promo price on product_Tag
 
 Verify FULL
     [Arguments]    ${SavingBadge}    ${Full_Reg}    ${FULL_Promo}
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    Run Keyword And Continue On Failure    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
     ...    AND    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Full_Reg}
     ...    AND    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
     ...    ELSE    Element should contain    //div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Full_Reg}
@@ -107,7 +107,7 @@ Verify UPGRADE
     [Arguments]    ${SavingBadge}    ${Full_Reg}    ${FULL_Promo}
     click element    //li[@id='tab-2']
     sleep    3
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Element should contain    //div[@id='dynPrice_upgradeTab']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    Run Keyword And Continue On Failure    Element should contain    //div[@id='dynPrice_upgradeTab']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
     ...    AND    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${Full_Reg}
     ...    AND    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_Promo}
     ...    ELSE    Element should contain    //div[@id='dynPrice_upgradeTab']//div[@class='price']/div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${Full_Reg}
@@ -230,11 +230,11 @@ Check promo price on product_photomirage
 
 Verify Full_promo Price_PM
     [Arguments]    ${FULL_reg}
-    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_reg}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal']    ${FULL_reg}
 
 Verify Full_Reg price_PM
     [Arguments]    ${FULL_Reg}
-    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayStrikethrough']    ${FULL_Reg}
 
 Check subscription price
     [Arguments]    ${SKU}    ${Full_Reg}    ${saving}
@@ -259,11 +259,11 @@ Check promo price on product_dropdown list_PDF_BOX
 
 Verify monthly Price
     [Arguments]    ${monthly}
-    Element should contain    //div[@id='dynPrice_subscribeTab']//p[@data-promo-text='promoMsgShort']    ${monthly}
+    Run Keyword And Continue On Failure    Element should contain    //div[@id='dynPrice_subscribeTab']//p[@data-promo-text='promoMsgShort']    ${monthly}
 
 Verify subscription Price
     [Arguments]    ${FULL_Promo}
-    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal no-pad-left price']    ${FULL_Promo}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//span[@class='priceDisplayNormal no-pad-left price']    ${FULL_Promo}
 
 Open Browser to Product Page_HTTPS_MAC
     [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=painter

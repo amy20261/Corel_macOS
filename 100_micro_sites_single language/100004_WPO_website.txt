@@ -1,0 +1,33 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_040_wordperfect.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page_DEV_STD_PRO_PDF_HS
+    close all browsers
+    open browser to home page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}
+    verify link on home page    office-suite    professional-edition    pdf-creator    home-student
+
+Check Link_Home Page_STG_STD_PRO_PDF_HS
+    close all browsers
+    open browser to home page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}
+    verify link on home page    office-suite    professional-edition    pdf-creator    home-student
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}
+    click HeroBanner
+    Verify URL Contain    ${Hero}
+    Click MainFeature
+    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    Verify URL Contain    ${Highlight 1}
+    click highlight 2
+    Verify URL Contain    ${Highlight 2}
+    close all browsers

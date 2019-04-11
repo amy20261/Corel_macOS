@@ -1,0 +1,38 @@
+*** Settings ***
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Library           Selenium2Library
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_010_corel.com.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page_DEV_CDGS2019_PSU_PTR_VSP
+    close all browsers
+    open browser to Home page_HTTPS    dev    ${Corel}    ${lan}    ${currency}
+    verify link on home page_CDGS2019    coreldraw    paintshop-pro/ultimate    painter    videostudio/pro
+
+Check Link_Home Page_STG_CDGS2019_PSU_PTR_VSP
+    close all browsers
+    open browser to Home page_HTTPS    STG    ${Corel}    ${lan}    ${currency}
+    verify link on home page_CDGS2019    coreldraw    paintshop-pro/ultimate    painter    videostudio/pro
+
+*** Keywords ***
+verify link on home page_CDGS2019
+    [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}
+    Click HeroBanner_CDGS2019
+    Verify URL Contain_Blank    ${Hero}
+    Click MainFeature
+    Verify URL Contain_Blank    ${MainFeature}
+    Click Highlight 1
+    Verify URL Contain_Blank    ${Highlight1}
+    #Click Highlight 2
+    #Verify URL Contain_Blank    ${Highlight2}
+    #Click Sp. Offer 1
+    #Verify URL Contain_Blank    ${SpOffer1}
+    #Click Sp. Offer 2
+    #Verify URL Contain_Blank    ${SpOffer2}
+    #Click Sp. Offer 3
+    # Verify URL Contain_Blank    ${SpOffer3}
+    # Click Sp. Offer 4
+    # Verify URL Contain_Blank    ${SpOffer4}
+    close all browsers

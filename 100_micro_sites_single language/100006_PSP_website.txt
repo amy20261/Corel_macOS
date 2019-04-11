@@ -1,0 +1,32 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page_DEV_PSU_PSP_PVB_particleshop
+    close all browsers
+    open browser to home page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}
+    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle    particleshop
+    [Teardown]
+
+Check Link_Home Page_STG_PSU_PSP_PVB_particleshop
+    close all browsers
+    open browser to home page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}
+    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle    particleshop
+    [Teardown]
+
+*** Keywords ***
+verify link on home page
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}
+    click HeroBanner
+    run keyword and continue on failure    Verify URL Contain    ${Hero}
+    Click MainFeature
+    run keyword and continue on failure    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    run keyword and continue on failure    Verify URL Contain    ${Highlight 1}
+    Click Highlight 2
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 2}
+    close all browsers

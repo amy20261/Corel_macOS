@@ -1,0 +1,43 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Resource          ../Global_Keyword/Keyword_030_painterartist.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Check Link_Home Page_DEV_PTR_PE_Particleshop
+    close all browsers
+    open browser to home page_HTTPS    dev    ${wPTR}    ${lan}    ${currency}
+    verify link on home page_US    painter    painter-essentials    particleshop    brushes
+    [Teardown]
+
+Check Link_Home Page_STG_PTR_PE_Particleshop
+    close all browsers
+    open browser to home page_HTTPS    stg    ${wPTR}    ${lan}    ${currency}
+    verify link on home page_US    painter    painter-essentials    particleshop    brushes
+    [Teardown]
+
+*** Keywords ***
+verify link on home page_US
+    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}
+    click HeroBanner
+    Verify URL Contain    ${Hero}
+    Click MainFeature
+    Verify URL Contain    ${Main Feature}
+    Click Highlight 1
+    Verify URL Contain    ${Highlight 1}
+    Click Highlight 2
+    Verify URL Contain    ${Highlight 2}
+    #Click Sp. Offer 1
+    #Verify URL Contain    ${SpOffer1}
+    #Click Sp. Offer 2
+    #Verify URL Contain    ${SpOffer2}
+    #Click Sp. Offer 3_wacom
+    #Verify URL Contain    ${SpOffer3}
+    #Click Sp. Offer 4
+    #Verify URL Contain    ${SpOffer4}
+    close all browsers
