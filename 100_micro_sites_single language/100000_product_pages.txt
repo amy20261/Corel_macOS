@@ -28,3 +28,21 @@ Check price_product pages_DEV
     \    ...    @{var}[4]    @{var}[7]    @{var}[5]
     \    run keyword if    '@{var}[3]'=='VSP ULT 2019'    Check VSU product page_BOX    dev    @{var}[0]    @{var}[1]
     \    ...    @{var}[4]    @{var}[7]    @{var}[5]
+
+Check price_product pages_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\0415.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword if    '@{var}[3]'=='PTR_2019'    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]
+    \    ...    @{var}[4]    @{var}[7]    @{var}[5]
+    \    run keyword if    '@{var}[3]'=='OL_WP19'    Check WPO std product page_BOX    stg    @{var}[0]    @{var}[1]
+    \    ...    @{var}[4]    @{var}[7]    @{var}[5]
+    \    run keyword if    '@{var}[3]'=='PSP_2019_PRO'    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]
+    \    ...    @{var}[4]    @{var}[7]    @{var}[5]
+    \    run keyword if    '@{var}[3]'=='PSP_2019_ULT'    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]
+    \    ...    @{var}[4]    @{var}[7]    @{var}[5]
+    \    run keyword if    '@{var}[3]'=='VSP PRO 2019'    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]
+    \    ...    @{var}[4]    @{var}[7]    @{var}[5]
+    \    run keyword if    '@{var}[3]'=='VSP ULT 2019'    Check VSU product page_BOX    stg    @{var}[0]    @{var}[1]
+    \    ...    @{var}[4]    @{var}[7]    @{var}[5]
