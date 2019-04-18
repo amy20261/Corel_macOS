@@ -1,0 +1,19 @@
+*** Settings ***
+Library           Selenium2Library
+Resource          Keyword_001_Home.txt
+Resource          Keyword_003_Product.txt
+Resource          Keyword_090_pinnacle.txt
+
+*** Keywords ***
+Check Pinnade page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to pinnacle page    dev    pinnaclesys    en    ${currency}    products/studio/standard/
+    close all browsers
+
+Open Browser to Pinnacle page
+    [Arguments]    ${env}=dev    ${microsite}=roxio    ${lan}=en    ${currency}=en-US    ${page}=creator/suite/
+    Wait Until Keyword Succeeds    2    3    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2    3    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
