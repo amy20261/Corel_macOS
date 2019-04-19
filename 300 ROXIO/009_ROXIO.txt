@@ -221,4 +221,7 @@ screenshot_ROXIO_dev
     Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro
     Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/plugin/
     Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/suite/
+    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator
+    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/creator/
+    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/decoder/
     close all browsers

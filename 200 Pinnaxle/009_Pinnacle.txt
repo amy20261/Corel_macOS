@@ -15,18 +15,24 @@ Screenshot_Pinnacle_all Lan_DEV
     screenshot_Pinnacle_dev    en    en-GB
     screenshot_Pinnacle_dev    en    en-AU
     screenshot_Pinnacle_dev    en    en-NZ
+    screenshot_Pinnacle_dev    en    en-ZA
     screenshot_Pinnacle_dev    en    en-IE
+    screenshot_Pinnacle_dev    en    da-DK
     screenshot_Pinnacle_dev    en    nb-NO
     screenshot_Pinnacle_dev    en    pl-PL
+    screenshot_Pinnacle_dev    en    pt-BR
     screenshot_Pinnacle_dev    en    ru-RU
-    screenshot_Pinnacle_dev    en    de-DE
-    screenshot_Pinnacle_dev    en    fr-FR
-    screenshot_Pinnacle_dev    en    it-IT
-    screenshot_Pinnacle_dev    en    nl-NL
-    screenshot_Pinnacle_dev    en    se-SE
-    screenshot_Pinnacle_dev    en    ja-JP
-    screenshot_Pinnacle_dev    en    es-MX
-    screenshot_Pinnacle_dev    en    es-ES
+    screenshot_Pinnacle_dev    en    zh-TW
+    screenshot_Pinnacle_dev    en    zh-HK
+    screenshot_Pinnacle_dev    de    de-DE
+    screenshot_Pinnacle_dev    de    de-LI
+    screenshot_Pinnacle_dev    fr    fr-FR
+    screenshot_Pinnacle_dev    it    it-IT
+    screenshot_Pinnacle_dev    nl    nl-NL
+    screenshot_Pinnacle_dev    se    se-SE
+    screenshot_Pinnacle_dev    jp    ja-JP
+    screenshot_Pinnacle_dev    es    es-MX
+    screenshot_Pinnacle_dev    es    es-ES
 
 Screenshot_Pinnacle_all Lan_STG
     [Timeout]
@@ -35,18 +41,24 @@ Screenshot_Pinnacle_all Lan_STG
     screenshot_Pinnacle_stg    en    en-GB
     screenshot_Pinnacle_stg    en    en-AU
     screenshot_Pinnacle_stg    en    en-NZ
+    screenshot_Pinnacle_stg    en    en-ZA
     screenshot_Pinnacle_stg    en    en-IE
+    screenshot_Pinnacle_stg    en    da-DK
     screenshot_Pinnacle_stg    en    nb-NO
     screenshot_Pinnacle_stg    en    pl-PL
+    screenshot_Pinnacle_stg    en    pt-BR
     screenshot_Pinnacle_stg    en    ru-RU
-    screenshot_Pinnacle_stg    en    de-DE
-    screenshot_Pinnacle_stg    en    fr-FR
-    screenshot_Pinnacle_stg    en    it-IT
-    screenshot_Pinnacle_stg    en    nl-NL
-    screenshot_Pinnacle_stg    en    se-SE
-    screenshot_Pinnacle_stg    en    ja-JP
-    screenshot_Pinnacle_stg    en    es-MX
-    screenshot_Pinnacle_stg    en    es-ES
+    screenshot_Pinnacle_stg    en    zh-TW
+    screenshot_Pinnacle_stg    en    zh-HK
+    screenshot_Pinnacle_stg    de    de-DE
+    screenshot_Pinnacle_stg    de    de-LI
+    screenshot_Pinnacle_stg    fr    fr-FR
+    screenshot_Pinnacle_stg    it    it-IT
+    screenshot_Pinnacle_stg    nl    nl-NL
+    screenshot_Pinnacle_stg    se    se-SE
+    screenshot_Pinnacle_stg    jp    ja-JP
+    screenshot_Pinnacle_stg    es    es-MX
+    screenshot_Pinnacle_stg    es    es-ES
 
 Screenshot_Pinnacle_all Lan_PRO
     [Timeout]
@@ -55,18 +67,24 @@ Screenshot_Pinnacle_all Lan_PRO
     screenshot_Pinnacle_pro    en    en-GB
     screenshot_Pinnacle_pro    en    en-AU
     screenshot_Pinnacle_pro    en    en-NZ
+    screenshot_Pinnacle_pro    en    en-ZA
     screenshot_Pinnacle_pro    en    en-IE
+    screenshot_Pinnacle_pro    en    da-DK
     screenshot_Pinnacle_pro    en    nb-NO
     screenshot_Pinnacle_pro    en    pl-PL
+    screenshot_Pinnacle_pro    en    pt-BR
     screenshot_Pinnacle_pro    en    ru-RU
-    screenshot_Pinnacle_pro    en    de-DE
-    screenshot_Pinnacle_pro    en    fr-FR
-    screenshot_Pinnacle_pro    en    it-IT
-    screenshot_Pinnacle_pro    en    nl-NL
-    screenshot_Pinnacle_pro    en    se-SE
-    screenshot_Pinnacle_pro    en    ja-JP
-    screenshot_Pinnacle_pro    en    es-MX
-    screenshot_Pinnacle_pro    en    es-ES
+    screenshot_Pinnacle_pro    en    zh-TW
+    screenshot_Pinnacle_pro    en    zh-HK
+    screenshot_Pinnacle_pro    de    de-DE
+    screenshot_Pinnacle_pro    de    de-LI
+    screenshot_Pinnacle_pro    fr    fr-FR
+    screenshot_Pinnacle_pro    it    it-IT
+    screenshot_Pinnacle_pro    nl    nl-NL
+    screenshot_Pinnacle_pro    se    se-SE
+    screenshot_Pinnacle_pro    jp    ja-JP
+    screenshot_Pinnacle_pro    es    es-MX
+    screenshot_Pinnacle_pro    es    es-ES
 
 *** Keywords ***
 Open browser to home
