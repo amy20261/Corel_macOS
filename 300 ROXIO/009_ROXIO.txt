@@ -34,31 +34,20 @@ HTTPS_screenshot_ROXIO_STG_EN
     \    #run keyword and continue on failure    location should contain    https
     \    close all browsers
 
-Screenshot_ROXIO_all Lan_STG
-    [Timeout]
-    screenshot_ROXIO_STG    en    en-US
-    screenshot_ROXIO_STG    en    en-CA
-    screenshot_ROXIO_STG    en    en-GB
-    screenshot_ROXIO_STG    en    en-AU
-    screenshot_ROXIO_STG    en    en-NZ
-    screenshot_ROXIO_STG    en    en-ZA
-    screenshot_ROXIO_STG    en    en-IE
-    screenshot_ROXIO_STG    en    da-DK
-    screenshot_ROXIO_STG    en    nb-NO
-    screenshot_ROXIO_STG    en    pl-PL
-    screenshot_ROXIO_STG    en    pt-BR
-    screenshot_ROXIO_STG    en    ru-RU
-    screenshot_ROXIO_STG    en    zh-TW
-    screenshot_ROXIO_STG    en    zh-HK
-    screenshot_ROXIO_STG    de    de-DE
-    screenshot_ROXIO_STG    de    de-LI
-    screenshot_ROXIO_STG    fr    fr-FR
-    screenshot_ROXIO_STG    it    it-IT
-    screenshot_ROXIO_STG    nl    nl-NL
-    screenshot_ROXIO_STG    se    se-SE
-    screenshot_ROXIO_STG    jp    ja-JP
-    screenshot_ROXIO_STG    es    es-MX
-    screenshot_ROXIO_STG    es    es-ES
+HTTPS_screenshot_ROXIO_DEV_EN
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\ROXIO\\ROXIO_S.txt
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    Split String    ${line}    ;
+    \    close all browsers
+    \    Wait Until Keyword Succeeds    2    3    open browser    https://dev.www.roxio.public.corel.net/${line}
+    \    Wait Until Keyword Succeeds    2    3    go to    https://dev.www.roxio.public.corel.net/${line}
+    \    Maximize Browser Window
+    \    sleep    3
+    \    remove file    c:\\temp\\ROXIO\\${line}.png
+    \    capture page screenshot    c:\\temp\\ROXIO\\${line}.png
+    \    #run keyword and continue on failure    location should contain    https
+    \    close all browsers
 
 Screenshot_ROXIO_all Lan_PRO
     [Timeout]
@@ -86,20 +75,31 @@ Screenshot_ROXIO_all Lan_PRO
     screenshot_ROXIO_PRO    es    es-MX
     screenshot_ROXIO_PRO    es    es-ES
 
-HTTPS_screenshot_ROXIO_DEV_EN
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\ROXIO\\ROXIO_S.txt
-    @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
-    \    @{var}=    Split String    ${line}    ;
-    \    close all browsers
-    \    Wait Until Keyword Succeeds    2    3    open browser    https://dev.www.roxio.public.corel.net/${line}
-    \    Wait Until Keyword Succeeds    2    3    go to    https://dev.www.roxio.public.corel.net/${line}
-    \    Maximize Browser Window
-    \    sleep    3
-    \    remove file    c:\\temp\\ROXIO\\${line}.png
-    \    capture page screenshot    c:\\temp\\ROXIO\\${line}.png
-    \    #run keyword and continue on failure    location should contain    https
-    \    close all browsers
+Screenshot_ROXIO_all Lan_STG
+    [Timeout]
+    screenshot_ROXIO_STG    en    en-US
+    screenshot_ROXIO_STG    en    en-CA
+    screenshot_ROXIO_STG    en    en-GB
+    screenshot_ROXIO_STG    en    en-AU
+    screenshot_ROXIO_STG    en    en-NZ
+    screenshot_ROXIO_STG    en    en-ZA
+    screenshot_ROXIO_STG    en    en-IE
+    screenshot_ROXIO_STG    en    da-DK
+    screenshot_ROXIO_STG    en    nb-NO
+    screenshot_ROXIO_STG    en    pl-PL
+    screenshot_ROXIO_STG    en    pt-BR
+    screenshot_ROXIO_STG    en    ru-RU
+    screenshot_ROXIO_STG    en    zh-TW
+    screenshot_ROXIO_STG    en    zh-HK
+    screenshot_ROXIO_STG    de    de-DE
+    screenshot_ROXIO_STG    de    de-LI
+    screenshot_ROXIO_STG    fr    fr-FR
+    screenshot_ROXIO_STG    it    it-IT
+    screenshot_ROXIO_STG    nl    nl-NL
+    screenshot_ROXIO_STG    se    se-SE
+    screenshot_ROXIO_STG    jp    ja-JP
+    screenshot_ROXIO_STG    es    es-MX
+    screenshot_ROXIO_STG    es    es-ES
 
 Screenshot_ROXIO_all Lan_dev
     [Timeout]
@@ -151,38 +151,6 @@ Open browser to page
     capture page screenshot    ${page}_${currency}.png
     close browser
 
-screenshot_ROXIO_STG
-    [Arguments]    ${lan}=en    ${currency}=en-US
-    Open browser to Home    stg.www.roxio.public.corel.net    ${lan}    ${currency}
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/cddvdburning
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/photo
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/video
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/backup
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/dvdplayersdecoders
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/mac
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade_center/emc
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/mac/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-lp-to-mp3/standard/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-burning/standard/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    easy-vhs-to-dvd/standard/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/recordnow/premier/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/vista/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/decoder/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/plugin/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/suite/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/toast/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/titanium/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-video-copy-and-convert/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/creator/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    game-capture/hd-pro/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro/
-    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/pro/
-    close all browsers
-
 screenshot_ROXIO_PRO
     [Arguments]    ${lan}=en    ${currency}=en-US
     Open browser to Home    www.roxio.com    ${lan}    ${currency}
@@ -215,34 +183,42 @@ screenshot_ROXIO_PRO
     Open browser to page    www.roxio.com    ${lan}    ${currency}    products/toast/pro/
     close all browsers
 
+screenshot_ROXIO_STG
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    stg.www.roxio.public.corel.net    ${lan}    ${currency}
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/cddvdburning
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/photo
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/video
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/backup
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/dvdplayersdecoders
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    store/mac
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade_center/emc
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/mac/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-lp-to-mp3/standard/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-burning/standard/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    easy-vhs-to-dvd/standard/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/recordnow/premier/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/vista/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/decoder/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/plugin/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/suite/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/toast/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/titanium/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-video-copy-and-convert/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/creator/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    game-capture/hd-pro/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro/
+    Open browser to page    stg.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/pro/
+    close all browsers
+
 screenshot_ROXIO_dev
     [Arguments]    ${lan}=en    ${currency}=en-US
     Open browser to Home    dev.www.roxio.public.corel.net    ${lan}    ${currency}
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    store/cddvdburning
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    store/photo
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    store/video
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    store/backup
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    store/dvdplayersdecoders
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    store/mac
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast
     Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade_center/emc
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-vhs-to-dvd/mac/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-lp-to-mp3/standard/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-burning/standard/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    easy-vhs-to-dvd/standard/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/recordnow/premier/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/vista/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/cineplayer/decoder/
     Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/plugin/
     Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/suite/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/toast/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/titanium/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/easy-video-copy-and-convert/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    upgrade-center/creator/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/creator/pro/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    game-capture/hd-pro/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/game-capture/hd-pro/
-    Open browser to page    dev.www.roxio.public.corel.net    ${lan}    ${currency}    products/toast/pro/
     close all browsers

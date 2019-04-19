@@ -1,0 +1,120 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Resource          ../Global_Keyword/Keyword_000_Verification.txt
+Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_002_Special_Offer_Page.txt
+Variables         ../Global_Variable/eComm.py
+
+*** Test Cases ***
+Screenshot_Pinnacle_all Lan_DEV
+    [Timeout]
+    screenshot_Pinnacle_dev    en    en-US
+    screenshot_Pinnacle_dev    en    en-CA
+    screenshot_Pinnacle_dev    en    en-GB
+    screenshot_Pinnacle_dev    en    en-AU
+    screenshot_Pinnacle_dev    en    en-NZ
+    screenshot_Pinnacle_dev    en    en-IE
+    screenshot_Pinnacle_dev    en    nb-NO
+    screenshot_Pinnacle_dev    en    pl-PL
+    screenshot_Pinnacle_dev    en    ru-RU
+    screenshot_Pinnacle_dev    en    de-DE
+    screenshot_Pinnacle_dev    en    fr-FR
+    screenshot_Pinnacle_dev    en    it-IT
+    screenshot_Pinnacle_dev    en    nl-NL
+    screenshot_Pinnacle_dev    en    se-SE
+    screenshot_Pinnacle_dev    en    ja-JP
+    screenshot_Pinnacle_dev    en    es-MX
+    screenshot_Pinnacle_dev    en    es-ES
+
+Screenshot_Pinnacle_all Lan_STG
+    [Timeout]
+    screenshot_Pinnacle_stg    en    en-US
+    screenshot_Pinnacle_stg    en    en-CA
+    screenshot_Pinnacle_stg    en    en-GB
+    screenshot_Pinnacle_stg    en    en-AU
+    screenshot_Pinnacle_stg    en    en-NZ
+    screenshot_Pinnacle_stg    en    en-IE
+    screenshot_Pinnacle_stg    en    nb-NO
+    screenshot_Pinnacle_stg    en    pl-PL
+    screenshot_Pinnacle_stg    en    ru-RU
+    screenshot_Pinnacle_stg    en    de-DE
+    screenshot_Pinnacle_stg    en    fr-FR
+    screenshot_Pinnacle_stg    en    it-IT
+    screenshot_Pinnacle_stg    en    nl-NL
+    screenshot_Pinnacle_stg    en    se-SE
+    screenshot_Pinnacle_stg    en    ja-JP
+    screenshot_Pinnacle_stg    en    es-MX
+    screenshot_Pinnacle_stg    en    es-ES
+
+Screenshot_Pinnacle_all Lan_PRO
+    [Timeout]
+    screenshot_Pinnacle_pro    en    en-US
+    screenshot_Pinnacle_pro    en    en-CA
+    screenshot_Pinnacle_pro    en    en-GB
+    screenshot_Pinnacle_pro    en    en-AU
+    screenshot_Pinnacle_pro    en    en-NZ
+    screenshot_Pinnacle_pro    en    en-IE
+    screenshot_Pinnacle_pro    en    nb-NO
+    screenshot_Pinnacle_pro    en    pl-PL
+    screenshot_Pinnacle_pro    en    ru-RU
+    screenshot_Pinnacle_pro    en    de-DE
+    screenshot_Pinnacle_pro    en    fr-FR
+    screenshot_Pinnacle_pro    en    it-IT
+    screenshot_Pinnacle_pro    en    nl-NL
+    screenshot_Pinnacle_pro    en    se-SE
+    screenshot_Pinnacle_pro    en    ja-JP
+    screenshot_Pinnacle_pro    en    es-MX
+    screenshot_Pinnacle_pro    en    es-ES
+
+*** Keywords ***
+Open browser to home
+    [Arguments]    ${microsite}=stg.www.pinnaclesys.public.corel.net    ${lan}=en    ${currency}=en-US
+    Run Keyword And Continue On Failure    remove file    c:/temp/Pinnacle/${microsite}/Home_${currency}.png
+    open browser    https://${microsite}/${lan}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    1
+    Selenium2Library.set screenshot directory    c:/temp/Pinnacle/${microsite}/
+    capture page screenshot    Home_${currency}.png
+    close browser
+
+Open browser to page
+    [Arguments]    ${microsite}=stg.www.pinnaclesys.public.corel.net    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    [Timeout]
+    Run Keyword And Continue On Failure    Remove file    c:/temp/Pinnacle/${microsite}/${page}_${currency}.png
+    open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
+    Maximize Browser Window
+    sleep    3
+    Selenium2Library.set screenshot directory    c:/temp/Pinnacle/${microsite}/
+    capture page screenshot    ${page}_${currency}.png
+    close browser
+
+screenshot_Pinnacle_dev
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    dev.www.pinnaclesys.public.corel.net    ${lan}    ${currency}
+    Open browser to page    dev.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    upgrade/studio
+    Open browser to page    dev.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio
+    Open browser to page    dev.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio/standard
+    Open browser to page    dev.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio/plus/
+    Open browser to page    dev.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio/ultimate/
+
+screenshot_Pinnacle_STG
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    stg.www.pinnaclesys.public.corel.net    ${lan}    ${currency}
+    Open browser to page    stg.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    upgrade/studio
+    Open browser to page    stg.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio
+    Open browser to page    stg.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio/standard
+    Open browser to page    stg.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio/plus/
+    Open browser to page    stg.www.pinnaclesys.public.corel.net    ${lan}    ${currency}    products/studio/ultimate/
+
+screenshot_Pinnacle_PRO
+    [Arguments]    ${lan}=en    ${currency}=en-US
+    Open browser to Home    www.Pinnacle.io    ${lan}    ${currency}
+    Open browser to page    www.Pinnacle.io    ${lan}    ${currency}    upgrade/studio
+    Open browser to page    www.Pinnacle.io    ${lan}    ${currency}    products/studio
+    Open browser to page    www.Pinnacle.io    ${lan}    ${currency}    products/studio/standard
+    Open browser to page    www.Pinnacle.io    ${lan}    ${currency}    products/studio/plus/
+    Open browser to page    www.Pinnacle.io    ${lan}    ${currency}    products/studio/ultimate/
