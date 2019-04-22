@@ -137,11 +137,3 @@ Check SKU on PVB_STG
     Check sku array
     Check SKU    ${KPVB}
     close all browsers
-
-Check PSU product page_New design
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_New design    ${env}    ${wPSP}    en    ${currency}    paintshop-pro/ultimate/index2.html
-    Check promo price on product_New design    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}    ${OPSU}
-    ...    ${XPSU}
-    close all browsers

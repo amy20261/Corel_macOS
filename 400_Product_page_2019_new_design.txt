@@ -1,0 +1,16 @@
+*** Settings ***
+Library           Selenium2Library
+Library           OperatingSystem
+Library           String
+Variables         Global_Variable/eComm.py
+Resource          Global_Keyword/Keyword_003_product_New_design.txt
+Resource          Global_Keyword/Keyword_050_paintershoppro.txt
+
+*** Test Cases ***
+Check price_PSU product page_BOX_20% OFF_DEV_NEW product
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20_B.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check PSU product page_New design    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
