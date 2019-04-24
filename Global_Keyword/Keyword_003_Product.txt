@@ -57,7 +57,7 @@ Select Full
 Verify SavingsBadge
     [Arguments]    ${SavingBadge}
     sleep    1
-    Run Keyword And Continue On Failure    Element should contain    //p[@data-promo-text='savingsBadge']    ${SavingBadge}
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
 
 Verify Full_Reg price
     [Arguments]    ${FULL_Reg}

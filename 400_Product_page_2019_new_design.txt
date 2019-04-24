@@ -16,9 +16,10 @@ Check price_PSU product page_BOX_20% OFF_DEV_NEW product
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_BOX_20% OFF_DEV_NEW product-2
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20_B.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PSU_BOX_20.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check PSU product page_New design-2    dev    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
+    \    ...    @{var}[7]    @{var}[5]    ${PPSU}    ${UPSU}    ${OPSU}
+    \    ...    ${XPSU}
