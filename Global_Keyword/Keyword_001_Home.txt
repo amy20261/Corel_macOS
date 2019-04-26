@@ -90,7 +90,7 @@ Click Featured Prod 2
     sleep    3
 
 Click Featured Prod 3
-    click element    //div[@class='cat-product product-3']
+    click element    //div[@class='cat-product hs product-3']
     sleep    3
 
 Click business-education
