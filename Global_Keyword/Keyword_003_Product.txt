@@ -21,7 +21,7 @@ Open Browser to Product Page
 Check promo price on product_dropdown list
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}
     Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_dropdown list
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_OLD    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
@@ -210,7 +210,7 @@ Check promo price on product_dropdown list_BOX
     Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
     Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list
     ...    AND    Select BOX_dropdown list
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_OLD    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
@@ -306,3 +306,8 @@ Check SUB1 SKU
 Check SUB2 SKU
     [Arguments]    ${SUB2SKU}
     Run Keyword And Continue On Failure    Page should contain    ${SUB2SKU}    loglevel=NONE
+
+Verify SavingsBadge_OLD
+    [Arguments]    ${SavingBadge}
+    sleep    1
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
