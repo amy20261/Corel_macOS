@@ -50,7 +50,7 @@ Check Link_Home Page_STG
 Check Link_Home Page_DEV_ASP_PSU_PVB_particleshop
     ${contents}=    Get File    ${ASP_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
@@ -59,7 +59,7 @@ Check Link_Home Page_DEV_ASP_PSU_PVB_particleshop
 Check Link_Home Page_STG_ASP_PSU_PVB_particleshop
     ${contents}=    Get File    ${ASP_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wASP}    @{var}[1]    @{var}[2]
@@ -68,7 +68,7 @@ Check Link_Home Page_STG_ASP_PSU_PVB_particleshop
 Check Link_Home Page_DEV_ASP_PSP_PVB_particleshop
     ${contents}=    Get File    ${ASP_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
@@ -77,7 +77,7 @@ Check Link_Home Page_DEV_ASP_PSP_PVB_particleshop
 Check Link_Home Page_STG_ASP_PSP_PVB_particleshop
     ${contents}=    Get File    ${ASP_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wASP}    @{var}[1]    @{var}[2]
