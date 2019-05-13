@@ -8,29 +8,38 @@ Resource          ../Global_Keyword/Keyword_003_Product.txt
 Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 
 *** Test Cases ***
-Holiday Stationary Pack_WPO STD
-    ${contents}=    Get File    ${VA_HolidayStationaryPack}
+MultiCam Capture_VSP_dev
+    ${contents}=    Get File    ${VA_MultiCam}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WPO std page    Holiday Stationary Pack    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSP page    dev    MultiCam Capture    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-Holiday Stationary Pack_WPO PRO
-    ${contents}=    Get File    ${VA_HolidayStationaryPack}
+MultiCam Capture_VSP_stg
+    ${contents}=    Get File    ${VA_MultiCam}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WPO PRO page    Holiday Stationary Pack    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSP page    stg    MultiCam Capture    en    @{var}[1]    @{var}[2]
     \    close all browsers
 
-Holiday Stationary Pack_WPO HS
-    ${contents}=    Get File    ${VA_HolidayStationaryPack}
+MultiCam Capture_VSU_dev
+    ${contents}=    Get File    ${VA_MultiCam}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on WPO HS page    Holiday Stationary Pack    en    @{var}[1]    @{var}[2]
+    \    Check VA on VSU page    dev    MultiCam Capture    en    @{var}[1]    @{var}[2]
+    \    close all browsers
+
+MultiCam Capture_VSU_stg
+    ${contents}=    Get File    ${VA_MultiCam}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Check VA on VSU page    stg    MultiCam Capture    en    @{var}[1]    @{var}[2]
     \    close all browsers
