@@ -14,7 +14,8 @@ Nature Essential Brush Pack_PE_dev
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PE page    dev    Nature Essentials    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PE page    dev    Nature Essentials    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
 Nature Essential Brush Pack_PE_stg
@@ -23,5 +24,6 @@ Nature Essential Brush Pack_PE_stg
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PE page    stg    Nature Essentials    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PE page    stg    Nature Essentials    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers

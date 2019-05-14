@@ -13,7 +13,7 @@ Nature Brush Pack_PTR_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    dev    Nature Brush Pack    en
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PTR page    dev    Nature Brush Pack    en
     \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
@@ -22,7 +22,7 @@ Nature Brush Pack_PTR_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU;de-DE;fr-FR;ja-JP'    Check VA on PTR page    stg    Nature Brush Pack    en
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PTR page    stg    Nature Brush Pack    en
     \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
@@ -32,7 +32,8 @@ Nature Brush Pack_particleshop_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on particleshop page    dev    Nature Brush Pack    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on particleshop page    dev    Nature Brush Pack    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
 Nature Brush Pack_particleshop_STG
@@ -41,5 +42,6 @@ Nature Brush Pack_particleshop_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on particleshop page    stg    Nature Brush Pack    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on particleshop page    stg    Nature Brush Pack    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers

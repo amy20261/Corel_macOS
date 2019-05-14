@@ -14,7 +14,8 @@ Film and Filter effect scripts bundle_PSP_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSP page    dev    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PSP page    dev    Film And Filter Effects Script Bundle    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
 Film and Filter effect scripts bundle_PSP_STG
@@ -23,7 +24,8 @@ Film and Filter effect scripts bundle_PSP_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSP page    stg    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PSP page    stg    Film And Filter Effects Script Bundle    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
 Flim and Fliter effect scripts bundle_PSU_DEV
@@ -32,7 +34,8 @@ Flim and Fliter effect scripts bundle_PSU_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    dev    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PSU page    dev    Film And Filter Effects Script Bundle    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers
 
 Flim and Fliter effect scripts bundle_PSU_STG
@@ -41,5 +44,6 @@ Flim and Fliter effect scripts bundle_PSU_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Check VA on PSU page    stg    Film and Filter Effects Script Bundle    en    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PSU page    stg    Film And Filter Effects Script Bundle    en
+    \    ...    @{var}[1]    @{var}[2]
     \    close all browsers

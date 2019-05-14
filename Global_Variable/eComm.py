@@ -174,7 +174,7 @@ VA_WINZIP='C:\\Corel\\Global_Variable\\VA\\VA_WINZIP.csv'
 VA_PSPHoliday='C:\\Corel\\Global_Variable\\VA\\VA_PSP Holiday.csv'
 VA_HolidayStationaryPack='C:\\Corel\\Global_Variable\\VA\\VA_Holiday Stationary Pack.csv'
 VA_NatureBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_NatureBrushPack.csv'
-VA_NEBrushPack='C:\\CoC:\\Corel\\Global_Variable\\VA\\rel\\Global_Variable\\VA\\VA_NEBrushPack.csv'
+VA_NEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_NEBrushPack.csv'
 VA_ScriptsBundle='C:\\Corel\\Global_Variable\\VA\\VA_ScriptsBundle.csv'
 VA_MultiCam='C:\\Corel\\Global_Variable\\VA\\VA_MultiCam.csv'
 
