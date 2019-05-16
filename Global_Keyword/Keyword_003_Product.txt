@@ -311,3 +311,20 @@ Verify SavingsBadge_OLD
     [Arguments]    ${SavingBadge}
     sleep    1
     Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
+
+Verify SavingsBadge_CDTS
+    [Arguments]    ${SavingBadge}
+    sleep    1
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']/p[@data-promo-text='savingsBadge']    ${SavingBadge}
+
+Check promo price on product_radio_BOX_CDTS
+    [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
+    ...    ${UPBOXSKU}
+    Run keyword if    '${SKU}'=='${UPSKU}'    Select Upgrade_radio button
+    Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
+    Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button
+    ...    AND    Select BOX_dropdown list
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_CDTS    ${SavingBadge}
+    ...    AND    Verify Full_Reg price    ${Full_Reg}
+    ...    AND    Verify Full_Promo Price    ${Full_promo}
+    ...    ELSE    Verify Full_Promo Price    ${Full_Reg}

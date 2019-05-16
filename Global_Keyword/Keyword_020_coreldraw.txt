@@ -52,7 +52,7 @@ Check CDTS product page_BOX
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
-    Check promo price on product_radio_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}    ${OCDTS}
+    Check promo price on product_radio_BOX_CDTS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}    ${OCDTS}
     ...    ${XCDTS}
     close all browsers
 
