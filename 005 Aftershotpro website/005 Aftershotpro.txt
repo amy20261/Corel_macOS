@@ -116,10 +116,10 @@ verify link on home page_ASP
     [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}
     click HeroBanner_ASP
     run keyword and continue on failure    Verify URL Contain    ${Hero}
-    Click MainFeature
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Main Feature}
-    Click Highlight 1
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 1}
-    Click Highlight 2
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 2}
-    close all browsers
+    #Click MainFeature
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Main Feature}
+    #Click Highlight 1
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 1}
+    #Click Highlight 2
+    #run keyword and continue on failure    Verify URL Contain_Blank    ${Highlight 2}
+    #close all browsers
