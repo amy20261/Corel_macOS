@@ -198,7 +198,7 @@ Check promo price on product_dropdown list_WPO_BOX
     Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
     Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown llist_WPO
     ...    AND    Select BOX_dropdown list
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
@@ -252,7 +252,7 @@ Check promo price on product_dropdown list_PDF_BOX
     [Arguments]    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSKU}    ${BOXSKU}
     ...    ${UPBOXSKU}
     Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list_PDF
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
@@ -312,7 +312,7 @@ Verify SavingsBadge_OLD
     sleep    1
     Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${SavingBadge}
 
-Verify SavingsBadge_CDTS
+Verify SavingsBadge_2019
     [Arguments]    ${SavingBadge}
     sleep    1
     Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline-block;']/p[@data-promo-text='savingsBadge']    ${SavingBadge}
@@ -324,7 +324,7 @@ Check promo price on product_radio_BOX_CDTS
     Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
     Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_radio button
     ...    AND    Select BOX_dropdown list
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_CDTS    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
