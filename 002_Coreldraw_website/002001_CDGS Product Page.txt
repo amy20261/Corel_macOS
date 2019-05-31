@@ -176,3 +176,11 @@ Check price_CDGS product page_BOX_20-23-25% OFF_STG
     \    @{var}=    split string    ${line}    ;
     \    run keyword and continue on failure    Check CDGS product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
+
+Check price_CDGS product page_BOX_EOQ_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS10_EOQ.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    run keyword and continue on failure    Check CDGS product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    ...    @{var}[7]    @{var}[5]
