@@ -9,8 +9,8 @@ Resource          ../Global_Keyword/Keyword_050_paintershoppro.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check price_PVB product page_Q1_DEV
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+Check price_PVB product page_Quarterly_DEV
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -49,8 +49,8 @@ Check price_PVB product page_40% OFF_DEV
     \    run keyword and continue on failure    Check PSB product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
-Check price_PVB product page_Q1_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+Check price_PVB product page_Quarterly_STG
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
