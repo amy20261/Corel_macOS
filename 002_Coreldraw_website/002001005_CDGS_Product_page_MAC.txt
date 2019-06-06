@@ -30,7 +30,7 @@ Check price_CDGS product page_BOX_SRP_DEV_MAC
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    Run keyword if    '@{var}[1]'=='ESDCDGS2018AM'    run keyword and continue on failure    Check CDGS product page_BOX_MAC    dev    @{var}[0]
+    \    Run keyword if    '@{var}[1]'=='ESDCDGS2019AM'    run keyword and continue on failure    Check CDGS product page_BOX_MAC    dev    @{var}[0]
     \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]
 
 Check price_CDGS product page_BOX_SRP_STG_MAC
@@ -38,5 +38,5 @@ Check price_CDGS product page_BOX_SRP_STG_MAC
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    Run keyword if    '@{var}[1]'=='ESDCDGS2018AM'    run keyword and continue on failure    Check CDGS product page_BOX_MAC    stg    @{var}[0]
+    \    Run keyword if    '@{var}[1]'=='ESDCDGS2019AM'    run keyword and continue on failure    Check CDGS product page_BOX_MAC    stg    @{var}[0]
     \    ...    @{var}[1]    @{var}[4]    @{var}[7]    @{var}[5]

@@ -160,7 +160,7 @@ PTR_file_wacom='C:\\Corel\\Global_Variable\\Data\\PTR_BUNDLE.csv'
 
 #subscription
 CDGS_Sub='C:\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'
-CDTS_Sub='C:\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv'
+CDTS_Sub='C:\\Corel\\Global_Variable\\Data\\CDTS_subscription.csv'
 
 #VA price file
 VA_particleshop='C:\\Corel\\Global_Variable\\VA\\VA_Particleshop.csv'
@@ -177,6 +177,8 @@ VA_NatureBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_NatureBrushPack.csv'
 VA_NEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_NEBrushPack.csv'
 VA_ScriptsBundle='C:\\Corel\\Global_Variable\\VA\\VA_ScriptsBundle.csv'
 VA_MultiCam='C:\\Corel\\Global_Variable\\VA\\VA_MultiCam.csv'
+VA_PE6='C:\\Corel\\Global_Variable\\VA\\VA_PE6.csv'
+
 
 #HTTPS files
 HTTPS_ASP='C:\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'
