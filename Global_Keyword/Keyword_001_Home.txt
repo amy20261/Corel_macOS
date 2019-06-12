@@ -79,7 +79,7 @@ Click HeroBanner_CDGS2019
     ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
 
 Click HeroBanner_CDGS2019_coreldraw
-    click element    //div[@class="container"]//a[@class="btn btn-learn-more"]
+    click element    //div[@class='is-pc']//p[@class='buttons desktop']//a[@class='btn btn-learn-more'][contains(text(),'LEARN MORE')]
 
 Click Featured Prod 1
     click element    //div[@class='cat-product product-1']
