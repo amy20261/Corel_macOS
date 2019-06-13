@@ -9,95 +9,6 @@ Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_EN    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    \    run keyword if    '@{var}[1]' in 'de;fr;jp;br'    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check price_CDHS product page
-    ${contents}=    Get File    ${CDHS_file}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check CDHS product page    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_CDGS product page_BOX
-    ${contents}=    Get File    ${CDGS_BOX_file}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check CDGS product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_CAD product page_BOX
-    ${contents}=    Get File    ${CAD_file_BOX}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check CAD product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_CDTS product page_BOX
-    ${contents}=    Get File    ${CDTS_file_BOX}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check CDTS product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check Link_Home Page_DEV_CDGS_CDHS_CDTS_CAD
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    verify link on home page    coreldraw    home-student    technical-suite    corel-cad    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_CDGS_CDHS_CDTS_CAD
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    verify link on home page    coreldraw    home-student    technical-suite    corel-cad    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_DEV_CDGS_CDTS_CAD_CDHS
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    verify link on home page    coreldraw    technical-suite    corel-cad    home-student    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    STG    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    verify link on home page    coreldraw    technical-suite    corel-cad    home-student    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
 Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
@@ -105,8 +16,12 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    verify link on home page_CDGS2019    coreldraw    technical-suite    corel-cad    home-student    licensing
-    \    ...    product/coreldraw/#gallery
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la;tw;cn'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'cz;pl;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_NO HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
 
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
@@ -116,32 +31,15 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    verify link on home page_CDGS2019    coreldraw    technical-suite    corel-cad    home-student    licensing
-    \    ...    product/coreldraw/#gallery
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la;tw;cn'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'cz;pl;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_NO HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
 
 *** Keywords ***
-verify link on home page
-    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
-    ...    ${SpOffer3}    ${SpOffer4}
-    click HeroBanner_CDGS2019_coreldraw
-    Verify URL Contain    ${Hero}
-    Click MainFeature
-    Verify URL Contain    ${Main Feature}
-    Click Highlight 1
-    Verify URL Contain    ${Highlight 1}
-    Click Highlight 2
-    Verify URL Contain    ${Highlight 2}
-    #Click Sp. Offer 1
-    #Verify URL Contain    ${SpOffer1}
-    #Click Sp. Offer 2
-    #Verify URL Contain    ${SpOffer2}
-    #Click Sp. Offer 3
-    #Verify URL Contain    ${SpOffer3}
-    #Click Sp. Offer 4
-    #Verify URL Contain    ${SpOffer4}
-    close all browsers
-
 verify link on special offer page
     [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
     #Click Special Offers Hero
@@ -168,30 +66,9 @@ verify link on special offer page_JP
     Verify URL Contain    ${Prod 3}
     close all browsers
 
-verify link on home page_EN
-    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
-    ...    ${SpOffer3}    ${SpOffer4}
-    click HeroBanner
-    Verify URL Contain    ${Hero}
-    Click MainFeature
-    Verify URL Contain    ${Main Feature}
-    Click Highlight 1
-    Verify URL Contain    ${Highlight 1}
-    Click Highlight 2
-    Verify URL Contain    ${Highlight 2}
-    Click Sp. Offer 1
-    Verify URL Contain    ${SpOffer1}
-    Click Sp. Offer 2
-    Verify URL Contain    ${SpOffer2}
-    Click Sp. Offer 3
-    Verify URL Contain    ${SpOffer3}
-    Click Sp. Offer 4_gallery
-    Verify URL Contain    ${SpOffer4}
-    close all browsers
-
-verify link on home page_CDGS2019
+verify link on home page_CDGS2019_LAN
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    click HeroBanner_CDGS2019_coreldraw
+    Click HeroBanner_CDGS2019_LAN
     Verify URL Contain    ${Hero}
     Click Featured Prod 1
     Verify URL Contain    ${ Featured Prod 1}
@@ -199,6 +76,38 @@ verify link on home page_CDGS2019
     Verify URL Contain    ${ Featured Prod 2}
     Click Featured Prod 3
     Verify URL Contain    ${ Featured Prod 3}
+    Click business-education
+    Verify URL Contain    ${Business education}
+    Click design-gallery
+    Verify URL Contain_Blank    ${design-gallery}
+    close all browsers
+
+verify link on home page_CDGS2019_EN
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
+    Click HeroBanner_CDGS2019_EN
+    Verify URL Contain    ${Hero}
+    Click Featured Prod 1
+    Verify URL Contain    ${ Featured Prod 1}
+    Click Featured Prod 2
+    Verify URL Contain    ${ Featured Prod 2}
+    Click Featured Prod 3
+    Verify URL Contain    ${ Featured Prod 3}
+    Click business-education
+    Verify URL Contain    ${Business education}
+    Click design-gallery
+    Verify URL Contain_Blank    ${design-gallery}
+    close all browsers
+
+verify link on home page_CDGS2019_LAN_no HS
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
+    Click HeroBanner_CDGS2019_lan
+    Verify URL Contain    ${Hero}
+    Click Featured Prod 1
+    Verify URL Contain    ${ Featured Prod 1}
+    Click Featured Prod 2
+    Verify URL Contain    ${ Featured Prod 2}
+    Click Featured Prod 3
+    Verify URL Contain_blank    ${ Featured Prod 3}
     Click business-education
     Verify URL Contain    ${Business education}
     Click design-gallery

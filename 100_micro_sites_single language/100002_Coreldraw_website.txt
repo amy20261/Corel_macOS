@@ -21,7 +21,7 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
 *** Keywords ***
 verify link on home page_CDGS2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    click HeroBanner_CDGS2019_coreldraw
+    Click HeroBanner_CDGS2019_EN
     Verify URL Contain    ${Hero}
     Click Featured Prod 1
     Verify URL Contain    ${ Featured Prod 1}

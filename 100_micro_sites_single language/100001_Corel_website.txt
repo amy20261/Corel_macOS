@@ -19,7 +19,7 @@ Check Link_Home Page_STG_CDGS2019_PSU_PTR_VSP
 *** Keywords ***
 verify link on home page_CDGS2019
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}
-    Click HeroBanner_CDGS2019
+    Click HeroBanner_CDGS2019_LAN
     Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}

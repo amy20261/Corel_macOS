@@ -73,13 +73,11 @@ Click HeroBanner_ASP
     run keyword if    '${promo-hero-banner}'=='display: inline-block;'    click image    //img[@data-promo-image='heroBanner']
     ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
 
-Click HeroBanner_CDGS2019
-    ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]//p[@class="buttons is-pc"]@style
-    run keyword if    '${promo-hero-banner}'=='display: block;'    click element    //div[@class="container hero"]//a[@class="btn btn-learn-more"]
-    ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
+Click HeroBanner_CDGS2019_LAN
+    click element    //div[@class='is-pc']//p[@class='buttons'] //a[@class='btn btn-learn-more']
 
-Click HeroBanner_CDGS2019_coreldraw
-    click element    //div[@class='is-pc']//p[@class='buttons desktop']//a[@class='btn btn-learn-more'][contains(text(),'LEARN MORE')]
+Click HeroBanner_CDGS2019_EN
+    run keyword and continue on failure    click element    //div[@class='is-pc']//p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
 
 Click Featured Prod 1
     click element    //div[@class='cat-product product-1']
