@@ -18,24 +18,32 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la;tw;cn'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'cz;pl;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_NO HS    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'nl'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_no licensing page    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'pl;tw;cn;ru'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'cz;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS_Licensing page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
 
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
+    :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    open browser to home page_HTTPS    STG    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la;tw;cn'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'cz;pl;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_NO HS    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'nl'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_no licensing page    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'pl;tw;cn;ru'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'cz;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS_Licensing page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
 
@@ -66,50 +74,66 @@ verify link on special offer page_JP
     Verify URL Contain    ${Prod 3}
     close all browsers
 
-verify link on home page_CDGS2019_LAN
-    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    Click HeroBanner_CDGS2019_LAN
-    Verify URL Contain    ${Hero}
-    Click Featured Prod 1
-    Verify URL Contain    ${ Featured Prod 1}
-    Click Featured Prod 2
-    Verify URL Contain    ${ Featured Prod 2}
-    Click Featured Prod 3
-    Verify URL Contain    ${ Featured Prod 3}
-    Click business-education
-    Verify URL Contain    ${Business education}
-    Click design-gallery
-    Verify URL Contain_Blank    ${design-gallery}
-    close all browsers
-
 verify link on home page_CDGS2019_EN
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    Click HeroBanner_CDGS2019_EN
-    Verify URL Contain    ${Hero}
-    Click Featured Prod 1
-    Verify URL Contain    ${ Featured Prod 1}
-    Click Featured Prod 2
-    Verify URL Contain    ${ Featured Prod 2}
-    Click Featured Prod 3
-    Verify URL Contain    ${ Featured Prod 3}
-    Click business-education
-    Verify URL Contain    ${Business education}
-    Click design-gallery
-    Verify URL Contain_Blank    ${design-gallery}
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_EN
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
+    Run Keyword And Continue On Failure    Click Featured Prod 1
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
+    Run Keyword And Continue On Failure    Click Featured Prod 2
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
+    Run Keyword And Continue On Failure    Click Featured Prod 3
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click business-education
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Business education}
+    Run Keyword And Continue On Failure    Click design-gallery
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
     close all browsers
 
-verify link on home page_CDGS2019_LAN_no HS
+verify link on home page_CDGS2019_LAN
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    Click HeroBanner_CDGS2019_lan
-    Verify URL Contain    ${Hero}
-    Click Featured Prod 1
-    Verify URL Contain    ${ Featured Prod 1}
-    Click Featured Prod 2
-    Verify URL Contain    ${ Featured Prod 2}
-    Click Featured Prod 3
-    Verify URL Contain_blank    ${ Featured Prod 3}
-    Click business-education
-    Verify URL Contain    ${Business education}
-    Click design-gallery
-    Verify URL Contain_Blank    ${design-gallery}
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_LAN
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
+    Run Keyword And Continue On Failure    Click Featured Prod 1
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
+    Run Keyword And Continue On Failure    Click Featured Prod 2
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
+    Run Keyword And Continue On Failure    Click Featured Prod 3
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click business-education
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Business education}
+    Run Keyword And Continue On Failure    Click design-gallery
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
+    close all browsers
+
+verify link on home page_CDGS2019_LAN_no Licensing page
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_LAN
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
+    Run Keyword And Continue On Failure    Click Featured Prod 1
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
+    Run Keyword And Continue On Failure    Click Featured Prod 2
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
+    Run Keyword And Continue On Failure    Click Featured Prod 3
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click business-education
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${Business education}
+    Run Keyword And Continue On Failure    Click design-gallery
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
+    close all browsers
+
+verify link on home page_CDGS2019_LAN_no HS_Licensing page
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_lan
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
+    Run Keyword And Continue On Failure    Click Featured Prod 1
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
+    Run Keyword And Continue On Failure    Click Featured Prod 2
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
+    Run Keyword And Continue On Failure    Click Featured Prod 3
+    Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click business-education
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Business education}
+    Run Keyword And Continue On Failure    Click design-gallery
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
     close all browsers
