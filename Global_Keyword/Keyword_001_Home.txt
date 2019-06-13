@@ -81,20 +81,15 @@ Click HeroBanner_CDGS2019_EN
 
 Click Featured Prod 1
     click element    //div[@class='cat-product product-1']
-    sleep    3
 
 Click Featured Prod 2
     click element    //div[@class='cat-product product-2']
-    sleep    3
 
 Click Featured Prod 3
     click element    //div[@class='cat-product hs product-3']
-    sleep    3
 
 Click business-education
     click element    //div[@class='business-education']//a[@class='btn btn-learn-more']
-    sleep    3
 
 Click design-gallery
     click element    //div[@class='design-gallery']//a[@class='btn btn-learn-more is-pc']
-    sleep    3
