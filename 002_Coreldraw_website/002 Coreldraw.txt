@@ -22,9 +22,9 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     \    Run keyword if    '@{var}[1]' in 'nl'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_no licensing page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'pl;tw;cn;ru'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'pl;ru'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'cz;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS_Licensing page    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'cz;tw;cn;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS_Licensing page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
 
@@ -34,16 +34,16 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    STG    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     \    Run keyword if    '@{var}[1]' in 'nl'    run keyword and continue on failure    verify link on home page_CDGS2019_lan_no licensing page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'pl;tw;cn;ru'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'pl;ru'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
-    \    Run keyword if    '@{var}[1]' in 'cz;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS_Licensing page    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'cz;tw;cn;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS_Licensing page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
 
@@ -122,7 +122,7 @@ verify link on home page_CDGS2019_LAN_no Licensing page
     Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
     close all browsers
 
-verify link on home page_CDGS2019_LAN_no HS_Licensing page
+verify link on home page_CDGS2019_LAN_no HS
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
     Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_lan
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
@@ -134,6 +134,22 @@ verify link on home page_CDGS2019_LAN_no HS_Licensing page
     Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click business-education
     Run Keyword And Continue On Failure    Verify URL Contain    ${Business education}
+    Run Keyword And Continue On Failure    Click design-gallery
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
+    close all browsers
+
+verify link on home page_CDGS2019_LAN_no HS_Licensing page
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_lan
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
+    Run Keyword And Continue On Failure    Click Featured Prod 1
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
+    Run Keyword And Continue On Failure    Click Featured Prod 2
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
+    Run Keyword And Continue On Failure    Click Featured Prod 3
+    Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click business-education
+    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${Business education}
     Run Keyword And Continue On Failure    Click design-gallery
     Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
     close all browsers
