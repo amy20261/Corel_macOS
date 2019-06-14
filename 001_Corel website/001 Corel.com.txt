@@ -224,6 +224,34 @@ Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/WINDVD
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
     \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
 
+Check Link_Home Page_DEV_CDGS2019/VSU_PSP/PTR_PTR/PSU_VSU/WINDVD
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to Home page_HTTPS    stg    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'de;fr'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
+    \    ...    videostudio/ultimate    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
+    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
+    \    ...    videostudio/ultimate    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+
+Check Link_Home Page_STG_CDGS2019/VSU_PSP/PTR_PTR/PSU_VSU/WINDVD
+    ${contents}=    Get File    ${Corel_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to Home page_HTTPS    stg    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword if    '@{var}[1]' in 'de;fr'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
+    \    ...    videostudio/ultimate    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
+    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/standard    painter
+    \    ...    videostudio/ultimate    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
+
 *** Keywords ***
 verify link on home page_en
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
