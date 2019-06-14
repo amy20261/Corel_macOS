@@ -449,7 +449,7 @@ verify link in special offer page_BN_BR
 verify link on home page_CDGS2019
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
     ...    ${SpOffer3}    ${SpOffer4}
-    Click HeroBanner_CDGS2019_LAN
+    Click HeroBanner_Corel_2019
     Verify URL Contain_Blank    ${Hero}
     Click MainFeature
     Verify URL Contain_Blank    ${MainFeature}

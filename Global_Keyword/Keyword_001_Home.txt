@@ -93,3 +93,6 @@ Click business-education
 
 Click design-gallery
     click element    //div[@class='design-gallery']//a[@class='btn btn-learn-more is-pc']
+
+Click HeroBanner_Corel_2019
+    run keyword and continue on failure    click element    //p[@class='buttons is-pc']//a[@class='btn btn-learn-more']
