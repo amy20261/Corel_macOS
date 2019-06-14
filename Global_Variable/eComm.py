@@ -112,6 +112,9 @@ PSP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP.csv'
 VSP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
 ASP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
+#link on SpOffer Hero
+Corel_SP_Hero='C:\\Corel\\Global_Variable\\Link\\Checklink_sp_hero.csv'
+
 #link on SpOffer page
 Corel_SP='C:\\Corel\\Global_Variable\\Link\\Checklink_sp_Corel.csv'
 CDGS_SP='C:\\Corel\\Global_Variable\\Link\\Checklink_Sp_CDGS.csv'

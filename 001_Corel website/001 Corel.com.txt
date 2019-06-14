@@ -252,6 +252,15 @@ Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/WINDVD
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_jp    videostudio/ultimate    painter    paintshop-pro/ultimate
     \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
 
+Chick Link_Special Offer Hero_2019
+    ${contents}=    Get File    ${Corel_Sp_Hero}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    ${env}    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+
 *** Keywords ***
 verify link on home page_en
     [Arguments]    ${Hero}    ${MainFeature}    ${Highlight1}    ${Highlight2}    ${SpOffer1}    ${SpOffer2}
@@ -465,4 +474,10 @@ verify link on home page_CDGS2019
     # Verify URL Contain_Blank    ${SpOffer3}
     # Click Sp. Offer 4
     # Verify URL Contain_Blank    ${SpOffer4}
+    close all browsers
+
+verify link in special offer Hero_ 2019
+    [Arguments]    ${Special Offers Hero}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
     close all browsers

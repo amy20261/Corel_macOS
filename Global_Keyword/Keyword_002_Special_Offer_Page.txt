@@ -7,7 +7,7 @@ Open Browser to Special Offer Page
     Wait Until Keyword Succeeds    2 min    1 sec    open browser    http://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}    browser=firefox
     Wait Until Keyword Succeeds    2 min    1 sec    go to    http://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}
     Maximize Browser Window
-    sleep    5
+    sleep    3
 
 Click Special Offers Hero
     click element    //*[@id="centered-btns1_s0"]
@@ -35,7 +35,7 @@ Open Browser to Special Offer Page_HTTPS
     Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}    browser=firefox
     Wait Until Keyword Succeeds    2 min    1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}
     Maximize Browser Window
-    sleep    5
+    sleep    3
 
 Open Browser to Special Offer Page_HTTPS_PROD
     [Arguments]    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers

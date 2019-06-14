@@ -31,7 +31,7 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
