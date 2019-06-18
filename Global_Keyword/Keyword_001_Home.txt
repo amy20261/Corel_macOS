@@ -96,3 +96,15 @@ Click design-gallery
 
 Click HeroBanner_Corel_2019
     run keyword and continue on failure    click element    //p[@class='buttons is-pc']//a[@class='btn btn-learn-more']
+
+Click HeroBanner_PTR2019_EN
+    run keyword and continue on failure    click element    //p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
+
+Click Featured Prod 1_PTR
+    click element    //div/a[@href='product/painter-essentials/']
+
+Click Featured Prod 2_PTR
+    click element    //div/a[@href='product/particleshop/']
+
+Click Featured Prod 3_PTR
+    click element    //div/a[@href='product/painter/brushes/']
