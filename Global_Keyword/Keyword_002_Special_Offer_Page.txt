@@ -10,7 +10,7 @@ Open Browser to Special Offer Page
     sleep    3
 
 Click Special Offers Hero
-    click element    //*[@id="centered-btns1_s0"]
+    click element    //div[@class='title-box']//p[@class='buttons desktop']/span[@class='is-pc-inline']/a[@class='btn btn-learn-more']
 
 Click Prod 1
     click element    //*[@id="offers_product_name_1"]
@@ -73,3 +73,6 @@ Click Prod 15
 
 Click Prod 16
     click element    //*[@id="offers_product_name_16"]
+
+Click Special Offers Hero_LAN
+    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1'
