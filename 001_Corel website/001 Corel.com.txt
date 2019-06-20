@@ -259,8 +259,9 @@ Chick Link_Special Offer Hero_2019
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to special offer page_HTTPS    ${env}    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    Run keyword if    '@{var}[1]' in 'de;fr;it;br;la'    run keyword and continue on failure    verify link in special offer Hero_2019_LAN    @{var}[3]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    #Run keyword if    '@{var}[1]' in 'de;fr;it;br;la'    run keyword and continue on failure    verify link in special offer Hero_2019_LAN    @{var}[3]
+    \    close all browsers
 
 *** Keywords ***
 verify link on home page_en

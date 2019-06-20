@@ -75,4 +75,4 @@ Click Prod 16
     click element    //*[@id="offers_product_name_16"]
 
 Click Special Offers Hero_LAN
-    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1'
+    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1']
