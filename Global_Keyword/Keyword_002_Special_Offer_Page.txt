@@ -9,8 +9,25 @@ Open Browser to Special Offer Page
     Maximize Browser Window
     sleep    3
 
+Open Browser to Special Offer Page_HTTPS
+    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}    browser=firefox
+    Wait Until Keyword Succeeds    2 min    1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}
+    Maximize Browser Window
+    sleep    3
+
+Open Browser to Special Offer Page_HTTPS_PROD
+    [Arguments]    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://www.${microsite}.com/${lan}/special-offers/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
+    Wait Until Keyword Succeeds    2 min    1 sec    go to    https://www.${microsite}.com/${lan}/special-offers/?currency=${currency}
+    Maximize Browser Window
+    sleep    3
+
 Click Special Offers Hero
     click element    //div[@class='title-box']//p[@class='buttons desktop']/span[@class='is-pc-inline']/a[@class='btn btn-learn-more']
+
+Click Special Offers Hero_LAN
+    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1']
 
 Click Prod 1
     click element    //*[@id="offers_product_name_1"]
@@ -29,20 +46,6 @@ Click Prod 5
 
 Click Prod 6
     click element    //*[@id="offers_product_name_6"]
-
-Open Browser to Special Offer Page_HTTPS
-    [Arguments]    ${env}=dev    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
-    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}    browser=firefox
-    Wait Until Keyword Succeeds    2 min    1 sec    go to    https://${env}.www.${microsite}.public.corel.net/${lan}/special-offers/?currency=${currency}
-    Maximize Browser Window
-    sleep    3
-
-Open Browser to Special Offer Page_HTTPS_PROD
-    [Arguments]    ${microsite}=corel    ${lan}=en    ${currency}=en-US    ${page}=special-offers
-    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://www.${microsite}.com/${lan}/special-offers/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
-    Wait Until Keyword Succeeds    2 min    1 sec    go to    https://www.${microsite}.com/${lan}/special-offers/?currency=${currency}
-    Maximize Browser Window
-    sleep    3
 
 Click Prod 7
     click element    //*[@id="offers_product_name_7"]
@@ -73,6 +76,3 @@ Click Prod 15
 
 Click Prod 16
     click element    //*[@id="offers_product_name_16"]
-
-Click Special Offers Hero_LAN
-    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1']

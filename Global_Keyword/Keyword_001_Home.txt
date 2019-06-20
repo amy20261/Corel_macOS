@@ -9,9 +9,28 @@ Open Browser to Home Page
     Maximize Browser Window
     sleep    1
 
+Open Browser to Home Page_HTTPS
+    [Arguments]    ${env}=dev    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    2
+
+Open Browser to Home Page_HTTPS_PROD
+    [Arguments]    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://www.${microsite}.com/${lan}/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
+    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://www.${microsite}.com/${lan}/?currency=${currency}
+    Maximize Browser Window
+    sleep    7s
+
 Click HeroBanner
     ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="promo-hero-banner"]@style
     run keyword if    '${promo-hero-banner}'=='display: inline-block;'    click image    //img[@data-promo-image='heroBanner']
+    ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
+
+Click HeroBanner_corel_IT
+    ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="promo-hero-banner"]@style
+    run keyword if    '${promo-hero-banner}'=='display: block;'    click image    //html/body/div[4]/div[1]/div[2]/a/img
     ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
 
 Click MainFeature
@@ -46,25 +65,6 @@ Click Sp. Offer 4_Gallery
 Click Sp. Offer 4
     click element    //div[@class="spoff spoff-4 col-xs-3"]//div[@class="spoff-img col-xs-5"]
 
-Open Browser to Home Page_HTTPS
-    [Arguments]    ${env}=dev    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
-    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
-    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
-    Maximize Browser Window
-    sleep    2
-
-Open Browser to Home Page_HTTPS_PROD
-    [Arguments]    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
-    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://www.${microsite}.com/${lan}/?currency=${currency}    browser=firefox    ff_profile_dir=C:\\Users\\amy.hsieh\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\osmp91xh.default
-    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://www.${microsite}.com/${lan}/?currency=${currency}
-    Maximize Browser Window
-    sleep    7s
-
-Click HeroBanner_corel_IT
-    ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="promo-hero-banner"]@style
-    run keyword if    '${promo-hero-banner}'=='display: block;'    click image    //html/body/div[4]/div[1]/div[2]/a/img
-    ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
-
 Click Sp. Offer 4_ASP
     click element    //div[@class="spoff spoff-1 col-xs-3"]//div[@class="spoff-img col-xs-5"]
 
@@ -73,11 +73,14 @@ Click HeroBanner_ASP
     run keyword if    '${promo-hero-banner}'=='display: inline-block;'    click image    //img[@data-promo-image='heroBanner']
     ...    ELSE    click element    //div[@class="container hero"]//a[@class="btn btn-primary"]
 
-Click HeroBanner_CDGS2019_LAN
-    click element    //div[@class='is-pc']//p[@class='buttons'] //a[@class='btn btn-learn-more']
+Click HeroBanner_Corel_2019
+    run keyword and continue on failure    click element    //p[@class='buttons is-pc']//a[@class='btn btn-learn-more']
 
 Click HeroBanner_CDGS2019_EN
     run keyword and continue on failure    click element    //div[@class='is-pc']//p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
+
+Click HeroBanner_CDGS2019_LAN
+    click element    //div[@class='is-pc']//p[@class='buttons'] //a[@class='btn btn-learn-more']
 
 Click Featured Prod 1
     click element    //div[@class='cat-product product-1']
@@ -93,9 +96,6 @@ Click business-education
 
 Click design-gallery
     click element    //div[@class='design-gallery']//a[@class='btn btn-learn-more is-pc']
-
-Click HeroBanner_Corel_2019
-    run keyword and continue on failure    click element    //p[@class='buttons is-pc']//a[@class='btn btn-learn-more']
 
 Click HeroBanner_PTR2019_EN
     run keyword and continue on failure    click element    //p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
