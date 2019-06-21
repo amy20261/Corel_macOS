@@ -76,38 +76,17 @@ Click HeroBanner_ASP
 Click HeroBanner_Corel_2019
     run keyword and continue on failure    click element    //p[@class='buttons is-pc']//a[@class='btn btn-learn-more']
 
+Click HeroBanner_Corel_2019_JP
+    run keyword and continue on failure    click element    //header//a[@class='btn btn-learn-more']
+
 Click HeroBanner_CDGS2019_EN
     run keyword and continue on failure    click element    //div[@class='is-pc']//p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
 
 Click HeroBanner_CDGS2019_LAN
     click element    //div[@class='is-pc']//p[@class='buttons'] //a[@class='btn btn-learn-more']
 
-Click Featured Prod 1
-    click element    //div[@class='cat-product product-1']
-
-Click Featured Prod 2
-    click element    //div[@class='cat-product product-2']
-
-Click Featured Prod 3
-    click element    //div[@class='cat-product hs product-3']
-
-Click business-education
-    click element    //div[@class='business-education']//a[@class='btn btn-learn-more']
-
-Click design-gallery
-    click element    //div[@class='design-gallery']//a[@class='btn btn-learn-more is-pc']
-
 Click HeroBanner_PTR2019_EN
     run keyword and continue on failure    click element    //p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
-
-Click Featured Prod 1_PTR
-    click element    //div/a[@href='product/painter-essentials/']
-
-Click Featured Prod 2_PTR
-    click element    //div/a[@href='product/particleshop/']
-
-Click Featured Prod 3_PTR
-    click element    //div/a[@href='product/painter/brushes/']
 
 Click Featured Prod 1_2019
     click element    //div[1][@class='col-xs-4 module-col']//span[@class='link']
@@ -117,6 +96,3 @@ Click Featured Prod 2_2019
 
 Click Featured Prod 3_2019
     click element    //div[3][@class='col-xs-4 module-col']//span[@class='link']
-
-Click HeroBanner_Corel_2019_JP
-    run keyword and continue on failure    click element    //header//a[@class='btn btn-learn-more']

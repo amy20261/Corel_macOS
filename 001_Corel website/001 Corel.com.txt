@@ -16,22 +16,21 @@ Check Link_Home Page_DEV_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to Home page_HTTPS    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    coreldraw    paintshop-pro/ultimate    painter
-    \    ...    videostudio/ultimate
-    \    run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la;cz;pl;tw;cn;ru'    verify link on home page_CDGS2019_LAN    coreldraw    paintshop-pro/ultimate    painter
-    \    ...    videostudio/ultimate
-    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    videostudio/ultimate    painter    paintshop-pro/ultimate
-    \    ...    coreldraw
+    \    run keyword if    '@{var}[1]' in 'en'    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]
+    \    run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la;cz;pl;tw;cn;ru'    verify link on home page_CDGS2019_LAN    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]
+    \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]
 
-Chick Link_Special Offer Hero_2019
+Chick Link_Special Offer Hero_DEV
     ${contents}=    Get File    ${Corel_Sp_Hero}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    ${env}    ${Corel}    @{var}[1]    @{var}[2]
+    \    open browser to special offer page_HTTPS    DEV    ${Corel}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    #Run keyword if    '@{var}[1]' in 'de;fr;it;br;la'    run keyword and continue on failure    verify link in special offer Hero_2019_LAN    @{var}[3]
     \    close all browsers
 
 *** Keywords ***
