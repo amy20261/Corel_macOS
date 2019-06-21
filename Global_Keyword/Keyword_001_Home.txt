@@ -108,3 +108,15 @@ Click Featured Prod 2_PTR
 
 Click Featured Prod 3_PTR
     click element    //div/a[@href='product/painter/brushes/']
+
+Click Featured Prod 1_2019
+    click element    //div[1][@class='col-xs-4 module-col']//span[@class='link']
+
+Click Featured Prod 2_2019
+    click element    //div[2][@class='col-xs-4 module-col']//span[@class='link']
+
+Click Featured Prod 3_2019
+    click element    //div[3][@class='col-xs-4 module-col']//span[@class='link']
+
+Click HeroBanner_Corel_2019_JP
+    run keyword and continue on failure    click element    //header//a[@class='btn btn-learn-more']
