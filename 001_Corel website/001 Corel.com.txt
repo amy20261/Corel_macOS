@@ -38,11 +38,11 @@ verify link on home page_CDGS2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Click HeroBanner_Corel_2019
     Verify URL Contain_Blank    ${Hero}
-    click Featured prod 1_2019
+    Click Featured Prod 1_corel
     Verify URL Contain_Blank    ${ Featured Prod 1}
-    click Featured prod 2_2019
+    Click Featured Prod 2_corel
     Verify URL Contain_Blank    ${ Featured Prod 2}
-    click Featured prod 3_2019
+    Click Featured Prod 3_corel
     Verify URL Contain_Blank    ${ Featured Prod 3}
     close all browsers
 
@@ -50,11 +50,11 @@ verify link on home page_CDGS2019_LAN
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Click HeroBanner_Corel_2019
     Verify URL Contain_Blank    ${Hero}
-    click Featured prod 1_2019
+    Click Featured Prod 1_corel
     Verify URL Contain_Blank    ${ Featured Prod 1}
-    click Featured prod 2_2019
+    Click Featured Prod 2_corel
     Verify URL Contain_Blank    ${ Featured Prod 2}
-    click Featured prod 3_2019
+    Click Featured Prod 3_corel
     Verify URL Contain_Blank    ${ Featured Prod 3}
     close all browsers
 
@@ -62,11 +62,11 @@ verify link on home page_CDGS2019_JP
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Click HeroBanner_Corel_2019_JP
     Verify URL Contain_Blank    ${Hero}
-    click Featured prod 1_2019
+    Click Featured Prod 1_corel
     Verify URL Contain_Blank    ${ Featured Prod 1}
-    click Featured prod 2_2019
+    Click Featured Prod 2_corel
     Verify URL Contain_Blank    ${ Featured Prod 2}
-    click Featured prod 3_2019
+    Click Featured Prod 3_corel
     Verify URL Contain_Blank    ${ Featured Prod 3}
     close all browsers
 
