@@ -97,11 +97,11 @@ Click HeroBanner_CDGS2019_LAN
 Click HeroBanner_PTR2019_EN
     run keyword and continue on failure    click element    //p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
 
-Click Featured Prod 1_PTR
+Click Featured Prod 1
     click element    //div[1][@class='col-sm-4 module-col']//span[@class='link']
 
-Click Featured Prod 2_PTR
+Click Featured Prod 2
     click element    //div[2][@class='col-sm-4 module-col']//span[@class='link']
 
-Click Featured Prod 3_PTR
+Click Featured Prod 3
     click element    //div[3][@class='col-sm-4 module-col']//span[@class='link']

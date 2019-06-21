@@ -18,10 +18,10 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
+    \    #Run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
+    \    ...    # @{var}[5]    @{var}[6]
+    \    #Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
+    \    ...    # @{var}[5]    @{var}[6]
     [Teardown]
 
 *** Keywords ***
@@ -29,11 +29,11 @@ verify link on home page_CDGS2019_EN
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
-    Run Keyword And Continue On Failure    Click Featured Prod 1_corel
+    Run Keyword And Continue On Failure    Click Featured Prod 1
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
-    Run Keyword And Continue On Failure    Click Featured Prod 2_corel
+    Run Keyword And Continue On Failure    Click Featured Prod 2
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
-    Run Keyword And Continue On Failure    Click Featured Prod 3_corel
+    Run Keyword And Continue On Failure    Click Featured Prod 3
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
     close all browsers
 

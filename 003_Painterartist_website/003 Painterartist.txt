@@ -24,10 +24,10 @@ verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click HeroBanner_PTR2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
-    Run Keyword And Continue On Failure    Click Featured Prod 1_PTR
+    Run Keyword And Continue On Failure    Click Featured Prod 1
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
-    Run Keyword And Continue On Failure    Click Featured Prod 2_PTR
+    Run Keyword And Continue On Failure    Click Featured Prod 2
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
-    Run Keyword And Continue On Failure    Click Featured Prod 3_PTR
+    Run Keyword And Continue On Failure    Click Featured Prod 3
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
     close all browsers
