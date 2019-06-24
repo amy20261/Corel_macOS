@@ -110,6 +110,7 @@ PTR_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_PTR.csv'
 WPO_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_WPO.csv'
 PSP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_PSP.csv'
 VSP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
+VSP_Home_2019='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP_2019.csv'
 ASP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
 #link on SpOffer Hero

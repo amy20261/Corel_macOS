@@ -94,7 +94,7 @@ Click HeroBanner_CDGS2019_EN
 Click HeroBanner_CDGS2019_LAN
     click element    //div[@class='is-pc']//p[@class='buttons'] //a[@class='btn btn-learn-more']
 
-Click HeroBanner_PTR2019_EN
+Click HeroBanner_2019_EN
     run keyword and continue on failure    click element    //p[@class='buttons desktop'] //a[@class='btn btn-learn-more']
 
 Click Featured Prod 1

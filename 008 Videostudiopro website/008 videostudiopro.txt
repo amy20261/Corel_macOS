@@ -87,8 +87,8 @@ Check Link_Home Page_DEV_VSU_VSP_PVB_DVD
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle    windvdpro    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;nl;jp;ru;tw'    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle
+    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
 Check Link_Home Page_STG_VSU_VSP_PVB_DVD
@@ -98,19 +98,30 @@ Check Link_Home Page_STG_VSU_VSP_PVB_DVD
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle    windvdpro    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;nl;jp;ru;tw'    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle
+    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
-Check Link_Home Page_DEV_VSU_VSP_VSU_PVB_Photomirage
-    ${contents}=    Get File    ${VSP_Home}
+Check Link_Home Page_DEV_VSU_VSP_VSU_PVB_PM_2019
+    ${contents}=    Get File    ${VSP_Home_2019}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'en'    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]    @{var}[7]
     [Teardown]
+
+Chick Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    DEV    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
 
 *** Keywords ***
 verify link on home page
@@ -141,14 +152,20 @@ verify link on Sp page
     close all browsers
 
 verify link on home page_2019
-    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}
-    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_EN
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Horizontal 1}
+    Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
     Run Keyword And Continue On Failure    Click Featured Prod 1
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
     Run Keyword And Continue On Failure    Click Featured Prod 2
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
     Run Keyword And Continue On Failure    Click Featured Prod 3
-    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
-    Run Keyword And Continue On Failure    Click business-education
-    Run Keyword And Continue On Failure    Verify URL Contain    ${Business education}
+    Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
+    #Run Keyword And Continue On Failure    Click Horizontal 1
+    #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 1}
+
+verify link in special offer Hero_ 2019
+    [Arguments]    ${Special Offers Hero}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
+    close all browsers
