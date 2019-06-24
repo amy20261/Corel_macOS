@@ -163,6 +163,7 @@ verify link on home page_2019
     Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
     #Run Keyword And Continue On Failure    Click Horizontal 1
     #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 1}
+    close all browsers
 
 verify link in special offer Hero_ 2019
     [Arguments]    ${Special Offers Hero}

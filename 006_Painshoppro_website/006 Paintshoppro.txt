@@ -95,8 +95,8 @@ Check Link_Home Page_DEV_PSU_PSP_PVB_particleshop
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle    particleshop    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    \    Run keyword if    '@{var}[1]' in de;fr;it;nl;jp;ru;tw'    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
+    \    ...    particleshop    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
 Check Link_Home Page_STG_PSU_PSP_PVB_particleshop
@@ -106,20 +106,30 @@ Check Link_Home Page_STG_PSU_PSP_PVB_particleshop
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle    particleshop    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
+    \    Run keyword if    '@{var}[1]' in de;fr;it;nl;jp;ru;tw'    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
+    \    ...    particleshop    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
 Check Link_Home Page_DEV_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
-    ${contents}=    Get File    ${PSP_Home}
+    ${contents}=    Get File    ${PSP_Home_2019}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
-    \    ...    @{var}[8]
+    \    Run keyword if    '@{var}[1]' in 'en'    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]    @{var}[7]    @{var}[8]
     [Teardown]
+
+Chick Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    DEV    ${wPSP}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
 
 *** Keywords ***
 verify link on home page
@@ -164,8 +174,8 @@ verify link on special offer page_JP
     close all browsers
 
 verify link on home page_2019
-    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Business education}    ${design-gallery}
-    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_EN
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Horizontal 1}    ${Horizontal 2}
+    Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
     Run Keyword And Continue On Failure    Click Featured Prod 1
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
@@ -173,8 +183,14 @@ verify link on home page_2019
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
     Run Keyword And Continue On Failure    Click Featured Prod 3
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
-    Run Keyword And Continue On Failure    Click business-education
-    Run Keyword And Continue On Failure    Verify URL Contain    ${Business education}
-    Run Keyword And Continue On Failure    Click design-gallery
-    Run Keyword And Continue On Failure    Verify URL Contain_Blank    ${design-gallery}
+    #Run Keyword And Continue On Failure    Click Horizontal 1
+    #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 1}
+    #Run Keyword And Continue On Failure    Click Horizontal 2
+    #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 2}
+    close all browsers
+
+verify link in special offer Hero_ 2019
+    [Arguments]    ${Special Offers Hero}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
     close all browsers
