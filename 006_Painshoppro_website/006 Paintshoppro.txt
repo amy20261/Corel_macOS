@@ -95,7 +95,7 @@ Check Link_Home Page_DEV_PSU_PSP_PVB_particleshop
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in de;fr;it;nl;jp;ru;tw'    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
+    \    Run keyword if    '@{var}[1]' in 'de;fr;it;nl;jp;ru;tw'    verify link on home page    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
     \    ...    particleshop    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 
@@ -122,7 +122,7 @@ Check Link_Home Page_DEV_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
     [Teardown]
 
 Chick Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${VSP_SP}
+    ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
