@@ -72,7 +72,7 @@ verify link on home page_CDGS2019_JP
 
 verify link in special offer Hero_ 2019
     [Arguments]    ${Special Offers Hero}
-    Click Special Offers Hero
+    Click Special Offers Hero_CDGS
     run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
     close all browsers
 

@@ -24,6 +24,9 @@ Open Browser to Special Offer Page_HTTPS_PROD
     sleep    3
 
 Click Special Offers Hero
+    click element    //div[@class='title-box']//p[@class='buttons desktop']/a[@class='btn btn-learn-more']
+
+Click Special Offers Hero_CDGS
     click element    //div[@class='title-box']//p[@class='buttons desktop']/span[@class='is-pc-inline']/a[@class='btn btn-learn-more']
 
 Click Special Offers Hero_LAN
