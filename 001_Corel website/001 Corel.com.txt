@@ -33,7 +33,19 @@ Chick Link_Special Offer Hero_DEV
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
-Check Link_Home Page_stg_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
+Chick Link_Special Offer Page_DEV
+    ${contents}=    Get File    ${Corel_Sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    DEV    ${Corel}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
+    \    ...    @{var}[10]    @{var}[11]
+    \    close all browsers
+
+Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -47,7 +59,7 @@ Check Link_Home Page_stg_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]
 
-Chick Link_Special Offer Hero_stg
+Chick Link_Special Offer Hero_STG
     ${contents}=    Get File    ${Corel_Sp_Hero}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -104,4 +116,27 @@ verify link in special offer Hero_ 2019_LAN
     [Arguments]    ${Special Offers Hero}
     Click Special Offers Hero_LAN
     run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
+    close all browsers
+
+verify link in special offer Page_ 2019
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}    ${Prod 5}
+    ...    ${Prod 6}    ${Prod 7}    ${Prod 8}
+    Click Special Offers Hero_CDGS
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 4}
+    Click Prod 5
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 5}
+    Click Prod 6
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 6}
+    Click Prod 7
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 7}
+    Click Prod 8
+    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 8}
     close all browsers

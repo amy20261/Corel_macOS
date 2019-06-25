@@ -123,6 +123,27 @@ Chick Link_Special Offer Hero_DEV
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
+Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
+    ${contents}=    Get File    ${VSP_Home_2019}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]
+    \    ...    @{var}[6]    @{var}[7]
+    [Teardown]
+
+Chick Link_Special Offer Hero_stg
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
 *** Keywords ***
 verify link on home page
     [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
