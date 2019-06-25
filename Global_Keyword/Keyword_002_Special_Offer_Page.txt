@@ -24,13 +24,13 @@ Open Browser to Special Offer Page_HTTPS_PROD
     sleep    3
 
 Click Special Offers Hero
-    click element    //div[@class='title-box']//p[@class='buttons desktop']/a[@class='btn btn-learn-more']
+    run keyword and continue on failure    click element    //div[@class='title-box']//p[@class='buttons desktop']/a[@class='btn btn-learn-more']
 
 Click Special Offers Hero_CDGS
-    click element    //div[@class='title-box']//p[@class='buttons desktop']/span[@class='is-pc-inline']/a[@class='btn btn-learn-more']
+    run keyword and continue on failure    click element    //div[@class='title-box']//p[@class='buttons desktop']/span[@class='is-pc-inline']/a[@class='btn btn-learn-more']
 
 Click Special Offers Hero_LAN
-    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1']
+    run keyword and continue on failure    click element    //a[@data-promo-link='spoffHero1'/img[@data-promo-image='spoffHero1']
 
 Click Prod 1
     run keyword and continue on failure    click element    //h4[@id='offers_product_name_1']
