@@ -29,6 +29,26 @@ Chick Link_Special Offer Hero_DEV
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
+Check Link_Home Page_stg_PTR_PE_Particleshop_brush_2019
+    ${contents}=    Get File    ${PTR_Home}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    [Teardown]
+
+Chick Link_Special Offer Hero_stg
+    ${contents}=    Get File    ${PTR_SP}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
 *** Keywords ***
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
