@@ -98,7 +98,7 @@ Check Link_Home Page_STG_VSU_VSP_PVB_DVD
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'de;fr;it;nl;jp;ru;tw'    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp;ru;tw'    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle
     \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
     [Teardown]
 

@@ -50,7 +50,7 @@ Check price_PVB product page_40% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB product page_Quarterly_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q1.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_q.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
