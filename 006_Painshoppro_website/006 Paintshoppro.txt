@@ -138,8 +138,8 @@ Check Link_Home Page_stg_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]
-    \    ...    @{var}[6]    @{var}[7]    @{var}[8]
+    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    \    ...    @{var}[8]
     [Teardown]
 
 Chick Link_Special Offer Hero_stg
@@ -149,7 +149,7 @@ Chick Link_Special Offer Hero_stg
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to special offer page_HTTPS    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
 *** Keywords ***
