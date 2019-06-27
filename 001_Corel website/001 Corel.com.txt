@@ -22,7 +22,7 @@ Check Link_Home Page_DEV_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    ...    @{var}[6]
 
 Chick Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${Corel_Sp_Hero}
+    ${contents}=    Get File    ${Corel_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -56,7 +56,7 @@ Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    ...    @{var}[6]
 
 Chick Link_Special Offer Hero_STG
-    ${contents}=    Get File    ${Corel_Sp_Hero}
+    ${contents}=    Get File    ${Corel_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;

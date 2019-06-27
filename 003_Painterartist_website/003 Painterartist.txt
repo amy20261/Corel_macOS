@@ -36,7 +36,7 @@ Chick Link_Special Offer Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to special offer page_HTTPS    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
@@ -67,7 +67,7 @@ Chick Link_Special Offer Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to special offer page_HTTPS    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 

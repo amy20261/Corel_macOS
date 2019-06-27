@@ -114,9 +114,6 @@ VSP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP.csv'
 VSP_Home_2019='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_VSP_2019.csv'
 ASP_Home='C:\\Corel\\Global_Variable\\Link\\Checklink_Home_ASP.csv'
 
-#link on SpOffer Hero
-Corel_SP_Hero='C:\\Corel\\Global_Variable\\Link\\Checklink_sp_hero.csv'
-
 #link on SpOffer page
 Corel_SP='C:\\Corel\\Global_Variable\\Link\\Checklink_sp_Corel.csv'
 CDGS_SP='C:\\Corel\\Global_Variable\\Link\\Checklink_Sp_CDGS.csv'
@@ -146,7 +143,6 @@ VA_NEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_NEBrushPack.csv'
 VA_ScriptsBundle='C:\\Corel\\Global_Variable\\VA\\VA_ScriptsBundle.csv'
 VA_MultiCam='C:\\Corel\\Global_Variable\\VA\\VA_MultiCam.csv'
 VA_PE6='C:\\Corel\\Global_Variable\\VA\\VA_PE6.csv'
-
 
 #HTTPS files
 HTTPS_ASP='C:\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'
