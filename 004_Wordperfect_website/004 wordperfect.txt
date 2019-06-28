@@ -83,12 +83,64 @@ Check Link_Home Page_STG_PRO_STD_PDF_HS
 Check Link_Home Page_DEV_Std_Pro_HS_PDF_2019
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
+
+Chick Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${WPO_sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    DEV    ${wWPO}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Chick Link_Special Offer Page_DEV
+    ${contents}=    Get File    ${WPO_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    close all browsers
+
+Check Link_Home Page_STG_Std_Pro_HS_PDF_2019
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wWPO}    @{var}[1]    @{var}[2]
+    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    [Teardown]
+
+Chick Link_Special Offer Hero_STG
+    ${contents}=    Get File    ${WPO_sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    stg    ${wWPO}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Chick Link_Special Offer Page_STG
+    ${contents}=    Get File    ${WPO_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    stg    ${wWPO}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    close all browsers
 
 *** Keywords ***
 verify link on home page
@@ -128,7 +180,7 @@ verify link on special offer page
 
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
-    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_EN
+    Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
     Run Keyword And Continue On Failure    Click Featured Prod 1
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
@@ -136,4 +188,24 @@ verify link on home page_2019
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
     Run Keyword And Continue On Failure    Click Featured Prod 3
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
+    close all browsers
+
+verify link in special offer Hero_ 2019
+    [Arguments]    ${Special Offers Hero}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
+    close all browsers
+
+verify link in special offer Page_ 2019
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain    ${Prod 4}
     close all browsers
