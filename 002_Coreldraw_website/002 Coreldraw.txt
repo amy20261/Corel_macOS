@@ -50,6 +50,8 @@ Chick Link_Special Offer Page_DEV
     \    open browser to special offer page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
 Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_default
@@ -71,10 +73,7 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_no HS    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
+    \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
 Chick Link_Special Offer Hero_STG
@@ -87,6 +86,19 @@ Chick Link_Special Offer Hero_STG
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
     [Teardown]
+
+Chick Link_Special Offer Page_STG
+    ${contents}=    Get File    ${CDGS_SP}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    close all browsers
 
 *** Keywords ***
 verify link on home page_CDGS2019_default
@@ -155,4 +167,18 @@ verify link in special offer Page_ 2019
     run keyword and continue on failure    verify URL contain    ${Prod 3}
     Click Prod 4
     run keyword and continue on failure    verify URL contain    ${Prod 4}
+    close all browsers
+
+verify link in special offer Page_ 2019_no HS
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    Click Special Offers Hero_CDGS
+    run keyword and continue on failure    verify URL contain    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    verify URL contain    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    verify URL contain    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    verify URL contain    ${Prod 3}
+    #Click Prod 4
+    #run keyword and continue on failure    verify URL contain    ${Prod 4}
     close all browsers
