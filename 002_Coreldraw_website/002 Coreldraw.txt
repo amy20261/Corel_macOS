@@ -59,7 +59,10 @@ Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_default
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_default_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
@@ -143,13 +146,13 @@ verify link in special offer Hero_ 2019
 verify link in special offer Page_ 2019
     [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
     Click Special Offers Hero_CDGS
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Special Offers Hero}
+    run keyword and continue on failure    verify URL contain    ${Special Offers Hero}
     Click Prod 1
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 1}
+    run keyword and continue on failure    verify URL contain    ${Prod 1}
     Click Prod 2
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 2}
+    run keyword and continue on failure    verify URL contain    ${Prod 2}
     Click Prod 3
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 3}
+    run keyword and continue on failure    verify URL contain    ${Prod 3}
     Click Prod 4
-    run keyword and continue on failure    Verify URL Contain_Blank    ${Prod 4}
+    run keyword and continue on failure    verify URL contain    ${Prod 4}
     close all browsers
