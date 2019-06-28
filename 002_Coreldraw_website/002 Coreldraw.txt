@@ -9,6 +9,18 @@ Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
+Check Link_Home Page_DEV_CDGS_CDTS_CAD_CDHS_default
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_default_no HS    @{var}[3]    @{var}[4]
+    \    ...    # @{var}[5]    @{var}[6]
+
 Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
@@ -16,12 +28,7 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    #Run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
-    \    #Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
+    \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
 Chick Link_Special Offer Hero_DEV
@@ -52,12 +59,7 @@ Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_default
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    #Run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
-    \    #Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
+    \    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
@@ -66,11 +68,9 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link on home page_CDGS2019_en    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]
-    \    #Run keyword if    '@{var}[1]' in 'de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_lan    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
-    \    #Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_LAN_no HS    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_no HS    @{var}[3]    @{var}[4]
     \    ...    # @{var}[5]    @{var}[6]
     [Teardown]
 
@@ -98,7 +98,19 @@ verify link on home page_CDGS2019_default
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
     close all browsers
 
-verify link on home page_CDGS2019_EN
+verify link on home page_CDGS2019_default_no HS
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_LAN
+    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
+    Run Keyword And Continue On Failure    Click Featured Prod 1_CDGS
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
+    Run Keyword And Continue On Failure    Click Featured Prod 2_CDGS
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
+    Run Keyword And Continue On Failure    Click Featured Prod 3_CDGS
+    Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
+    close all browsers
+
+verify link on home page_CDGS2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
@@ -110,19 +122,7 @@ verify link on home page_CDGS2019_EN
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
     close all browsers
 
-verify link on home page_CDGS2019_LAN
-    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
-    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_LAN
-    Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
-    Run Keyword And Continue On Failure    Click Featured Prod 1
-    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
-    Run Keyword And Continue On Failure    Click Featured Prod 2
-    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
-    Run Keyword And Continue On Failure    Click Featured Prod 3
-    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
-    close all browsers
-
-verify link on home page_CDGS2019_LAN_no HS
+verify link on home page_CDGS2019_no HS
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_lan
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
