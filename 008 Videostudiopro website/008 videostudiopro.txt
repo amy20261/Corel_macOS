@@ -122,6 +122,17 @@ Chick Link_Special Offer Hero_DEV
     \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
+Chick Link_Special Offer Page_DEV
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    ...    @{var}[7]
+    \    close all browsers
+
 Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
     ${contents}=    Get File    ${VSP_Home_2019}
     @{lines}=    Split to lines    ${contents}
@@ -140,6 +151,17 @@ Chick Link_Special Offer Hero_stg
     \    close all browsers
     \    open browser to special offer page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
     \    \    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Chick Link_Special Offer Page_STG
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to special offer page_HTTPS    STG    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    ...    @{var}[7]
     \    close all browsers
 
 *** Keywords ***
@@ -188,4 +210,18 @@ verify link in special offer Hero_ 2019
     [Arguments]    ${Special Offers Hero}
     Click Special Offers Hero
     run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
+    close all browsers
+
+verify link in special offer Page_ 2019
+    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify URL Contain    ${Special Offers Hero}
+    Click Prod 1
+    run keyword and continue on failure    Verify URL Contain    ${Prod 1}
+    Click Prod 2
+    run keyword and continue on failure    Verify URL Contain    ${Prod 2}
+    Click Prod 3
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
+    Click Prod 4
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 4}
     close all browsers
