@@ -9,99 +9,6 @@ Resource          ../Global_Keyword/Keyword_060_videostudiopro.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check price_VSU product page_BOX
-    ${contents}=    Get File    ${VSU_file_BOX}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSU product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_VSP product page_BOX
-    ${contents}=    Get File    ${VSP_file_BOX}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check Link_Home Page_DEV_Family_VSU_PVB_DVD
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    videostudio    videostudio/ultimate    photo-video-bundle    windvdpro    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_Family_VSU_PVB_DVD
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    videostudio    videostudio/ultimate    photo-video-bundle    windvdpro    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_DEV_VSP_VSU_PVB_DVD
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    videostudio/pro    videostudio/ultimate    photo-video-bundle    windvdpro    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_VSP_VSU_PVB_DVD
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page    videostudio/pro    videostudio/ultimate    photo-video-bundle    windvdpro    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_DEV_VSU_VSP_PVB_DVD
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'de;fr;it;nl;jp;ru;tw'    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle
-    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_VSU_VSP_PVB_DVD
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp;ru;tw'    verify link on home page    videostudio/ultimate    videostudio/pro    photo-video-bundle
-    \    ...    windvdpro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
 Check Link_Home Page_DEV_VSU_VSP_VSU_PVB_PM_2019
     ${contents}=    Get File    ${VSP_Home_2019}
     @{lines}=    Split to lines    ${contents}
@@ -165,33 +72,6 @@ Chick Link_Special Offer Page_STG
     \    close all browsers
 
 *** Keywords ***
-verify link on home page
-    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
-    ...    ${SpOffer3}    ${SpOffer4}
-    click HeroBanner
-    run keyword and continue on failure    Verify URL Contain    ${Hero}
-    Click MainFeature
-    run keyword and continue on failure    Verify URL Contain    ${Main Feature}
-    Click Highlight 1
-    run keyword and continue on failure    Verify URL Contain_blank    ${Highlight 1}
-    Click Highlight 2
-    run keyword and continue on failure    Verify URL Contain_blank    ${Highlight 2}
-    close all browsers
-
-verify link on Sp page
-    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
-    #Click Special Offers Hero
-    #run keyword and continue on failure    Verify URL Contain_blank    ${Special Offers Hero}
-    Click Prod 1
-    run keyword and continue on failure    Verify URL Contain    ${Prod 1}
-    Click Prod 2
-    run keyword and continue on failure    Verify URL Contain    ${Prod 2}
-    Click Prod 3
-    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
-    Click Prod 4
-    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 4}
-    close all browsers
-
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Horizontal 1}
     Run Keyword And Continue On Failure    Click HeroBanner_2019_EN

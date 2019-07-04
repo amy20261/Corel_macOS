@@ -9,77 +9,6 @@ Resource          ../Global_Keyword/Keyword_040_wordperfect.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page
-    ${contents}=    Get File    ${WPO_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check price_WPO std product page_BOX
-    ${contents}=    Get File    ${Wstd_file_BOX}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check WPO std product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check price_WPO pro product page_BOX
-    ${contents}=    Get File    ${Wpro_file_BOX}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check WPO pro product page_BOX    ${env}    @{var}[0]    @{var}[1]    @{var}[4]
-    \    ...    @{var}[7]    @{var}[5]
-
-Check Link_Home Page_DEV_STD_PRO_PDF_HS
-    ${contents}=    Get File    ${WPO_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page    office-suite    professional-edition    pdf-creator    home-student    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_STD_PRO_PDF_HS
-    ${contents}=    Get File    ${WPO_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page    office-suite    professional-edition    pdf-creator    home-student    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_DEV_PRO_STD_PDF_HS
-    ${contents}=    Get File    ${WPO_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page    professional-edition    office-suite    pdf-creator    home-student    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
-Check Link_Home Page_STG_PRO_STD_PDF_HS
-    ${contents}=    Get File    ${WPO_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    verify link on home page    professional-edition    office-suite    pdf-creator    home-student    @{var}[7]
-    \    ...    @{var}[8]    @{var}[9]    @{var}[10]
-    [Teardown]
-
 Check Link_Home Page_DEV_Std_Pro_HS_PDF_2019
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
@@ -143,41 +72,6 @@ Chick Link_Special Offer Page_STG
     \    close all browsers
 
 *** Keywords ***
-verify link on home page
-    [Arguments]    ${Hero}    ${Main Feature}    ${Highlight 1}    ${Highlight 2}    ${SpOffer1}    ${SpOffer2}
-    ...    ${SpOffer3}    ${SpOffer4}
-    click HeroBanner
-    Verify URL Contain    ${Hero}
-    Click MainFeature
-    Verify URL Contain    ${Main Feature}
-    Click Highlight 1
-    Verify URL Contain    ${Highlight 1}
-    click highlight 2
-    Verify URL Contain    ${Highlight 2}
-    Click Sp. Offer 1
-    Verify URL Contain    ${SpOffer1}
-    Click Sp. Offer 2
-    Verify URL Contain    ${SpOffer2}
-    Click Sp. Offer 3
-    Verify URL Contain    ${SpOffer3}
-    Click Sp. Offer 4
-    Verify URL Contain    ${SpOffer4}
-    close all browsers
-
-verify link on special offer page
-    [Arguments]    ${Special Offers Hero}    ${Prod 1}    ${Prod 2}    ${Prod 3}    ${Prod 4}
-    #Click Special Offers Hero
-    #Verify URL Contain_blank    ${Special Offers Hero}
-    Click Prod 1
-    Verify URL Contain    ${Prod 1}
-    Click Prod 2
-    Verify URL Contain    ${Prod 2}
-    Click Prod 3
-    Verify URL Contain    ${Prod 3}
-    Click Prod 4
-    Verify URL Contain    ${Prod 4}
-    close all browsers
-
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
