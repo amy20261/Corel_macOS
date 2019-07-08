@@ -188,6 +188,7 @@ screenshot_wordperfect
     Open browser to Home    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}
     Open browser to page    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}    special-offers
     Open browser to page    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}    free-trials
+    Open browser to page    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}    product/wordperfect
     Open browser to page    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}    product/office-suite
     Open browser to page    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}    product/professional-edition
     Open browser to page    stg.www.wordperfect.public.corel.net    ${lan}    ${currency}    product/home-student
