@@ -54,6 +54,15 @@ Chick Link_Special Offer Page_DEV
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
+Check tiral down_Home Page_DEV
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
 Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_default
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
@@ -99,6 +108,15 @@ Chick Link_Special Offer Page_STG
     \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
+
+Check tiral down_Home Page_STG
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 *** Keywords ***
 verify link on home page_CDGS2019_default
@@ -181,4 +199,10 @@ verify link in special offer Page_ 2019_no HS
     run keyword and continue on failure    verify URL contain    ${Prod 3}
     #Click Prod 4
     #run keyword and continue on failure    verify URL contain    ${Prod 4}
+    close all browsers
+
+verify trial download on home page_CDGS
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click Trial download_CDGs
+    Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
     close all browsers

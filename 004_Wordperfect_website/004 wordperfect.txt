@@ -40,6 +40,15 @@ Chick Link_Special Offer Page_DEV
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
+Check tiral down_Home Page_DEV
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    dev    ${wWPO}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
 Check Link_Home Page_STG_Std_Pro_HS_PDF_2019
     ${contents}=    Get File    ${WPO_Home}
     @{lines}=    Split to lines    ${contents}
@@ -70,6 +79,15 @@ Chick Link_Special Offer Page_STG
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
+
+Check tiral down_Home Page_STG
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    open browser to home page_HTTPS    STG    ${wWPO}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 *** Keywords ***
 verify link on home page_2019
@@ -102,4 +120,10 @@ verify link in special offer Page_ 2019
     run keyword and continue on failure    Verify URL Contain    ${Prod 3}
     Click Prod 4
     run keyword and continue on failure    Verify URL Contain    ${Prod 4}
+    close all browsers
+
+verify trial download on home page
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click Trial download_WPO
+    Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
     close all browsers

@@ -114,3 +114,18 @@ Click Featured Prod 2_CDGS
 
 Click Featured Prod 3_CDGS
     click element    //div[3][@class='col-sm-4']//h2
+
+Click Trial download_CDGS
+    click element    //a[@id='cdgs-trial']
+
+Click Trial download_PTR
+    click element    //a[@id='ptr-trial_1']
+
+Click Trial download_WPO
+    click element    //a[@id='wpo-trial']
+
+Click Trial download_PSP
+    click element    //a[@id='psp-trial_1']
+
+Click Trial download_VSP
+    click element    //a[@id='vsp-trial']
