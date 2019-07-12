@@ -121,7 +121,7 @@ Check tiral down_Home Page_STG
 *** Keywords ***
 verify link on home page_CDGS2019_default
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
-    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_LAN
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_en
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
     Run Keyword And Continue On Failure    Click Featured Prod 1_CDGS
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
@@ -133,7 +133,7 @@ verify link on home page_CDGS2019_default
 
 verify link on home page_CDGS2019_default_no HS
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
-    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_LAN
+    Run Keyword And Continue On Failure    Click HeroBanner_CDGS2019_en
     Run Keyword And Continue On Failure    Verify URL Contain    ${Hero}
     Run Keyword And Continue On Failure    Click Featured Prod 1_CDGS
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 1}
