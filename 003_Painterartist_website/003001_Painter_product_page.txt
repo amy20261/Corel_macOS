@@ -14,7 +14,7 @@ Check price_PTR product page_BOX_SRP_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_10% OFF_DEV
@@ -22,7 +22,7 @@ Check price_PTR product page_BOX_10% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_15% OFF_DEV
@@ -30,7 +30,7 @@ Check price_PTR product page_BOX_15% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_20% OFF_DEV
@@ -38,7 +38,7 @@ Check price_PTR product page_BOX_20% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_25% OFF_DEV
@@ -46,7 +46,7 @@ Check price_PTR product page_BOX_25% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_30% OFF_DEV
@@ -54,7 +54,7 @@ Check price_PTR product page_BOX_30% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_55% OFF_DEV
@@ -62,7 +62,7 @@ Check price_PTR product page_BOX_55% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_SRP_STG
@@ -70,7 +70,7 @@ Check price_PTR product page_BOX_SRP_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_10% OFF_STG
@@ -78,7 +78,7 @@ Check price_PTR product page_BOX_10% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_15% OFF_STG
@@ -86,7 +86,7 @@ Check price_PTR product page_BOX_15% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_20% OFF_STG
@@ -94,7 +94,7 @@ Check price_PTR product page_BOX_20% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_25% OFF_STG
@@ -102,7 +102,7 @@ Check price_PTR product page_BOX_25% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_30% OFF_STG
@@ -110,7 +110,7 @@ Check price_PTR product page_BOX_30% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PTR product page_BOX_55% OFF_STG
@@ -118,5 +118,5 @@ Check price_PTR product page_BOX_55% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PTR product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PTR product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]

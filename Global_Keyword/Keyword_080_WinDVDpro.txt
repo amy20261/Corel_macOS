@@ -7,6 +7,6 @@ Resource          Keyword_003_Product.txt
 Check WinDVD product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}
     close all browsers
-    open browser to home page_HTTPS    ${env}    ${WinDVD}    en    ${currency}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${WD}
+    Open Browser to Home Page    ${env}    ${WinDVD}    en    ${currency}
+    Check promo price on product_dropdown list_Old    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${WD}
     close all browsers

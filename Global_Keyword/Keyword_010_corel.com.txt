@@ -1,5 +1,0 @@
-*** Settings ***
-Resource           Keyword_001_Home.txt
-Resource           Keyword_000_Verification.txt
-
-*** Keywords ***

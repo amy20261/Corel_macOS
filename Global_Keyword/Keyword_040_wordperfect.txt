@@ -7,74 +7,39 @@ Resource          Keyword_003_Product.txt
 Check WPO std product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOSTD}
-    Check promo price on product_dropdownlist_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOSTD}
+    Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOSTD}
+    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOSTD}    ${OWPOSTD}
+    ...    ${XWPOSTD}
     close all browsers
 
 Check WPO pro product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
-    Check promo price on product_dropdownlist_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}
+    Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
+    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}    ${OWPOPRO}
+    ...    ${XWPOPRO}
     close all browsers
 
 Check WPO HS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOHS}
-    Check promo price on product_dropdownlist_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}
+    Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOHS}
+    Check promo price on product_dropdown list_WPO    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}    ${OWPOHS}
+    ...    ${XWPOHS}
     close all browsers
 
 Check PDF product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${PDF}
-    Check promo price on product_tag    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPDF}
-    close all browsers
-
-Check WPO pro product page_WPO
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}
-    close all browsers
-
-Check WPO std product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOSTD}
-    Check promo price on product_dropdownlist_WPO_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOSTD}    ${OWPOSTD}
-    ...    ${XWPOSTD}
-    close all browsers
-
-Check WPO pro product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOPRO}
-    Check promo price on product_dropdownlist_WPO_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOPRO}    ${OWPOPRO}
-    ...    ${XWPOPRO}
-    close all browsers
-
-Check WPO HS product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${WPOHS}
-    Check promo price on product_dropdown list_WPO_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UWPOHS}    ${OWPOHS}
-    ...    ${XWPOHS}
-    close all browsers
-
-Check PDF product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wWPO}    en    ${currency}    ${PDF}
-    Check promo price on product_dropdownlist_PDF_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPDF}    ${OPDF}
+    Open Browser to Product Page    ${env}    ${wWPO}    en    ${currency}    ${PDF}
+    Check promo price on product_dropdown list_PDF    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPDF}    ${OPDF}
     ...    ${XPDF}
     close all browsers
 
 Check SKU on WPO STD_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}    ${WPOSTD}
+    Open Browser to Product Page    dev    ${wWPO}    ${lan}    ${currency}    ${WPOSTD}
     Check sku array
     Check SKU    ${KWPO}
     Check UP SKU    ${UWPO}
@@ -85,7 +50,7 @@ Check SKU on WPO STD_DEV
 Check SKU on WPO STD_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}    ${WPOSTD}
+    Open Browser to Product Page    stg    ${wWPO}    ${lan}    ${currency}    ${WPOSTD}
     Check sku array
     Check SKU    ${KWPO}
     Check UP SKU    ${UWPO}
@@ -96,7 +61,7 @@ Check SKU on WPO STD_STG
 Check SKU on WPO PRO_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}    ${WPOPRO}
+    Open Browser to Product Page    dev    ${wWPO}    ${lan}    ${currency}    ${WPOPRO}
     Check sku array
     Check SKU    ${KPRO}
     Check UP SKU    ${UPRO}
@@ -107,7 +72,7 @@ Check SKU on WPO PRO_DEV
 Check SKU on WPO PRO_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}    ${WPOPRO}
+    Open Browser to Product Page    stg    ${wWPO}    ${lan}    ${currency}    ${WPOPRO}
     Check sku array
     Check SKU    ${KPRO}
     Check UP SKU    ${UPRO}
@@ -118,7 +83,7 @@ Check SKU on WPO PRO_STG
 Check SKU on WPO HS_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wWPO}    ${lan}    ${currency}    ${WPOHS}
+    Open Browser to Product Page    dev    ${wWPO}    ${lan}    ${currency}    ${WPOHS}
     Check sku array
     Check SKU    ${KHNS}
     Check UP SKU    ${UHNS}
@@ -127,7 +92,7 @@ Check SKU on WPO HS_DEV
 Check SKU on WPO HS_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wWPO}    ${lan}    ${currency}    ${WPOHS}
+    Open Browser to Product Page    stg    ${wWPO}    ${lan}    ${currency}    ${WPOHS}
     Check sku array
     Check SKU    ${KHNS}
     Check UP SKU    ${UHNS}

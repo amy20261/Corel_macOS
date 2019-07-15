@@ -15,7 +15,7 @@ Check Link_Home Page_DEV_VSU_VSP_VSU_PVB_PM_2019
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
     [Teardown]
 
@@ -25,7 +25,7 @@ Chick Link_Special Offer Hero_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    DEV    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    DEV    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
@@ -35,7 +35,7 @@ Chick Link_Special Offer Page_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     \    ...    @{var}[7]
     \    close all browsers
@@ -46,7 +46,7 @@ Check tiral down_Home Page_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
@@ -55,7 +55,7 @@ Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
     [Teardown]
 
@@ -65,7 +65,7 @@ Chick Link_Special Offer Hero_stg
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
@@ -75,7 +75,7 @@ Chick Link_Special Offer Page_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    STG    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    STG    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     \    ...    @{var}[7]
     \    close all browsers
@@ -86,7 +86,7 @@ Check tiral down_Home Page_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 *** Keywords ***

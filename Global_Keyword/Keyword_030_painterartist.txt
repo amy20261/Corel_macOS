@@ -7,46 +7,29 @@ Resource          Keyword_003_Product.txt
 Check PTR product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    en    ${currency}    ${PTR}
-    Check promo price on product_dropdown list_PTR    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPTR}
+    Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PTR}
+    Check promo price on product_dropdown list_PTR    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPTR}    ${OPTR}
+    ...    ${XPTR}
     close all browsers
 
 Check PE6 product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    en    ${currency}    ${PE}
-    Check promo price on product_dropdown list_PTR    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPE}
+    Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PE}
+    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPE}
     close all browsers
 
 Check particleshop product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    en    ${currency}    ${particleshop}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${Uparticleshop}
-    close all browsers
-
-Check PTR product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wPTR}    en    ${currency}    ${PTR}
-    Check promo price on product_dropdown list_PTR_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPTR}    ${OPTR}
-    ...    ${XPTR}
-    close all browsers
-
-Check bunclle page
-    [Arguments]    ${page}    ${product}    ${price_reg}    ${price_promo}    ${SavingBadge}=${null}
-    close all browsers
-    open browser    https://www.painterartist.com/en/product/wacom/?currency=en-US#${page}
-    Element should contain    //*[@id="${page}"]//h3    ${product}
-    Element should contain    //*[@id="${page}"]//span[@class='priceDisplayStrikethrough']    ${price_reg}
-    Element should contain    //*[@id="${page}"]//p[@data-promo-text='savingsBadge']    ${SavingBadge}
-    Element should contain    //*[@id="${page}"]//span[@class='priceDisplayNormal']    ${price_promo}
+    Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${particleshop}
+    Check promo price on product_dropdown list_Old    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${Uparticleshop}
     close all browsers
 
 Check SKU on PTR_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wPTR}    ${lan}    ${currency}    ${PTR}
+    Open Browser to Product Page    dev    ${wPTR}    ${lan}    ${currency}    ${PTR}
     Check sku array
     Check SKU    ${KPTR}
     Check UP SKU    ${UPTR}
@@ -57,7 +40,7 @@ Check SKU on PTR_DEV
 Check SKU on PTR_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    STG    ${wPTR}    ${lan}    ${currency}    ${PTR}
+    Open Browser to Product Page    STG    ${wPTR}    ${lan}    ${currency}    ${PTR}
     Check sku array
     Check SKU    ${KPTR}
     Check UP SKU    ${UPTR}

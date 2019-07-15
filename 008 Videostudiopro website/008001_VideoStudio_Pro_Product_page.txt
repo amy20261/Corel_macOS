@@ -14,7 +14,7 @@ Check price_VSP product page_SRP_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_10% Off_DEV
@@ -22,7 +22,7 @@ Check price_VSP product page_10% Off_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_20% Off_DEV
@@ -30,7 +30,7 @@ Check price_VSP product page_20% Off_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_30% Off_DEV
@@ -38,7 +38,7 @@ Check price_VSP product page_30% Off_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_35% Off_DEV
@@ -46,7 +46,7 @@ Check price_VSP product page_35% Off_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_SRP_STG
@@ -54,7 +54,7 @@ Check price_VSP product page_SRP_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_10% Off_STG
@@ -62,7 +62,7 @@ Check price_VSP product page_10% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_20% Off_STG
@@ -70,7 +70,7 @@ Check price_VSP product page_20% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_30% Off_STG
@@ -78,7 +78,7 @@ Check price_VSP product page_30% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_35% Off_STG
@@ -86,7 +86,7 @@ Check price_VSP product page_35% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]Check
 
 Check price_VSP product page_4025% Off_DEV
@@ -94,7 +94,7 @@ Check price_VSP product page_4025% Off_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_4025% Off_STG
@@ -102,7 +102,7 @@ Check price_VSP product page_4025% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_5030% Off_DEV
@@ -110,7 +110,7 @@ Check price_VSP product page_5030% Off_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_VSP product page_5030% Off_STG
@@ -118,5 +118,5 @@ Check price_VSP product page_5030% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check VSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check VSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]

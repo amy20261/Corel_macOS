@@ -15,7 +15,7 @@ Check Link_Home Page
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    ${env}    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    ${env}    ${wASP}    @{var}[1]    @{var}[2]
     \    run keyword if    '@{var}[1]' in 'en'    verify link on home page    @{var}[3]    @{var}[7]    @{var}[8]
     \    ...    @{var}[9]    @{var}[10]
     \    run keyword if    '@{var}[1]' in 'de'    verify link on home page_de    @{var}[3]    @{var}[7]    @{var}[8]
@@ -35,7 +35,7 @@ Check Link_Home Page_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page_ASP    aftershot/pro    paintsh op-pro/ultimate    photo-video-bundle    particleshop
 
 Check Link_Home Page_STG
@@ -44,7 +44,7 @@ Check Link_Home Page_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page    aftershot/pro    @{var}[7]    @{var}[8]    @{var}[9]    @{var}[10]
 
 Check Link_Home Page_DEV_ASP_PSU_PVB_particleshop
@@ -53,7 +53,7 @@ Check Link_Home Page_DEV_ASP_PSU_PVB_particleshop
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page_ASP    aftershot/pro    paintshop-pro/ultimate    photo-video-bundle    particleshop
 
 Check Link_Home Page_STG_ASP_PSU_PVB_particleshop
@@ -62,7 +62,7 @@ Check Link_Home Page_STG_ASP_PSU_PVB_particleshop
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    stg    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page_ASP    aftershot/pro    paintshop-pro/ultimate    photo-video-bundle    particleshop
 
 Check Link_Home Page_DEV_ASP_PSP_PVB_particleshop
@@ -71,7 +71,7 @@ Check Link_Home Page_DEV_ASP_PSP_PVB_particleshop
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page_ASP    aftershot/pro    paintshop-pro/standard    photo-video-bundle    particleshop
 
 Check Link_Home Page_STG_ASP_PSP_PVB_particleshop
@@ -80,7 +80,7 @@ Check Link_Home Page_STG_ASP_PSP_PVB_particleshop
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wASP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    stg    ${wASP}    @{var}[1]    @{var}[2]
     \    verify link on home page_ASP    aftershot/pro    paintshop-pro/standard    photo-video-bundle    particleshop
 
 *** Keywords ***

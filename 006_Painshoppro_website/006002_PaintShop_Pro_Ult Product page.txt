@@ -14,7 +14,7 @@ Check price_PSU product page_SRP_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_10% OFF_DEV
@@ -22,7 +22,7 @@ Check price_PSU product page_10% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_20% OFF_DEV
@@ -30,7 +30,7 @@ Check price_PSU product page_20% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_25% OFF_DEV
@@ -38,7 +38,7 @@ Check price_PSU product page_25% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_30% OFF_DEV
@@ -46,7 +46,7 @@ Check price_PSU product page_30% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_35% OFF_DEV
@@ -54,7 +54,7 @@ Check price_PSU product page_35% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_40% OFF_DEV
@@ -62,7 +62,7 @@ Check price_PSU product page_40% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_50% OFF_DEV
@@ -70,7 +70,7 @@ Check price_PSU product page_50% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_SRP_STG
@@ -78,7 +78,7 @@ Check price_PSU product page_SRP_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_10% OFF_STG
@@ -86,7 +86,7 @@ Check price_PSU product page_10% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_20% OFF_STG
@@ -94,7 +94,7 @@ Check price_PSU product page_20% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_25% OFF_STG
@@ -102,7 +102,7 @@ Check price_PSU product page_25% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_30% OFF_STG
@@ -110,7 +110,7 @@ Check price_PSU product page_30% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_35% OFF_STG
@@ -118,7 +118,7 @@ Check price_PSU product page_35% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_40% OFF_STG
@@ -126,7 +126,7 @@ Check price_PSU product page_40% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_50% OFF_STG
@@ -134,7 +134,7 @@ Check price_PSU product page_50% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_30/20% OFF_DEV
@@ -142,7 +142,7 @@ Check price_PSU product page_30/20% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_30/20% OFF_STG
@@ -150,7 +150,7 @@ Check price_PSU product page_30/20% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSP product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSP product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_40/25% OFF_DEV
@@ -158,7 +158,7 @@ Check price_PSU product page_40/25% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_40/25% OFF_STG
@@ -166,7 +166,7 @@ Check price_PSU product page_40/25% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_50/35% OFF_DEV
@@ -174,7 +174,7 @@ Check price_PSU product page_50/35% OFF_DEV
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_50/35% OFF_STG
@@ -182,7 +182,7 @@ Check price_PSU product page_50/35% OFF_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PSU product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PSU product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PSU product page_25% OFF_DEV_New design

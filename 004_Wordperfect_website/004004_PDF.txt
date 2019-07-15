@@ -14,7 +14,7 @@ Check price_PDF product page_BOX_20% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_25% Off_dev
@@ -22,7 +22,7 @@ Check price_PDF product page_BOX_25% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_30% Off_dev
@@ -30,7 +30,7 @@ Check price_PDF product page_BOX_30% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_35% Off_dev
@@ -38,7 +38,7 @@ Check price_PDF product page_BOX_35% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_3525% Off_dev
@@ -46,7 +46,7 @@ Check price_PDF product page_BOX_3525% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_40% Off_dev
@@ -54,7 +54,7 @@ Check price_PDF product page_BOX_40% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_50% Off_dev
@@ -62,7 +62,7 @@ Check price_PDF product page_BOX_50% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_57/35% Off_dev
@@ -70,7 +70,7 @@ Check price_PDF product page_BOX_57/35% Off_dev
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_20% Off_STG
@@ -78,7 +78,7 @@ Check price_PDF product page_BOX_20% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_25% Off_STG
@@ -86,7 +86,7 @@ Check price_PDF product page_BOX_25% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_30% Off_STG
@@ -94,7 +94,7 @@ Check price_PDF product page_BOX_30% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_35% Off_STG
@@ -102,7 +102,7 @@ Check price_PDF product page_BOX_35% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_3525% Off_stg
@@ -110,7 +110,7 @@ Check price_PDF product page_BOX_3525% Off_stg
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_40% Off_stg
@@ -118,7 +118,7 @@ Check price_PDF product page_BOX_40% Off_stg
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_50% Off_STG
@@ -126,7 +126,7 @@ Check price_PDF product page_BOX_50% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    stg    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    stg    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_57/35% Off_STG
@@ -134,5 +134,5 @@ Check price_PDF product page_BOX_57/35% Off_STG
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
-    \    run keyword and continue on failure    Check PDF product page_BOX    dev    @{var}[0]    @{var}[1]    @{var}[4]
+    \    run keyword and continue on failure    Check PDF product page    dev    @{var}[0]    @{var}[1]    @{var}[4]
     \    ...    @{var}[7]    @{var}[5]

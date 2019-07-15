@@ -7,81 +7,39 @@ Resource          Keyword_003_Product.txt
 Check PSU product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PSU}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}
+    Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSU}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}    ${OPSU}
+    ...    ${XPSU}
     close all browsers
 
 Check PSP product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PSP}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSP}
+    Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSP}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSP}    ${OPSP}
+    ...    ${XPSP}
     close all browsers
 
 Check PSB product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PVB}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPVB}
-    close all browsers
-
-Check PSU product page_PROD
-    [Arguments]    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS_PROD    ${wPSP}    en    ${currency}    ${PSU}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}
-    close all browsers
-
-Check PSP product page_PROD
-    [Arguments]    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS_PROD    ${wPSP}    en    ${currency}    ${PSP}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSP}
-    close all browsers
-
-Check PSB product page_PROD
-    [Arguments]    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS_PROD    ${wPSP}    en    ${currency}    ${PVB}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPVB}
-    close all browsers
-
-Check PSU product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PSU}
-    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}    ${OPSU}
-    ...    ${XPSU}
-    close all browsers
-
-Check PSP product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PSP}
-    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSP}    ${OPSP}
-    ...    ${XPSP}
-    close all browsers
-
-Check PSB product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PVB}
-    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPVB}    ${OPVB}
+    Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PVB}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPVB}    ${OPVB}
     ...    ${XPVB}
     close all browsers
 
-Check PI product page_BOX
+Check PI product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wPSP}    en    ${currency}    ${PI}
-    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPI}    ${OPI}
+    Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PI}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPI}    ${OPI}
     ...    ${XPI}
     close all browsers
 
 Check SKU on PSP_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}    ${PSP}
+    Open Browser to Products Page    dev    ${wPSP}    ${lan}    ${currency}    ${PSP}
     Check sku array
     Check SKU    ${KPSP}
     Check UP SKU    ${UPSP}
@@ -92,7 +50,7 @@ Check SKU on PSP_DEV
 Check SKU on PSP_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}    ${PSP}
+    Open Browser to Products Page    stg    ${wPSP}    ${lan}    ${currency}    ${PSP}
     Check sku array
     Check SKU    ${KPSP}
     Check UP SKU    ${UPSP}
@@ -103,7 +61,7 @@ Check SKU on PSP_STG
 Check SKU on PSU_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}    ${PSU}
+    Open Browser to Products Page    dev    ${wPSP}    ${lan}    ${currency}    ${PSU}
     Check sku array
     Check SKU    ${KPSU}
     Check UP SKU    ${UPSU}
@@ -114,7 +72,7 @@ Check SKU on PSU_DEV
 Check SKU on PSU_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}    ${PSU}
+    Open Browser to Products Page    stg    ${wPSP}    ${lan}    ${currency}    ${PSU}
     Check sku array
     Check SKU    ${KPSU}
     Check UP SKU    ${UPSU}
@@ -125,7 +83,7 @@ Check SKU on PSU_STG
 Check SKU on PVB_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    dev    ${wPSP}    ${lan}    ${currency}    ${PVB}
+    Open Browser to Products Page    dev    ${wPSP}    ${lan}    ${currency}    ${PVB}
     Check sku array
     Check SKU    ${KPVB}
     close all browsers
@@ -133,7 +91,7 @@ Check SKU on PVB_DEV
 Check SKU on PVB_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    stg    ${wPSP}    ${lan}    ${currency}    ${PVB}
+    Open Browser to Products Page    stg    ${wPSP}    ${lan}    ${currency}    ${PVB}
     Check sku array
     Check SKU    ${KPVB}
     close all browsers

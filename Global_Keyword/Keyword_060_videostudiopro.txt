@@ -7,37 +7,23 @@ Resource          Keyword_003_Product.txt
 Check VSU product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSU}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSU}
+    Open Browser to Products Page    ${env}    ${wVSP}    en    ${currency}    ${VSU}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSU}    ${OVSU}
+    ...    ${XVSU}
     close all browsers
 
 Check VSP product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSP}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}
-    close all browsers
-
-Check VSU product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSU}
-    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSU}    ${OVSU}
-    ...    ${XVSU}
-    close all browsers
-
-Check VSP product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Products Page_HTTPS    ${env}    ${wVSP}    en    ${currency}    ${VSP}
-    Check promo price on product_dropdown list_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}    ${OVSP}
+    Open Browser to Products Page    ${env}    ${wVSP}    en    ${currency}    ${VSP}
+    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UVSP}    ${OVSP}
     ...    ${XVSP}
     close all browsers
 
 Check SKU on VSP_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    dev    ${wVSP}    ${lan}    ${currency}    ${VSP}
+    Open Browser to Products Page    dev    ${wVSP}    ${lan}    ${currency}    ${VSP}
     Check sku array
     Check SKU    ${KVSP}
     Check UP SKU    ${UVSP}
@@ -48,7 +34,7 @@ Check SKU on VSP_DEV
 Check SKU on VSP_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    stg    ${wVSP}    ${lan}    ${currency}    ${VSP}
+    Open Browser to Products Page    stg    ${wVSP}    ${lan}    ${currency}    ${VSP}
     Check sku array
     Check SKU    ${KVSP}
     Check UP SKU    ${UVSP}
@@ -59,7 +45,7 @@ Check SKU on VSP_STG
 Check SKU on VSU_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    dev    ${wVSP}    ${lan}    ${currency}    ${VSU}
+    Open Browser to Products Page    dev    ${wVSP}    ${lan}    ${currency}    ${VSU}
     Check sku array
     Check SKU    ${KVSU}
     Check UP SKU    ${UVSU}
@@ -70,7 +56,7 @@ Check SKU on VSU_DEV
 Check SKU on VSU_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Products Page_HTTPS    stg    ${wVSP}    ${lan}    ${currency}    ${VSU}
+    Open Browser to Products Page    stg    ${wVSP}    ${lan}    ${currency}    ${VSU}
     Check sku array
     Check SKU    ${KVSU}
     Check UP SKU    ${UVSU}

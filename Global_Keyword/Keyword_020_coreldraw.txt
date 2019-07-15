@@ -7,88 +7,38 @@ Resource          Keyword_003_Product.txt
 Check CDGS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}
-    close all browsers
-
-Check CAD product page
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CAD}
-    Check promo price on product_dropdown list_CAD    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCAD}
-    close all browsers
-
-Check CDTS product page
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
-    Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}
+    Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
+    Check promo price on product_radio_CDGS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}    ${OCDGS}
+    ...    ${XCDGS}
     close all browsers
 
 Check CDHS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDHS}
-    Check promo price on product_radio    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDHS}
+    Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDHS}
+    Check promo price on product_radio_CDHS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDHS}
     close all browsers
 
-Check CDGS product page_BOX
+Check CAD product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Check promo price on product_radio_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}    ${OCDGS}
-    ...    ${XCDGS}
-    close all browsers
-
-Check CAD product page_BOX
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CAD}
-    Check promo price on product_dropdown list_CAD_BOX    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCAD}    ${OCAD}
+    Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CAD}
+    Check promo price on product_dropdown list_CAD    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCAD}    ${OCAD}
     ...    ${XCAD}
     close all browsers
 
-Check CDTS product page_BOX
+Check CDTS product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
-    Check promo price on product_radio_BOX_CDTS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}    ${OCDTS}
+    Open Browser to Product Page    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
+    Check promo price on product_radio_CDTS    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDTS}    ${OCDTS}
     ...    ${XCDTS}
-    close all browsers
-
-Check CDGS product page_subscription
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${savings}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
-    close all browsers
-
-Check CDTS product page_subscription
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${savings}
-    close all browsers
-    Open Browser to Product Page_HTTPS    ${env}    ${wCDGS}    en    ${currency}    ${CDTS}
-    Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
-    close all browsers
-
-Check CDGS product page_BOX_MAC
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
-    close all browsers
-    Open Browser to Product Page_HTTPS_MAC    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Check promo price on product_radio_BOX_MAC    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UCDGS}    ${OCDGS}
-    ...    ${XCDGS}
-    close all browsers
-
-Check CDGS product page_subscription_MAC
-    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${savings}
-    close all browsers
-    Open Browser to Product Page_HTTPS_MAC    ${env}    ${wCDGS}    en    ${currency}    ${CDGS}
-    Check subscription price    ${SKU}    ${Full_Reg}    ${savings}
     close all browsers
 
 Check SKU on CDGS_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
+    Open Browser to Product Page    dev    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
     Check sku array
     Check SKU    ${KCDGS}
     Check UP SKU    ${UCDGS}
@@ -101,7 +51,7 @@ Check SKU on CDGS_DEV
 Check SKU on CDGS_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
+    Open Browser to Product Page    stg    ${wCDGS}    ${lan}    ${currency}    ${CDGS}
     Check sku array
     Check SKU    ${KCDGS}
     Check UP SKU    ${UCDGS}
@@ -114,7 +64,7 @@ Check SKU on CDGS_STG
 Check SKU on CAD_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CAD}
+    Open Browser to Product Page    dev    ${wCDGS}    ${lan}    ${currency}    ${CAD}
     Check sku array
     Check SKU    ${KCAD}
     Check UP SKU    ${UCAD}
@@ -125,7 +75,7 @@ Check SKU on CAD_DEV
 Check SKU on CAD_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CAD}
+    Open Browser to Product Page    stg    ${wCDGS}    ${lan}    ${currency}    ${CAD}
     Check sku array
     Check SKU    ${KCAD}
     Check UP SKU    ${UCAD}
@@ -136,7 +86,7 @@ Check SKU on CAD_STG
 Check SKU on CDHS_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDHS}
+    Open Browser to Product Page    dev    ${wCDGS}    ${lan}    ${currency}    ${CDHS}
     Check sku array
     Check SKU    ${KCDHS}
     close all browsers
@@ -144,7 +94,7 @@ Check SKU on CDHS_DEV
 Check SKU on CDHS_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CDHS}
+    Open Browser to Product Page    stg    ${wCDGS}    ${lan}    ${currency}    ${CDHS}
     Check sku array
     Check SKU    ${KCDHS}
     close all browsers
@@ -152,7 +102,7 @@ Check SKU on CDHS_STG
 Check SKU on CDTS_DEV
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    dev    ${wCDGS}    ${lan}    ${currency}    ${CDTS}
+    Open Browser to Product Page    dev    ${wCDGS}    ${lan}    ${currency}    ${CDTS}
     Check sku array
     Check SKU    ${KCDTS}
     Check UP SKU    ${UCDTS}
@@ -165,7 +115,7 @@ Check SKU on CDTS_DEV
 Check SKU on CDTS_STG
     [Arguments]    ${lan}    ${currency}
     close all browsers
-    Open Browser to Product Page_HTTPS    stg    ${wCDGS}    ${lan}    ${currency}    ${CDTS}
+    Open Browser to Product Page    stg    ${wCDGS}    ${lan}    ${currency}    ${CDTS}
     Check sku array
     Check SKU    ${KCDTS}
     Check UP SKU    ${UCDTS}

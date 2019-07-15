@@ -15,7 +15,7 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
@@ -25,7 +25,7 @@ Chick Link_Special Offer Hero_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
@@ -35,7 +35,7 @@ Chick Link_Special Offer Page_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
@@ -48,7 +48,7 @@ Check tiral down_Home Page_DEV
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
@@ -57,7 +57,7 @@ Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
@@ -67,7 +67,7 @@ Chick Link_Special Offer Hero_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
     [Teardown]
@@ -78,7 +78,7 @@ Chick Link_Special Offer Page_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to special offer page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
@@ -91,7 +91,7 @@ Check tiral down_Home Page_STG
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 *** Keywords ***
