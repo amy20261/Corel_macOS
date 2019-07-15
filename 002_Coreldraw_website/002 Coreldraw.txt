@@ -9,18 +9,6 @@ Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check Link_Home Page_DEV_CDGS_CDTS_CAD_CDHS_default
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_default_no HS    @{var}[3]    @{var}[4]
-    \    ...    # @{var}[5]    @{var}[6]
-
 Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
@@ -62,18 +50,6 @@ Check tiral down_Home Page_DEV
     \    close all browsers
     \    open browser to home page_HTTPS    dev    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
-Check Link_Home Page_STG_CDGS_CDTS_CAD_CDHS_default
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    open browser to home page_HTTPS    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link on home page_CDGS2019_default    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'pl;cz;tw;cn;ru;jp'    run keyword and continue on failure    verify link on home page_CDGS2019_default_no HS    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
     ${contents}=    Get File    ${CDGS_Home}

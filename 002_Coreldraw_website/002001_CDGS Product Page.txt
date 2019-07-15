@@ -9,14 +9,6 @@ Resource          ../Global_Keyword/Keyword_020_coreldraw.txt
 Variables         ../Global_Variable/eComm.py
 
 *** Test Cases ***
-Check price_CDGS product page_subscription
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_subscription.csv
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    Run keyword if    '@{var}[1]'=='CDGSSUBPUREPREM2'    runkeywords    Check CDGS product page_subscription    ${env}    @{var}[0]
-    \    ...    @{var}[1]    @{var}[4]    @{var}[7]
-
 Check price_CDGS product page_BOX_SRP_DEV
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\CDGS_BOX_00.csv
     @{lines}=    Split to lines    ${contents}
