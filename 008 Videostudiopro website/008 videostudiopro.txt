@@ -47,7 +47,14 @@ Check tiral down_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'de'    run keyword and continue on failure    verify trial download on home page_de    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'fr'    run keyword and continue on failure    verify trial download on home page_fr    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify trial download on home page_jp    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
     ${contents}=    Get File    ${VSP_Home_2019}
@@ -127,5 +134,23 @@ verify link in special offer Page_ 2019
 verify trial download on home page
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click Trial download_VSP
+    Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
+    close all browsers
+
+verify trial download on home page_de
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click Trial download_VSP_de
+    Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
+    close all browsers
+
+verify trial download on home page_fr
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click Trial download_VSP_fr
+    Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
+    close all browsers
+
+verify trial download on home page_JP
+    [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Click Trial download_VSP_jp
     Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
     close all browsers

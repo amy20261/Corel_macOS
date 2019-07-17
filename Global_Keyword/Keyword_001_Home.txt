@@ -67,3 +67,12 @@ Click Trial download_PSP
 
 Click Trial download_VSP
     click element    //a[@id='vsp-trial']
+
+Click Trial download_VSP_de
+    click element    //a[@id='vsp-trial-de']
+
+Click Trial download_VSP_fr
+    click element    //a[@id='vsp-trial-fr']
+
+Click Trial download_VSP_JP
+    click element    //a[@id='vsp-trial-jp']
