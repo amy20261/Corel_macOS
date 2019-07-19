@@ -24,6 +24,5 @@ Nature Essential Brush Pack_PE_stg
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    run keyword if    '@{var}[1]' in 'en-US;en-CA;en-GB;en-AU'    Check VA on PE page    stg    Nature Essentials    en
-    \    ...    @{var}[1]    @{var}[2]
+    \    Check VA on PE page    stg    Nature Essentials    en    @{var}[1]    @{var}[2]
     \    close all browsers
