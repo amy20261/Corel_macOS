@@ -58,7 +58,7 @@ Check price_PDF product page_BOX_40% Off_dev
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_50% Off_dev
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PDF_BOX50.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PDF50.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -122,7 +122,7 @@ Check price_PDF product page_BOX_40% Off_stg
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PDF product page_BOX_50% Off_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PDF_BOX50.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PDF50.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
