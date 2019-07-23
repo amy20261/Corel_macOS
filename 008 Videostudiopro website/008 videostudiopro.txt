@@ -96,6 +96,16 @@ Check tiral down_Home Page_STG
     \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
+Check LTO and SavingBadge_Home Page
+    ${contents}=    Get File    ${VSP_Home_2019}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify LTO and Savingbadge on home page
+    [Teardown]
+
 *** Keywords ***
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Horizontal 1}
@@ -153,4 +163,19 @@ verify trial download on home page_JP
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}
     Run Keyword And Continue On Failure    Click Trial download_VSP_jp
     Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
+    close all browsers
+
+verify LTO and SavingBadge on home page
+    ${exLTO}=    run keyword and return status    element should be visible    /p[@data-promo-test='hpPromoMsgShort']/span[@class='title"]
+    ${LTO}=    run keyword if     '${exLTO}'=='PASS'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
+    Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
+    Run Keyword And Continue On Failure    Verify LTO    ${exLTO}    ${LTO}
+    ${Style 1}=    get element attribute    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]    style
+    ${Value 1}=    Run keyword if    '${Style 1}'=='display: inline-block;'    get text    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
+    Run Keyword And Continue On Failure    Click Featured Prod 1
+    Run Keyword And Continue On Failure    Verify Savingbadge    ${Style 1}    ${Value 1}
+    ${Style 2}=    get element attribute    //div[2][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]    style
+    ${Value 2}=    Run keyword if    '${Style 2}'=='display: inline-block;'    get text    //div[2][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
+    Run Keyword And Continue On Failure    Click Featured Prod 2
+    Run Keyword And Continue On Failure    Verify Savingbadge    ${Style 2}    ${Value 2}
     close all browsers

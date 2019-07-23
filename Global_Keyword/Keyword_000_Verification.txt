@@ -20,5 +20,22 @@ Verify URL Contain
     [Arguments]    ${page}
     sleep    3
     Run Keyword And Continue On Failure    location should contain    ${page}
+    Run Keyword And Continue On Failure    element should contain
+    Go back
+    sleep    3
+
+Verify Savingbadge
+    [Arguments]    ${Style}    ${savingBadge}
+    sleep    3
+    Run keyword if    '${Style}'=='display: inline-block;'    element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${savingBadge}
+    Run keyword if    '${Style}'!='display: inline-block;'    element should not be visible    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']
+    Go back
+    sleep    3
+
+Verify LTO
+    [Arguments]    ${exLTO}    ${LTO}
+    sleep    3
+    Run keyword if    '${exLTO}'=='PASS'    element should contain    //div[@class='lto-box']    ${LTO}
+    Run keyword if    '${exLTO}'=='FALSE'    element should not be visible    //div[@class='lto-box']
     Go back
     sleep    3
