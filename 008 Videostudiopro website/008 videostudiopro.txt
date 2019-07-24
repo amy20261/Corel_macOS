@@ -177,30 +177,30 @@ verify trial download on home page_JP
 
 verify LTO and SavingBadge on home page
     ${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
-    ${LTO}=    run keyword if    '${exLTO}'=='PASS'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
+    ${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
     Run Keyword And Continue On Failure    Click HeroBanner_2019_EN
     Run Keyword And Continue On Failure    Verify LTO    ${exLTO}    ${LTO}
     ${Style 1}=    run keyword and return status    element should be visible    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
-    ${Value 1}=    Run keyword if    '${Style 1}'=='PASS'    get text    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
+    ${Value 1}=    Run keyword if    '${Style 1}'=='True'    get text    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
     Run Keyword And Continue On Failure    Click Featured Prod 1
     Run Keyword And Continue On Failure    Verify Savingbadge    ${Style 1}    ${Value 1}
     ${Style 2}=    run keyword and return status    element should be visible    //div[2][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
-    ${Value 2}=    Run keyword if    '${Style 2}'=='PASS'    get text    //div[2][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
+    ${Value 2}=    Run keyword if    '${Style 2}'=='True'    get text    //div[2][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
     Run Keyword And Continue On Failure    Click Featured Prod 2
     Run Keyword And Continue On Failure    Verify Savingbadge    ${Style 2}    ${Value 2}
     close all browsers
 
 verify LTO and SavingBadge on special offer Page
     ${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
-    ${LTO}=    run keyword if    '${exLTO}'=='PASS'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
+    ${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
     Click Special Offers Hero
     run keyword and continue on failure    Verify LTO    ${exLTO}    ${LTO}
     ${Style 1}=    run keyword and return status    element should be visible    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
-    ${Value 1}=    Run keyword if    '${Style 1}'=='PASS'    get text    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
+    ${Value 1}=    Run keyword if    '${Style 1}'=='True'    get text    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     Click Prod 1
     run keyword and continue on failure    Verify Savingbadge    ${Style 1}    ${Value 1}
     ${Style 2}=    run keyword and return status    element should be visible    //div[2][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
-    ${Value 2}=    Run keyword if    '${Style 2}'=='PASS'    get text    //div[2][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
+    ${Value 2}=    Run keyword if    '${Style 2}'=='True'    get text    //div[2][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     Click Prod 2
-    run keyword and continue on failure    Verify Savingbadge    ${Style 1}    ${Value 1}
+    run keyword and continue on failure    Verify Savingbadge    ${Style 2}    ${Value 2}
     close all browsers
