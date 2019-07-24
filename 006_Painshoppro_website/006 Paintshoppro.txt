@@ -188,6 +188,6 @@ verify LTO and SavingBadge on special offer Page
     run keyword and continue on failure    Verify Savingbadge    ${Style 2}    ${Value 2}
     ${Style 4}=    run keyword and return status    element should be visible    //div[4][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     ${Value 4}=    Run keyword if    '${Style 4}'=='True'    get text    //div[4][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
-    Click Prod 3
+    Click Prod 4
     run keyword and continue on failure    Verify Savingbadge    ${Style 4}    ${Value 4}
     close all browsers
