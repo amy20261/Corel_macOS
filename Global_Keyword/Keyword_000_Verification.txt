@@ -27,8 +27,8 @@ Verify URL Contain
 Verify Savingbadge
     [Arguments]    ${Style}    ${savingBadge}
     sleep    3
-    Run keyword if    '${Style}'=='display: inline-block;'    element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${savingBadge}
-    Run keyword if    '${Style}'!='display: inline-block;'    element should not be visible    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']
+    Run keyword if    '${Style}'=='PASS'    element should contain    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']    ${savingBadge}
+    Run keyword if    '${Style}'=='FALSE'    element should not be visible    //div[@style='display: inline-block;']//p[@data-promo-text='savingsBadge']
     Go back
     sleep    3
 
