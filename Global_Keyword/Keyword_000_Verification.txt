@@ -20,7 +20,6 @@ Verify URL Contain
     [Arguments]    ${page}
     sleep    3
     Run Keyword And Continue On Failure    location should contain    ${page}
-    Run Keyword And Continue On Failure    element should contain
     Go back
     sleep    3
 
