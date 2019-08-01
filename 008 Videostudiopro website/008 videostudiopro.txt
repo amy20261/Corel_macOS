@@ -49,12 +49,6 @@ Check tiral down_Home Page_DEV
     \    Open Browser to Home Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'de'    run keyword and continue on failure    verify trial download on home page_de    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'fr'    run keyword and continue on failure    verify trial download on home page_fr    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify trial download on home page_jp    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
 
 Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
     ${contents}=    Get File    ${VSP_Home_2019}
@@ -94,7 +88,8 @@ Check tiral down_Home Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
 
 Check LTO and SavingBadge_Home Page
     ${contents}=    Get File    ${VSP_Home_2019}
