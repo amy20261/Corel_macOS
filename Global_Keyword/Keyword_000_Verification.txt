@@ -38,3 +38,11 @@ Verify LTO
     Run Keyword And Continue On Failure    Run keyword if    '${exLTO}'=='False'    element should not be visible    //div[@class='lto-box']
     Go back
     sleep    3
+
+Verify Savingbadge_PSP
+    [Arguments]    ${Style}    ${savingBadge}
+    sleep    3
+    Run Keyword And Continue On Failure    Run keyword if    '${Style}'=='True'    element should contain    //p[@data-promo-text='savingsBadge' and @style='display: inline;']    ${savingBadge}
+    Run Keyword And Continue On Failure    Run keyword if    '${Style}'=='False'    element should not be visible    //p[@data-promo-text='savingsBadge']
+    Go back
+    sleep    3
