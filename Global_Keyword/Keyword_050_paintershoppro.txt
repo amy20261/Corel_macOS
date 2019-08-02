@@ -43,8 +43,6 @@ Check SKU on PSP_DEV
     Check sku array
     Check SKU    ${KPSP}
     Check UP SKU    ${UPSP}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSP}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSP}
     close all browsers
 
 Check SKU on PSP_STG
@@ -65,8 +63,6 @@ Check SKU on PSU_DEV
     Check sku array
     Check SKU    ${KPSU}
     Check UP SKU    ${UPSU}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSU}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSU}
     close all browsers
 
 Check SKU on PSU_STG
@@ -76,8 +72,6 @@ Check SKU on PSU_STG
     Check sku array
     Check SKU    ${KPSU}
     Check UP SKU    ${UPSU}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPSU}
-    run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPSU}
     close all browsers
 
 Check SKU on PVB_DEV
