@@ -19,74 +19,13 @@ Check Link_Home Page_DEV_PTR_PE_Particleshop_brush_2019
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
-Chick Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${PTR_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Chick Link_Special Offer Page_DEV
-    ${contents}=    Get File    ${PTR_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    close all browsers
-
-Check tiral down_Home Page_DEV
+Check Trial down_Home Page_DEV
     ${contents}=    Get File    ${PTR_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
-Check Link_Home Page_STG_PTR_PE_Particleshop_brush_2019
-    ${contents}=    Get File    ${PTR_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    [Teardown]
-
-Chick Link_Special Offer Hero_STG
-    ${contents}=    Get File    ${PTR_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Chick Link_Special Offer Page_STG
-    ${contents}=    Get File    ${PTR_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    close all browsers
-
-Check tiral down_Home Page_STG
-    ${contents}=    Get File    ${PTR_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    STG    ${wPTR}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
 Check LTO and SavingBadge_Home Page
@@ -99,7 +38,7 @@ Check LTO and SavingBadge_Home Page
     \    verify LTO and Savingbadge on home page
     [Teardown]
 
-Chick LTO and SavingBadge_Special Offer Page
+Check LTO and SavingBadge_Special Offer Page
     ${contents}=    Get File    ${PTR_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -107,6 +46,67 @@ Chick LTO and SavingBadge_Special Offer Page
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
+    \    close all browsers
+
+Check Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${PTR_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Check Link_Special Offer Page_DEV
+    ${contents}=    Get File    ${PTR_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    close all browsers
+
+Check Link_Home Page_STG_PTR_PE_Particleshop_brush_2019
+    ${contents}=    Get File    ${PTR_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    [Teardown]
+
+Check Trial down_Home Page_STG
+    ${contents}=    Get File    ${PTR_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    STG    ${wPTR}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Link_Special Offer Hero_STG
+    ${contents}=    Get File    ${PTR_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Check Link_Special Offer Page_STG
+    ${contents}=    Get File    ${PTR_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
     \    close all browsers
 
 *** Keywords ***

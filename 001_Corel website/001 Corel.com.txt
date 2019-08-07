@@ -20,7 +20,7 @@ Check Link_Home Page_DEV_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]
 
-Chick Link_Special Offer Hero_DEV
+Check Link_Special Offer Hero_DEV
     ${contents}=    Get File    ${Corel_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -30,7 +30,7 @@ Chick Link_Special Offer Hero_DEV
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
-Chick Link_Special Offer Page_DEV
+Check Link_Special Offer Page_DEV
     ${contents}=    Get File    ${Corel_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -54,7 +54,7 @@ Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     \    run keyword if    '@{var}[1]' in 'jp'    verify link on home page_CDGS2019_JP    @{var}[3]    @{var}[4]    @{var}[5]
     \    ...    @{var}[6]
 
-Chick Link_Special Offer Hero_STG
+Check Link_Special Offer Hero_STG
     ${contents}=    Get File    ${Corel_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -64,7 +64,7 @@ Chick Link_Special Offer Hero_STG
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
-Chick Link_Special Offer Page_STG
+Check Link_Special Offer Page_STG
     ${contents}=    Get File    ${Corel_Sp}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
