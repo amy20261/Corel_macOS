@@ -164,9 +164,9 @@ verify link in special offer Page_ 2019
     Click Prod 2
     run keyword and continue on failure    Verify URL Contain    ${Prod 2}
     Click Prod 3
-    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
+    run keyword and continue on failure    Verify URL Contain    ${Prod 3}
     Click Prod 4
-    run keyword and continue on failure    Verify URL Contain    ${Prod 4}
+    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 4}
     close all browsers
 
 verify trial download on home page
