@@ -112,7 +112,7 @@ Check Link_Special Offer Hero_stg
     \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
-Check Link_Special Offer Page_STG
+Check Link_Special Offer Page_STG_PSU_PSU_PSP_PM_PVB
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -131,6 +131,17 @@ Check Trial down_Home Page_STG
     \    close all browsers
     \    Open Browser to Home Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check Link_Special Offer Page_STG_PSU_PSP_PSU_PVB_PM
+    ${contents}=    Get File    ${PSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle
+    \    ...    photomirage
+    \    close all browsers
 
 *** Keywords ***
 verify link on home page_2019

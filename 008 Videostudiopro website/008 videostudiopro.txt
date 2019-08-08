@@ -29,7 +29,7 @@ Chick Link_Special Offer Hero_DEV
     \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
-Chick Link_Special Offer Page_DEV
+Chick Link_Special Offer Page_DEV_VSU_VSU_VSP_WINDVD_PVB
     ${contents}=    Get File    ${VSP_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -109,6 +109,17 @@ Chick LTO and SavingBadge_Special Offer Page
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
+    \    close all browsers
+
+Chick Link_Special Offer Page_DEV_VSU_VSP_VSU_PVB_WINDVD
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    videostudio/ultimate    videostudio/pro    videostudio/ultimate    photo-video-bundle
+    \    ...    windvdpro
     \    close all browsers
 
 *** Keywords ***
