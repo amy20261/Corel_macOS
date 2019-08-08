@@ -145,6 +145,8 @@ VA_NEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_NEBrushPack.csv'
 VA_ScriptsBundle='C:\\Corel\\Global_Variable\\VA\\VA_ScriptsBundle.csv'
 VA_MultiCam='C:\\Corel\\Global_Variable\\VA\\VA_MultiCam.csv'
 VA_PE6='C:\\Corel\\Global_Variable\\VA\\VA_PE6.csv'
+VA_AEBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_AnimationEssentialsBrushPack.csv'
+VA_AnimationsBrushPack='C:\\Corel\\Global_Variable\\VA\\VA_AnimationsBrushPack.csv'
 
 #HTTPS files
 HTTPS_ASP='C:\\Corel\\Global_Variable\\HTTPS\\HTTPS_ASP.csv'
