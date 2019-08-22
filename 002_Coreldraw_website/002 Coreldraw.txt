@@ -91,6 +91,27 @@ Check Trial down_Home Page_STG
     \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
+Check LTO and SavingBadge_Home Page_stg
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    verify LTO and Savingbadge on home page
+    [Teardown]
+
+Check LTO and SavingBadge_Special Offer Page_stg
+    ${contents}=    Get File    ${CDGS_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
+    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify LTO and SavingBadge on special offer page_JP
+    \    close all browsers
+
 Check Link_Special Offer Hero_STG
     ${contents}=    Get File    ${CDGS_SP}
     @{lines}=    Split to lines    ${contents}
