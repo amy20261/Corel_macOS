@@ -19,27 +19,6 @@ Check Link_Home Page_DEV_VSU_VSP_VSU_PVB_PM_2019
     \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
     [Teardown]
 
-Chick Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${VSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    DEV    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Chick Link_Special Offer Page_DEV_VSU_VSU_VSP_WINDVD_PVB
-    ${contents}=    Get File    ${VSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    \    ...    @{var}[7]
-    \    close all browsers
-
 Check tiral down_Home Page_DEV
     ${contents}=    Get File    ${VSP_Home}
     @{lines}=    Split to lines    ${contents}
@@ -47,47 +26,6 @@ Check tiral down_Home Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]
-
-Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
-    ${contents}=    Get File    ${VSP_Home_2019}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
-    [Teardown]
-
-Chick Link_Special Offer Hero_stg
-    ${contents}=    Get File    ${VSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Chick Link_Special Offer Page_STG
-    ${contents}=    Get File    ${VSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    STG    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    \    ...    @{var}[7]
-    \    close all browsers
-
-Check tiral down_Home Page_STG
-    ${contents}=    Get File    ${VSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]
 
@@ -111,10 +49,92 @@ Chick LTO and SavingBadge_Special Offer Page
     \    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
     \    close all browsers
 
+Chick Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    DEV    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Chick Link_Special Offer Page_DEV_VSU_VSU_VSP_WINDVD_PVB
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    ...    @{var}[7]
+    \    close all browsers
+
+Check Link_Home Page_stg_VSU_VSP_VSU_PVB_PM_2019
+    ${contents}=    Get File    ${VSP_Home_2019}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify link on home page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]    @{var}[7]
+    [Teardown]
+
+Check tiral down_Home Page_STG
+    ${contents}=    Get File    ${VSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]
+
+Check LTO and SavingBadge_Home Page_STG
+    ${contents}=    Get File    ${VSP_Home_2019}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    verify LTO and Savingbadge on home page
+    [Teardown]
+
+Chick LTO and SavingBadge_Special Offer Page_STG
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
+    \    close all browsers
+
+Chick Link_Special Offer Hero_stg
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Chick Link_Special Offer Page_STG
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    STG    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    \    ...    @{var}[7]
+    \    close all browsers
+
 Chick Link_Special Offer Page_DEV_VSU_VSP_VSU_PVB_WINDVD
     ${contents}=    Get File    ${VSP_SP}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wVSP}    @{var}[1]    @{var}[2]
