@@ -88,6 +88,26 @@ Check Trial down_Home Page_STG
     \    Open Browser to Home Page    STG    ${wPTR}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
+Check LTO and SavingBadge_Home Page_STG
+    ${contents}=    Get File    ${PTR_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    verify LTO and Savingbadge on home page
+    [Teardown]
+
+Check LTO and SavingBadge_Special Offer Page_STG
+    ${contents}=    Get File    ${PTR_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wPTR}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
+    \    close all browsers
+
 Check Link_Special Offer Hero_STG
     ${contents}=    Get File    ${PTR_SP}
     @{lines}=    Split to lines    ${contents}
@@ -149,8 +169,8 @@ verify trial download on home page
     close all browsers
 
 verify LTO and SavingBadge on home page
-    ${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
-    ${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
+    #${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
+    #${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
     #run Keyword And Continue On Failure    Click HeroBanner_2019_EN
     # Keyword And Continue On Failure    Verify LTO    ${exLTO}    ${LTO}
     ${Style 1}=    run keyword and return status    element should be visible    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
