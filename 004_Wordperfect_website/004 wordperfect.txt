@@ -88,6 +88,26 @@ Check Trial down_Home Page_STG
     \    Open Browser to Home Page    STG    ${wWPO}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
 
+Check LTO and SavingBadge_Home Page_STG
+    ${contents}=    Get File    ${WPO_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
+    \    verify LTO and Savingbadge on home page
+    [Teardown]
+
+Check LTO and SavingBadge_Special Offer Page_STG
+    ${contents}=    Get File    ${WPO_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wWPO}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify LTO and SavingBadge on special offer page
+    \    close all browsers
+
 Check Link_Special Offer Hero_STG
     ${contents}=    Get File    ${WPO_sp}
     @{lines}=    Split to lines    ${contents}
