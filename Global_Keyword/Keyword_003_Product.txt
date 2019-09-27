@@ -26,7 +26,7 @@ Open Browser to Product Page
     sleep    4
 
 Select Upgrade_dropdown list
-    select from list by value    //select[@form='version-select']    Upgrade
+    select from list by value    //select[@form='version-select']    UPGRADE
 
 Select Upgrade_dropdown list_CAD
     select from list    //select[@id='version-select']    UPGRADE
@@ -127,7 +127,7 @@ Check promo price on product_dropdown list
     Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
     Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list
     ...    AND    Select BOX_dropdown list
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_OLD    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
