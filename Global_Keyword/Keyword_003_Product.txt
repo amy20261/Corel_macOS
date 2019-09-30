@@ -26,7 +26,7 @@ Open Browser to Product Page
     sleep    4
 
 Select Upgrade_dropdown list
-    select from list by value    //select[@form='version-select']    UPGRADE
+    select from list    //select[@form='version-select']    UPGRADE
 
 Select Upgrade_dropdown list_CAD
     select from list    //select[@id='version-select']    UPGRADE
