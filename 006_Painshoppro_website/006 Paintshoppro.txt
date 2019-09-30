@@ -143,24 +143,24 @@ Check Link_Special Offer Page_STG_PSU_PSP_PSU_PVB_PM
     \    ...    photomirage
     \    close all browsers
 
-Check Link_Special Offer Page_STG_PSU_PSU_PSP_PVB_PM
+Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PVB_PM
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
     \    ...    photomirage
     \    close all browsers
 
-Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PVB_PM
+Check Link_Special Offer Page_STG_PSU_PSU_PSP_PVB_PM
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
     \    ...    photomirage
     \    close all browsers
