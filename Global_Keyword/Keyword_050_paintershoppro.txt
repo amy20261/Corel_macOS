@@ -16,7 +16,7 @@ Check PSP product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSP}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSP}    ${OPSP}
+    Check promo price on product_dropdown list_PSP    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSP}    ${OPSP}
     ...    ${XPSP}
     close all browsers
 
