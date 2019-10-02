@@ -47,3 +47,10 @@ Check SKU on PTR_STG
     run keyword if    '${lan}' in 'en'    Check BOX SKU    ${OPTR}
     run keyword if    '${lan}' in 'en'    Check BOX SKU    ${XPTR}
     close all browsers
+
+Check PE7 product page
+    [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
+    close all browsers
+    Open Browser to Product Page    ${env}    ${wPTR}    en    ${currency}    ${PE}
+    Check promo price on product_dropdown list_PE6    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPE}
+    close all browsers
