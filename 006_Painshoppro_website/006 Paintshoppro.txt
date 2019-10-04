@@ -69,7 +69,7 @@ Check Link_Special Offer Hero_DEV
     \    Run keyword if    '@{var}[1]' in 'en'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
-Check Link_Special Offer Page_DEV_PSU_PSP_PM_PVB
+Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PM_PVB
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -80,7 +80,7 @@ Check Link_Special Offer Page_DEV_PSU_PSP_PM_PVB
     \    ...    @{var}[7]
     \    close all browsers
 
-Check Link_Special Offer Page_DEV_PSP_PSU_PVB_PM
+Check Link_Special Offer Page_DEV_PSU_PSP_PSU_PVB_PM
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
