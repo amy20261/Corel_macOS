@@ -142,6 +142,17 @@ Chick Link_Special Offer Page_DEV_VSU_VSP_VSU_PVB_WINDVD
     \    ...    windvdpro
     \    close all browsers
 
+Chick Link_Special Offer Page_STG_VSU_VSP_VSU_PVB_WINDVD
+    ${contents}=    Get File    ${VSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wVSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    videostudio/ultimate    videostudio/pro    videostudio/ultimate    photo-video-bundle
+    \    ...    windvdpro
+    \    close all browsers
+
 *** Keywords ***
 verify link on home page_2019
     [Arguments]    ${Hero}    ${ Featured Prod 1}    ${ Featured Prod 2}    ${ Featured Prod 3}    ${Horizontal 1}
