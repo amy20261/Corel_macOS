@@ -27,7 +27,7 @@ Check Link_Special Offer Hero_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;ja'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
     \    close all browsers
 
 Check Link_Special Offer Page_DEV
@@ -37,7 +37,7 @@ Check Link_Special Offer Page_DEV
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;ja'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
     \    ...    @{var}[10]    @{var}[11]
     \    close all browsers
@@ -71,7 +71,7 @@ Check Link_Special Offer Page_STG
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;ja'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
     \    ...    @{var}[10]    @{var}[11]
     \    close all browsers
@@ -83,7 +83,19 @@ Check Link_Special Offer Page_DEV_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;ja'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    coreldraw    painter    @{var}[7]    @{var}[8]    @{var}[9]
+    \    ...    @{var}[10]    @{var}[11]
+    \    close all browsers
+
+Check Link_Special Offer Page_STG_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
+    ${contents}=    Get File    ${Corel_Sp}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${Corel}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    coreldraw    painter    @{var}[7]    @{var}[8]    @{var}[9]
     \    ...    @{var}[10]    @{var}[11]
     \    close all browsers
