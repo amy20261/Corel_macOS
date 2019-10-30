@@ -100,7 +100,7 @@ Check Link_Special Offer Page_STG_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
     \    ...    @{var}[10]    @{var}[11]
     \    close all browsers
 
-Check LTO _Home Page_BN1
+Check Hero _Home Page_BN1
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -110,7 +110,7 @@ Check LTO _Home Page_BN1
     \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
     [Teardown]
 
-Check LTO_ speical Offer Page_BN1
+Check Hero_ speical Offer Page_BN1
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}

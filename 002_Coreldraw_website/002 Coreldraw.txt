@@ -19,7 +19,64 @@ Check Link_Home Page_DEV_CDGS2019_CDTS_CAD_CDHS
     \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
     [Teardown]
 
-Check Trial down_Home Page_DEV
+Check Link_Special Offer Hero_DEV
+    ${contents}=    Get File    ${CDGS_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+
+Check Link_Special Offer Page_DEV
+    ${contents}=    Get File    ${CDGS_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    close all browsers
+
+Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
+    ${contents}=    Get File    ${CDGS_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+    [Teardown]
+
+Check Link_Special Offer Hero_STG
+    ${contents}=    Get File    ${CDGS_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
+    \    close all browsers
+    [Teardown]
+
+Check Link_Special Offer Page_STG
+    ${contents}=    Get File    ${CDGS_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
+    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
+    \    close all browsers
+
+Check Trial down_Home Page
     ${contents}=    Get File    ${CDGS_Home}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -69,73 +126,7 @@ Check SavingBadge_Special Offer Page
     \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify SavingBadge on special offer page_JP
     \    close all browsers
 
-Check Link_Special Offer Hero_DEV
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    close all browsers
-
-Check Link_Home Page_STG_CDGS2019_CDTS_CAD_CDHS
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link on home page_CDGS2019    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-    [Teardown]
-
-Check Trial down_Home Page_STG
-    ${contents}=    Get File    ${CDGS_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page_CDGS    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
-Check Link_Special Offer Hero_STG
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer Hero_2019    @{var}[3]
-    \    close all browsers
-    [Teardown]
-
-Check Link_Special Offer Page_STG
-    ${contents}=    Get File    ${CDGS_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    stg    ${wCDGS}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    Run keyword if    '@{var}[1]' in 'jp'    run keyword and continue on failure    verify link in special offer page_2019_no HS    @{var}[3]    @{var}[4]
-    \    ...    @{var}[5]    @{var}[6]    @{var}[7]
-    \    close all browsers
-
-Check LTO _Home Page_BN1
+Check Hero _Home Page_BN1
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
@@ -145,10 +136,10 @@ Check LTO _Home Page_BN1
     \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
     [Teardown]
 
-Check LTO_ speical Offer Page_BN1
+Check Hero_ speical Offer Page_BN1
     ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wCDGS}    @{var}[1]    @{var}[2]
