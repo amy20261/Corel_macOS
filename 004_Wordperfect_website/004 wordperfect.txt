@@ -88,7 +88,7 @@ Check LTO_Home Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify LTO on home page
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    verify LTO on home page
     [Teardown]
 
 Check SavingBadge_Home Page
@@ -98,7 +98,7 @@ Check SavingBadge_Home Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify Savingbadge on home page
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    verify Savingbadge on home page
     [Teardown]
 
 Check LTO_Special Offer Page
@@ -108,7 +108,7 @@ Check LTO_Special Offer Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify LTO on special offer page
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    verify LTO on special offer page
     \    close all browsers
 
 Check SavingBadge_Special Offer Page
@@ -118,7 +118,7 @@ Check SavingBadge_Special Offer Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify SavingBadge on special offer page
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    verify SavingBadge on special offer page
     \    close all browsers
 
 Check Hero _Home Page_BN1
@@ -128,7 +128,8 @@ Check Hero _Home Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    close all browsers
     [Teardown]
 
 Check Hero_ speical Offer Page_BN1
@@ -138,7 +139,8 @@ Check Hero_ speical Offer Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wWPO}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    close all browsers
     [Teardown]
 
 *** Keywords ***

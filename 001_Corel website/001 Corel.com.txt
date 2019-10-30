@@ -108,6 +108,7 @@ Check Hero _Home Page_BN1
     \    close all browsers
     \    Open Browser to Home Page    dev    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    close all browsers
     [Teardown]
 
 Check Hero_ speical Offer Page_BN1
@@ -118,6 +119,7 @@ Check Hero_ speical Offer Page_BN1
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    close all browsers
     [Teardown]
 
 *** Keywords ***
