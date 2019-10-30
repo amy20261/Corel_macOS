@@ -133,7 +133,7 @@ Check LTO_Home Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify LTO on home page
+    \    run keyword and continue on failure    verify LTO on home page
     [Teardown]
 
 Check SavingBadge_Home Page
@@ -143,7 +143,7 @@ Check SavingBadge_Home Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify Savingbadge on home page
+    \    run keyword and continue on failure    verify Savingbadge on home page
     [Teardown]
 
 Check LTO_Special Offer Page
