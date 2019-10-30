@@ -20,45 +20,6 @@ Check Link_Home Page_DEV_PSU_PSP_PSU_PVB_Photomirage_particleshop_2019
     \    ...    @{var}[8]
     [Teardown]
 
-Check Tiral down_Home Page_DEV
-    ${contents}=    Get File    ${PSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
-Check LTO and SavingBadge_Home Page
-    ${contents}=    Get File    ${PSP_Home_2019}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    verify LTO and Savingbadge on home page
-    [Teardown]
-
-Check LTO and SavingBadge_Special Offer Page_PSU_PSP_PM_PVB
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify LTO and SavingBadge on special offer Page_PSU_PSP_PM_PVB
-    \    close all browsers
-
-Check LTO and SavingBadge_Special Offer Page_PSP_PSU_PVB_PM
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify LTO and SavingBadge on special offer Page_PSP_PSU_PVB_PM
-    \    close all browsers
-
 Check Link_Special Offer Hero_DEV
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
@@ -88,6 +49,17 @@ Check Link_Special Offer Page_DEV_PSU_PSP_PSU_PVB_PM
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle
+    \    ...    photomirage
+    \    close all browsers
+
+Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PVB_PM
+    ${contents}=    Get File    ${PSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
     \    ...    photomirage
     \    close all browsers
 
@@ -123,15 +95,6 @@ Check Link_Special Offer Page_STG_PSU_PSU_PSP_PM_PVB
     \    ...    @{var}[7]
     \    close all browsers
 
-Check Trial down_Home Page_STG
-    ${contents}=    Get File    ${PSP_Home}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Home Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
-
 Check Link_Special Offer Page_STG_PSU_PSP_PSU_PVB_PM
     ${contents}=    Get File    ${PSP_SP}
     @{lines}=    Split to lines    ${contents}
@@ -140,17 +103,6 @@ Check Link_Special Offer Page_STG_PSU_PSP_PSU_PVB_PM
     \    close all browsers
     \    Open Browser to Special Offer Page    stg    ${wPSP}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/standard    paintshop-pro/ultimate    photo-video-bundle
-    \    ...    photomirage
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV_PSU_PSU_PSP_PVB_PM
-    ${contents}=    Get File    ${PSP_SP}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
     \    ...    photomirage
     \    close all browsers
 
@@ -164,6 +116,85 @@ Check Link_Special Offer Page_STG_PSU_PSU_PSP_PVB_PM
     \    run keyword and continue on failure    verify link in special offer page_2019    paintshop-pro/ultimate    paintshop-pro/ultimate    paintshop-pro/standard    photo-video-bundle
     \    ...    photomirage
     \    close all browsers
+
+Check Tiral down_Home Page
+    ${contents}=    Get File    ${PSP_Home}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify trial download on home page    @{var}[3]    @{var}[4]    @{var}[5]    @{var}[6]
+
+Check LTO_Home Page
+    ${contents}=    Get File    ${PSP_Home_2019}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify LTO on home page
+    [Teardown]
+
+Check SavingBadge_Home Page
+    ${contents}=    Get File    ${PSP_Home_2019}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    verify Savingbadge on home page
+    [Teardown]
+
+Check LTO_Special Offer Page
+    ${contents}=    Get File    ${PSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify LTO on special offer Page
+    \    close all browsers
+
+Check SavingBadge_Special Offer Page_PSU_PSP_PM_PVB
+    ${contents}=    Get File    ${PSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify SavingBadge on special offer Page_PSU_PSP_PM_PVB
+    \    close all browsers
+
+Check SavingBadge_Special Offer Page_PSP_PSU_PVB_PM
+    ${contents}=    Get File    ${PSP_SP}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    verify SavingBadge on special offer Page_PSP_PSU_PVB_PM
+    \    close all browsers
+
+Check Hero _Home Page_BN1
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    [Teardown]
+
+Check Hero_ speical Offer Page_BN1
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${wPSP}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    [Teardown]
 
 *** Keywords ***
 verify link on home page_2019
@@ -208,11 +239,14 @@ verify trial download on home page
     Run Keyword And Continue On Failure    Verify URL Contain    trial-thank-you
     close all browsers
 
-verify LTO and SavingBadge on home page
+verify LTO on home page
     ${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
     ${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
-    #run Keyword And Continue On Failure    Click HeroBanner_2019_EN
-    #Run Keyword And Continue On Failure    Verify LTO    ${exLTO}    ${LTO}
+    run Keyword And Continue On Failure    Click HeroBanner_2019_EN
+    Run Keyword And Continue On Failure    Verify LTO    ${exLTO}    ${LTO}
+    Close all browsers
+
+verify SavingBadge on home page
     ${Style 1}=    run keyword and return status    element should be visible    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
     ${Value 1}=    Run keyword if    '${Style 1}'=='True'    get text    //div[1][@class='col-sm-4 module-col']//p[@data-promo-text="savingsBadge"]
     Run Keyword And Continue On Failure    Click Featured Prod 1
@@ -227,11 +261,14 @@ verify LTO and SavingBadge on home page
     Run Keyword And Continue On Failure    Verify Savingbadge_PSP    ${Style 3}    ${Value 3}
     Close all browsers
 
-verify LTO and SavingBadge on special offer Page_PSU_PSP_PM_PVB
+verify LTO on special offer Page
     ${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
     ${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
-    #Click Special Offers Hero
-    #run keyword and continue on failure    Verify LTO    ${exLTO}    ${LTO}
+    Click Special Offers Hero
+    run keyword and continue on failure    Verify LTO    ${exLTO}    ${LTO}
+    close all browsers
+
+verify SavingBadge on special offer Page_PSU_PSP_PM_PVB
     ${Style 1}=    run keyword and return status    element should be visible    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     ${Value 1}=    Run keyword if    '${Style 1}'=='True'    get text    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     Click Prod 1
@@ -246,11 +283,7 @@ verify LTO and SavingBadge on special offer Page_PSU_PSP_PM_PVB
     run keyword and continue on failure    Verify Savingbadge_PSP    ${Style 4}    ${Value 4}
     close all browsers
 
-verify LTO and SavingBadge on special offer Page_PSP_PSU_PVB_PM
-    ${exLTO}=    run keyword and return status    element should be visible    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']
-    ${LTO}=    run keyword if    '${exLTO}'=='True'    get text    //p[@data-promo-text='hpPromoMsgShort']/span[@class='save']
-    #Click Special Offers Hero
-    #run keyword and continue on failure    Verify LTO    ${exLTO}    ${LTO}
+verify SavingBadge on special offer Page_PSP_PSU_PVB_PM
     ${Style 1}=    run keyword and return status    element should be visible    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     ${Value 1}=    Run keyword if    '${Style 1}'=='True'    get text    //div[1][@class='col-sm-3']//p[@data-promo-text='savingsBadge']
     Click Prod 1
