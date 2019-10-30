@@ -116,7 +116,7 @@ Check LTO _Special Offer Page
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    dev    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify LTO    on special offer page
+    \    run keyword and continue on failure    verify LTO on special offer page
     \    close all browsers
 
 Check SavingBadge_Special Offer Page
