@@ -7,6 +7,10 @@ env='dev'
 lan='en'
 currency='en-US'
 
+#Black November
+Main_message_LOC='C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv'
+HSW_BN1='C:\\Corel\\Global_Variable\\Message\\HSW_BN1.csv'
+
 #micro website
 Corel='corel'
 wCDGS='coreldraw'

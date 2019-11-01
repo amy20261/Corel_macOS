@@ -76,3 +76,10 @@ Click Trial download_VSP_fr
 
 Click Trial download_VSP_JP
     click element    //a[@id='vsp-trial-jp']
+
+Open Browser to Free Trial Page
+    [Arguments]    ${env}=dev    ${microsite}=Painshoppro    ${lan}=en    ${currency}=en-US
+    Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/free-trials/?currency=${currency}
+    Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/free-trials/?currency=${currency}
+    Maximize Browser Window
+    sleep    2

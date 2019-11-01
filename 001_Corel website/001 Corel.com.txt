@@ -101,24 +101,49 @@ Check Link_Special Offer Page_STG_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
     \    close all browsers
 
 Check Hero _Home Page_BN1
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
+    ${contents}=    Get File    ${Main_message_LOC}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Home Page    dev    ${Corel}    @{var}[1]    @{var}[2]
+    \    Open Browser to Home Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
     \    close all browsers
     [Teardown]
 
 Check Hero_ speical Offer Page_BN1
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Message\\Main Message_LOC.csv
+    ${contents}=    Get File    ${Main_message_LOC}
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
+    \    Open Browser to Special Offer Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    close all browsers
+
+Check HSW _Home Page_BN1
+    ${contents}=    Get File    ${HSW_BN1}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Home Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[3]
+    \    #run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[4]
+    \    run keyword and continue on failure    element should contain    //span[@class='hsw-btn']    @{var}[5]
+    \    close all browsers
+    [Teardown]
+
+Check HSW _Free Trial Page_BN1
+    ${contents}=    Get File    ${HSW_BN1}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Free Trial Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
+    \    run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[3]
+    \    #run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[4]
+    \    run keyword and continue on failure    element should contain    //span[@class='hsw-btn']    @{var}[5]
     \    close all browsers
     [Teardown]
 
