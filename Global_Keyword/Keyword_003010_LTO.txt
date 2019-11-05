@@ -99,7 +99,7 @@ Check VA on ASP page
 
 Check VA on WinDVD page
     [Arguments]    ${env}    ${ValueAdd}    ${Lan}    ${currency}    ${worth}
-    Open Browser To Home Page HTTPS    ${env}    ${WinDVD}    en    ${currency}
+    Open Browser To Home Page    ${env}    ${WinDVD}    en    ${currency}
     Run Keyword And Continue On Failure    LTO should contain    ${ValueAdd}    ${WinDVD}    ${currency}    ${worth}
 
 LTO should contain
