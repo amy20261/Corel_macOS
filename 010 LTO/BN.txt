@@ -7,6 +7,7 @@ Variables         ../Global_Variable/eComm.py
 Resource          ../Global_Keyword/Keyword_003_Product.txt
 Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_055_photomirage.txt
 
 *** Test Cases ***
 BN_particleshop
@@ -194,6 +195,17 @@ BN_ASP
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wASP}    @{var}[1]    @{var}[2]
     \    ...    ${ASP}
     \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    element should contain    //h4[@data-promo-text="ltoTitle"]    @{var}[3]
+    \    close all browsers
+
+BN_Photomirage
+    ${contents}=    Get File    ${Main_message_LOC}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Run Keyword And Continue On Failure    Open Browser to photomirage page    ${env}    ${wPHOTOMIRAGE}    @{var}[1]    @{var}[2]
+    \    ...    ${features}
+    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    element should contain    //h3[@data-promo-text="ltoTitle"]    @{var}[3]
     \    close all browsers
 
 BN_WinDVD

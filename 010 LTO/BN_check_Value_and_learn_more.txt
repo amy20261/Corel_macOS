@@ -7,6 +7,7 @@ Variables         ../Global_Variable/eComm.py
 Resource          ../Global_Keyword/Keyword_003_Product.txt
 Resource          ../Global_Keyword/Keyword_003010_LTO.txt
 Resource          ../Global_Keyword/Keyword_001_Home.txt
+Resource          ../Global_Keyword/Keyword_055_photomirage.txt
 
 *** Test Cases ***
 BN_particleshop
@@ -17,7 +18,8 @@ BN_particleshop
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
     \    ...    ${particleshop}
-    \    Verify value and learn more    ${wPTR}    ${particleshop}    @{var}[1]    @{var}[2]    @{var}[5]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    Verify value and learn more    ${wPTR}    ${particleshop}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[5]
     \    close all browsers
 
 BN_PE
@@ -28,7 +30,8 @@ BN_PE
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
     \    ...    ${PE}
-    \    Verify value and learn more    ${wPTR}    ${PE}    @{var}[1]    @{var}[2]    @{var}[11]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    Verify value and learn more    ${wPTR}    ${PE}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[11]
     \    close all browsers
 
 BN_PTR
@@ -39,7 +42,8 @@ BN_PTR
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
     \    ...    ${PTR}
-    \    Verify value and learn more    ${wPTR}    ${PTR}    @{var}[1]    @{var}[2]    @{var}[10]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    Verify value and learn more    ${wPTR}    ${PTR}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[10]
     \    close all browsers
 
 BN_WPO STD
@@ -50,7 +54,8 @@ BN_WPO STD
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
     \    ...    ${WPOSTD}
-    \    Verify value and learn more    ${wWPO}    ${WPOSTD}    @{var}[1]    @{var}[2]    @{var}[6]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en'    Verify value and learn more    ${wWPO}    ${WPOSTD}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[6]
     \    close all browsers
 
 BN_WPO PRO
@@ -61,7 +66,8 @@ BN_WPO PRO
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
     \    ...    ${WPOPRO}
-    \    Verify value and learn more    ${wWPO}    ${WPOPRO}    @{var}[1]    @{var}[2]    @{var}[6]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en'    Verify value and learn more    ${wWPO}    ${WPOPRO}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[6]
     \    close all browsers
 
 BN_WPO HS
@@ -72,7 +78,8 @@ BN_WPO HS
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
     \    ...    ${WPOHS}
-    \    Verify value and learn more    ${wWPO}    ${WPOHS}    @{var}[1]    @{var}[2]    @{var}[6]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en'    Verify value and learn more    ${wWPO}    ${WPOHS}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[6]
     \    close all browsers
 
 BN_PDF
@@ -83,7 +90,8 @@ BN_PDF
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wWPO}    @{var}[1]    @{var}[2]
     \    ...    ${PDF}
-    \    Verify value and learn more    ${wWPO}    ${PDF}    @{var}[1]    @{var}[2]    @{var}[3]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en'    Verify value and learn more    ${wWPO}    ${PDF}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[3]
     \    close all browsers
 
 BN_CDTS
@@ -94,7 +102,8 @@ BN_CDTS
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    ...    ${CDTS}
-    \    Verify value and learn more    ${wCDGS}    ${CDTS}    @{var}[1]    @{var}[2]    @{var}[3]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wCDGS}    ${CDTS}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[3]
     \    close all browsers
 
 BN_CDGS HS
@@ -105,7 +114,8 @@ BN_CDGS HS
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    ...    ${CDHS}
-    \    Verify value and learn more    ${wCDGS}    ${CDHS}    @{var}[1]    @{var}[2]    @{var}[3]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wCDGS}    ${CDHS}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[3]
     \    close all browsers
 
 BN_CAD
@@ -116,7 +126,8 @@ BN_CAD
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    ...    ${CAD}
-    \    Verify value and learn more    ${wCDGS}    ${CAD}    @{var}[1]    @{var}[2]    @{var}[3]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wCDGS}    ${CAD}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[3]
     \    close all browsers
 
 BN_CDGS
@@ -127,7 +138,8 @@ BN_CDGS
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    ...    ${CDGS}
-    \    Verify value and learn more    ${wCDGS}    ${CDGS}    @{var}[1]    @{var}[2]    @{var}[4]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wCDGS}    ${CDGS}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[4]
     \    close all browsers
 
 BN_PSP
@@ -138,7 +150,8 @@ BN_PSP
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wPSP}    @{var}[1]    @{var}[2]
     \    ...    ${PSP}
-    \    Verify value and learn more    ${wPSP}    ${PSP}    @{var}[1]    @{var}[2]    @{var}[7]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wPSP}    ${PSP}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[7]
 
 BN_PSU
     ${contents}=    Get File    ${BN_VA}
@@ -148,7 +161,8 @@ BN_PSU
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wPSP}    @{var}[1]    @{var}[2]
     \    ...    ${PSU}
-    \    Verify value and learn more    ${wPSP}    ${PSU}    @{var}[1]    @{var}[2]    @{var}[7]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wPSP}    ${PSU}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[7]
     \    close all browsers
 
 BN_PVB
@@ -159,7 +173,8 @@ BN_PVB
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wPSP}    @{var}[1]    @{var}[2]
     \    ...    ${PVB}
-    \    Verify value and learn more    ${wPSP}    ${PVB}    @{var}[1]    @{var}[2]    @{var}[9]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wPSP}    ${PVB}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[9]
     \    close all browsers
 
 BN_VSP
@@ -170,7 +185,8 @@ BN_VSP
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
     \    ...    ${VSP}
-    \    Verify value and learn more    ${wVSP}    ${VSP}    @{var}[1]    @{var}[2]    @{var}[8]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wVSP}    ${VSP}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[8]
     \    close all browsers
 
 BN_VSU
@@ -181,7 +197,8 @@ BN_VSU
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
     \    ...    ${VSU}
-    \    Verify value and learn more    ${wVSP}    ${VSU}    @{var}[1]    @{var}[2]    @{var}[8]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wVSP}    ${VSU}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[8]
     \    close all browsers
 
 BN_ASP
@@ -192,7 +209,20 @@ BN_ASP
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wASP}    @{var}[1]    @{var}[2]
     \    ...    ${ASP}
-    \    Verify value and learn more    ${wASP}    ${ASP}    @{var}[1]    @{var}[2]    @{var}[4]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wASP}    ${ASP}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[4]
+    \    close all browsers
+
+BN_Photomirage
+    ${contents}=    Get File    ${BN_VA}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Run Keyword And Continue On Failure    Open Browser to photomirage page    ${env}    ${wPHOTOMIRAGE}    @{var}[1]    @{var}[2]
+    \    ...    ${features}
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wPHOTOMIRAGE}    ${features}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[4]
     \    close all browsers
 
 BN_WinDVD
@@ -202,7 +232,8 @@ BN_WinDVD
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser To Home Page    ${env}    ${WinDVD}    @{var}[1]    @{var}[2]
-    \    Verify value and learn more    ${WinDVD}    WINDVD    @{var}[1]    @{var}[2]    @{var}[3]
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${WinDVD}    WINDVD    @{var}[1]    @{var}[2]
+    \    ...    @{var}[3]
     \    close all browsers
 
 *** Keywords ***
