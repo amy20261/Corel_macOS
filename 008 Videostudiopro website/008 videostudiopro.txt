@@ -168,14 +168,11 @@ Check Hero_ speical Offer Page_BN1
 Check HSW _Home Page_BN1
     ${contents}=    Get File    ${HSW_BN1}
     @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
+    :FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[3]
-    \    #run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[4]
-    \    run keyword and continue on failure    element should contain    //span[@class='hsw-btn']    @{var}[5]
-    \    close all browsers
+    \    verify HSW    @{var}[3]    @{var}[5]
     [Teardown]
 
 Check HSW _Free Trial Page_BN1
@@ -185,10 +182,7 @@ Check HSW _Free Trial Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Free Trial Page    ${env}    ${wVSP}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[3]
-    \    #run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[4]
-    \    run keyword and continue on failure    element should contain    //span[@class='hsw-btn']    @{var}[5]
-    \    close all browsers
+    \    run keyword and continue on failure    verify HSW    @{var}[3]    @{var}[5]
     [Teardown]
 
 *** Keywords ***
