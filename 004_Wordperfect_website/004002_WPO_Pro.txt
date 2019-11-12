@@ -138,7 +138,7 @@ Check price_WPO pro product page_BOX_50/45/40% OFF_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_WPO pro product page_BOX_40/30% OFF_DEV
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOPRO_BOX_4030.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOPRO4030.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -146,7 +146,7 @@ Check price_WPO pro product page_BOX_40/30% OFF_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_WPO pro product page_BOX_40/30% OFF_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOPRO_BOX_4030.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\WPOPRO4030.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
