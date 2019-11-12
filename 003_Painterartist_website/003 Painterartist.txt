@@ -136,7 +136,7 @@ Check Hero _Home Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
     \    close all browsers
     [Teardown]
 
@@ -147,7 +147,7 @@ Check Hero_ speical Offer Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
     \    close all browsers
     [Teardown]
 
@@ -158,10 +158,7 @@ Check HSW _Home Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Home Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify HSW    @{var}[3]    @{var}[5]
-    ${EMPTY}
-    ${EMPTY}
-    ${EMPTY}
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify HSW    @{var}[3]    @{var}[5]
     [Teardown]
 
 Check HSW _Free Trial Page_BN1
@@ -171,10 +168,7 @@ Check HSW _Free Trial Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Free Trial Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    verify HSW    @{var}[3]    @{var}[5]
-    ${EMPTY}
-    ${EMPTY}
-    ${EMPTY}
+    \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    verify HSW    @{var}[3]    @{var}[5]
     [Teardown]
 
 *** Keywords ***
