@@ -106,7 +106,7 @@ BN_CDGS HS
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    ...    ${CDHS}
-    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    element should contain    //h4[@data-promo-text="ltoTitle"]    @{var}[3]
+    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl'    element should contain    //h4[@data-promo-text="ltoTitle"]    @{var}[3]
     \    close all browsers
 
 BN_CAD
@@ -205,7 +205,7 @@ BN_Photomirage
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to photomirage page    ${env}    ${wPHOTOMIRAGE}    @{var}[1]    @{var}[2]
     \    ...    ${features}
-    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    element should contain    //h3[@data-promo-text="ltoTitle"]    @{var}[3]
+    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en'    element should contain    //h3[@data-promo-text="ltoTitle"]    @{var}[3]
     \    close all browsers
 
 BN_WinDVD
