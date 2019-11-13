@@ -118,7 +118,7 @@ Check Hero_ speical Offer Page_BN1
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Open Browser to Special Offer Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
-    \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']/span[@class='title']    @{var}[3]
+    \    run keyword and continue on failure    element should contain    //p[@data-promo-text='hpPromoMsgShort']//span[@class='title']    @{var}[3]
     \    close all browsers
 
 Check HSW _Home Page_BN1
