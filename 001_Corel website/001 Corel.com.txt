@@ -42,6 +42,18 @@ Check Link_Special Offer Page_DEV
     \    ...    @{var}[10]    @{var}[11]
     \    close all browsers
 
+Check Link_Special Offer Page_DEV_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
+    ${contents}=    Get File    ${Corel_Sp}
+    @{lines}=    Split to lines    ${contents}
+    : FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
+    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
+    \    ...    coreldraw    painter    @{var}[7]    @{var}[8]    @{var}[9]
+    \    ...    @{var}[10]    @{var}[11]
+    \    close all browsers
+
 Check Link_Home Page_STG_CDGS2019/VSU_PSU/PTR_PTR/PSU_VSU/CDGS
     ${contents}=    Get File    ${Corel_Home}
     @{lines}=    Split to lines    ${contents}
@@ -73,18 +85,6 @@ Check Link_Special Offer Page_STG
     \    Open Browser to Special Offer Page    stg    ${Corel}    @{var}[1]    @{var}[2]
     \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
     \    ...    @{var}[5]    @{var}[6]    @{var}[7]    @{var}[8]    @{var}[9]
-    \    ...    @{var}[10]    @{var}[11]
-    \    close all browsers
-
-Check Link_Special Offer Page_DEV_CDGS_CDGS Sub_PTR-WPO_PSU_ASP_VSU_PVB
-    ${contents}=    Get File    ${Corel_Sp}
-    @{lines}=    Split to lines    ${contents}
-    : FOR    ${line}    IN    @{lines}
-    \    @{var}=    split string    ${line}    ;
-    \    close all browsers
-    \    Open Browser to Special Offer Page    dev    ${Corel}    @{var}[1]    @{var}[2]
-    \    Run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;br;la;jp'    run keyword and continue on failure    verify link in special offer page_2019    @{var}[3]    @{var}[4]
-    \    ...    coreldraw    painter    @{var}[7]    @{var}[8]    @{var}[9]
     \    ...    @{var}[10]    @{var}[11]
     \    close all browsers
 
@@ -129,6 +129,7 @@ Check HSW _Home Page_BN1
     \    close all browsers
     \    Open Browser to Home Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;it;la;nl;br;jp'    verify HSW    @{var}[3]    @{var}[5]
+    \    close all browsers
     [Teardown]
 
 Check HSW _Free Trial Page_BN1
@@ -139,6 +140,7 @@ Check HSW _Free Trial Page_BN1
     \    close all browsers
     \    Open Browser to Free Trial Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;it;la;nl;br;jp'    verify HSW    @{var}[3]    @{var}[5]
+    \    close all browsers
     [Teardown]
 
 *** Keywords ***
