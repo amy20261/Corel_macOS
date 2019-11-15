@@ -127,7 +127,7 @@ Check promo price on product_dropdown list
     Run keyword if    '${SKU}'=='${BOXSKU}'    Select BOX_dropdown list
     Run keyword if    '${SKU}'=='${UPBOXSKU}'    run keywords    Select Upgrade_dropdown list
     ...    AND    Select BOX_dropdown list
-    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_2019    ${SavingBadge}
+    Run keyword if    '${SavingBadge}'!=""    run keywords    Verify SavingsBadge_PSU    ${SavingBadge}
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
@@ -249,3 +249,8 @@ Check promo price on product_dropdown list_PSP
     ...    AND    Verify Full_Reg price    ${Full_Reg}
     ...    AND    Verify Full_Promo Price    ${Full_promo}
     ...    ELSE    Verify Full_Promo Price    ${Full_Reg}
+
+Verify SavingsBadge_PSU
+    [Arguments]    ${SavingBadge}
+    sleep    3
+    Run Keyword And Continue On Failure    Element should contain    //div[@style='display: inline;']//p//span[@data-promo-text='savingsBadge']    ${SavingBadge}
