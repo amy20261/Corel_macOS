@@ -250,5 +250,5 @@ Verify value and learn more
 
 Verify value
     [Arguments]    ${web}    ${product}    ${lan}    ${currency}    ${value}
-    Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgLong"]    ${value}
+    Run Keyword And Continue On Failure    element should contain    //span[@data-promo-text="promoMsgShort"]    ${value}
     Close all browsers
