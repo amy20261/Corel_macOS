@@ -114,8 +114,8 @@ BN_CDGS HS
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wCDGS}    @{var}[1]    @{var}[2]
     \    ...    ${CDHS}
-    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wCDGS}    ${CDHS}    @{var}[1]    @{var}[2]
-    \    ...    @{var}[3]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en;de;fr'    Verify value and learn more    ${wCDGS}    ${CDHS}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[3]
     \    close all browsers
 
 BN_CAD
@@ -221,8 +221,8 @@ BN_Photomirage
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to photomirage page    ${env}    ${wPHOTOMIRAGE}    @{var}[1]    @{var}[2]
     \    ...    ${features}
-    \    Run Keyword And Continue On Failure    Verify value    ${wPHOTOMIRAGE}    ${features}    @{var}[1]    @{var}[2]
-    \    ...    @{var}[4]
+    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en'    Verify value    ${wPHOTOMIRAGE}    ${features}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[4]
     \    close all browsers
 
 BN_WinDVD
