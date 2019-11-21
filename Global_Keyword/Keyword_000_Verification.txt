@@ -49,7 +49,7 @@ Verify Savingbadge_PSP
 
 verify HSW
     [Arguments]    ${HSW}    ${see offer}
-    run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    ${HSW}
+    run keyword and continue on failure    element should contain    //span[@class='bn hsw-title']    ${HSW}
     #run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[4]
     run keyword and continue on failure    element should contain    //span[@class='hsw-btn']    ${see offer}
     Run Keyword And Continue On Failure    click element    //span[@class='hsw-btn']
