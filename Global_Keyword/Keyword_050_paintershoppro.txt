@@ -8,7 +8,7 @@ Check PSU product page
     [Arguments]    ${env}    ${currency}    ${SKU}    ${Full_Reg}    ${SavingBadge}=${null}    ${Full_promo}=${null}
     close all browsers
     Open Browser to Products Page    ${env}    ${wPSP}    en    ${currency}    ${PSU}
-    Check promo price on product_dropdown list    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}    ${OPSU}
+    Check promo price on product_dropdown list_PSU    ${SKU}    ${Full_Reg}    ${SavingBadge}    ${Full_promo}    ${UPSU}    ${OPSU}
     ...    ${XPSU}
     close all browsers
 
