@@ -48,10 +48,10 @@ Verify Savingbadge_PSP
     sleep    3
 
 verify HSW
-    [Arguments]    ${HSW}    ${see offer}
+    [Arguments]    ${HSW}    ${see offer}    ${timer}
     run keyword and continue on failure    element should contain    //span[@class='bn hsw-title']    ${HSW}
-    #run keyword and continue on failure    element should contain    //span[@class='bn hsw-title center']    @{var}[4]
     run keyword and continue on failure    element should contain    //span[@class='hsw-btn']    ${see offer}
+    run keyword and continue on failure    element should contain    //div[@class='bn-timer']    ${timer}
     Run Keyword And Continue On Failure    click element    //span[@class='hsw-btn']
     Run Keyword And Continue On Failure    Location Should Contain    special-offers
     close all browsers

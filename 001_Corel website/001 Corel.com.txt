@@ -129,6 +129,7 @@ Check HSW _Home Page_BN1
     \    close all browsers
     \    Open Browser to Home Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;it;la;nl;br;jp'    verify HSW    @{var}[3]    @{var}[5]
+    \    ...    @{var}[4]
     \    close all browsers
     [Teardown]
 
@@ -140,6 +141,7 @@ Check HSW _Free Trial Page_BN1
     \    close all browsers
     \    Open Browser to Free Trial Page    ${env}    ${Corel}    @{var}[1]    @{var}[2]
     \    run keyword and continue on failure    Run keyword if    '@{var}[1]' in 'en;de;fr;it;la;nl;br;jp'    verify HSW    @{var}[3]    @{var}[5]
+    \    ...    @{var}[4]
     \    close all browsers
     [Teardown]
 
