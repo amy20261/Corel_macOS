@@ -13,7 +13,7 @@ Resource          ../Global_Keyword/Keyword_055_photomirage.txt
 BN_particleshop
     ${contents}=    Get File    ${Main_message_LOC}
     @{lines}=    Split to lines    ${contents}
-    :FOR    ${line}    IN    @{lines}
+    : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Product Page    ${env}    ${wPTR}    @{var}[1]    @{var}[2]
@@ -194,7 +194,7 @@ BN_ASP
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wASP}    @{var}[1]    @{var}[2]
     \    ...    ${ASP}
-    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de;fr;it;nl;jp'    Verify LTO title    @{var}[3]    @{var}[4]
+    \    Run Keyword And Continue On Failure    run keyword if    '@{var}[1]' in 'en;de'    Verify LTO title    @{var}[3]    @{var}[4]
     \    close all browsers
 
 BN_Photomirage
