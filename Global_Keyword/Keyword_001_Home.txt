@@ -7,7 +7,7 @@ Open Browser to Home Page
     Wait Until Keyword Succeeds    2 min    1 sec    open browser    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Wait Until Keyword Succeeds    2 min    1 sec    Go to    https://${env}.www.${microsite}.public.corel.net/${lan}/?currency=${currency}
     Maximize Browser Window
-    sleep    2
+    sleep    4
 
 Click HeroBanner_ASP
     ${promo-hero-banner}=    Get element attribute    //div[@class="container hero"]/div[@class="home-promo-banner"]@style
