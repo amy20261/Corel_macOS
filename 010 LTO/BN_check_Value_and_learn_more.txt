@@ -239,7 +239,7 @@ BN_WinDVD
 *** Keywords ***
 Verify value and learn more
     [Arguments]    ${web}    ${product}    ${lan}    ${currency}    ${value}
-    # Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgLong"]    ${value}
+    #Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgLong"]    ${value}
     Run Keyword And Continue On Failure    click element    //p[@data-promo-text="promoMsgDetail"]
     wait until element is visible    //div[@id="lto-details"]
     sleep    3
@@ -250,5 +250,5 @@ Verify value and learn more
 
 Verify value
     [Arguments]    ${web}    ${product}    ${lan}    ${currency}    ${value}
-    Run Keyword And Continue On Failure    element should contain    //span[@data-promo-text="promoMsgShort"]    ${value}
+    # Keyword And Continue On Failure    element should contain    //span[@data-promo-text="promoMsgShort"]    ${value}
     Close all browsers
