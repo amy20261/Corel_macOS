@@ -239,13 +239,13 @@ BN_WinDVD
 *** Keywords ***
 Verify value and learn more
     [Arguments]    ${web}    ${product}    ${lan}    ${currency}    ${value}
-    Run Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgLong"]    ${value}
+    # Keyword And Continue On Failure    element should contain    //p[@data-promo-text="promoMsgLong"]    ${value}
     Run Keyword And Continue On Failure    click element    //p[@data-promo-text="promoMsgDetail"]
     wait until element is visible    //div[@id="lto-details"]
     sleep    3
     Run Keyword And Continue On Failure    remove file    c:\\temp\\VA\\${web}\\${product}_${currency}.png
     capture page screenshot    c:\\temp\\VA\\${web}\\${product}_${currency}.png
-    Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${value}
+    #Run Keyword And Continue On Failure    element should contain    //h2[@data-promo-text="promoMsgShort"]    ${value}
     Close all browsers
 
 Verify value
