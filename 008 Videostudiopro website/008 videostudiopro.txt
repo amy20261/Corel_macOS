@@ -199,7 +199,7 @@ verify link on home page_2019
     Run Keyword And Continue On Failure    Click Featured Prod 2
     Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 2}
     Run Keyword And Continue On Failure    Click Featured Prod 3
-    Run Keyword And Continue On Failure    Verify URL Contain_blank    ${ Featured Prod 3}
+    Run Keyword And Continue On Failure    Verify URL Contain    ${ Featured Prod 3}
     #Run Keyword And Continue On Failure    Click Horizontal 1
     #Run Keyword And Continue On Failure    Verify URL Contain_blank    ${Horizontal 1}
     close all browsers
@@ -219,7 +219,7 @@ verify link in special offer Page_ 2019
     Click Prod 2
     run keyword and continue on failure    Verify URL Contain    ${Prod 2}
     Click Prod 3
-    run keyword and continue on failure    Verify URL Contain_blank    ${Prod 3}
+    run keyword and continue on failure    Verify URL Contain    ${Prod 3}
     Click Prod 4
     run keyword and continue on failure    Verify URL Contain_blank    ${Prod 4}
     close all browsers
