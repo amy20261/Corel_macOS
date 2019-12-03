@@ -222,4 +222,4 @@ BN_WinDVD
 Verify LTO title
     [Arguments]    ${title}    ${timer}
     run keyword and continue on failure    element should contain    //h4[@data-promo-text="ltoTitle"]    ${title}
-    run keyword and continue on failure    element should contain    //div[@class='bn-timer']    ${timer}
+    # keyword and continue on failure    element should contain    //div[@class='bn-timer']    ${timer}
