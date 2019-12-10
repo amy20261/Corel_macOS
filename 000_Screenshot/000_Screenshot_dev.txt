@@ -24,6 +24,20 @@ Screenshot_corel
     screenshot_Corel    pl    pl-PL
     screenshot_Corel    ru    ru-RU
     screenshot_Corel    cz    cs-CZ
+    screenshot_Corel    en    se-SE
+    screenshot_Corel    en    nb-NO
+    screenshot_Corel    de    da-DK
+    screenshot_Corel    de    de-LI
+    screenshot_Corel    en    en-ZA
+    screenshot_Corel    la    es-MX
+    screenshot_Corel    en    en-IN
+    screenshot_Corel    la    es-AR
+    screenshot_Corel    la    es-CL
+    screenshot_Corel    la    es-CO
+    screenshot_Corel    la    es-PE
+    screenshot_Corel    en    en-MY
+    screenshot_Corel    en    en-SG
+    screenshot_Corel    en    ko-KR
 
 Screenshot_coreldraw
     [Timeout]
