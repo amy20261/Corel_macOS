@@ -26,7 +26,7 @@ Check price_PVB Ult product page_50/35/33% off_STG
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB Ult product page_25% off_DEV
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_ULT_30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_ULT_25.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
@@ -34,7 +34,7 @@ Check price_PVB Ult product page_25% off_DEV
     \    ...    @{var}[7]    @{var}[5]
 
 Check price_PVB Ult product page_25% off_STG
-    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_ULT_30.csv
+    ${contents}=    Get File    C:\\Corel\\Global_Variable\\Data\\PVB_ULT_25.csv
     @{lines}=    Split to lines    ${contents}
     : FOR    ${line}    IN    @{lines}
     \    @{var}=    split string    ${line}    ;
