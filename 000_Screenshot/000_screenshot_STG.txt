@@ -24,6 +24,20 @@ Screenshot_corel
     screenshot_Corel    pl    pl-PL
     screenshot_Corel    ru    ru-RU
     screenshot_Corel    cz    cs-CZ
+    screenshot_Corel    en    se-SE
+    screenshot_Corel    en    nb-NO
+    screenshot_Corel    de    da-DK
+    screenshot_Corel    de    de-LI
+    screenshot_Corel    en    en-ZA
+    screenshot_Corel    la    es-MX
+    screenshot_Corel    en    en-IN
+    screenshot_Corel    la    es-AR
+    screenshot_Corel    la    es-CL
+    screenshot_Corel    la    es-CO
+    screenshot_Corel    la    es-PE
+    screenshot_Corel    en    en-MY
+    screenshot_Corel    en    en-SG
+    screenshot_Corel    en    ko-KR
 
 Screenshot_coreldraw
     [Timeout]
@@ -46,6 +60,20 @@ Screenshot_coreldraw
     screenshot_coreldraw    pl    pl-PL
     screenshot_coreldraw    ru    ru-RU
     screenshot_coreldraw    cz    cs-CZ
+    screenshot_coreldraw    en    se-SE
+    screenshot_coreldraw    en    nb-NO
+    screenshot_coreldraw    de    da-DK
+    screenshot_coreldraw    de    de-LI
+    screenshot_coreldraw    en    en-ZA
+    screenshot_coreldraw    la    es-MX
+    screenshot_coreldraw    en    en-IN
+    screenshot_coreldraw    la    es-AR
+    screenshot_coreldraw    la    es-CL
+    screenshot_coreldraw    la    es-CO
+    screenshot_coreldraw    la    es-PE
+    screenshot_coreldraw    en    en-MY
+    screenshot_coreldraw    en    en-SG
+    screenshot_coreldraw    en    ko-KR
 
 Screenshot_painterartist
     [Timeout]
@@ -59,6 +87,16 @@ Screenshot_painterartist
     screenshot_painterartist    jp    ja-JP
     screenshot_painterartist    tw    zh-TW
     screenshot_painterartist    en    en-IE
+    screenshot_painterartist    en    se-SE
+    screenshot_painterartist    en    nb-NO
+    screenshot_painterartist    de    da-DK
+    screenshot_painterartist    de    de-LI
+    screenshot_painterartist    en    en-ZA
+    screenshot_painterartist    la    es-MX
+    screenshot_painterartist    en    en-IN
+    screenshot_painterartist    en    en-MY
+    screenshot_painterartist    en    en-SG
+    screenshot_painterartist    en    ko-KR
 
 Screenshot_wordperfect_all Lan
     [Timeout]
@@ -68,6 +106,14 @@ Screenshot_wordperfect_all Lan
     screenshot_wordperfect    en    en-NZ
     screenshot_wordperfect    en    en-AU
     screenshot_wordperfect    en    en-IE
+    screenshot_wordperfect    en    se-SE
+    screenshot_wordperfect    en    nb-NO
+    screenshot_wordperfect    de    da-DK
+    screenshot_wordperfect    de    de-LI
+    screenshot_wordperfect    en    en-ZA
+    screenshot_wordperfect    en    en-IN
+    screenshot_wordperfect    en    en-MY
+    screenshot_wordperfect    en    en-SG
 
 Screenshot_PSP_all Lan
     [Timeout]

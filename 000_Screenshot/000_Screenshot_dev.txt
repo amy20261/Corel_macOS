@@ -60,6 +60,20 @@ Screenshot_coreldraw
     screenshot_coreldraw    pl    pl-PL
     screenshot_coreldraw    ru    ru-RU
     screenshot_coreldraw    cz    cs-CZ
+    screenshot_coreldraw    en    se-SE
+    screenshot_coreldraw    en    nb-NO
+    screenshot_coreldraw    de    da-DK
+    screenshot_coreldraw    de    de-LI
+    screenshot_coreldraw    en    en-ZA
+    screenshot_coreldraw    la    es-MX
+    screenshot_coreldraw    en    en-IN
+    screenshot_coreldraw    la    es-AR
+    screenshot_coreldraw    la    es-CL
+    screenshot_coreldraw    la    es-CO
+    screenshot_coreldraw    la    es-PE
+    screenshot_coreldraw    en    en-MY
+    screenshot_coreldraw    en    en-SG
+    screenshot_coreldraw    en    ko-KR
 
 Screenshot_painterartist
     [Timeout]
@@ -70,9 +84,20 @@ Screenshot_painterartist
     screenshot_painterartist    en    en-NZ
     screenshot_painterartist    de    de-DE
     screenshot_painterartist    fr    fr-FR
+    screenshot_painterartist    br    pt-BR
     screenshot_painterartist    jp    ja-JP
     screenshot_painterartist    tw    zh-TW
     screenshot_painterartist    en    en-IE
+    screenshot_painterartist    en    se-SE
+    screenshot_painterartist    en    nb-NO
+    screenshot_painterartist    de    da-DK
+    screenshot_painterartist    de    de-LI
+    screenshot_painterartist    en    en-ZA
+    screenshot_painterartist    la    es-MX
+    screenshot_painterartist    en    en-IN
+    screenshot_painterartist    en    en-MY
+    screenshot_painterartist    en    en-SG
+    screenshot_painterartist    en    ko-KR
 
 Screenshot_wordperfect_all Lan
     [Timeout]
@@ -82,6 +107,17 @@ Screenshot_wordperfect_all Lan
     screenshot_wordperfect    en    en-NZ
     screenshot_wordperfect    en    en-AU
     screenshot_wordperfect    en    en-IE
+    screenshot_wordperfect    br    pt-BR
+    screenshot_wordperfect    jp    ja-JP
+    screenshot_wordperfect    en    en-IE
+    screenshot_wordperfect    en    se-SE
+    screenshot_wordperfect    en    nb-NO
+    screenshot_wordperfect    de    da-DK
+    screenshot_wordperfect    de    de-LI
+    screenshot_wordperfect    en    en-ZA
+    screenshot_wordperfect    en    en-IN
+    screenshot_wordperfect    en    en-MY
+    screenshot_wordperfect    en    en-SG
 
 Screenshot_PSP_all Lan
     [Timeout]
