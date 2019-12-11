@@ -117,6 +117,18 @@ ASP
     \    ...    @{var}[1]    @{var}[2]    @{var}[12]
     \    close all browsers
 
+PVB Ult
+    ${contents}=    Get File    ${Q_VA}
+    @{lines}=    Split to lines    ${contents}
+    :FOR    ${line}    IN    @{lines}
+    \    @{var}=    split string    ${line}    ;
+    \    close all browsers
+    \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wPSP}    @{var}[1]    @{var}[2]
+    \    ...    ${PVBU}
+    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wPSP}    ${PSU}    @{var}[1]    @{var}[2]
+    \    ...    @{var}[13]
+    \    close all browsers
+
 *** Keywords ***
 Verify value and learn more
     [Arguments]    ${web}    ${product}    ${lan}    ${currency}    ${value}
