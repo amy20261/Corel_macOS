@@ -93,7 +93,6 @@ Screenshot_painterartist
     screenshot_painterartist    de    da-DK
     screenshot_painterartist    de    de-LI
     screenshot_painterartist    en    en-ZA
-    screenshot_painterartist    la    es-MX
     screenshot_painterartist    en    en-IN
     screenshot_painterartist    en    en-MY
     screenshot_painterartist    en    en-SG
@@ -112,8 +111,6 @@ Screenshot_wordperfect_all Lan
     screenshot_wordperfect    en    en-IE
     screenshot_wordperfect    en    se-SE
     screenshot_wordperfect    en    nb-NO
-    screenshot_wordperfect    de    da-DK
-    screenshot_wordperfect    de    de-LI
     screenshot_wordperfect    en    en-ZA
     screenshot_wordperfect    en    en-IN
     screenshot_wordperfect    en    en-MY
@@ -135,7 +132,7 @@ Screenshot_PSP_all Lan
     screenshot_PSP    tw    zh-TW
     screenshot_PSP    cn    zh-HK
     screenshot_PSP    en    en-IE
-    screenshot_PSP    la    es-ES
+    screenshot_PSP    es    es-ES
     screenshot_PSP    pl    pl-PL
     screenshot_PSP    ru    ru-RU
     screenshot_PSP    en    se-SE
@@ -143,7 +140,7 @@ Screenshot_PSP_all Lan
     screenshot_PSP    de    da-DK
     screenshot_PSP    de    de-LI
     screenshot_PSP    en    en-ZA
-    screenshot_PSP    la    es-MX
+    screenshot_PSP    es    es-MX
     screenshot_PSP    en    en-IN
     screenshot_PSP    en    en-MY
     screenshot_PSP    en    en-SG
@@ -169,7 +166,7 @@ Screenshot_VSP_all Lan
     screenshot_VSP    tw    zh-TW
     screenshot_VSP    cn    zh-HK
     screenshot_VSP    en    en-IE
-    screenshot_VSP    la    es-ES
+    screenshot_VSP    es    es-ES
     screenshot_VSP    pl    pl-PL
     screenshot_VSP    ru    ru-RU
     screenshot_VSP    en    se-SE
@@ -177,7 +174,7 @@ Screenshot_VSP_all Lan
     screenshot_VSP    de    da-DK
     screenshot_VSP    de    de-LI
     screenshot_VSP    en    en-ZA
-    screenshot_VSP    la    es-MX
+    screenshot_VSP    es    es-MX
     screenshot_VSP    en    en-IN
     screenshot_VSP    en    en-MY
     screenshot_VSP    en    en-SG
@@ -196,15 +193,15 @@ Screenshot_WinDVD_all Lan
     screenshot_DVD    nl    nl-NL
     screenshot_DVD    jp    ja-JP
     screenshot_DVD    en    en-IE
-    screenshot_DVD    la    es-ES
-    screenshot_DVD    pl    pl-PL
-    screenshot_DVD    ru    ru-RU
+    screenshot_DVD    en    es-ES
+    screenshot_DVD    en    pl-PL
+    screenshot_DVD    en    ru-RU
     screenshot_DVD    en    se-SE
     screenshot_DVD    en    nb-NO
     screenshot_DVD    de    da-DK
     screenshot_DVD    de    de-LI
     screenshot_DVD    en    en-ZA
-    screenshot_DVD    la    es-MX
+    screenshot_DVD    en    es-MX
     screenshot_DVD    en    en-IN
     screenshot_DVD    en    en-MY
     screenshot_DVD    en    en-SG
