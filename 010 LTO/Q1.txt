@@ -125,8 +125,8 @@ PVB Ult
     \    close all browsers
     \    Run Keyword And Continue On Failure    Open Browser to Products Page    ${env}    ${wPSP}    @{var}[1]    @{var}[2]
     \    ...    ${PVBU}
-    \    Run Keyword And Continue On Failure    Verify value and learn more    ${wPSP}    ${PSU}    @{var}[1]    @{var}[2]
-    \    ...    @{var}[13]
+    \    Run Keyword And Continue On Failure    Run keyword if    '@{var}[1]' in 'en;de;fr;jp'    Verify value and learn more    ${wPSP}    ${PSU}
+    \    ...    @{var}[1]    @{var}[2]    @{var}[13]
     \    close all browsers
 
 *** Keywords ***
