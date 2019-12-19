@@ -105,8 +105,6 @@ Screenshot_wordperfect_all Lan
     screenshot_wordperfect    en    en-NZ
     screenshot_wordperfect    en    en-AU
     screenshot_wordperfect    en    en-IE
-    #    br    pt-BR
-    #    jp    ja-JP
     screenshot_wordperfect    en    en-IE
     screenshot_wordperfect    en    se-SE
     screenshot_wordperfect    en    nb-NO
