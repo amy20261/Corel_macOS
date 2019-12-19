@@ -84,7 +84,6 @@ Screenshot_painterartist
     screenshot_painterartist    en    en-NZ
     screenshot_painterartist    de    de-DE
     screenshot_painterartist    fr    fr-FR
-    screenshot_painterartist    br    pt-BR
     screenshot_painterartist    jp    ja-JP
     screenshot_painterartist    tw    zh-TW
     screenshot_painterartist    en    en-IE
@@ -106,8 +105,8 @@ Screenshot_wordperfect_all Lan
     screenshot_wordperfect    en    en-NZ
     screenshot_wordperfect    en    en-AU
     screenshot_wordperfect    en    en-IE
-    screenshot_wordperfect    br    pt-BR
-    screenshot_wordperfect    jp    ja-JP
+    #    br    pt-BR
+    #    jp    ja-JP
     screenshot_wordperfect    en    en-IE
     screenshot_wordperfect    en    se-SE
     screenshot_wordperfect    en    nb-NO
