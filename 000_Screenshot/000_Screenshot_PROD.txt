@@ -16,14 +16,6 @@ Screenshot_corel
     screenshot_Corel    nl    nl-NL
     screenshot_Corel    br    pt-BR
     screenshot_Corel    jp    ja-JP
-    screenshot_Corel    tw    zh-TW
-    screenshot_Corel    cn    zh-HK
-    screenshot_Corel    en    en-IE
-    screenshot_Corel    en    en-RW
-    screenshot_Corel    la    es-ES
-    screenshot_Corel    pl    pl-PL
-    screenshot_Corel    ru    ru-RU
-    screenshot_Corel    cz    cs-CZ
 
 Screenshot_coreldraw
     [Timeout]
@@ -38,14 +30,6 @@ Screenshot_coreldraw
     screenshot_coreldraw    nl    nl-NL
     screenshot_coreldraw    br    pt-BR
     screenshot_coreldraw_No H&S    jp    ja-JP
-    screenshot_coreldraw    tw    zh-TW
-    screenshot_coreldraw    cn    zh-HK
-    screenshot_coreldraw    en    en-IE
-    screenshot_coreldraw    en    en-RW
-    screenshot_coreldraw    la    es-ES
-    screenshot_coreldraw    pl    pl-PL
-    screenshot_coreldraw    ru    ru-RU
-    screenshot_coreldraw    cz    cs-CZ
 
 Screenshot_painterartist
     [Timeout]
@@ -224,12 +208,12 @@ screenshot_DVD
 
 Open browser to home
     [Arguments]    ${microsite}=dev.www.corel.public.corel.net    ${lan}=en    ${currency}=en-US
-    Run Keyword And Continue On Failure    remove file    c:/temp/prod/${microsite}/Home_${currency}.png
-    open browser    https://${microsite}/${lan}/?currency=${currency}
+    Run Keyword And Continue On Failure    remove file    /Users/CorelIT/Temp/prod/${microsite}/Home_${currency}.png
+    open browser    https://${microsite}/${lan}/?currency=${currency}    browser=safari
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/?currency=${currency}
     Maximize Browser Window
     sleep    1
-    Selenium2Library.set screenshot directory    c:/temp/prod/${microsite}/
+    Selenium2Library.set screenshot directory    /Users/CorelIT/Temp/prod/${microsite}/
     capture page screenshot    Home_${currency}.png
     close browser
 
@@ -237,7 +221,7 @@ Open browser to page
     [Arguments]    ${microsite}=dev.www.corel.public.corel.net    ${lan}=en    ${currency}=en-US    ${page}=special-offers
     [Timeout]
     Run Keyword And Continue On Failure    Remove file    c:/temp/prod/${microsite}/${page}_${currency}.png
-    open browser    https://${microsite}/${lan}/${page}/?currency=${currency}
+    open browser    https://${microsite}/${lan}/${page}/?currency=${currency}    browser=safari
     Wait Until Keyword Succeeds    2 min    0.1 sec    go to    https://${microsite}/${lan}/${page}/?currency=${currency}
     Maximize Browser Window
     sleep    1
